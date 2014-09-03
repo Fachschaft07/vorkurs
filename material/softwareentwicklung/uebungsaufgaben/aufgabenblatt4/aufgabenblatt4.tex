@@ -1,0 +1,190 @@
+\documentclass[answers]{exam}
+\usepackage[french, english, ngerman]{babel} 
+\usepackage[utf8x]{inputenc}
+\usepackage{ucs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{sectsty}
+\usepackage{stmaryrd}
+
+
+\title{Aufgabenblatt 4}
+\linespread{1.2}
+
+% Kopf-Fu"szeile
+\addtolength{\headheight}{2\baselineskip} \addtolength{\headheight}{0.61pt}
+\pagestyle{headandfoot}
+
+\firstpageheader{Aufgabenblatt 3}{}{\thepage}
+\runningheader{Aufgabenblatt 3}{}{\thepage}
+\firstpagefooter{\small{Vorkurs Softwareentwicklung}}{}{\small{WS 2014/15}}
+\runningfooter{\small{Vorkurs Softwareentwicklung}}{}{\small{WS 2014/15}}
+\runningfootrule
+\runningheadrule
+\firstpageheadrule
+\firstpagefootrule
+%\allsectionsfont{\sffamily\raggedright}
+
+\lstset{
+	language=Java,
+	showstringspaces=false, 
+	basicstyle=\small,
+	breakatwhitespace=true,breaklines=true,
+	tabsize=2, 
+	keywordstyle=\color{blue}\textbf,
+}
+%\allsectionsfont{\sffamily\raggedright}
+
+\begin{document}
+
+\begin{questions}	
+	\question Das Array
+	\begin{parts}
+	\part Schreiben Sie ein Programm in dem Sie ein Array (bis zum Index 10) mit seinem Index füllen. Wie viele Plätze hat das Array?
+	\part Was halten Sie von folgendem Programmcode? Markieren und erklären Sie kurz alle Fehler?
+	\begin{lstlisting}	
+public class Aufg1b
+{
+	public static void main(String[] args)
+	{
+		int array;
+		array = new int[5];
+		
+		int secArray[];
+		secArray = new  int   [5];
+		
+		int[]a1 = new int[10];
+		[]int a2 = new int[10];
+		int a3 [] = new int[10];
+		
+		a3[-1] = 4;
+		a3[10] = 5;
+		a3[0] = 2;
+		a1 = new int[];
+		a1 = new int [] {1,2,3,4};
+		a2 = {1,2,3,4};
+		a2 = new {1,2,3,4};
+		
+		int [] twoDimArray1 = new int []{{1,2},{3,4},{5,6}};
+		int [][] twoDimArray2 = new int [][]{{1,2},{3,4},{5,6}};
+		int [][] twoDimArray3 = new int[4][];
+		int [][] twoDimArray4 = new int[][];
+		int [][] twoDimArray5 = new int[][5];
+		
+		int a [] = new int[2];
+		int b [] = new int[8];
+		int c [];
+		c = a;
+		a = b;
+		b = c;
+	
+		int i [] = new int[55];
+		double [] d = new double[33];
+		short s [] = new short[44];
+		i = d;
+		d = i;
+		i = s;
+	}
+}
+	\end{lstlisting}	
+	\part Was bedeutet nun eigentlich dieses verdammte \textit{String args[]}? Was genau ist \textit{args}?
+	\part Schreiben Sie das Programm aus Aufgabe 1c des Aufgabenblatts 3 so um, dass Sie ohne switches und if/else auskommen. Verwenden Sie stattdessen ein \textit{String[] array}!
+	\end{parts}
+	
+	\question Die for-Schleife
+	\begin{parts}
+	\part Schreiben Sie das Programm aus Aufgabe 1a dieses Aufgabenblatts so um, dass Sie das Array nicht manuell sondern mit einer for-Schleife befüllen. Füllen Sie dabei das Array einmal von vorne (Start bei 0) und einmal von hinten (Start beim letzten Index). Was glauben Sie, welche Version schneller in der Ausführung ist, die des manuellen oder automatischen Befüllens mit einer Schleife?
+	\part Analysieren Sie folgenden Code. Welche Schleife läuft aus dem Arraybereich heraus und verursacht somit einen Fehler? Welche Ausgabe wird generiert (sofern das Programm nicht abstürzt).
+\begin{lstlisting}	
+		int[] array = new int[10];
+		
+		System.out.println("Ausgabe 1:");
+		for(int i = 0; i <= 10; i++)
+		{
+			array[i] = i;
+			System.out.print(array[i]+ " ");
+		}
+		
+		System.out.println("\nAusgabe 2:");
+		for(int i = 0; i < 10; i = i + 1)
+		{
+			array[i] = i;
+			System.out.print(array[i]+ " ");
+		}
+		
+		System.out.println("\nAusgabe 3:");
+		for(int i = 0; i > array.length; i++)
+		{
+			array[i] = i + 3;
+			System.out.println(array[i]+ " ");
+		}
+		
+		System.out.println("\nAusgabe 4:");
+		for(int i = 0; i <= 10; i++)
+		{
+			i = i + 3;
+			array[i] = i;
+			System.out.println(array[i] + " ");
+		}
+\end{lstlisting}
+\part Schreiben Sie ein Programm, das ein zweidimensionales Array (\textit{int[][] array = new int [10][10]}), füllt. Der Inhalt sollte sich aus den Indizes ergeben.
+\part Schreiben Sie ein Programm zur Berechnung der Summe der Zahlen von 1 bis n. Dabei wird n als Parameter übergeben und das Ergebnis soll ausgegeben werden. Verwenden Sie dabei eine for-Schleife.
+\part Schreiben Sie ein Programm zur Berechnung der Fakultät der Zahl n. Dabei wird n als Parameter übergeben. Verwenden Sie dafür eine for-Schleife. Testen Sie bis zu welcher Zahl das Ergebnis stimmt.
+\newpage
+\part Schreiben Sie ein Programm dem eine Zahl n als Parameter übergeben wird und das daraus resultierende Quadrat zeichnet (Hinweis: Sie benötigen zwei in sich geschachtelte Schleifen, sowie mehrere if-Konstrukte):
+\begin{lstlisting}	
+n = 0:
+keine Ausgabe...
+
+n = 1:
+*
+
+n = 2:
+**
+**
+
+n = 3:
+***
+* *
+***
+
+n = 4:
+****
+*  *
+*  *
+****
+
+usw.
+\end{lstlisting}	
+
+\part Schreiben Sie ein Programm, das mit Hilfe geschachtelter Schleifen folgende Ausgabe erzeugt:
+\begin{lstlisting}	
+1 abcdefg
+12 abcdef
+123 abcde
+1234 abcd
+12345 abc
+123456 ab
+1234567 a
+\end{lstlisting}	
+	\end{parts}
+	
+	\newpage
+	\question Die while-Schleife	
+	\begin{parts}
+	\part Schreiben Sie die Schleifen zur Berechnung der Summe aus 3d und der Fakultät aus Aufgabe 3e jeweils in eine while-Schleife um.
+	\part Wo liegt im folgenden Programmcode das Problem und was wird passieren wenn wir das Programm starten?
+	\begin{lstlisting}
+	int n = 2;
+	while(n%2==0)
+	{
+		n = n + 2;
+		System.out.println(n);
+	}
+	\end{lstlisting}
+	\end{parts}
+\end{questions}
+\end{document}

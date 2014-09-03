@@ -1,0 +1,122 @@
+\documentclass[answers]{exam}
+\usepackage[french, english, ngerman]{babel} 
+\usepackage[utf8x]{inputenc}
+\usepackage{ucs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{sectsty}
+\usepackage{stmaryrd}
+
+
+\title{Aufgabenblatt 3}
+\linespread{1.2}
+
+% Kopf-Fu"szeile
+\addtolength{\headheight}{2\baselineskip} \addtolength{\headheight}{0.61pt}
+\pagestyle{headandfoot}
+
+\firstpageheader{Aufgabenblatt 3}{}{\thepage}
+\runningheader{Aufgabenblatt 3}{}{\thepage}
+\firstpagefooter{\small{Vorkurs Softwareentwicklung}}{}{\small{WS 2014/15}}
+\runningfooter{\small{Vorkurs Softwareentwicklung}}{}{\small{WS 2014/15}}
+\runningfootrule
+\runningheadrule
+\firstpageheadrule
+\firstpagefootrule
+%\allsectionsfont{\sffamily\raggedright}
+
+\lstset{
+	language=Java,
+	showstringspaces=false, 
+	basicstyle=\small,
+	breakatwhitespace=true,breaklines=true,
+	tabsize=2, 
+	keywordstyle=\color{blue}\textbf,
+}
+%\allsectionsfont{\sffamily\raggedright}
+
+\begin{document}
+
+\begin{questions}	
+	\question if/else und if else
+	\begin{parts}
+	\part Geben Sie im Programm zur Schaltjahrberechnung einen Text Ihrer Wahl statt \textit{true} und \textit{false} aus.
+	\part Was halten Sie von folgendem Code? Was macht das Programm und wie könnte man das Programm verschönern?
+	\begin{lstlisting}	
+public class Aufg1b
+{
+	public static void main(String[] args)
+	{
+		int x = Integer.parseInt(args[0]);
+		int y = Integer.parseInt(args[1]);
+		
+		if(x > y)
+		{
+			System.out.println(true);
+		}
+		else
+		{
+			System.out.println(false);
+		}
+	}
+}
+	\end{lstlisting}	
+	\part Schreiben Sie ein Programm, dem eine ganze Zahl übergeben wird. Die Ausgabe hängt davon ab welche Zahl eingegeben wurde. Je nach Zahl wird eine von 7 beliebigen Texten ausgegeben. Verwenden Sie nur if/else zur Unterscheidung.
+	\part Was ist der Fehler des folgenden Programms? Schreiben Sie eine korrekte Version.
+\begin{lstlisting}
+public class Aufg1d
+{
+	public static void main(String[] args)
+	{
+		int number = 6;
+		
+		if(number % 3 == 0)
+			System.out.println("Zahl ist durch 3 teilbar");
+			if(number % 9 == 0)
+				System.out.println("Zahl ist auch durch 9 teilbar");
+		else
+			System.out.println("Zahl ist nicht durch 3 teilbar");
+	}
+}
+\end{lstlisting}
+\newpage
+\part Gegeben seien drei Variablen, die Auskunft über Eigenschaften einer bestimmten Stadt geben:
+\begin{lstlisting}
+boolean istHaupstadt;
+int anzahlEinwohner;
+double steuernProEinwohner;
+\end{lstlisting}	
+
+Dabei gilt folgendes:
+\begin{itemize}
+\item \emph{istHauptstadt} ist genau dann true, wenn die Stadt eine Hauptstadt ist.
+\item \emph{anzahlEinwohner} gibt die Anzahl der Einwohner der Stadt an.
+\item \emph{steuernProEinwohner} ist die durchschnittliche monatliche Steuerabgabe pro Einwohner und Monat.
+\end{itemize}
+Wir definieren eine Metropole als eine Stadt, die Hauptstadt ist mit mehr als 100 000 Einwohner oder die mehr als 200 000 Einwohner hat und im Durchschnitt mindestens 720 000 000 Steuereinnahmen hat. \\
+Geben Sie einen Booleschen-Ausdruck mit den drei Variablen in Java an, der genau dann true ist, wenn die Stadt eine Metropole ist. 
+
+\part Bauen Sie ein Programm das folgendes Entscheidungsproblem löst:
+Es werden 3 ganze Zahlen, - wir nennen sie x1, x2 und x3 - definiert. Diese Zahlen dürfen, müssen aber nicht paarweise verschieden sein, d.h. im Extremfall sind sie sogar gleich. Gesucht wird der mittlere Wert m.
+
+\textbf{Beispiele}:\\
+$x_1=9, x_2=3, x_3=6\\\Rightarrow m = 6$
+
+$x_1=3, x_2=6, x_3=9\\\Rightarrow m = 6$
+
+$x_1=2, x_2=1, x_3=2\\\Rightarrow m = 2$
+
+$x_1=2, x_2=2, x_3=2\\\Rightarrow m = 2$
+
+\textbf{Hilfe}: Suchen Sie im Internet nach \textit{Entscheidungsbaum} und zeichnen Sie einen solchen zur Orientierung auf.
+	\end{parts}
+	
+	\question Vergleichen von Fließkommazahlen
+	\begin{parts}
+	\part Schreiben Sie Programm mit zwei lokalen Variablen vom Typ double. Die eine Variable soll den initialen Wert 0,0 und die andere den Wert 0,1 haben. Addieren Sie (ohne Schleife) 10 mal den Wert der zweiten Variable auf die erste. Vergleichen Sie anschließend den Wert mit dem Identitätsoperator \textit{==} auf 1,0 und geben Sie das Ergebnis dieses Booleschen Ausdrucks und der zwei Variablen auf dem Bildschirm aus. Wie erklären Sie sich das Resultat?
+	\end{parts}
+\end{questions}
+\end{document}

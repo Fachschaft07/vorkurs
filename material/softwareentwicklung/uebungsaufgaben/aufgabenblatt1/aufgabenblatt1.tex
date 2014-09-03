@@ -1,0 +1,152 @@
+\documentclass[answers]{exam}
+\usepackage[french, english, ngerman]{babel} 
+\usepackage[utf8x]{inputenc}
+\usepackage{ucs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{sectsty}
+\usepackage{stmaryrd}
+
+
+\title{Aufgabenblatt 1}
+\linespread{1.2}
+
+% Kopf-Fu"szeile
+\addtolength{\headheight}{2\baselineskip} \addtolength{\headheight}{0.61pt}
+\pagestyle{headandfoot}
+
+\firstpageheader{Aufgabenblatt 1}{}{\thepage}
+\runningheader{Aufgabenblatt 1}{}{\thepage}
+\firstpagefooter{\small{Vorkurs Softwareentwicklung}}{}{\small{WS 2014/15}}
+\runningfooter{\small{Vorkurs Softwareentwicklung}}{}{\small{WS 2014/15}}
+\runningfootrule
+\runningheadrule
+\firstpageheadrule
+\firstpagefootrule
+%\allsectionsfont{\sffamily\raggedright}
+
+\lstset{
+	language=Java,
+	showstringspaces=false, 
+	basicstyle=\small,
+	breakatwhitespace=true,breaklines=true,
+	tabsize=2, 
+	keywordstyle=\color{blue}\textbf,
+}
+
+\begin{document}
+
+\begin{questions}
+ \question Java Umgebung
+\begin{parts}
+	\part Kontrollieren Sie ob die Java Umgebung bereits installiert wurde und wenn nicht installieren Sie diese.
+	\part Öffnen Sie die zum JDK gehörende Dokumentation und machen Sie sich mit Hilfe eines HTML-Browsers mit ihr vertraut. Schlagen Sie mit deren Hilfe die Methode println der Klasse PrintStream des Pakets java.io nach. Sie sollen lediglich lernen wie Sie das Nachschlagewerk benutzen können.
+%		\begin{lstlisting}
+%		\end{lstlisting}
+\end{parts}
+
+ \question Ausgabe mit println und print
+\begin{parts}
+	\part Erstellen Sie das \textit{Hello World-Programm} aus der Vorlesung und bringen Sie es zum Laufen.
+	\part Erstellen Sei ein Programm, das folgende veränderte Ausgabe generiert:
+		\begin{lstlisting}
+		Hallo Leute,
+		
+		heute lerne ich ein bisschen Java!
+		\end{lstlisting}
+	\part Markieren Sie im folgenden Programmcode alle Fehler und schreiben Sie dann eine fehlerfreie Version.
+	\begin{lstlisting}
+class hello
+{
+	public void main{String args[]};
+   	(
+     	System.out.PrintLn('Hello, world')
+   	)
+}
+		\end{lstlisting}
+		\part Schreiben Sie ein Programm, das nur mit einem einzigen Ausdruck folgendes ausgibt (benutzen Sie Java um das Ergebnis zu \textbf{berechnen}):
+		\begin{lstlisting}
+		5 + 37 = 42
+		\end{lstlisting}
+		
+		\part Wo liegt der Unterschied zwischen \textit{System.out.println()} und \textit{System.out.print()}? Schreiben Sie ein Programm, das folgende Ausgabe generiert und verwenden Sie dabei kein \textit{System.out.println()} sondern nur \textit{System.out.print()}. (Zusatz) Versuchen nur \textbf{ein} \textit{System.out.print()} zu verwenden.
+		\begin{lstlisting}
+		Ich brauche kein println 
+		
+		ich kann das auch mit print 
+		\end{lstlisting}
+\end{parts}
+	
+	\newpage
+	\question Literale
+	\begin{parts}
+	\part Beschreiben Sie, welche der folgenden literalen Konstanten in Java gültig sind und welche nicht. Geben Sie bei den gültigen Literalen deren Datentyp und bei den ungültigen den Grund für den Fehler an): 
+	\begin{itemize}
+\item     42
+\item    -17
+\item    2+3
+\item 	1.1*10\textasciicircum 3
+\item    2.3
+\item    2,3
+\item    20
+\item    'Hello'
+\item    \grqq a\grqq
+\item    TRUE
+\item    b
+\item    false
+\item    3.141592
+\item    1.000.000
+\item    0,524
+\item    214089067
+\item    1.1e-10
+\item   +13
+\item   1d
+\item    0x1d 
+\item 	.34
+\end{itemize}
+	\end{parts}
+	
+	\newpage
+	\question Variablen - Definition und Initialisierung
+		\begin{parts}
+	\part Schreiben Sie ein Programm in dem Sie von jedem Ihnen bekannten Datentyp jeweils eine Variable definieren und in der nächsten Zeile initialisieren. Initialisieren Sie die Variablen mit der größtmöglichen Zahl und geben Sie alles auf der Konsole aus.
+	\part Markieren Sie im folgenden Programmcode alle Fehler bzw. schreiben sie eine fehlerfreie Version und geben sie an, was das Programm ausgibt.
+		\begin{lstlisting}
+public class Aufg4b
+{
+	public static void main(String args[])
+	{
+		int a, b = 4;
+		System.out.println(a);
+		System.out.println(b);
+		int a = 5;
+		a = 6;
+		int c = d;
+		
+		int i = 5; short s = 4;
+		boolean b = 1;
+		boolean bool1 = true, boolean bool2 = false;
+		double d1 = 1.3;
+		double d2 = d1 = 1.5;
+		System.out.println(d1);
+		System.out.println(d2);
+		long l = 131231341313;
+		float f = 1.3;
+	}
+}
+		\end{lstlisting}
+		\end{parts}
+		
+\question Rechnen mit Variablen
+		\begin{parts}
+	\part Finden Sie durch Ausprobieren heraus wie oft sie die Zahl 0.1e-23 = $0,1 * 10^{-23}$  (double) mal sich selbst nehmen müssen bis sie 0 erhalten. Warum ist das Ergebnis mathematisch nicht richtig?
+	\part Finden Sie durch Ausprobieren heraus wie oft sie die Zahl 9e100 = $9*10^{100}$ (double) nehmen müssen bis \textit{infinity} heraus kommt. Versuchen Sie infinity auch mit dem Datentyp int und einer Zahl Ihrer Wahl heraus zu bekommen. Was stellen Sie fest? Ist das Ergebnis mathematisch korrekt?
+	\part Schreiben Sie ein möglichst kurzes Programm, was die einfache Rechnung 3/2 durchführt und ausgibt. Was stellen Sie fest?
+	\part Entwickeln Sie ein kleines Programm zur Berechnung der Tage, Stunden, Minuten und Sekunden aus einer vorgegebenen Zahl von Sekunden, hier 3798. Sie dürfen nur durch 24 oder 60 dividieren (nicht z.B. durch 3600). Überlegen Sie, in welcher Reihenfolge Sie die Ausgaben zweckmäßigerweise berechnen können. Sie dürfen Zwischenergebnisse einführen.
+	\end{parts}
+
+\end{questions}
+\end{document}

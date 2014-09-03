@@ -1,0 +1,137 @@
+\documentclass[answers]{exam}
+\usepackage[french, english, ngerman]{babel} 
+\usepackage[utf8x]{inputenc}
+\usepackage{ucs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{sectsty}
+\usepackage{stmaryrd}
+
+
+\title{Aufgabenblatt 2}
+\linespread{1.2}
+
+% Kopf-Fu"szeile
+\addtolength{\headheight}{2\baselineskip} \addtolength{\headheight}{0.61pt}
+\pagestyle{headandfoot}
+
+\firstpageheader{Aufgabenblatt 2}{}{\thepage}
+\runningheader{Aufgabenblatt 2}{}{\thepage}
+\firstpagefooter{\small{Vorkurs Softwareentwicklung}}{}{\small{WS 2014/15}}
+\runningfooter{\small{Vorkurs Softwareentwicklung}}{}{\small{WS 2014/15}}
+\runningfootrule
+\runningheadrule
+\firstpageheadrule
+\firstpagefootrule
+%\allsectionsfont{\sffamily\raggedright}
+
+\lstset{
+	language=Java,
+	showstringspaces=false, 
+	basicstyle=\small,
+	breakatwhitespace=true,breaklines=true,
+	tabsize=2, 
+	keywordstyle=\color{blue}\textbf,
+}
+%\allsectionsfont{\sffamily\raggedright}
+
+\begin{document}
+
+\begin{questions}
+	\question Variablen und Datentypen
+	\begin{parts}
+	\part Analysieren sie folgenden Programmcode. Warum kann man das (byte) rechts nicht einfach weglassen und welche Auswirkungen hat es? Warum braucht man hingegen in der letzten Zeile keine Typumwandlung (type cast)?
+			\begin{lstlisting}
+public class Aufg1a
+{
+	public static void main(String args[])
+	{
+		int a = 1234;
+		byte c = 20;
+		byte b = (byte)a;
+		a = c;
+	}
+}
+			\end{lstlisting}
+
+	\part Wieso braucht man für unterschiedliche Werte einer Variable unterschiedlich viel Speicherplatz um diese zu speichern?
+	\part Weisen Sie einer byte-Variable den Wert einer int-Variable zu. Warum führt führt die Zuweisung zu Informationsverlust?
+	\part Nennen Sie einen Grund warum die Genauigkeit einer Fließkommazahl begrenzt ist. Schreiben Sie ein Programm das dieses Problem zeigt und offensichtlich falsche Ergebnisse liefert.
+	\part Geben Sie an was dieser Code auf der Konsole ausgibt und von welchem Datentyp die jeweiligen Ausgaben sind.
+				\begin{lstlisting}
+public class Aufg1e
+{
+	public static void main(String[] args)
+	{
+		System.out.println(4+2+" Wert");				
+		System.out.println("" + 4 + 2 + " Wert");		
+		System.out.println("" + (4 + 2) + " Wert");		
+		
+		System.out.println((byte)(127 + 1));			
+		System.out.println((127 + 1));					
+		System.out.println(((byte)127 + (byte)1));		
+		System.out.println('a' + 1);                    
+		System.out.println('a' + (char)1);             
+		System.out.println((char)('a' + 1));			
+		
+		System.out.println(3/2);						
+		System.out.println((double)3/2);				
+		System.out.println((double)(3/2));      	    
+		System.out.println((char)'a' + 1);				
+	}
+}
+			\end{lstlisting}	
+	\end{parts}
+	\newpage
+	\question Boolean und logische Ausdrücke
+	\begin{parts}
+	\part Geben Sie die Ausgabe des folgenden Programms an.
+	\begin{lstlisting}
+public class Aufg2a
+{
+	public static void main(String[] args)
+	{
+		System.out.println(true && false);				
+		System.out.println(true && true);				
+		System.out.println(false && false);				
+		System.out.println(true || false);				
+		System.out.println(true || true);				
+		System.out.println(false || false);				
+		
+		System.out.println(true && false || true);		
+		System.out.println(true || true && false);		
+		System.out.println((true || true) && false);	
+		System.out.println(true ^ false);				
+		System.out.println(true ^ true);				
+		System.out.println(false ^ false);			
+	}
+}
+	\end{lstlisting}
+	\part Schreiben Sie ein Programm das \textit{true} ausgibt, wenn eine ganze Zahl im Programm gerade ist und \textit{false} wenn sie ungerade ist. Sie können auch einmal versuchen die Zahl als Parameter bei Programmstart mitzugeben und Sie dann zu testen (optional).
+	\part Schreiben Sie ein Programm das \textit{true} ausgibt, wenn eine ganze Zahl im Programm ein Schaltjahr ist und \textit{false} wenn sie kein Schaltjahr ist. Sie können auch einmal versuchen die Zahl als Parameter bei Programmstart mitzugeben und Sie dann zu testen (optional).
+
+	\end{parts}
+	
+	\question Aufgaben lösen mit dem Rechner
+	\begin{parts}
+%	\part Elektrizität (optional):
+%Der elektrische Widerstand R eines (zylinderförmigen) Drahtes mit einer Länge l (in Meter) und Durchmesser d (in Meter) berechnet sich aus dessen Fläche A des Querschnitts (in Meter %zum Quadrat) und des spezifischen Widerstandes des Materials Ρ (rho, in Meter mal Ohm). Als Formel:
+%$$R = Ρ( l / A )$$
+%Berechnen Sie den Widerstand eines Drahtes mit 1m Länge und 1mm Durchmesser für Kupfer ($P = 1,78*10^{-8}$) und für Silizium ($P=2300$)\\
+%Nach dem Ohmschen Gesetz ist Strom (I) proportional zur Spannung (U). Oder als Formel: 
+%$$U = R * I$$
+%Wie viel Spannung muss an dem Draht angelegt werden, damit 25 Ampere Strom durchfließen?
+%\newpage
+\part Temperatur: Schreiben Sie ein Programm, um eine Temperatur (gegeben in Grad Celsius) in Grad Fahrenheit umzurechnen. Die Umrechnungsformel ist:
+$$\textsf{Fahrenheit} = \frac{9}{5} * \textsf{Celsius}$$
+
+Die beiden Temperaturen sollen jeweils in lokale Variablen \textit{celsius} und \textit{fahrenheit} vom Typ double gespeichert werden. Folgendes soll nach der Berechnung ausgegeben werden:
+\begin{lstlisting}
+10.0 Grad Celsius sind 50.0 Grad Fahrenheit
+\end{lstlisting} 
+	\end{parts}
+\end{questions}
+\end{document}
