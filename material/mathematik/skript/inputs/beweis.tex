@@ -1,0 +1,61 @@
+\subsection{Direkter Beweis}
+Den direkten Beweis haben wir im Kapitel "uber die quadratischen Funktionen schon kennengelernt.\\
+Es handelt sich hierbei um nichts anderes als das direkte Herleiten von Formeln.
+
+\subsection{Indirekter Beweis}
+Im indirekten Beweis schaut man sich den Fall an, welchen man beweisen will und zeigt, dass es nicht anders sein kann.\\
+Man geht also zun"achst vom Gegenteil aus und versucht auf einen Widerspruch zu sto"sen.\\
+
+\subsubsection{Beispiel}
+Das bekannteste Beispiel hierf"ur ist der Beweis daf"ur, dass es sich bei Wurzel 2 um keine rationale Zahl handelt.\\
+Man geht nun zun"achst davon aus, dass es eine rationale Zahl ist.\\
+Wenn dies der Fall ist, so w"urde sich Wurzel 2 folgenderma"sen ausdr"ucken lassen:\\
+$\exists q, p \in \mathbb{N}:\sqrt{2}=\frac{q}{p}$\\
+Wichtig hierf"ur ist die Voraussetzung, dass es sich bei q und p um teilerfremde Zahlen handelt, der Bruch also vollst"andig gek"urzt ist.\\
+Quadriert man nun die Gleichung, so bekommt man:\\
+$2 = \frac{q^2}{p^2}$\\
+Nun noch mit $p^2$ multiplizieren:\\
+$2 * p^2 = q^2$\\
+Da es sich bei p und q um ganze Zahlen handelt, sind nat"urlich auch deren Quadrate ganze Zahlen.\\
+Eine ganze Zahl mit 2 multipliziert ist auch wieder eine ganze Zahl. $=>$ Es handelt sich bei $q^2$ um eine ganze, gerade Zahl handelt.\\
+Wenn das Quadrat einer Zahl gerade ist, ist auch die Zahl selber gerade, deshalb l"asst sich q auch folgenderma"sen darstellen.\\
+$\exists r : q = 2 * r$\\
+Setzt man nun diesen Wert f"ur q oben ein, so erh"alt man:\\
+$2 * p^2 = 4 * r^2$
+$\Leftrightarrow p^2 = 2 * r^2$\\
+Nun sieht man das es sich auch bei p um eine ganze, gerade Zahl handelt.\\
+Da jede ganze, gerade Zahl den Teiler 2 hat, besitzen auch p und q den gemeinsamen Teiler 2.\\
+Einer unserer Voraussetzungen war allerdings, dass diese beiden Zahlen teilerfremd sind.\\
+Wenn wir auf solch einen Widerspruch treffen, so muss zumindest eine unserer Annahmen falsch sein.\\
+Die einzige Annahme, welche wir getroffen haben ist jedoch, dass es sich bei Wurzel 2 um eine rationale Zahl handelt.\\
+Dies ist also falsch. Und somit haben wir bewiesen, dass $\sqrt{2}$ keine rationale Zahl ist.
+
+\subsection{Vollst"andige Induktion}
+Wenn man beweisen will, dass zwei Aussagen im Zahlenraum $\mathbb{N}$ gelten, so greift man oft auf die Vollst"andige Induktion zur"uck.\\
+Bei der vollst"andigen Induktion zeigt man zun"achst, dass es f"ur kleine n gilt, dies wird auch als Induktionsanfang bezeichnet.\\
+Zum Beispiel: man will beweisen, dass $a_{n}=2a_{n-1}; a_1 = 2$ gleich $a_n = 2^n$ ist.\\
+Induktionsanfang:\\
+$n=1: a_1 = 2; a_1 = 2^1 = 2 =>$passt.\\
+Nun stellen wir unsere Annahme auf, dies ist nichts anderes, als dass wir sagen, dass die beiden Aussagen f"ur n gleich sind (f"ur kleine n's stimmt dies ja).\\
+Induktionsannahme:\\
+$2a_{n-1}=2^n; a_1 = 2$\\
+Als n"achstes folgt nun die Induktionsbehauptung, wir behaupten, dass, wenn es f"ur n gilt, es auch f"ur
+n+1 gilt, also:\\
+Induktionsbehauptung:\\
+$2a_{n+1-1} = 2^{n+1}; a_1 = 2$\\
+$\Leftrightarrow 2a_{n} = 2^{n+1}; a_1 = 2$\\
+Jetzt kommen wir zum eigentlichen Beweis! Und zwar ersetzen wir das $a_{n}$ aus unserer Behauptung durch das $a_n = 2^n$ aus unserer Annahme, denn mit dieser d"urfen wir auf Grund der Tatsache, dass es f"ur kleine n's gilt, arbeiten. Und wenn die Aussage stimmt, kommt genau die andere Seite unserer Behauptung heraus, also $ 2^{n+1}$\\
+Induktionsbeweis:\\
+$2(2^n)= 2^{n+1}$\\
+Wuhu! Wir haben bewiesen, dass unsere Aussage stimmt. Aber warum ist dies so?\\
+Ganz einfach, wir haben gezeigt, dass die Aussage f"ur $n=1$ gilt und dass, wenn sie f"ur n gilt auch f"ur n+1 gilt...\\
+Wenn sie also nun f"ur n = 1 gilt, so gilt sie auch f"ur n=2 und somit auch wieder f"ur n=3.\\
+So k"onnen wir uns nun durch den gesamten Zahlenraum $\mathbb{N}$ hangeln... $=>$ q.e.d.
+
+\subsection{"Ubungen}
+\begin{enumerate}
+\item Zeige, dass folgende Aussagen gelten:
+\begin{itemize}
+\item $\sum\limits_{i=0}^{n} q^i = \frac{1-q^{n+1}}{1-q}$; f"ur $q \neq 1$
+\end{itemize}
+\end{enumerate}

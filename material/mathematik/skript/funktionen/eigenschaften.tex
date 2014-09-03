@@ -1,0 +1,54 @@
+\subsection{Grundlegende Eigenschaften von Funktionen}
+\subsubsection{Was ist eine Funktion?}
+Eine Funktion besteht grundlegend aus drei Dingen:
+\begin{enumerate}
+\item\textcolor{red}{Definitionsmenge:} $\mathbb{D}$
+\item\textcolor{red}{Bildbereich/Wertemenge:} $\mathbb{W}$
+\item\textcolor{red}{Abbildungsvorschrift:} $f$
+\end{enumerate}
+\begin{flushleft}
+Die Definitionsmenge gibt hierbei an in welchem Bereich die Funktion definiert ist, sprich welche Werte "'in die Funktion eingesetzt werden d"urfen"'.\\\vspace{0.5 cm}
+Die Abbildungsvorschrift sorgt nun daf"ur, dass jedem Wert x des Definitionsbereichs genau ein Wert y des Bildbereiches zugeordnet werden kann.\\\vspace{0.5 cm}
+Die Wertemenge enth"alt genau jene Zahlen, welche man durch Abbildung des Definitionsbereiches mithilfe der Abbildungsvorschrift erhalten kann.\\\vspace{0.5 cm}
+\textbf{Zur Vorstellungserleichterung:}\\
+Vorstellen kann man sich das wie die Funktionsweise eines Fotoapparates.\\
+Der Definitionsbereich w"are hierbei das, was in der realen Welt existiert und von der Kamera aufgenommen werden soll.
+Das ausgestrahlte Licht, der Bestandteile des Definitionsbereiches, wird nun mithilfe einer Linse eingefangen, gespiegelt und bei neueren Kameras mithilfe von Sensoren in digitale Bilder umgewandelt. Dieses digitale \textcolor{red}{Bild} ist nun das Ergebnis und jeder erreichte Wert (RGB, CMYK, ...) ist Bestandteil der Bildmenge.\\\vspace{0.5 cm}
+\textbf{Beispiele:}\\
+\begin{itemize}
+\item $\mathbb{D}\rightarrow\mathbb{W}, f(x)=x^2$
+\item $\mathbb{D}\rightarrow\mathbb{W}, f(x)=42x(12x-12(3x^2))$
+\end{itemize}
+\end{flushleft}
+
+\subsubsection{Monotonie}
+Wie bei Folgen und Reihen gibt es auch in der Welt der Funktionen den Begriff (strenge) Monotonie.\\
+\begin{itemize}
+\item Eine Funktion ist \textcolor{red}{monoton fallend} \textcolor{DarkGrey}{(bzw. wachsend)}, wenn gilt:\\
+$\forall x_1, x_2 \in\mathbb{D}, x_1 < x_2: f(x_1)\geq f(x_2) \hspace{0.2 cm}\textcolor{DarkGrey}{(bzw. f(x_1)\leq f(x_2)}$
+\item Eine Funktion ist \textcolor{red}{streng monoton fallend} \textcolor{DarkGrey}{(bzw. wachsend)}, wenn gilt:\\
+$\forall x_1, x_2 \in\mathbb{D}, x_1 < x_2: f(x_1)>f(x_2) \hspace{0.2 cm}\textcolor{DarkGrey}{(bzw. f(x_1)<f(x_2)}$
+\end{itemize}
+
+\subsubsection{Symmetrie}
+\begin{flushleft}
+Eine Funktion ist genau dann \textcolor{red}{symmetrisch zur y-Achse}, wenn gilt:\\
+$f(x)=f(-x)$\\
+Solche Funktionen werden auch als \textcolor{red}{gerade} Funktion bezeichnet.\\\vspace{0.5 cm}
+Eine Funktion ist genau dann \textcolor{red}{symmetrisch zum Ursprung}, oder auch \textcolor{red}{ungerade}, wenn gilt:\\
+$f(-x)=-f(x)$\\
+\end{flushleft}
+\textbf{\textcolor{red}{Achtung:}} Eine Gerade ist nicht immer eine gerade Funktion!!!
+
+\subsubsection{Periodizit"at}
+Eine Funktion ist dann \textcolor{red}{periodisch}, wenn es eine Konstante p gibt, f"ur die gilt:\\
+$f(x+p) = f(x), \forall x\in\mathbb{D}$\vspace{0.5 cm}\\
+Diese Definition sagt eigentlich nichts anderes aus, als dass sich die Funktion st"andig im gleichen Abstand wiederholt.
+
+\subsubsection{Nullstellen}
+Eine Nullstelle ist ein Punkt, an dem der Graf die x-Achse schneidet.\\
+Anders ausgedr"uckt: Ein Punkt an dem die Funktion f(x) den Wert 0 erreicht.\\
+Um Nullstellen zu berechnen, setzt man im Normalfall die Gleichung erst einmal gleich 0 und stellt diese dann nach "'x"' um. So kann man nun den x-Wert berechnen (der y-Wert eine Nullstelle ist logischerweise 0, weshalb er nicht berechnet werden muss).
+
+\subsubsection{Stetigkeit}
+Eine Funktion ist stetig, wenn man ihren Graphen (innerhalb der Definitionsmenge) ohne Absetzen des Stiftes in einem Zug zeichnen kann.

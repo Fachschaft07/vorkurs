@@ -1,0 +1,39 @@
+\subsection{Monotonie, Beschr"anktheit und Konvergenz}
+\subsubsection{Monotonie}
+Eine Folge ist \textcolor{red}{monoton fallend}, wenn kein Folgeglied gr"o"ser ist als dessen Vorg"anger.\\
+Mathematisch ausgedr"uckt: $\forall n\in{\mathbb{N}}: a_n \leq a_{n-1}$\\
+Ist eine Folge \textcolor{red}{monoton steigend}, so ist jedes Folgeglied entweder gr"o"ser oder gleich dessen Vorg"anger.\\
+Mathematisch ausgedr"uckt: $\forall n\in{\mathbb{N}}: a_n \geq a_{n-1}$\\
+
+\paragraph{Strenge Monotonie} 
+Der Unterschied zwischen Monotonie und strenger Monotonie ist einfach. Bei Monotonie d"urfen die Folgeglieder gleich deren Vorg"anger sein, bei strenger Monotonie ist dies jedoch nicht der Fall.
+\\
+
+Mathematisch ausgedr"uckt:
+\begin{itemize}
+\item \textcolor{red}{streng monoton steigend} $\Leftrightarrow \forall n\in\mathbb{N}: a_n > a_{n-1}$
+\item \textcolor{red}{streng monoton fallend} $\Leftrightarrow \forall n\in\mathbb{N}: a_n < a_{n-1}$
+\end{itemize}
+
+\subsubsection{Beschr"anktheit}
+Ist eine Folge nach unten beschr"ankt, so gilt $\exists s \forall n\in{\mathbb{N}}: s\leq a_n $
+Hierbei wird jeder Wert, welcher kleiner gleich des kleinsten Folgegliedes der Folge ist, als \textcolor{red}{untere Schranke} bezeichnet.\\
+Die gr"o"ste untere Schranke wird als \textcolor{red}{Infimum} bezeichnet.\\
+Eine Folge ist dann nach oben beschr"ankt, wenn es mindestens einen Wert s aus $\mathbb{N}$ gibt, welcher gr"o"ser oder gleich des gr"o"sten Folgegliedes ist. Diese Werte bezeichnet man als \textcolor{red}{obere Schranke}.\\
+Mathematisch ausgedr"uckt: $\exists s \forall n\in{\mathbb{N}}: s\geq a_n $\\
+Die kleinste obere Schranke hei"st \textcolor{red}{Supremum}.
+
+\subsubsection{Konvergenz}
+N"ahert sich eine Folge stetig einem bestimmten "'\textcolor{red}{Grenzwert}"' (oder "'\textcolor{red}{Limes}"') a beliebig nahe an, so sagt man, sie konvergiert gegen a.\\
+Mathematisch: $\forall n \geq n_0: (\forall \epsilon>0 \exists n_0 \forall n\geq n_0 : |a_n - a|<\epsilon)$\\
+Epsilon $\epsilon$ ist hierbei eine beliebig kleine Zahl, welche den Abstand zwischen dem Wert von $a_n$ und dem Grenzwert a beschreibt.\\
+Jede nicht konvergente Folge wird als \textcolor{red}{divergent} bezeichnet.
+
+\paragraph{Asymptote}
+Eine Asymptote ist eine Gerade, an die sich ein Graph ann"ahert (konvergiert), ohne sie zu ber"uhren.
+
+\subsubsection{Zusammenh"ange}
+\begin{itemize}
+\item Jede konvergente Folge ist auch beschr"ankt, allerdings ist \textbf{nicht} jede beschr"ankte Folge auch konvergent. \textcolor{red}{Konvergenz $\Rightarrow$ Beschr"anktheit}
+\item Jede beschr"ankte, monotone Folge ist konvergent. \textcolor{red}{Beschr"anktheit und Monotonie $\Rightarrow$ Konvergenz}
+\end{itemize}

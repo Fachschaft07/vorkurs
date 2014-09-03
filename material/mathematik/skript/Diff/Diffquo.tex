@@ -1,0 +1,63 @@
+\subsection{Ableiten von Funktionen}
+\subsubsection{Ableiten von Funktionen}
+Definition (Ableitung): Die Ableitung ist die Steigung eines Punktes auf einem Graphen.\\
+Wie erhalte ich die Ableitung? Die Steigung eines Punktes auf einem Graphen erh"alt man, indem man an eben diesem Punkt eine Tangente an den Graphen lege. Die Steigung dieser Tangenten ist somit auch die Steigung in diesem Punkt.\\
+Definition (Tangente): Eine Tangente ist eine Gerade, die den Graphen in nur einem einzigen Punkt ber"uhrt.\\
+Um die Tangentensteigung zu erhalten, betrachtet man zun"achst die Steigung einer Sekante und n"ahert den zweiten Punkt dem ersten immer weiter an. Ja, das klingt stark nach einer Grenzwertbildung.\\
+$ \lim\limits_{x\rightarrow x_0} \frac{f(x)-f(x_0)}{x-x_0}$
+\subsubsection{Differenzierbarkeit}
+Definition: Eine Funktion ist genau dann differenzierbar, wenn sie stetig ist und gleichzeitig keine Spr"unge der Steigung, d.h keine "'Knicke"' enth"alt (egal ob man die Funktion von links oder rechts betrachtet, die Steigung muss in beiden F"allen gleich sein).
+\subsubsection{Die erste Ableitung}
+Um eine Funktion abzuleiten multipliziert man bei Polynomen jeweils die Exponenten mit den dazugeh"origen Koeffizienten ihrer Basis und subtrahiert den Exponenten dabei um 1.\\
+Zum Beispiel: \\
+$f(x)=2x^2 \Rightarrow f'(x)=2*2x^{2-1}=4x$\\
+Konstanten fallen dabei weg.\\
+Zum Beispiel:\\
+$f(x)=2x^2+4 \Rightarrow f'(x)=2*2x^(2-1)=4x$\\
+F"ur Logarithmus- und e-Funktionen sowie die Winkelfunktionen gelten besondere Ableitungsgesetze.
+\subsection{Besondere Ableitungen}
+\begin{tabular}{|>{\centering\arraybackslash}p{6.5 cm}|>{\centering\arraybackslash}p{6.5 cm}|}
+\hline
+${f(x)}$&${f'(x)}$\\
+\hline
+$sin(x)$&$cos(x)$\\
+\hline
+$cos(x)$&$-sin(x)$\\
+\hline
+$tan(x)$&$\frac{1}{cos^2(x)}$\\
+\hline
+$ln(x)$&$\frac{1}{x}$\\
+\hline
+$e^x$&$e^x$\\
+\hline
+\end{tabular}
+\subsection{Ableitungsregeln}
+Wie "uberall in der Mathematik gibt es auch f"ur das Ableiten, insbesondere bei komplizierteren Funktionstermen, bestimmte Regeln im Hinblick auf ihre richtige Ableitung.
+\subsubsection{Produktregel}
+$f(x)=h(x)*g(x)\Rightarrow f'(x)=h'(x)*g(x)+h(x)*g'(x)$\\
+Beispiel: $f(x)=2x^3*sin(x)\Rightarrow f'(x)=6x^2*sin(x)+2x^3*cos(x)$\\
+\subsubsection{Quotientenregel}
+$f(x)=\frac{h(x)}{g(x)}\Rightarrow f'(x)=\frac{h'(x)*g(x)-h(x)*g'(x)}{(g(x))^2}$\\
+Beispiel: $f(x)=\frac{2x^3}{2x^2+4}\Rightarrow f'(x)=\frac{6x^2*(2x^2+4)-2x^3*4x}{(2^2+4)^2}$\\
+\subsubsection{Kettenregel}
+F"ur ineinander geschachtelte (verkettete) Funktionen gilt die sogenannte Kettenregel.\\
+Dabei wird die Funktion ganz normal abgeleitet und die innere Funktion \textcolor{red}{nachdifferenziert}.
+$f(x)=f(g(x))\Rightarrow f'(g(x))=f'(g(x))\textcolor{red}{g'(x)}$\\
+Beispiel: $f(g(x))=x^{(x^2+4)}\Rightarrow f'(g(x))=(x^2+4)*x^{(x^2+4-1)}\textcolor{red}{*2x}$
+\subsection{"Ubungen}
+\begin{enumerate}
+\item Bilde die Ableitungen folgender Terme
+\begin{itemize}
+\item $f(x)=12x^3 - 3x^2 + x + 12$
+\item $f(x)= 6 sin^2(x) + cos(x) $
+\item $f(x)= \frac{x^2-x}{x^2+x}$
+\item $f(x)= \frac{3x}{12x^2 - 4x + 2} * sin^2(x) - 3cos(x) + 1$
+\end{itemize}
+Welche dieser Funktionen sind nicht differenzierbar?
+\begin{itemize}
+\item $f(x)=\lbrace^{3x; f"ur x < 3}_{2x; f"ur x>3}$
+\item $f(x)=|x|$
+\item $f(x)= \frac{x^3}{sin(x)}$
+\item $f(x)= 0$
+\end{itemize}
+\end{enumerate}

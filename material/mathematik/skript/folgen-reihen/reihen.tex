@@ -1,0 +1,46 @@
+\subsection{Reihen}
+Eine Reihe ist eine Folge von Partialsummen.\\
+Anders ausgedr"uckt eine Reihe ist im Grunde genommen das was entsteht, wenn man die einzelnen Glieder einer Folge aufsummiert. Will man nun eine bestimmte Anzahl (oder alle) Glieder der Folge $a_n = \frac{1}{n}$ aufsummieren, so w"are es umst"andlich, wenn nicht sogar unm"oglich, diese alle auszurechnen und dann erst hinzuschreiben.\\
+Deshalb wurde ein neues, mathematisches Symbol eingef"uhrt, das so genannte "'Summen-Zeichen"' $\sum$.
+\vspace{1 cm}\\
+Folgende Grafik zeigt nun noch einmal aus welchen Teilen sich das Summen-Zeichen zusammen setzt:
+\vspace{0.5 cm}\\
+\begin{minipage}{7 cm}
+\includegraphics[width = 7 cm]{pictures/summe}
+\begin{description}
+\item[Endwert] Dieser Wert bestimmt, bis zu welchem Glied die Folge aufsummiert werden soll.
+\end{description}
+\end{minipage}
+\begin{minipage}{7 cm}
+\begin{description}
+\item[Startwert] Dieser Wert ist der erste Wert der Laufvariable und bestimmt somit das erste aufsummierte Folgeglied.
+\item[Laufvariable] Diese Variable ist auch Teil des Bildungsgesetzes und wird pro aufsummierten Folgeglieds um 1 erh"oht, bis sie den Endwert erreicht hat.
+\item[Funktion bzw. der Laufvariable] Hiermit ist das Bildungsgesetz der urspr"unglichen Folge gemeint.
+\end{description}
+\end{minipage}
+
+\subsubsection{Endliche Reihen}
+Als endliche Reihen werden Reihen bezeichnet, deren Startwert und Endwert nicht gegen Unendlich gehen. (Ich sage hier mit Absicht "'\textbf{gegen} plus oder minus Unendlich geht"', da der Wert Unendlich logischer Weise niemals erreicht werden kann, auch wenn Chuck Norris bis Unendlich z"ahlen kann...)
+
+\subsubsection{Unendliche Reihen}
+Was f"ur eine "Uberraschung, dass es bei Unendlichen Reihen nun so ist, dass der Endwert gegen Unendlich geht.
+
+\paragraph{Schreibweise}
+$s = \sum\limits_{k=0}^{\infty}g(k)$\\
+
+\subsubsection{Monotonie, Beschr"anktheit und Konvergenz}
+Genau wie Folgen k"onnen auch Reihen monoton, beschr"ankt und konvergent gegen einen bestimmten Wert sein. Die Definition dieser Begriffe bleibt jedoch genau die selbe, wie auch bei Folgen, weshalb ich sie mir hier spare.
+
+\subsection{Besondere Reihen}
+\subsubsection{Konvergierende Reihen und Nullfolgen}
+Das Bildungsgesetz jeder konvergierenden Reihe beschreibt eine Nullfolge.\\
+\textcolor{red}{Anders herum stimmt das allerdings nicht!}\\
+Bekanntestes Gegenbeispiel hierf"ur ist die so genannte \textbf{Harmonische Reihe}:\\
+$s_n = \sum\limits_{k=1}^{n}\frac{1}{k}$\\
+Diese Reihe divergiert gegen Unendlich! Sie wird auch als \textcolor{red}{harmonische Reihe} bezeichnet.\\
+Beweis mithilfe einer Absch"atzung:\\
+\includegraphics[width = 10 cm]{pictures/AbschaetzungHarmReihe}\footnote{Prof. Eich-Soellner, Analysis-Skript SS 2011, S.30}
+
+\subsubsection{Geometrische Reihen}
+Jede geometrische Reihe kann auch wie folgt dargestellt werden:\\
+\includegraphics[width = 4.5 cm]{pictures/geometrischeReihen}\\

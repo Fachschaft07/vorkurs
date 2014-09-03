@@ -1,0 +1,43 @@
+\documentclass[12pt,a4paper,titlepage]{scrartcl}
+\usepackage[left=3cm,right=4cm,top=3cm,bottom=3cm,includeheadfoot]{geometry}
+\usepackage{german}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{polynom}
+\usepackage{array}
+\usepackage[colorlinks,pdfpagelabels,pdfstartview = FitH,bookmarksopen = true,bookmarksnumbered = true,linkcolor = black,plainpages = false,hypertexnames = false,citecolor = black]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{Vorkurs (Mathematik)}
+\renewcommand{\headrulewidth}{0.5 pt}
+\fancyfoot[L]{\today}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{by S. Pl"oderl}
+\renewcommand{\footrulewidth}{0.5 pt}
+\newcommand{\psection}[1]{\pagebreak\section{#1}}
+\definecolor{DarkGrey}{RGB}{128,128,128}
+\begin{document}
+\input{inputs/title}
+
+\psection{Einf"uhrung}
+\input{inputs/einfuehrung}
+
+\psection{Folgen und Reihen}
+\input{inputs/folgenUReihen}
+
+\psection{Funktionen}
+\input{inputs/funktionen}
+
+\psection{Differentiation}
+\input{inputs/differentiation}
+
+\psection{Integration}
+\input{inputs/integration}
+
+\psection{Beweisverfahren}
+\input{inputs/beweis}
+
+\end{document}

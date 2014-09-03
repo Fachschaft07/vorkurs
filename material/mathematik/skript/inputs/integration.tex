@@ -1,0 +1,33 @@
+\subsection{Integration}
+Definition (Integral): ein Integral ist die Fl"achenbilanz zwischen einem Funktionsgraphen und der x-Achse.\\
+Integrale werden immer in Intervallen berechnet.\\
+Dabei unterscheidet man offene Integrale, d.h ein Integral ohne Grenzen und ein geschlossenes Integral, welches lediglich in einem bestimmten Intervall berechnet wird.\\
+Schreibweise: $\int f(x)dx\Rightarrow$  offenes Integral\\
+\hspace{2.5 cm}$\int\limits_{a}^{b}f(x)dx \Rightarrow$ geschlossenes Integral im Intervall [a;b]\\
+Dabei beschreibt das dx am Ende jeweils, nach welcher Variable integriert wird. In der Physik beispielsweise findet man auch h"aufig die Bezeichnung dt.
+\subsubsection{Stammfunktionen}
+Definition: die Ableitung einer Stammfunktion ergibt den Funktionsterm der ursprünglichen Funktion.\\
+Symbol der Stammfunktion: F(x)     d.h. $F'(x)=f(x)$
+\subsubsection{Berechnung von Stammfunktionen}
+Die Stammfunktion erh"alt man, indem man die Ableitung r"uckw"arts rechnet. D.h. ich addiere den Exponenten um 1, bilde daraus einen Bruch der Form $\frac{1}{Exponent+1}$ und multipliziere diesen mit dem Faktor vor der Basis.
+Mit dieser Methode lassen sich zu fast allen Polynomen Stammfunktionen berechnen. Da es sich um eine Stammfunktion handelt, muss sie am Ende noch mit einer unbekannten Konstanten C addiert werden.
+\subsubsection{Hauptsatz der Differential- und Integralrechnung (HDI)}
+\textcolor{red}{HDI}:\textcolor{red}{!!!Jede Integralfunktion ist eine Stammfunktion der zu integrierenden Funktion!!!}
+\subsubsection{Berechnung von Integralen}
+Zun"achst berechnet man sich eine Stammfunktion der Integralfunktion.\\
+$\int\limits_{a}^{b} f(x)dx \Rightarrow [F(x)]^b_a$\\
+Als n"achstes setzt man die obere Grenze in die Stammfunktion ein und subtrahiert von diesem Wert den Wert der Stammfunktion mit der eingesetzten unteren Grenze.\\
+$F(b)-F(a)$
+\subsubsection{Berechnung von Fl"ache zwischen zwei Graphen}
+Um die Fl"ache zwischen zwei Graphen f(x) und g(x) zu ermitteln, berechnet man sich zun"achst die Schnittpunkte der beiden Graphen, welche die Intervallgrenzen bilden. Wenn man nun eine neue Funktion h(x) aus der Subtraktion der beiden Funktionen f(x) und g(x) bildet und das Integral dieser Funktion "uber die beiden Schnittpunkte berechnet, erh"alt man die Fl"ache zwischen den beiden Graphen.
+
+\subsection{"Ubung}
+\begin{enumerate}
+\item Berechne die Stammfunktionen folgender Funktionen
+\begin{itemize}
+\item $f(x)=x^2-8$
+\item $f(x)=3x^2+4x-16$
+\item $f(x)=sin(x)-3$
+\end{itemize}
+\item Berechne nun alle Fl"achen zwischen den oben gegebenen Graphen.
+\end{enumerate}
