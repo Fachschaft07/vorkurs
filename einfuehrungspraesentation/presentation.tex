@@ -3,6 +3,7 @@
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
+\usepackage{pdfpages}
 
 \mode<presentation>{
 	\definecolor{LogoRed}{RGB}{219,00,31}
@@ -83,29 +84,24 @@
 \frametitle{Die Fachschaft}
 
 \begin{center}
-\pause
-
-\includegraphics[width=1.9cm]{img/benni1.jpg}
-\pause
-\hspace{0.1cm}
-\includegraphics[width=1.9cm]{img/benni2.jpg}
-\pause
-\hspace{0.1cm}
-\includegraphics[width=1.9cm]{img/benni3.jpg}\\
-\pause
-
-\vspace{0.2cm}
-
-\includegraphics[width=1.9cm]{img/benni4.jpg}
-\pause
-\hspace{0.1cm}
-\includegraphics[width=1.9cm]{img/benni5.jpg}
-\pause
-\hspace{0.1cm}
-\includegraphics[width=1.9cm]{img/benni6.jpg}
-
-\vspace{0.1cm}
-
+%\pause
+%\includegraphics[width=1.9cm]{img/benni1.jpg}
+%\pause
+%\hspace{0.1cm}
+%\includegraphics[width=1.9cm]{img/benni2.jpg}
+%\pause
+%\hspace{0.1cm}
+%\includegraphics[width=1.9cm]{img/benni3.jpg}\\
+%\pause
+%\vspace{0.2cm}
+%\includegraphics[width=1.9cm]{img/benni4.jpg}
+%\pause
+%\hspace{0.1cm}
+%\includegraphics[width=1.9cm]{img/benni5.jpg}
+%\pause
+%\hspace{0.1cm}
+%\includegraphics[width=1.9cm]{img/benni6.jpg}
+%\vspace{0.1cm}
 Benjamin Reischböck
 
 \end{center}
@@ -231,6 +227,18 @@ Benjamin Reischböck
 \frametitle{Gruppeneinteilung}
 \end{frame}
 
+{
+	\setbeamercolor{background canvas}{bg=}
+	\includepdf[pages=1]{timetable.pdf}
+	\includepdf[pages=2]{timetable.pdf}
+	\includepdf[pages=3]{timetable.pdf}
+	\includepdf[pages=4]{timetable.pdf}
+	\includepdf[pages=5]{timetable.pdf}
+}
+
+\begin{frame}
+\frametitle{Gruppeneinteilung}
+\end{frame}
 
 \begin{frame}
 \frametitle{Ende}
@@ -240,6 +248,5 @@ und\\
 viel Spaß im Vorkurs!
 \end{center}
 \end{frame}
-
 
 \end{document}
