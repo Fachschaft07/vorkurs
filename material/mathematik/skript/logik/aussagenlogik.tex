@@ -1,0 +1,296 @@
+Die Logik "offnete den Weg f"ur die Informatik. Sie war immer eine Disziplin der Philosophie und hat eine sehr interessante Geschichte (von Aristoteles, Kant, Hegel, Boole, Russell, Gentzen, Skolem, G"odel, bis zu Turing und weiter) hinter sich gelassen. Die Aussagenlogik, als kleiner aber grundlegender Teil, ist intuitiv und auf sehr nat"urliche Weise begreifbar. Sie ist fundamental um mathematische Ausdr"ucke zu verstehen und wird in allen Bereichen der Mathematik verwendet. In der Informatik hat die Logik und damit auch die Aussagenlogik eine wichtige Bedeutung. In der technischen Informatik werden Kodierer und Dekodierer, Addierer und Multiplizierer mit sogenannten logischen Gattern realisiert. Ein Gatter ist nichts anders als eine logische Verkn"upfung. Zum Beispiel ist das Und-Gatter ein Gatter mit zwei Eing"angen $x_{in}^1, x_{in}^2$ und einem Ausgang $x_{out}$ mit 
+\begin{equation*}
+	x_{out} = x_{in}^1 \land x_{in}^2,
+\end{equation*}
+legt man nun eine gewisse Spannung an $x_{in}^1$ und gleichzeitig an $x_{in}^2$ an so gibt das Gatter diese Spannung weiter ansonsten nicht. Die Gatter bilden den Kern f"ur z.B. Mikroprozessoren. Zudem ist die Aussagenlogik in jeder Programmiersprache eingebettet und sie werden viele logische Ausdr"ucke, zum Beispiel in Java, schreiben.
+
+Sp"ater im Studium werden Sie (Wirtschaftsinformatiker ausgeschlossen) das Konzept einer formalen Sprache kennenlernen, dabei sind formale Sprachen und bestimmte Teile der Logik eng miteinander verbunden. Die aktuelle Forschung besch"aftigt sich mit der automatisierten Beweis"uberpr"ufung und sogar mit dem automatisierten Beweisen bisher unbewiesener Aussagen. Die Logik ist zudem im Bereich k"unstliche Intelligenz und Robotik essentiell.
+
+Wir werden lediglich die Aussagenlogik besprechen und einen ganz kurzen ersten Blick auf die Pr"adikatenlogik werfen. Beherrschen sie diese beiden Bereiche der Logik, so sind sie f"ur das gesamte Bachelorstudium gewappnet.
+
+%\subsection{Alles auf Anfang}
+%Ein mathematisches System baut auf gewissen Grundregeln auf, die nicht bewiesen werden k"onnen und intuitiv gew"ahlt werden (meist durch Beobachtungen aus der Natur). Ohne Grundregeln k"onnte man keine Folgerungen aufstellen. Das hei{\ss}t aber auch, dass wir uns immer im Hinterkopf halten m"ussen, dass wenn diese Regeln in sich zusammenbrechen, auch das gesamte System zusammenbricht. Eine absolute Wahrheit ist also nicht bekannt. Dies mag zun"achst sehr unbefriedigend klingen aber die Resultate aus der Mathematik haben sich bisher als wahr herausgestellt, eine absolute Gewissheit existiert allerdings nicht!
+
+\subsection{Aussagen}
+\begin{definition}[Aussage]
+Eine Aussage ist ein als Satz formulierter Gedanke, dem man auf sinnvolle Weise einen Wahrheitswert zuordnen kann.
+\end{definition}
+
+\begin{axiom}[Gesetzt vom ausgeschlossenen Dritten]
+Eine Aussage ist entweder \textbf{wahr (w)} oder \textbf{falsch (f)}.
+\end{axiom}
+
+\subsubsection*{Beispiele}
+\begin{itemize}
+\item $A_1 := $ Die Sonne strahlt w"arme ab.
+\item $A_2 := $ Bayern M"unchen wird diese Saison wieder deutscher Meister.
+\item $A_3 := 1+1 = 2$
+\item $A_4 := $ Wann ist in diesem Jahr Ostern?
+\end{itemize}
+$A_1$ und $A_3$ sind offensichtlich wahre Aussagen. $A_2$ k"onnen wir derzeit nicht "uberpr"ufen, sie ist aber trotzdem wahr oder falsch und darum zul"assig. $A_4$ ist keine Aussage.
+
+\subsubsection*{Schreibweisen}
+Wir schreiben gew"ohnlich $A$ ist \textbf{wahr} oder \textbf{falsch} bzw. \textbf{w} oder \textbf{f} bzw. (f"ur uns Informatiker) \textbf{1} oder \textbf{0}.
+
+\subsection{Logische Verkn"upfungen}
+\begin{definition}[Negation]
+Unter der Negation einer Aussage $A$ versteht man die Aussage $\neg A$ (Mathe) bzw. $\overline{A}$ (Informatik) ('nicht $A$'), die genau dann wahr ist, wenn $A$ selbst falsch ist.
+\end{definition}
+Es folgt eine sogenannte \textbf{Wahrheitstabelle} der Verkn"upfung. In der ersten Spalte stehen die Werte die $A$ annimmt und in der rechten Spalte Werte die $\neg A$ dann besitzt. Solche Wahrheitstabellen werden Sie in der technischen Informatik viele erstellen. Besitzt eine logische Verkn"upfung bzw. eine aussagenlogische Formel $k$ verschiedene Variablen, so gibt es $2^k$ verschiedene Belegungen. Dabei bedeutet, Belegung, dass jede Variable bzw. Aussage entweder wahr oder falsch ist. Jede Aussage kann 2 Werte annehmen bei $k$ Aussagen sind das $\underbrace{2 \cdot 2 \cdot \cdots \cdots 2}_{k-\text{mal}} = 2^k$ M"oglichkeiten.
+\begin{center}
+\begin{tabular}{c||c}
+ $A$ & $\neg A$  \\ 
+\hline
+\cellcolor{ared}falsch  & \cellcolor{agreen}wahr   \\ 
+\cellcolor{green}wahr  & \cellcolor{ared} falsch  \\ 
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection*{Beispiel}
+\begin{itemize}
+	\item Die Negation der Aussage '4 ist ungerade' ist die Aussage '4 ist gerade', denn es gibt nur diese beiden M"oglichkeiten.
+	\item Aber die Negation der Aussage '4.5 ist ungerade' ist nicht die Aussage '4.5 ist gerade', denn beide Aussagen sind falsch, ja sogar unsinnig. Die Negation der Aussage 'Diese Kuh ist schwarz' ist nicht etwa die Aussage 'Diese Kuh ist wei{\ss}', denn es gibt ja noch andere Farben. Vielmehr m"usste man sagen:'Diese Kuh ist nicht schwarz'. Das umgangssprachliche Gegengenteil ist meist etwas anderes als die logische Verneinung.
+\end{itemize}
+
+\begin{definition}[Konjunktion]
+Unter der Konjunktion zweier Aussagen $A$ und $B$ versteht man die Aussage $A \land B$ (Mathe) bzw. $A \cdot B$ (Informatik) (in Worten:'$A$ und $B$'), die genau dann wahr ist, wenn $A$ und $B$ gleichzeitig wahr sind.
+\end{definition}
+In den ersten Spalten dieser \textbf{Wahrheitstabelle} stehen die Werte der Variablen der Konjunktion in der letzten Spalte der resultierende Wert.
+\begin{center}
+\begin{tabular}{c|c||c}
+ $A$& $B$  &  $A \land B$  \\ 
+\hline
+\cellcolor{ared} falsch & \cellcolor{ared} falsch & \cellcolor{ared} falsch   \\ 
+\cellcolor{ared} falsch & \cellcolor{agreen} wahr & \cellcolor{ared} falsch  \\ 
+\cellcolor{agreen} wahr & \cellcolor{ared} falsch & \cellcolor{ared} falsch   \\ 
+\cellcolor{agreen} wahr & \cellcolor{agreen} wahr & \cellcolor{agreen} wahr  \\ 
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection*{Beispiel}
+\begin{itemize}
+	\item '18 ist eine gerade Zahl und durch 3 teilbar', ist eine wahre Aussage im Rahmen des Axiomensystems f"ur die Arithmetik, welche hier umgangssprachlich vorausgesetzt wurde. Eigentlich handelt es sich um die Aussage '18 ist eine gerade Zahl, und 18 ist durch 3 teilbar'.
+	\item '15 ist eine gerade Zahl und durch 3 teilbar', ist eine falsche Aussage, denn der erste Teil ist falsch.
+\end{itemize}
+
+
+\begin{definition}[Disjunktion]
+Unter der Disjunktion zweier Aussagen $A$ und $B$ versteht man die Aussage $A \lor B$ (Mathe) bzw. $A + B$ (Informatik) (in Worten:'$A$ oder $B$'), die genau dann wahr ist, wenn wenigstens eine der Aussagen $A$ oder $B$ wahr ist.
+\end{definition}
+In den ersten Spalten dieser \textbf{Wahrheitstabelle} stehen die Werte der Variablen der Konjunktion in der letzten Spalte der resultierende Wert.
+\begin{center}
+\begin{tabular}{c|c||c}
+$A$& $B$  &  $A \lor B$  \\ 
+ \cellcolor{ared}falsch & \cellcolor{ared} falsch & \cellcolor{ared}falsch   \\ 
+ \cellcolor{ared}falsch & \cellcolor{agreen}wahr & \cellcolor{agreen}wahr  \\ 
+ \cellcolor{agreen}wahr & \cellcolor{ared} falsch & \cellcolor{agreen}wahr   \\ 
+\cellcolor{agreen}wahr & \cellcolor{agreen}wahr & \cellcolor{agreen}wahr  \\ 
+\hline
+\end{tabular}
+\end{center}
+Hier beginnen die Schwierigkeiten mit der Umgangssprache. Umgangssprachlich meinen wir mit 'oder' meist 'entweder $\ldots$ oder'. Was aber nicht der logischen Disjunktion entspricht.
+
+\subsubsection*{Beispiel}
+\begin{itemize}
+	\item 'Ich werde Mathematik oder Informatik studieren', diese Aussage ist auch dann wahr, wenn ich mich daf"ur entscheide, beide F"acher zu studieren. Falsch wird sie aber z.B., wenn ich nur Biologie studiere.
+	\item 'Ich kann nur H"u oder Hott sagen'. Das ist nat"urlich falsch, denn ich kann ja beide W"orter vermeiden.
+\end{itemize}
+
+
+\begin{definition}[Implikation]
+Unter der Implikation zweier Aussagen $A$ und $B$ versteht man die Aussage $A \Rightarrow B$ (in Worten:'$A$ impliziert $B$' oder 'aus $A$ folgt $B$'), versteht man die Zusammengesetzte Aussage $ (\neg A) \lor B$.
+\end{definition}
+In den ersten Spalten dieser \textbf{Wahrheitstabelle} stehen die Werte der Variablen der Konjunktion in der letzten beiden Spalte der resultierenden Werte (in der letzten der finale Wert).
+\begin{center}
+\begin{tabular}{c|c||c||c}
+$A$& $B$ &$\neg A$&  $\neg A \lor B$  \\ 
+ \cellcolor{ared}falsch &  \cellcolor{ared}falsch & \cellcolor{agreen}wahr  & \cellcolor{agreen}wahr  \\ 
+ \cellcolor{ared}falsch & \cellcolor{agreen}wahr & \cellcolor{agreen}wahr  &  \cellcolor{agreen}wahr  \\ 
+\cellcolor{agreen}wahr &  \cellcolor{ared}falsch & \cellcolor{ared} falsch  &  \cellcolor{ared}falsch  \\ 
+\cellcolor{agreen}wahr & \cellcolor{agreen}wahr & \cellcolor{ared} falsch  &  \cellcolor{agreen}wahr  \\ 
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection*{Beispiel}
+$A$ wird auch als Pr"amisse bezeichnet. Eigentlich sieht alles recht einfach aus. Nehmen wir die Aussagen:'($A$) Wenn es regnet folgt daraus, dass ($B$) die Stra{\ss}e nass wird'. Wenn es nun regnet und die Stra{\ss}e nass wird ist die Aussage wahr. Doch was passiert wenn es nicht regnet? Hier liegt der Knackpunkt! Wenn es nicht regnet ist die Aussage immer wahr egal ob die Stra{\ss}e nun nass oder trocken ist.
+\begin{center}
+Aus einer falschen Aussage kann man alles folgern!
+\end{center}
+Wir k"onnen die Aussage auch wie folgt formulieren:
+\begin{center}
+Ist die Stra{\ss}e nicht nass, so folgt daraus, es regnet nicht. 
+\end{center}
+Wir sehen hier die Anwendung des Kontropositionsgesetzes:
+\begin{equation*}
+((\neg B) \Rightarrow (\neg A)) \iff (A \Rightarrow B)
+\end{equation*}
+
+\begin{definition}["Aquivalenz]
+Unter der "aquivalenz zweier Aussagen $A$ und $B$ versteht man die Aussage $A \iff B$ (in Worten:'$A$ gilt genau dann wenn $B$ gilt'). Diese ist genau dann wahr wenn $A \Rightarrow B \land B \Rightarrow A$ wahr ist. 
+\end{definition}
+In den ersten Spalten dieser \textbf{Wahrheitstabelle} stehen die Werte der Variablen der Konjunktion in der letzten Spalte der resultierende Wert.
+\begin{center}
+\begin{tabular}{|c|c||c|}
+ $A$ & $B$ & $A \iff B$  \\ 
+\cellcolor{ared}falsch & \cellcolor{ared}falsch & \cellcolor{agreen}wahr    \\ 
+\cellcolor{ared}falsch & \cellcolor{agreen}wahr & \cellcolor{ared}falsch    \\ 
+\cellcolor{agreen}wahr & \cellcolor{ared}falsch & \cellcolor{ared}falsch    \\ 
+\cellcolor{agreen}wahr & \cellcolor{agreen}wahr & \cellcolor{agreen}wahr    \\ 
+\hline
+\end{tabular}
+\end{center}
+Ein Beispiel w"are $x + 5 = 7 \iff x + 8 = 10$.
+
+
+\begin{definition}[Exklusives Oder]
+Unter dem exklusives Oder zweier Aussagen $A$ und $B$ versteht man die Aussage $A \text{ XOR } B$ (in Worten:'entweder $A$ oder $B$'). Diese ist genau dann wahr wenn $(A \land \neg B) \lor (\neg A \land B)$ wahr ist. 
+\end{definition}
+In den ersten Spalten dieser \textbf{Wahrheitstabelle} stehen die Werte der Variablen der Konjunktion in der letzten Spalte der resultierende Wert.
+\begin{center}
+\begin{tabular}{|c|c||c|}
+$A$ & $B$ & $A \textsf{ XOR } B$  \\ 
+\cellcolor{ared}falsch &  \cellcolor{ared}falsch &  \cellcolor{ared}falsch    \\ 
+\cellcolor{ared}falsch & \cellcolor{agreen}wahr & \cellcolor{agreen}wahr    \\ 
+\cellcolor{agreen}wahr & \cellcolor{ared}falsch & \cellcolor{agreen}wahr    \\ 
+\cellcolor{agreen}wahr & \cellcolor{agreen}wahr & \cellcolor{ared}falsch    \\ 
+\hline
+\end{tabular}
+\end{center}
+Das exklusive Oder ist f"ur die Informatiker so Hilfreich, dass es, anders als die Implikation, in die meisten Programmiersprachen als Standardfunktion eingebaut ist.
+
+\subsection{Vollst"andigkeit}
+Wie ihr sicher gesehen habt lassen sich XOR, $\iff, \Rightarrow$ mithilfe von $\neg, \land, \lor$ darstellen und tats"achlich reichen die Verkn"upfungen $\neg, \land, \lor$ aus um jede denkbare Formel aufzustellen. Trotzdem sollte man die Bedeutung der anderen Symbole beherrschen, da diese in jedem Mathe- oder Informatikbuch auftauchen und sehr n"utzliche Abk"urzungen sind. Man bedenke auch, dass auch eine andere Menge an Verkn"upfungen vollst"andig sein kann $A \land B$ kann zum Beispiel durch $\neg (A \Rightarrow \neg B)$ ausgedr"uckt werden, man "uberlege warum?
+
+\subsection{Grundlegende Rechenregeln}
+Wir verwenden das Symbol $\equiv$ anstatt $\iff$ um anzudeuten, dass wir zwei Ausdr"ucke vergleichen m"ochten und diese sollen durch das $\equiv$-Symbol besser abgetrennt werden. Die Symbole k"onnen als identisch angesehen werden. Wir m"ochten mit $\equiv$-Symbol verdeutlichen, dass die eine durch die andere Formel ersetzt/vereinfacht werden kann, da sie "aquivalent sind.
+\begin{itemize}
+\item Neutrales Element 1: $A \ \lor $ wahr $\equiv$ wahr
+\item Neutrales Element 2: $A \ \lor $ falsch $\equiv A$
+\item Neutrales Element 3: $A \ \land $ wahr $\equiv A$
+\item Neutrales Element 4: $A \ \land $ falsch $\equiv$ falsch
+\item Kommutativgesetz 1: $A \lor B \equiv B \lor A$
+\item Kommutativgesetz 2: $A \land B \equiv B \land A$
+\item Assoziativgesetz 1: $(A \lor B) \lor C \equiv A \lor (B \lor C)$
+\item Assoziativgesetz 2: $A \land B) \land C \equiv A \land (B \land C)$
+\item Distributivgesetz 1: $(A \land B) \lor C \equiv A \lor C \land  B \lor C$
+\item Distributivgesetz 2: $(A \lor B) \land C \equiv A \land C \lor B \land C$
+\item Idempotenzgesetz 1: $A \lor A \equiv A$
+\item Idempotenzgesetz 2: $A \land A \equiv A$
+\item Negation 1: $\neg \neg A \equiv A$
+\item Negation 2: $\neg A \lor A \equiv $ wahr
+\item Negation 3: $\neg A \land A \equiv$ falsch
+\item Absorbtionsgesetz 1: $A \lor (A \land B) \equiv A$
+\item Absorbtionsgesetz 2: $A \land (A \lor B) \equiv A$
+\item Gesetz von de Morgan 1: $\neg (A \lor B) \equiv \neg A \land \neg B$ (sehr n"utzlich)
+\item Gesetz von de Morgan 2: $\neg (A \land B) \equiv \neg A \lor \neg B$ (sehr n"utzlich)
+\end{itemize}
+Man bezeichnet wahr auch als das neutrale Element der Konjunktion ("ahnlich der 1 in der Multiplikation) und falsch als das neutrale Element der Disjunktion ("ahnlich der 0 in der Addition). Dies Erkl"art auch die Informatikschreibweise denn verwenden wir anstatt wahr die 1 und anstatt falsch die 0 so k"onnen wir mit einer Aussageformel rechen: $A \land B \equiv A \cdot B$, $A \lor B \equiv A + B \equiv \min(A + B, 1)$, das aber nur am Rande.
+
+\subsection{Tautologie}
+Als Tautologie bezeichnet man eine Aussage die immer wahr ist. So zum Beispiel das Gesetzt vom ausgeschlossenen Dritten
+
+\subsubsection*{Beispiel}
+\begin{equation*}
+A \lor (\neg A)
+\end{equation*}
+andere Tautologien sind nicht auf den ersten Blick zu Erkennen.
+
+\subsection{Widerspruch}
+Als Widerspruch bezeichnet man eine Aussage die immer falsch ist. 
+\begin{axiom}[Widerspruch]
+$F$ ist genau dann ein Widerspruch, wenn $\neg F$ eine Tautologie ist.
+\end{axiom}
+
+\subsubsection*{Beispiel}
+Nehmen wir das Beispiel von oben:
+\begin{equation*}
+(\neg A) \land A
+\end{equation*}
+ist immer falsch, denn immer wenn eine Seite der Konjunktion wahr ist, ist die andere falsch. Damit aber eine Konjunktion wahr wird m"ussen beide Seiten wahr sein. Verneinen wir diese Aussage so erhalten wir:
+\begin{equation*}
+\neg ((\neg A) \land A) \equiv^{\text{nach de Morgen 2}} ((\neg (\neg A)) \lor (\neg A)) \equiv^{\text{nach Negation 1}} (A \lor (\neg A))
+\end{equation*} 
+
+\subsection{Aussagelogik "uber Mengen}
+Bisher haben wir nur Aussagen betrachtet die sich nicht auf eine bestimmte Menge beschr"anken. Wir k"onnten zum Beispiel statt $A := \textsf{ Tomaten sind rot,} $ sagen 
+\begin{itemize}
+\item $A := \textsf{ \textbf{alle} Tomaten sind rot} $
+\item $A := \textsf{ \textbf{keine} Tomate ist rot} $
+\item $A := \textsf{ \textbf{es exisitiert mindestens eine} Tomate die rot ist} $
+\item $A := \textsf{ \textbf{nicht alle} Tomaten sind rot} $
+\end{itemize}
+Sp"ater werden wir daf"ur noch spezielle mathematische Symbole definieren, jetzt interessiert uns allerdings was diese neuen Angaben genau aussagen.
+\begin{itemize}
+\item alle: Wenn eine Aussage f"ur alle gelten soll, so ist sie bereits falsch, wenn sie f"ur einen nicht gilt
+\item keiner: Wenn eine Aussage f"ur keinen gelten soll, so ist sie bereits falsch, wenn sie f"ur mindestens einen gilt
+\item mindestens einer: Wenn die Aussage f"ur mindestens einen gelten soll, so ist sie falsch, wenn sie f"ur keinen gilt
+\item nicht alle: Wenn die Aussage nicht f"ur alle gilt, so ist sie falsch, wenn sie f"ur alle gilt
+\end{itemize}
+
+Das sieht doch sehr logisch aus, ich denke da w"are jeder selbst drauf gekommen. Trotzdem ist es ein beliebter Fehler folgendes zu schreiben:
+$$A := \textsc{ Alle Schafe sind schwarz } \color{red} \Rightarrow \neg A := \textsc{ Kein Schaf ist schwarz}$$\textbf{Achtung:} Umgangssprachlich vielleicht richtig aber logisch, mathematisch absolut falsch!!! Richtig w"are:
+$$A := \textsc{ Alle Schafe sind schwarz } \Rightarrow$$
+$$\neg A := \textsc{ Es gibt mindestens ein Schaf das nicht schwarz ist}$$
+
+\subsection{Aufgaben}
+Werten Sie folgende Ausdr"ucke aus
+\begin{enumerate}
+	\item wahr $\land$ falsch $\lor$ wahr
+	\item wahr $XOR$ (wahr $\lor$ falsch)
+	\item wahr $XOR$ (wahr $\land$ falsch)
+	\item falsch $XOR$ falsch $\lor$ wahr $\Rightarrow$ wahr
+	\item (falsch $XOR$ falsch $\land$ wahr) $\Rightarrow$ falsch
+	\item falsch $\iff$ wahr
+	\item (wahr $\Rightarrow$ wahr) $\iff$ (falsch $\Rightarrow$ falsch)
+\end{enumerate}
+
+Vereinfachen Sie folgende Ausdr"ucke
+\begin{enumerate}
+	\item $A \lor (B \land A) \lor (C \land A) \lor (D \land B)$
+	\item $A \lor \neg A \land (C \land \neg C)$
+	\item $(A \Rightarrow B) \land (\neg B \Rightarrow \neg A)$
+	\item $A \land (A \lor B)$
+\end{enumerate}
+
+F"uhren Sie folgende Negationen aus
+\begin{enumerate}
+	\item $\neg (\neg C \lor \neg D)$
+	\item $\neg ((A \lor B) \land (C \lor D))$
+	\item $\neg A := $ Kein Mensch kann Fu{\ss}ballspielen
+	\item $\neg A := $ Alle Rosen sind rot
+	\item $\neg A := $ Alle Tomaten schmecken klasse und sind rot
+	\item $\neg A := $ Wenn ich im Lotto gewinne folgt daraus, dass ich viel Geld habe
+\end{enumerate}
+
+Zeigen Sie, dass die folgenden Aussageverkn"upfungen Tautologien sind:
+\begin{enumerate}
+	\item $(A \land (A \Rightarrow B)) \Rightarrow B$ (Abtrennungsregel)
+	\item $((A \Rightarrow B) \land (B \Rightarrow C)) \Rightarrow (A \Rightarrow C)$ (Syllogismus-Regel)
+	\item $(A \Rightarrow B) \iff (\neg B \Rightarrow \neg A)$ (Kontrapositionsgesetz)
+\end{enumerate}
+
+\subsection{Erg"anzung}
+Dieser Teil ist nur f"ur alle Interessierten gedacht und wird nicht in der Vorlesung betrachtet.
+
+\subsubsection*{Theorien}
+Hierbei handelt es sich um eine Formalisierung, die \textbf{Intuition} von Logik die jedem Menschen innewohnt, die Aussagenlogik und die Pr"adikatenlogik reicht f"ur das Studium an der HM v"ollig aus. 
+
+Wenn wir beweisen wollen, dass eine Aussage $B$ wahr ist, und wenn wir schon wissen, dass Aussage $A$ wahr ist und dass $B$ von $A$ impliziert wird, wie gehen wir dann vor? Es sei $\mathcal{A}$ das System der Axiome unserer Theorie. Das sind einfach Aussagen, deren Wahrheit wir einfach festsetzen. Zu ihrer Formulierung benutzen wir primitive Terme und logische Verkn"upfungen. Mit Hilfe dieser primitiven Terme und logischen Verkn"upfungen lassen sich weitere Aussagen formulieren, die entweder wahr oder falsch sind. Mit $\mathcal{W}$ sei die Gesamtheit derjenigen Aussagen bezeichnet, die unter Voraussetzung von $\mathcal{A}$ wahr sind. Theoretisch lassen sich diese wahren Aussagen mit Hilfe von Wahrheitstafeln bestimmen. Praktisch wird das meist nicht so einfach gehen, man m"usste mit unendlich gro{\ss}en Tafeln arbeiten. Deshalb f"uhren wir ein Regelsystem zur Bildung von Ketten wahrer Aussagen $A_1, A_2, \ldots$ (sogenannter Beweise) ein, und wir sehen die Wahrheit einer Aussage $A$ als bewiesen an, wenn sie am Ende einer solchen Kette steht. Wir sagen dann, $A$ ist aus $\mathcal{A}$ ableitbar und schreiben:
+\begin{equation*}
+ \mathcal{A} \vdash A
+\end{equation*}
+Eine Beweiskette $A_1, A_2, \ldots, A_n$ wollen wir zul"assig nennen, wenn jede Aussage $A$, die in der Kette vorkommt, eine der folgenden Bedingungen erf"ullt:
+\begin{enumerate}
+\item $A$ ist eines der Axiome
+\item $A$ ist eine Tautologie ($\vdash A$)
+\item Es gibt eine Kette vor $A$ eine Aussage $B$ und die Aussage $B \Rightarrow A$. Diese Beweis-Schema tr"agt auch die Bezeichnung modus ponens und kann so beschrieben werden:
+Wenn $\mathcal{A} \vdash B$ und $\mathcal{A} \vdash (B \Rightarrow A$ dann $\mathcal{A} \vdash A$ (direkter Beweis)
+\item $A$ entsteht aus einer vorher abgeleiteten zusammengesetzten Aussage $B$, indem man eine in $B$ auftauchende Teilaussage durch eine "aquivalente ersetzt. Dieses Ersetzungs-Prinzip verleiht den Tautologien eine besondere Bedeutung.
+\item $A$ ist eine Definition, f"uhrt also nur eine andere Bezeichnung f"ur etwas bekanntes ein, wir verwenden hierf"ur $:=$ oder $:\iff$.
+\end{enumerate}
+
+\subsubsection*{Konstruktivismus}
+Es gibt logische System, neben der klassischen Logik, in denen das Gesetzt vom ausgeschlossenen Dritten \textbf{nicht} gilt, solche Systeme vermeiden damit den Beweis durch Widerspruch. Was erst einmal irrsinnig klingt macht Sinn wenn man bedenkt, dass z.B. durch das Gesetzt die Existenz von Objekten beweisen k"onnen ohne diese 'anzufassen' indem wir von der Nicht-Existenz ausgehen und damit zu einem Widerspruch gelangen (Stichwort: Konstruktivismus). Der Konstruktivismus ist f"ur Informatiker von gro{\ss}er Bedeutung. Die Beweise in der Informatik (sehen sie sp"ater in der theoretischen Informatik) sind fast immer konstruktiv. Solche Beweise liefern als Nebenprodukt oft einen konkreten L"osungsweg bzw. einen Algorithmus mit dem man etwas anfangen kann. Andere Beweise m"ogen einem eine Aussage beantworten, sonst haben sie aber keinerlei Mehrwert.

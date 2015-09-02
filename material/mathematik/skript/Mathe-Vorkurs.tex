@@ -2,31 +2,51 @@
 \usepackage[left=3cm,right=4cm,top=3cm,bottom=3cm,includeheadfoot]{geometry}
 \usepackage{german}
 \usepackage{graphicx}
+
 \usepackage{color}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{polynom}
 \usepackage{array}
+\usepackage[table]{xcolor}
 \usepackage[colorlinks,pdfpagelabels,pdfstartview = FitH,bookmarksopen = true,bookmarksnumbered = true,linkcolor = black,plainpages = false,hypertexnames = false,citecolor = black]{hyperref}
 \usepackage{fancyhdr}
+
+%Plots
+\usepackage{pgfplots}
+\usepackage{tikz}
+
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[C]{Vorkurs (Mathematik)}
 \renewcommand{\headrulewidth}{0.5 pt}
 \fancyfoot[L]{\today}
 \fancyfoot[C]{\thepage}
-\fancyfoot[R]{by S. Pl"oderl}
+\fancyfoot[R]{FS07}
 \renewcommand{\footrulewidth}{0.5 pt}
 \newcommand{\psection}[1]{\pagebreak\section{#1}}
 \definecolor{DarkGrey}{RGB}{128,128,128}
+
+\newtheorem{remark}{Bemerkung}[section]
+\newtheorem{axiom}{Satz}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Beispiel}[section]
+\newtheorem{important}{Merke}[section]
+\newtheorem{theorem}{Theorem}[section]
+
+\definecolor{agreen}{rgb}{0.5,1.0,0.5}
+\definecolor{ared}{rgb}{1.0,0.5,0.5}
+\definecolor{blue}{rgb}{0.5,0.5,1.0}
+
 \begin{document}
 \input{inputs/title}
 
 \psection{Einf"uhrung}
 \input{inputs/einfuehrung}
 
-\psection{Folgen und Reihen}
-\input{inputs/folgenUReihen}
+\psection{Aussagenlogik}
+\input{inputs/logik}
+
 
 \psection{Funktionen}
 \input{inputs/funktionen}
@@ -36,6 +56,9 @@
 
 \psection{Integration}
 \input{inputs/integration}
+
+\psection{Folgen und Reihen}
+\input{inputs/folgenUReihen}
 
 \psection{Beweisverfahren}
 \input{inputs/beweis}

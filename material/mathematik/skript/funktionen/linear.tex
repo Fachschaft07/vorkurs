@@ -1,47 +1,49 @@
 \subsection{Lineare Funktionen}
-Zu den einfachsten Funktionen geh"oren die linearen Funktionen.\\
-Alle linearen Funktionen (mit nur einer Variable) k"onnen in folgende Form gebracht werden: $f(x) = mx+t$.\\
-Hierbei ist m der konstante Wert der Steigung:\\
-$m= \frac{\triangle y}{\triangle x}=\frac{f(x_2)-f(x_1)}{x_2-x_1}$\\
-Die Konstante t ist auch als y-Achsenabschnitt bekannt. Er wird so bezeichnet, da die Funktion f"ur den x-Wert 0 den Funktionswert y = t annimmt.\\
-Lineare Funktionen existieren in drei Auspr"agungen. Geraden, Halbgeraden und Strecken.\\
-Eine Gerade ist unendlich lang, eine Strecke existiert nur zwischen zwei reellen Punkten und eine Halbgerade startet oder endet in genau einem Punkt. Der andere Teil geht ins Unendliche.
+Zu den einfachsten Funktionen geh"oren die linearen Funktionen. Alle linearen Funktionen (mit nur einer Variable) k"onnen in folgende Form gebracht werden: 
+\begin{equation*}
+f(x) = mx+t.
+\end{equation*}
+Hierbei ist m der konstante Wert der Steigung:
+\begin{equation*}
+m= \frac{\triangle y}{\triangle x}=\frac{f(x_2)-f(x_1)}{x_2-x_1}
+\end{equation*}
+Die Konstante $t$ ist auch als $y$-Achsenabschnitt bekannt. Er wird so bezeichnet, da die Funktion f"ur den $x$-Wert $0$ den Funktionswert $y = t$ annimmt. Viele komplizierte Funktionen werden am Ende doch wieder mit Hilfe einfacher lineare Funktionen angen"ahert. Lineare Funktionen lassen sich auf dem Computer leicht berechnen. Sie sind so prominent und verbreitet, dass es eine eigenen Vorlesung gibt: \textbf{Lineare Algebra}.
+
+%Lineare Funktionen existieren in drei Auspr"agungen. Geraden, Halbgeraden und Strecken. Eine Gerade ist unendlich lang, eine Strecke existiert nur zwischen zwei reellen Punkten und eine Halbgerade startet oder endet in genau einem Punkt. Der andere Teil geht ins Unendliche.
 
 \subsubsection{Die Punktsteigungsform}
 Um eine Gerade zu Definieren, sind immer zwei Dinge von N"oten:
 \begin{itemize}
-\item zwei Punkte, welche auf der Geraden liegen
-\item ein Punkt und die Steigung der Geraden
+\item zwei Punkte $P_1 = (x_1, f(x_1)), P_2 = (x_2, f(x_2))$, welche auf der Geraden liegen \textbf{oder}
+\item ein Punkt $P = (x_p, f(x_p))$ und die Steigung $m$ der Geraden
 \end{itemize}
-Um deren Gleichung zu berechnen, ben"otigt man die Punktsteigungsform, welche wie folgt lautet:\\
-$ f(x) = m(x-x_p) + y_p $
-m ist hierbei wie gehabt die Steigung der Geraden und x die Variable. \\
-$x_p$ und $y_p$ sind jedoch die Koordinaten eines Punktes P, welcher auf der Geraden liegt.
-Besitzt man die Steigung m nicht, sondern nur zwei Punkte der Geraden, so kann man diese mit deren Hilfe berechnen.\\
-Nachdem man die Punktsteigungsform dann ausmultipliziert hat, besitzt man wieder die ganz normale Geradengleichung, wie oben beschrieben.
+Im ersteren Fall berechnen wir $m$ nach obiger Gleichung $m = \frac{f(x_1) - f(x_2)}{x_1 - x_2}$ und sind im Fall 2. Um dann weiter zu verfahren, ben"otigt man die Punktsteigungsform, welche wie folgt lautet:
+\begin{equation*}
+f(x) = m \cdot (x-x_p) + y_p
+\end{equation*}
+$m$ ist hierbei wie gehabt die Steigung der Geraden und $x$ die Variable. $x_p$ und $f(x_p) = y_p$ sind jedoch die Koordinaten eines Punktes $P$, welcher auf der Geraden liegt. Nachdem man die Punktsteigungsform dann ausmultipliziert hat, besitzt man wieder die ganz normale Geradengleichung, wie oben beschrieben.
 
 \subsubsection{Schnittpunkt zweier Geraden}
-Ein Schnittpunkt zweier Funktionen ist ein Punkt, welcher sich auf beiden Graphen der Funktionen befindet.\\
-Die Berechnung eines Schnittpunktes ist rein theoretisch sehr logisch. Wenn ein Punkt auf beiden Graphen sein soll, so muss er beide Funktionen erf"ullen.\\
-Nehmen wir als Beispiel die Funktionen $y_1 = 4x$ und $y_2 = 12x - 23$.\\
-Wenn der Punkt nun beide Funktionen erf"ullen soll, so gilt $y_1 = y_2$.\\
-$=> 4x = 12x - 23$\\
-$-8x = -23$\\
-$x = \frac{23}{8}$\\
-Nun muss man den erhaltenen x-Wert nur noch in eine der beiden Gleichungen einsetzen und man erh"alt das Ergebnis.\\
-$y = 4 \frac{23}{8} = \frac{23}{2}$\\
-Der Schnittpunkt hat somit die Koordinaten S($\frac{23}{8}$/$\frac{23}{2}$).
+Ein Schnittpunkt zweier Funktionen ist ein Punkt, welcher sich auf beiden Graphen der Funktionen befindet. Wenn ein Punkt auf beiden Graphen sein soll, so muss er beide Funktionen erf"ullen. Seien $f_1, f_2$ Geradenfunktionen so scheiden sich die von ihnen definierten Geraden im Punkt $S = (x, y)$ wenn
+\begin{equation*}
+f_1(x) = f_2(x) = y
+\end{equation*}
+
+\paragraph{Beispiel:}
+Nehmen wir als Beispiel die Funktionen $f_1(x) = 4x$ und $f_2(x) = 12x - 23$. Es muss nun gelten 
+\begin{equation*}
+	f_1(x) = f_2(x) \iff 4x = 12x - 23 \iff -8x = -23 \iff x = \frac{23}{8}
+\end{equation*}
+Nun muss man den erhaltenen $x$-Wert nur noch in eine der beiden Gleichungen einsetzen und man erh"alt das Ergebnis oder wir schreiben frech
+\begin{equation*}
+S = \left( \frac{23}{8}, f_1(23/8) \right) = \left(\frac{23}{8}, \frac{23}{2} \right)
+\end{equation*}
+Der Schnittpunkt hat somit die Koordinaten $S = \left(\frac{23}{8}, \frac{23}{2} \right)$.
 
 \subsubsection{Besondere Geraden}
 \begin{itemize}
 \item Besitzen zwei Geraden dieselbe Steigung, so sind diese parallel zueinander. Im Normalfall besitzen diese keinerlei Schnittpunkte. Eine besondere Art der Parallelit"at ist jedoch die Identit"at zweier Geraden. Identische Geraden besitzen logischer Weise unendlich viele Schnittpunkte.
-\item Sind zwei Geraden senkrecht (im rechten Winkel) zueinander, so ist das Produkt ihrer Steigungen -1: $m_1 * m_2 = -1$.
-\item Eine Tangente ber"uhrt eine Kurve lediglich in einem einzigen Punkt.
-\item Eine Sekante schneidet eine Kurve in zwei Punkten.
+\item Sind zwei Geraden senkrecht (im rechten Winkel) zueinander, so ist das Produkt ihrer Steigungen -1: $m_1 \cdot m_2 = -1$.
+\item Eine  \textcolor{red}{Tangente} ber"uhrt eine Kurve lediglich in einem einzigen Punkt.
+\item Eine  \textcolor{red}{Sekante} schneidet eine Kurve in zwei Punkten.
 \end{itemize}
-
-\subsubsection{Umkehrfunktion}
-Durch Einsetzen eines bestimmten x-Wertes in eine Funktion f(x) erh"alt man den entsprechenden y-Wert.\\
-Will man jedoch den x-Wert zu einem bestimmten y-Wert bestimmen, so muss man zun"achst dessen Umkehrfunktion $f(y)^{-1}$ berechnen.\\
-Daf"ur l"ost man die Funktion nach x auf.\\
-Durch das Bilden der Umkehrfunktion werden Definitions- und Wertemenge vertauscht.

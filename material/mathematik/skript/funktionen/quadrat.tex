@@ -1,38 +1,64 @@
 \subsection{Quadratische Funktionen}
-Die n"achst einfachsten Funktionen nach den linearen stellen die so genannten quadratischen Funktionen dar. Sie werden auch als Parabelgleichungen bezeichnet.\\
-Ihren Namen verdanken diese Funktionen der Tatsache, dass ihre Variable zumindest einmal quadratisch und niemals mit einem h"oheren Exponenten als 2 in die Gleichung mit eingeht.\\
+Die n"achst einfachsten Funktionen nach den linearen stellen die so genannten quadratischen Funktionen dar. Sie werden auch als Parabelgleichungen bezeichnet. Ihren Namen verdanken diese Funktionen der Tatsache, dass ihre Variable zumindest einmal quadratisch und niemals mit einem h"oheren Exponenten als $2$ in die Gleichung mit eingeht.
 
 \subsubsection{Die Normalparabel}
-Die Normalparabel besitzt die Formel $f(x) = x^2$\\
-Graphisch stellt sie eine nach oben ge"offnete, achsensymmetrische Kurve dar, deren niedrigster Punkt (Scheitel) S im Ursprung des Koordinatensystems (0,0) liegt.
+Die Normalparabel besitzt die Formel 
+\begin{equation*}
+f(x) = x^2
+\end{equation*}
+Sie ist eine nach oben ge"offnete, achsensymmetrische Kurve dar, deren niedrigster Punkt (Scheitel) $S$ im Ursprung des Koordinatensystems $(0,0)$ liegt.
 
-\subsubsection{Verschieben einer Parabel}
-Eine Parabel l"asst sich um den Wert $x_s$ in x-Richtung verschieben, indem man diesen Wert von der Variable x subtrahiert, daraus folgt:\\
-$f(x)=(x-x_s)^2$\vspace{0.25 cm}\flushleft
-Durch Addition des gesamten Terms mit dem Wert $y_s$ wird die Parabel um den gleichen Wert in y-Richtung verschoben.\\
-Die Gleichung der Parabel lautet nun wie folgt:\\
-$f(x)=(x-x_s)^2+y_s$\\
-Ihr Scheitel besitzt die Koordinaten $S(x_s,y_s)$.
+%Siehe: Verschieben einer Funktion
+%\subsubsection{Verschieben einer Parabel}
+%Wollen wir eine 
+%Eine Parabel l"asst sich um den Wert $x_s$ in $x$-Richtung verschieben, indem man diesen Wert von der Variable $x$ subtrahiert, daraus folgt:\\
+%$f(x)=(x-x_s)^2$\vspace{0.25 cm}\flushleft
+%Durch Addition des gesamten Terms mit dem Wert $y_s$ wird die Parabel um den gleichen Wert in y-Richtung verschoben.\\
+%Die Gleichung der Parabel lautet nun wie folgt:\\
+%$f(x)=(x-x_s)^2+y_s$\\
+%Ihr Scheitel besitzt die Koordinaten $S(x_s,y_s)$.
 
 \subsubsection{Stauchen und Strecken}
-Durch Multiplizieren der Funktion der Normalparabel mit einer konstanten a l"asst sich die Kurve stauchen oder strecken.\\
-$f(x)=ax^2$\\
-Ist der Betrag von a kleiner 1, so wird die Parabel gestaucht. Ist er gr"o"ser 1, so wird sie gestreckt.\\
-Dar"uber hinaus wird die Funktion durch einen negativen Wert von a an der x-Achse gespiegelt und die Parabel ist somit nach unten ge"offnet.
+Durch Multiplizieren der Normalparabel mit einer konstanten $a$ l"asst sich die Kurve stauchen oder strecken. $f(x)=a \cdot x^2$ Ist der Betrag von $a$ kleiner $1$, so wird die Parabel gestaucht. Ist er gr"o"ser $1$, so wird sie gestreckt. Dar"uber hinaus wird die Funktion durch einen negativen Wert von a an der $x$-Achse gespiegelt und die Parabel ist somit nach unten ge"offnet.
+\begin{figure}[h!]
+\begin{center}
+\begin{tikzpicture}[scale = 1.0]
+    \begin{axis}[
+        domain=-10:10,
+        xmin=-10, xmax=10,
+        ymin=-0, ymax=100,
+        samples=400,
+        axis y line=center,
+        axis x line=middle,
+    ]
+    	   \addplot+[mark=none, color=blue] { x*x};
+        \addplot+[mark=none, color=red] {2 * x*x};
+         \addplot+[mark=none, color=green] {0.5 * x*x};
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+\caption{Normalparabel, gestreckte und gestauchte Normalparabel}
+\end{figure}
 
 \subsubsection{Die Scheitelform}
-Durch Kombination von Stauchung/Streckung und Verschiebung erh"alt man die so genannte Scheitelform:\\
-$f(x)=a(x-x_s)^2+y_s$\\
-Mithilfe dieser Funktion lassen sich alle Arten quadratischer Funktionen darstellen.\\
-Au"serdem lassen sich die Koordinaten des Scheitels, der Stauchungs- bzw. Streckungsfaktor der Funktion, sowie die Frage, ob sie nach oben oder unten ge"offnet ist, auf einfachste Weise bestimmen.
+Durch Kombination von Stauchung/Streckung und Verschiebung erh"alt man die so genannte Scheitelform: 
+\begin{equation*}
+f(x)=a(x-x_s)^2+y_s
+\end{equation*}
+Mithilfe dieser Funktion lassen sich alle Arten quadratischer Funktionen darstellen. Au"serdem lassen sich die Koordinaten des Scheitels, der Stauchungs- bzw. Streckungsfaktor der Funktion, sowie die Frage, ob sie nach oben oder unten ge"offnet ist, auf einfachste Weise bestimmen.
 
 \subsubsection{Die Normalform einer quadratischen Gleichung}
-Multipliziert man die Scheitelform aus, so erh"alt $f(x)=ax^2-2ax_sx+x_s^2+y_s$.\\
-Ersetzt man nun die konstanten Werte $-2ax_s$ durch b und $x_s^2+y_s$ durch c, so erh"alt man die Normalform quadratischer Gleichungen:\\
-$f(x)=ax^2+bx+c$
+Multipliziert man die Scheitelform aus, so erh"alt man 
+\begin{equation*}
+f(x)=a \cdot x^2-2 \cdot a \cdot x_sx+x_s^2+y_s.
+\end{equation*}
+Ersetzt man nun die konstanten Werte $-2ax_s$ durch $b$ und $x_s^2+y_s$ durch $c$, so erh"alt man die \textbf{Normalform} quadratischer Gleichungen:
+\begin{equation*}
+f(x)=a \cdot x^2+b \cdot x+c
+\end{equation*}
 
 \subsubsection{Die binomischen Formeln}
-Bei den binomischen Formeln handelt es sich wohl um drei der wichtigsten Umrechnungsregeln, welche in der Mathematik Verwendung finden.\\
+Die binomischen Formeln sind das Ergebnis des Ausmultiplizierens, hat man sie jedoch im Kopf so spart man viel Zeit.
 \begin{enumerate}
 \item $(a+b)^2=a^2+2ab+b^2$
 \item $(a-b)^2=a^2-2ab+b^2$
@@ -40,8 +66,7 @@ Bei den binomischen Formeln handelt es sich wohl um drei der wichtigsten Umrechn
 \end{enumerate}
 
 \subsubsection{Die quadratische Erg"anzung}
-Will man zum Beispiel zur Bestimmung des Scheitelpunktes die Normalform der quadratischen Gleichung in die Scheitelform umwandeln, so geht dies unter anderem mithilfe der so genannten quadratischen Erg"anzung.\\
-Zun"achst einmal besitzt man eine quadratische Gleichung in der Normalform.\\
+Will man zum Beispiel zur Bestimmung des Scheitelpunktes die Normalform der quadratischen Gleichung in die Scheitelform umwandeln, so geht dies unter anderem mithilfe der so genannten quadratischen Erg"anzung. Zun"achst einmal besitzt man eine quadratische Gleichung in der Normalform.\\
 Im Folgenden wird nun die Scheitelform der Funktion $f(x)=3x^2-6x-24$ berechnet:\\
 Der erste Schritt hierf"ur ist das Ausklammern der Konstante "'a"', in unserem Fall der 3:\\
 $f(x)=3(x^2-2x-8)$\\
