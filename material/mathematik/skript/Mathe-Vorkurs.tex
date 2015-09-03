@@ -12,10 +12,21 @@
 \usepackage[colorlinks,pdfpagelabels,pdfstartview = FitH,bookmarksopen = true,bookmarksnumbered = true,linkcolor = black,plainpages = false,hypertexnames = false,citecolor = black]{hyperref}
 \usepackage{fancyhdr}
 
+%Serifenschrift in Überschrift
+%\usepackage{sectsty}
+%\allsectionsfont{\rmfamily}
+%\usepackage{tocloft}
+%\renewcommand{\cftsecfont}{\rmfamily}
+%\renewcommand{\cftsecfont}{\bfseries}
+
 %Plots
+\usepackage{tkz-euclide}
+\usetikzlibrary{calc}
 \usepackage{pgfplots}
 \usepackage{tikz}
 \usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,calc}
+\newcounter{angle}
+\setcounter{angle}{220}
 
 %Polynomdivision
  \usepackage{polynom}
@@ -44,8 +55,12 @@
 \definecolor{blue}{rgb}{0.5,0.5,1.0}
 
 \begin{document}
+\pagenumbering{roman}
+%\setkomafont{disposition}{\normalfont\rmfamily}
 \input{inputs/title}
+\clearpage
 
+\pagenumbering{arabic}
 \psection{Einf"uhrung}
 \input{inputs/einfuehrung}
 
