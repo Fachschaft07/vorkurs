@@ -1,56 +1,78 @@
 \subsection{Direkter Beweis}
-Den direkten Beweis haben wir im Kapitel "uber die quadratischen Funktionen schon kennengelernt.\\
-Es handelt sich hierbei um nichts anderes als das direkte Herleiten von Formeln.
+Den direkten Beweis haben wir im Kapitel "uber die quadratischen Funktionen schon kennengelernt. Es handelt sich hierbei um nichts anderes als das direkte Herleiten von Formeln. Wen wir zeigen k"onnen dass 
+\begin{equation*}
+A_1 \Rightarrow A_2, A_2 \Rightarrow A_3, \ldots A_{n-1} \Rightarrow A_n
+\end{equation*}
+und $A_1$ gilt, dann folgt $A_n$. Wir haben also Pr"amissen, folgern gewisse Schl"usse und gelangen dann zur zu zeigenden Aussage.
 
 \subsection{Indirekter Beweis}
-Im indirekten Beweis schaut man sich den Fall an, welchen man beweisen will und zeigt, dass es nicht anders sein kann.\\
-Man geht also zun"achst vom Gegenteil aus und versucht auf einen Widerspruch zu sto"sen.\\
+Im indirekten Beweis oder auch Widerspruchsbeweis schaut man sich den Fall an, welchen man beweisen will und zeigt, dass es nicht anders sein kann. Man geht also zun"achst von der Negation aus und versucht auf einen Widerspruch zu sto"sen. Angenommen wir wollen $A$ beweisen. Wir wissen
+\begin{equation*}
+A \lor \neg A
+\end{equation*}
+ist eine Tautologie. Wir zeigen nun dass $\neg A \equiv \text{falsch}$, damit muss aber dann $A \equiv \text{wahr}$ gelten. Indirekte Beweise sind weniger sch"on in dem Sinne, dass sie weniger konstruktiv sind. Wir haben einen Widerspruchsannahme, folgern etwas und gelangen zu einem Widerspruch.
 
 \subsubsection{Beispiel}
-Das bekannteste Beispiel hierf"ur ist der Beweis daf"ur, dass es sich bei Wurzel 2 um keine rationale Zahl handelt.\\
-Man geht nun zun"achst davon aus, dass es eine rationale Zahl ist.\\
-Wenn dies der Fall ist, so w"urde sich Wurzel 2 folgenderma"sen ausdr"ucken lassen:\\
-$\exists q, p \in \mathbb{N}:\sqrt{2}=\frac{q}{p}$\\
-Wichtig hierf"ur ist die Voraussetzung, dass es sich bei q und p um teilerfremde Zahlen handelt, der Bruch also vollst"andig gek"urzt ist.\\
-Quadriert man nun die Gleichung, so bekommt man:\\
-$2 = \frac{q^2}{p^2}$\\
-Nun noch mit $p^2$ multiplizieren:\\
-$2 * p^2 = q^2$\\
-Da es sich bei p und q um ganze Zahlen handelt, sind nat"urlich auch deren Quadrate ganze Zahlen.\\
-Eine ganze Zahl mit 2 multipliziert ist auch wieder eine ganze Zahl. $=>$ Es handelt sich bei $q^2$ um eine ganze, gerade Zahl handelt.\\
-Wenn das Quadrat einer Zahl gerade ist, ist auch die Zahl selber gerade, deshalb l"asst sich q auch folgenderma"sen darstellen.\\
-$\exists r : q = 2 * r$\\
-Setzt man nun diesen Wert f"ur q oben ein, so erh"alt man:\\
-$2 * p^2 = 4 * r^2$
-$\Leftrightarrow p^2 = 2 * r^2$\\
-Nun sieht man das es sich auch bei p um eine ganze, gerade Zahl handelt.\\
-Da jede ganze, gerade Zahl den Teiler 2 hat, besitzen auch p und q den gemeinsamen Teiler 2.\\
-Einer unserer Voraussetzungen war allerdings, dass diese beiden Zahlen teilerfremd sind.\\
-Wenn wir auf solch einen Widerspruch treffen, so muss zumindest eine unserer Annahmen falsch sein.\\
-Die einzige Annahme, welche wir getroffen haben ist jedoch, dass es sich bei Wurzel 2 um eine rationale Zahl handelt.\\
-Dies ist also falsch. Und somit haben wir bewiesen, dass $\sqrt{2}$ keine rationale Zahl ist.
+Das bekannteste Beispiel hierf"ur ist der Beweis der Aussage:
+\begin{equation*}
+A:=  \sqrt{2} \text{ ist keine rationale Zahl}
+\end{equation*}
+Man geht nun zun"achst davon aus, dass es eine rationale Zahl ist. Angenommen $\neg A \equiv \text{wahr}$ also angenommen $\sqrt{2}$ ist eine rationale Zahl.
+\begin{equation*}
+\Rightarrow \exists q, p \in \mathbb{N}:\sqrt{2}=\frac{q}{p},
+\end{equation*}
+wobei $q$ und $p$ teilerfremd sind (sonst einfach k"urzen). Nun Quadrieren wir
+\begin{equation*}
+\Rightarrow 2 = \frac{q^2}{p^2}
+\end{equation*}
+Nun noch mit $p^2$ multiplizieren
+\begin{equation*}
+\Rightarrow 2 \cdot p^2 = q^2
+\end{equation*}
+Da es sich bei $p$ und $q$ um ganze Zahlen handelt, folgt ($\Rightarrow$) dass auch ihre Quadrate ganze Zahlen sind. Eine ganze Zahl mit $2$ multipliziert ist auch wieder eine ganze Zahl. 
+\begin{equation*}
+\Rightarrow q^2 \in \mathbb{Z}
+\end{equation*}
+Wenn das Quadrat einer Zahl gerade ist, folgt ($\Rightarrow$) dass auch die Zahl selber gerade ist, deshalb l"asst sich $q$ auch folgenderma"sen darstellen.
+\begin{equation*}
+\exists r \in \mathbb{Z} : q = 2 \cdot r
+\end{equation*}
+Setzt man nun diesen Wert f"ur $q$ oben ein, so erh"alt man
+\begin{equation*}
+2 \cdot p^2 = 4 \cdot r^2 \iff p^2 = 2 \cdot r^2
+\end{equation*}
+Nun sieht man das es sich auch bei $p$ um eine ganze, gerade Zahl handelt. Da jede ganze, gerade Zahl den Teiler $2$ hat, besitzen auch $p$ und $q$ den \textbf{gemeinsamen Teiler} 2. Einer unserer Voraussetzungen war allerdings, dass diese beiden Zahlen \textbf{teilerfremd} sind. Wenn wir auf solch einen Widerspruch treffen, so muss zumindest eine unserer Annahmen falsch sein. Die einzige Annahme, welche wir getroffen haben ist jedoch, dass es sich bei Wurzel $2$ um eine rationale Zahl handelt. Diese ist also falsch ($(\neg A) \Rightarrow \text{falsch}$ ist wahr). Damit muss $\neg A \equiv \text{falsch}$ sein und damit $A \equiv \text{wahr}$. Und somit haben wir bewiesen, dass $\sqrt{2}$ keine rationale Zahl ist.
 
 \subsection{Vollst"andige Induktion}
-Wenn man beweisen will, dass zwei Aussagen im Zahlenraum $\mathbb{N}$ gelten, so greift man oft auf die Vollst"andige Induktion zur"uck.\\
-Bei der vollst"andigen Induktion zeigt man zun"achst, dass es f"ur kleine n gilt, dies wird auch als Induktionsanfang bezeichnet.\\
-Zum Beispiel: man will beweisen, dass $a_{n}=2a_{n-1}; a_1 = 2$ gleich $a_n = 2^n$ ist.\\
-Induktionsanfang:\\
-$n=1: a_1 = 2; a_1 = 2^1 = 2 =>$passt.\\
-Nun stellen wir unsere Annahme auf, dies ist nichts anderes, als dass wir sagen, dass die beiden Aussagen f"ur n gleich sind (f"ur kleine n's stimmt dies ja).\\
-Induktionsannahme:\\
-$2a_{n-1}=2^n; a_1 = 2$\\
-Als n"achstes folgt nun die Induktionsbehauptung, wir behaupten, dass, wenn es f"ur n gilt, es auch f"ur
-n+1 gilt, also:\\
-Induktionsbehauptung:\\
-$2a_{n+1-1} = 2^{n+1}; a_1 = 2$\\
-$\Leftrightarrow 2a_{n} = 2^{n+1}; a_1 = 2$\\
-Jetzt kommen wir zum eigentlichen Beweis! Und zwar ersetzen wir das $a_{n}$ aus unserer Behauptung durch das $a_n = 2^n$ aus unserer Annahme, denn mit dieser d"urfen wir auf Grund der Tatsache, dass es f"ur kleine n's gilt, arbeiten. Und wenn die Aussage stimmt, kommt genau die andere Seite unserer Behauptung heraus, also $ 2^{n+1}$\\
-Induktionsbeweis:\\
-$2(2^n)= 2^{n+1}$\\
-Wuhu! Wir haben bewiesen, dass unsere Aussage stimmt. Aber warum ist dies so?\\
-Ganz einfach, wir haben gezeigt, dass die Aussage f"ur $n=1$ gilt und dass, wenn sie f"ur n gilt auch f"ur n+1 gilt...\\
-Wenn sie also nun f"ur n = 1 gilt, so gilt sie auch f"ur n=2 und somit auch wieder f"ur n=3.\\
-So k"onnen wir uns nun durch den gesamten Zahlenraum $\mathbb{N}$ hangeln... $=>$ q.e.d.
+Das Induktionsprinzip ist sehr nat"urlich. Es geht im Endeffekt um nichts anderes als ums Z"ahlen. Das beherrschen bereits Kleinkinder und Tiere. Stellen Sie sich eine Dominokette vor. Wenn sie der folgenden Aussage zustimmen k"onnen, haben sie die Induktion im Grunde verstanden:
+\begin{center}
+Wenn ich den ersten Dominostein umwerfe und zudem gilt: wenn ein Dominostein umf"allt, folgt, dass sein Nachfolger umf"allt, so fallen alle Dominosteine um.
+\end{center}
+Sie m"ussen nicht zeigen, dass jeder Stein umf"allt sondern sie zeigen dass:
+\begin{enumerate}
+\item \textbf{Induktionsanfang}: der 1. Stein umf"allt und
+\item \textbf{Induktionsschluss:} dass wenn Stein $n$ umf"allt, f"allt Stein $n+1$ um (wenn $n$ nicht der letzte Stein ist)
+\end{enumerate}
+Allgemeiner nutzen wir dies um Eigenschaften von Objekten zu zeigen, die nat"urlich geordnet sind.
+
+\subsubsection{Beispiel}
+Wir wollen nun beweisen:
+\begin{equation}
+a_{n} = 2 \cdot a_{n-1}; a_1 = 2 \text{ entspricht } b_n = 2^n.
+\end{equation}
+\begin{enumerate}
+\item \textbf{Induktionsanfang:} $n = 1$ (1. Stein): $ a_1 = 2 = 2^1 = b_n$ (passt)
+\item \textbf{Induktionsschluss:} $n' = n + 1$ (Achtung nicht $n' = 2$!), wir d"urfen zudem Annehmen das der $n$-te Stein gefallen ist, dass also $a_n = b_n$ (mehr nicht!).
+\begin{align*}
+a_{n+1} &=^{\text{nach Def.}} 2 \cdot a_{n+1-1} \\
+&=  2 \cdot a_{n} \\
+&=^\text{nach Induktionsanfang} 2 \cdot b_n \\
+&=^\text{nach Def.} 2 \cdot 2^n = 2^{n+1} \\
+&= b_{n+1}.
+\end{align*}
+(passt)
+\end{enumerate}
+Wuhu! Wir haben bewiesen, dass unsere Aussage stimmt.
 
 \subsection{"Ubungen}
 \begin{enumerate}
