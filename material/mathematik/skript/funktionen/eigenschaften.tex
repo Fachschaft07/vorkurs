@@ -15,6 +15,30 @@ Man beachte, dass zwar jedes $x \in \mathbb{D}$ sein $y \in Z$ hat aber nicht je
 
 \paragraph{Zur Vorstellungserleichterung:}
 Vorstellen kann man sich das wie die Funktionsweise eines Fotoapparates. Der Definitionsbereich w"are hierbei das, was in der realen Welt existiert und von der Kamera aufgenommen werden soll. Das ausgestrahlte Licht, der Bestandteile des Definitionsbereiches, wird nun mithilfe einer Linse eingefangen, gespiegelt und bei neueren Kameras mithilfe von Sensoren in digitale Bilder umgewandelt. Dieses digitale \textcolor{red}{Bild} ist nun das Ergebnis und jeder erreichte Wert (RGB, CMYK, ...) ist Bestandteil der Bildmenge.
+\begin{figure}[h!]
+ \centering
+ \begin{tikzpicture}[ele/.style={fill=black,circle,minimum width=.8pt,inner sep=1pt},every fit/.style={ellipse,draw,inner sep=-2pt}, scale = 0.8]
+  \node[ele,label=left:$a$] (a1) at (0,4) {};    
+  \node[ele,label=left:$b$] (a2) at (0,3) {};    
+  \node[ele,label=left:$c$] (a3) at (0,2) {};
+  \node[ele,label=left:$d$] (a4) at (0,1) {};
+
+  \node[ele,,label=right:$1$] (b1) at (4,5) {};
+  \node[ele,,label=right:$2$] (b2) at (4,4) {};
+  \node[ele,,label=right:$3$] (b3) at (4,3) {};
+  \node[ele,,label=right:$4$] (b4) at (4,2) {};
+  \node[ele,,label=right:$5$] (b5) at (4,1) {};  
+  
+
+  \node[draw,fit= (a1) (a2) (a3) (a4),minimum width=2cm] {} ;
+  \node[draw,fit= (b1) (b2) (b3) (b4) (b5),minimum width=2cm] {} ;  
+  \draw[->,thick,shorten <=2pt,shorten >=2pt] (a1) -- (b4);
+  \draw[->,thick,shorten <=2pt,shorten >=2] (a2) -- (b2);
+  \draw[->,thick,shorten <=2pt,shorten >=2] (a3) -- (b1);
+  \draw[->,thick,shorten <=2pt,shorten >=2] (a4) -- (b4);
+ \end{tikzpicture}
+ \caption{Eine Funktion mit einer endlichen $\mathbb{D} = \{a, b, c, d\}$ Definitionsmenge (rechts) und einer endlichen Zielmenge $Z = \{1, 2, 3, 4, 5\}$ und einer Bildmenge $\mathbb{W} = \{1,2,4\}$. Alle Elemente aus $\mathbb{D}$ besitzen genau eine 'Verbindungen'.}
+\end{figure}
 
 \paragraph{Beispiele:}
 \begin{itemize}
@@ -22,6 +46,96 @@ Vorstellen kann man sich das wie die Funktionsweise eines Fotoapparates. Der Def
 \item $\mathbb{D}\rightarrow\mathbb{W}, f(x)=42x(12x-12(3x^2))$
 \end{itemize}
 \end{flushleft}
+
+\subsubsection{Surjektion}
+Eine Funktion $f$ ist surjektiv genau dann wenn jeder Wert der Zielmenge (mindestens einmal) angenommen wird:
+\begin{equation*}
+\forall y \in Z \ \exists x \in \mathbb{D} : f(x) = y
+\end{equation*}
+\begin{figure}[h!]
+ \centering
+ \begin{tikzpicture}[ele/.style={fill=black,circle,minimum width=.8pt,inner sep=1pt},every fit/.style={ellipse,draw,inner sep=-2pt}, scale = 0.8]
+  \node[ele,label=left:$a$] (a1) at (0,6) {};    
+  \node[ele,label=left:$b$] (a2) at (0,5) {};    
+  \node[ele,label=left:$c$] (a3) at (0,4) {};
+  \node[ele,label=left:$d$] (a4) at (0,3) {};
+  \node[ele,label=left:$e$] (a5) at (0,2) {};
+  \node[ele,label=left:$f$] (a6) at (0,1) {};
+
+  \node[ele,,label=right:$1$] (b1) at (4,5) {};
+  \node[ele,,label=right:$2$] (b2) at (4,4) {};
+  \node[ele,,label=right:$3$] (b3) at (4,3) {};
+  \node[ele,,label=right:$4$] (b4) at (4,2) {};
+  \node[ele,,label=right:$5$] (b5) at (4,1) {};  
+  
+
+  \node[draw,fit= (a1) (a2) (a3) (a4) (a5) (a6),minimum width=2cm] {} ;
+  \node[draw,fit= (b1) (b2) (b3) (b4) (b5),minimum width=2cm] {} ;  
+  \draw[->,thick,shorten <=2pt,shorten >=2pt] (a1) -- (b4);
+  \draw[->,thick,shorten <=2pt,shorten >=2] (a2) -- (b2);
+  \draw[->,thick,shorten <=2pt,shorten >=2] (a3) -- (b1);
+  \draw[->,thick,shorten <=2pt,shorten >=2] (a4) -- (b4);
+  \draw[->,thick,shorten <=2pt,shorten >=2] (a5) -- (b3);
+  \draw[->,thick,shorten <=2pt,shorten >=2] (a6) -- (b5);
+ \end{tikzpicture}
+ \caption{Eine surjektive Funktion.}
+\end{figure}
+
+\subsubsection{Injektion}
+Eine Funktion $f$ ist injektiv genau dann wenn jeder Wert der Bildmenge nicht mehrmals angenommen wird:
+\begin{equation*}
+\forall x_1, x_2 \in \mathbb{D} : f(x_1) = f(x_2) \Rightarrow x_1 = x_2
+\end{equation*}
+\begin{figure}[h!]
+ \centering
+ \begin{tikzpicture}[ele/.style={fill=black,circle,minimum width=.8pt,inner sep=1pt},every fit/.style={ellipse,draw,inner sep=-2pt}, scale = 0.8]
+  \node[ele,label=left:$a$] (a1) at (0,4) {};    
+  \node[ele,label=left:$b$] (a2) at (0,3) {};    
+  \node[ele,label=left:$c$] (a3) at (0,2) {};
+  \node[ele,label=left:$d$] (a4) at (0,1) {};
+
+  \node[ele,,label=right:$1$] (b1) at (4,5) {};
+  \node[ele,,label=right:$2$] (b2) at (4,4) {};
+  \node[ele,,label=right:$3$] (b3) at (4,3) {};
+  \node[ele,,label=right:$4$] (b4) at (4,2) {};
+  \node[ele,,label=right:$5$] (b5) at (4,1) {};  
+  
+
+  \node[draw,fit= (a1) (a2) (a3) (a4) (a5) (a6),minimum width=2cm] {} ;
+  \node[draw,fit= (b1) (b2) (b3) (b4) (b5),minimum width=2cm] {} ;  
+  \draw[->,thick,shorten <=2pt,shorten >=2pt] (a1) -- (b1);
+  \draw[->,thick,shorten <=2pt,shorten >=2] (a2) -- (b2);
+  \draw[->,thick,shorten <=2pt,shorten >=2] (a3) -- (b3);
+  \draw[->,thick,shorten <=2pt,shorten >=2] (a4) -- (b4);
+ \end{tikzpicture}
+ \caption{Eine injektive Funktion.}
+\end{figure}
+
+\subsubsection{Bijektion}
+Eine Funktion ist bijektiv, wenn sie zugleich injektiv und surjektiv ist. Eine solche Funktion ist eine eins-zu-eins Relation, sie besitzt zudem eine Umkehrfunktion.
+\begin{figure}[h!]
+ \centering
+ \begin{tikzpicture}[ele/.style={fill=black,circle,minimum width=.8pt,inner sep=1pt},every fit/.style={ellipse,draw,inner sep=-2pt}, scale = 0.8]
+  \node[ele,label=left:$a$] (a1) at (0,4) {};    
+  \node[ele,label=left:$b$] (a2) at (0,3) {};    
+  \node[ele,label=left:$c$] (a3) at (0,2) {};
+  \node[ele,label=left:$d$] (a4) at (0,1) {};
+
+  \node[ele,,label=right:$1$] (b1) at (4,4) {};
+  \node[ele,,label=right:$2$] (b2) at (4,3) {};
+  \node[ele,,label=right:$3$] (b3) at (4,2) {};
+  \node[ele,,label=right:$4$] (b4) at (4,1) {};
+  
+
+  \node[draw,fit= (a1) (a2) (a3) (a4) (a5) (a6),minimum width=2cm] {} ;
+  \node[draw,fit= (b1) (b2) (b3) (b4) (b5),minimum width=2cm] {} ;  
+  \draw[->,thick,shorten <=2pt,shorten >=2pt] (a1) -- (b1);
+  \draw[->,thick,shorten <=2pt,shorten >=2] (a2) -- (b2);
+  \draw[->,thick,shorten <=2pt,shorten >=2] (a3) -- (b3);
+  \draw[->,thick,shorten <=2pt,shorten >=2] (a4) -- (b4);
+ \end{tikzpicture}
+ \caption{Eine bijektive Funktion.}
+\end{figure}
 
 \subsubsection{Umkehrfunktion}
 Durch Einsetzen eines bestimmten $x$-Wertes in eine Funktion $f(x)$ erh"alt man den entsprechenden $y$-Wert. Will man jedoch den $x$-Wert zu einem bestimmten $y$-Wert bestimmen, so muss man zun"achst dessen Umkehrfunktion $f(y)^{-1}$ berechnen. Daf"ur l"ost man die Funktion nach $x$ auf. Durch das Bilden der Umkehrfunktion werden Definitions- und Wertemenge vertauscht. Die Umkehrfunktion muss nat"urlich die Anforderungen erf"ullen welche an eine Funktion gestellt werden, erf"ullen. Wenn nicht jedes $y$ genau ein $x$ abgebildet wird existiert die Umkehrfunktion nicht. Eine Funktion muss \textbf{bijektiv} sein (jeder Wert der \textbf{Zielmenge} wird angenommen (\textcolor{red}{surjektiv}) und kein Wert der \textbf{Bildmenge} wird mehrfach angenommen (\textcolor{red}{injektiv})), damit aus ihr eine Umkehrfunktion gebildet werden kann.
@@ -72,7 +186,7 @@ Eine Funktion ist stetig, wenn man ihren Graphen (innerhalb der Definitionsmenge
 \end{equation*}
 Intuitiv bedeutet dies, dass egal wie klein ich meine Funktionswert-Umgebung ($\epsilon$) um $f(x_0)$ w"ahle, ich trotzdem alle Funktionswerte welche durch die Argument-Umgebung ($\delta$) um $x_0$ entstehen einschlie"sen kann.
 
-\subsubsection{Verschieben einer Funktion}
+\subsubsection{Verschieben einer Funktion} \label{sec:verschieben}
 Angenommen wir haben eine Funktion $f$ mit $\mathbb{D} = \mathbb{R}$ und wollen eine neue Funktion $f'$ bauen, wobei wir diese um $d > 0$ nach rechts verschieben wollen. Damit muss gelten:
 \begin{equation*}
 \forall x \in \mathbb{R} :  f'(x) = f(x-d) \iff \forall x \in \mathbb{R} : f'(x+d) = f(x).

@@ -1,35 +1,33 @@
 \subsection{Polynome}
 \subsubsection{Was ist ein Polynom}
-Bei Funktionen der Form $f(x) = a_n x^b + a_{n-1} x^{b-1} + a_{n-2} x^{b-2} + ... a_0$ handelt es sich um so genannte Polynome.\\
+Bei Funktionen der Form $f(x) = a_n x^b + a_{n-1} x^{b-1} + a_{n-2} x^{b-2} + ... a_0$ handelt es sich um so genannte Polynome.
 
 \subsubsection{Nullstellenberechnung mithilfe der Polynomdivision}
-Im Folgenden werde ich nun anhand des Beispiels $f(x) = 6x^3 - 12x^2 - 6x + 12$ die Nullstellenberechnung mithilfe der Polynomdivision erl"autern.\\
+Im Folgenden werde wir nun anhand des Beispiels 
+\begin{equation*}
+f(x) = 6x^3 - 12x^2 - 6x + 12
+\end{equation*}
+die Nullstellenberechnung mithilfe der Polynomdivision erl"autern. Dabei werden alle Nullstellen erraten. Jede Nullstelle liefert einen Linearfaktor. 
 \begin{enumerate}
-\item Zun"achst wird die Funktion gleich Null gesetzt.\\
-$6x^3 - 12x^2 - 6x + 12 = 0$
-\item Anschlie"send kann man die ganze Funktion einmal durch den Koeffizienten vor dem x mit der h"ochsten Potenz teilen.\\
-In unserem Fall also durch den Wert 6.\\
-$ x^3 -2x^2 - x + 2 = 0 $
-\item Nun muss man, so komisch es auch klingt, zun"achst einmal eine Nullstelle "'erraten"'.\\
-Da es aber sehr viele Zahlen gibt, w"urde dies ohne einen kleinen Trick sehr schwer werden.\\
-Besitzt ein Polynom lediglich ganzzahlige Koeffizienten, so sind die x-Werte der Nullstellen ganzzahlige Teiler von $a_0$.\\
-Unser Beispiel kann also nur Nullstellen bei x-Werten von -1,1,-2,2,-3,3,-6 und 6 besitzen.\\
-Nun kann man systematisch alle m"oglichen Kandidaten abarbeiten.\\
-Testen mit x = -1:\\
-$(-1)^3 - 2(-1)^2 - (-1) + 2 = 0$\\
-Gl"ucklicherweise haben wir schon beim ersten Versuch eine Nullstelle entdeckt.\\
-\item Nun werden wir uns die Eigenschaft des Faktorisierens zu Nutze machen, dass jedes Polynom in Faktoren $(x-x_{Nullstelle})$ zerlegt werden kann.\\
-Wir werden nun n"amlich eine schriftliche Division des Polynoms durch (x-(-1)) durchf"uhren.\vspace{0.5 cm}\\
-$ (x^3 - 2x^2 - x + 2):(x+1)= x^2 - 3x + 2$\\
-$ \underline{-x^3 - x^2} $\\
-$ \hspace{0.75 cm} -3x^2 - x $\\
-$ \hspace{0.75 cm} \underline{+3x^2 + 3x} $\\
-$ \hspace{1.75 cm} +2x + 2$\\
-$ \hspace{1.75 cm} \underline{-2x - 2}$\\
-$ \hspace{3 cm} 0$
-\item Jetzt beginnt der Vorgang mit der neuen Funktion ($g(x) = x^2 - 3x + 2$), welche einen Grad weniger hat von Neuem. In unserem Fall jedoch, da wir nun eine quadratische Funktion haben, k"onnen wir die Mitternachtsformel zur L"osung heranziehen.\\
-Die drei Nullstellen unserer Beispielfunktion lauten:\\
-$x_0 = -1; x_1 = 1; x_2 = 2$\\
-Die Funktion l"asst sich also auch wie folgt schreiben:\\
-$f(x)=(x+1)(x-1)(x-2)$
+\item Wie immer setzen wir die Funktion gleich Null und werden den Faktor los:
+\begin{equation*}
+6x^3 - 12x^2 - 6x + 12 = 0 \iff x^3 -2x^2 - x + 2 = 0
+\end{equation*}
+
+\item Nun muss man (leider) die erste Nullstelle "'erraten"'. Da es aber sehr viele Zahlen gibt, w"urde dies ohne einen kleinen Trick sehr schwer werden. Besitzt ein Polynom lediglich ganzzahlige Koeffizienten, so sind die $x$-Werte der Nullstellen ganzzahlige Teiler von $a_0$. Warum (nicht ganz leicht)? Unser Beispiel kann also nur Nullstellen bei $x$-Werten aus $\{-1,1,-2,2,-3,3,-6, 6\}$, besitzen. Nun kann man systematisch alle m"oglichen Kandidaten abarbeiten oder sieht es direkt. Testen mit $x \stackrel{?}{=} -1$:
+\begin{equation*}
+(-1)^3 - 2(-1)^2 - (-1) + 2 = 0
+\end{equation*}
+Gl"ucklicherweise haben wir schon beim ersten Versuch eine Nullstelle bei $x_1 = -1$ entdeckt.
+\item Nun werden wir uns die Eigenschaft des Faktorisierens zu Nutze machen, dass jedes Polynom in Faktoren $(x-x_{Nullstelle})$ zerlegt werden kann. Wir werden nun eine Division des Polynoms durch $(x-(-1)) = (x + 1)$ durchf"uhren:
+\polylongdiv{x^3 -2x^2 - x + 2}{x + 1}
+
+\item Jetzt beginnt der Vorgang mit der neuen Funktion ($g(x) = x^2 - 3x + 2$), welche einen Grad weniger hat von Neuem. In unserem Fall jedoch, da wir nun eine quadratische Funktion haben, k"onnen wir die Mitternachtsformel zur L"osung heranziehen. Die drei Nullstellen unserer Beispielfunktion lauten:
+\begin{equation*}
+x_0 = -1; x_1 = 1; x_2 = 2
+\end{equation*}
+Die Funktion l"asst sich also auch wie folgt schreiben:
+\begin{equation*}
+f(x)=(x+1)(x-1)(x-2)
+\end{equation*}
 \end{enumerate}

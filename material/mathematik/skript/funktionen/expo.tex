@@ -1,16 +1,29 @@
 \subsection{Exponentialfunktionen}
 \subsubsection{Was sind Exponentialfunktionen?}
-Exponentialfunktionen sind Funktionen der Form $f(x)=a*b^{x-x_0}+y_0$
+Exponentialfunktionen sind Funktionen der Form 
+\begin{equation*}
+f(x)=a \cdot b^{x-x_0}+y_0
+\end{equation*}
+Dabei ist
 \begin{description}
 \item[$a$] Stauchungs- bzw. Streckungsfaktor
 \item[$b$] Basis
-\item[$x_0$] Wert der Verschiebung in x-Richtung
-\item[$y_0$] Wert der Verschiebung in y-Richtung
+\item[$x_0$] Wert der Verschiebung in $x$-Richtung (siehe Abschnitt \ref{sec:verschieben})
+\item[$y_0$] Wert der Verschiebung in $y$-Richtung (siehe Abschnitt \ref{sec:verschieben})
 \end{description}
+Sie ist auf ganz $\mathbb{R}$ definiert und ist f"ur die Zielmenge $\mathbb{R}^{+} \setminus \{0\}$ surjektiv. Sie ist au"serdem injektiv uns somit f"ur $\mathbb{R}^{+} \setminus \{0\}$ als Zielmenge bijektiv.
 
 \subsubsection{Umkehrfunktion - die Logarithmusfunktion}
-Die Umkehrfunktion der Exponentialfunktion ist die Logarithmusfunktion.\\
-$y = a*b^{f^{-1}(y) - x_0}+y_0$\\
-$\frac{y-y_0}{a}=b^{f^{-1}(y) - x_0}$\\
-$\log_b(\frac{y-y_0}{a})=f^{-1}(y) - x_0$\\
-$f^{-1}(y) = \log_b(\frac{y-y_0}{a}) + x_0$
+Die Umkehrfunktion der Exponentialfunktion ist die Logarithmusfunktion. Sei $f(x)$ gleich
+\begin{equation*}
+f(x) = a \cdot b^{x-x_0}+y_0
+\end{equation*}
+So berechnet sich die Umkehrfunktion wie folgt:
+\begin{align*}
+y = a \cdot b^{x-x_0}+y_0 &\iff  \\
+y - y_0 = a \cdot b^{x-x_0} &\iff \\
+\frac{y - y_0}{a} =  b^{x-x_0} &\iff \\
+\log_b\left(\frac{y - y_0}{a}\right) = x - x_0 &\iff \\
+\log_b\left(\frac{y - y_0}{a}\right) + x_0 = x &
+\end{align*}
+Da die Exponentialfunktion mit einer Zielmenge gleich $\mathbb{R}^{+} \setminus \{0\}$ bijektiv ist, ist die Umkehrfunktion, der die Logarithmusfunktion, nur auf $\mathbb{R}^{+} \setminus \{0\}$ definiert!
