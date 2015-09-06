@@ -1,0 +1,107 @@
+Die Kurvendiskussion ist die Analyse einer Funktion im Hinblick auf ihre Eigenschaften, wie ihren \textcolor{red}{Definitionsbereich}, \textcolor{red}{Grenzwerte}, \textcolor{red}{Asymptoten}, \textcolor{red}{Schnittpunkte mit den Koordinatenachsen}, \textcolor{red}{Symmetrie}, \textcolor{red}{Extrem- und Terrassenpunkte}, \textcolor{red}{Monotonie} und ihrem \textcolor{red}{Kr"ummungsverhalten}. Die Reihenfolge spielt durchaus eine Reihenfolge. Es macht z.B. keinen Sinn den Wertebereich vor dem Definitionsbereich zu bestimmen, da der Wertebereich direkt vom Definitionsbereich abh"angt.
+
+\subsection{Definitons- und Wertebereich}
+Der Definitionsbereich ist die Menge aus der $x$ stammt f"ur, welche die Funktion definiert ist. Wir m"ochten meist den maximalen Definitionsbereich bestimmen, den Bereich also m"oglichst wenig einschr"anken. So ist $f(x) = \sqrt{x}$ f"ur negative reelle Zahlen nicht definiert. Damit w"are ein m"oglicher Definitionsbereich 
+\begin{equation*}
+\mathbb{D} := \mathbb{R}^{\geq 0} = \left\{x \in \mathbb{R} | x \geq 0 \right\}
+\end{equation*}
+Ein ebenfalls g"ultiger Definitionsbereich w"are $\left[10;15\right]$. Solche Einschr"ankungen machen Sinn wenn uns nur dieser Bereich der Funktion interessiert. In der Kurvendiskussion werden Sie aber immer nach dem maximalen Definitionsbereich gefragt. Oftmals k"onnen wir eine Funktion vereinfachen, sobald der Definitionsbereich definiert ist. So kann die Funktion
+\begin{equation*}
+f_1(x) = \frac{x-1}{x-1}
+\end{equation*}
+durch $f_2(x) = 1$ mit $\mathbb{D}_{f_2} = \mathbb{R} \setminus \{1\}$ ersetzt werden. Man bedenke $f_1(x) = f_2(x) \ \forall x \in \mathbb{D}_{f_2}$ jedoch gilt $f_2(1) = 1$ und $f_1(1)$ ist nicht definiert. Um den Wertebereich einer Funktion $F$ zu bestimmen, bestimmen wir
+\begin{equation*}
+\mathbb{W}_f = (\mathbb{D}_f) = \left\{f(x) \ | \ x \in \mathbb{D}_f \right\}
+\end{equation*}
+hierzu kann es von n"oten sein zuerst die Grenzwerte (Abschnitt \ref{sec:grenzwerte}) zu betrachten.
+
+\subsection{Schnittpunkte mit den Koordinatenachsen}
+Interessant k"onnen auch die Schnittpunkte des Graphen mit den Koordinatenachsen sein, v.a. wenn man den Graphen skizzieren m"ochte.
+
+\paragraph{Schnittpunkt mit der y-Achse:} $f(0)$, einfach einsetzten und ausrechnen.
+
+\paragraph{Nullstellen:} $f(x) = 0$ (siehe Abschnitt \ref{sec:nullstellen} und \ref{sec:quadnullstellen}). Merke: Ein Polynom hat h"ochstens so viele Nullstellen wie der h"ochste Exponent der Funktion, dabei erh"alt man zum Teil auch mehrfache Nullstellen, wie beispielsweise bei $x^3$. Diese Funktion hat ein dreifache Nullstelle an der Stelle x=0.
+
+\subsection{Grenzwerte} \label{sec:grenzwerte}
+\subsubsection{Polstellen und L"ocher}
+Eine Polstelle oder ein Pol, ist eine einpunktige Definitionsl"ucke einer Funktion, wenn die Funktionswerte in jeder Umgebung des Punktes (betragsm"a"sig) beliebig gro"s werden. Der Punkt $x_0 = 1$ der Funktion $f_1$ erf"ullt dies nicht (hier handelt es sich um ein \textbf{Loch}), denn $f_1(x) = 1$ in der Umgebung von $x_0$. Betrachten wir 
+\begin{equation*}
+f(x) := \frac{1}{x-1}
+\end{equation*}
+so handelt es sich bei $x_0 = 1$ um einen Pol der Funktion $f$ da
+\begin{equation*}
+\lim\limits_{x \to 1^+} f(x) = \infty \text{ und } \lim\limits_{x \to 1^-} f(x) = -\infty
+\end{equation*}
+$1^+$ ist der \textbf{rechter Grenzwert} bei $x=1$ (ann"aherung von rechts) und $1^-$ ist der \textbf{linke Grenzwert} bei $x=1$ (ann"aherung von links). Genau dieses Verhalten, also die Grenzwerte interessieren uns bei den Polstellen.
+
+\subsubsection{Verhalten im Unendlichen}
+Nun betrachtet man das Verhalten des Graphen im Unendlichen, also
+\begin{equation*}
+\lim\limits_{x \to +\infty} f(x) \text{ und } \lim\limits_{x \to -\infty} f(x) 
+\end{equation*}
+Dieses gibt man mit Hilfe des Limes an. Dabei ist interessant, ob sich der Graph einem bestimmten Wert ann"ahert oder ob er ins Unendliche steigt oder f"allt.
+
+\subsection{Asymptoten}
+Sei $f$ eine Funktion, so ist eine Asymptote von $f$ eine Gerade die $f$ im Unendlichen, sowohl in $x$ als auch in $y$ Richtung, ann"ahert. Asymptoten gehen somit direkt mit den Grenzwerten der Funktion $f$ einher. Im Normalfall handelt es sich um eine Gerade. Die Gerade muss keine Funktionsgerade sein! Betrachten wir erneut 
+\begin{equation*}
+f(x) = \frac{1}{x-1}
+\end{equation*}
+so ist die Gerade $x=0$ eine Asymptote von $f$. $y=1$ ist die triviale Asymptote.
+%Asymptoten k"onnen Geraden aber auch andere Funktionen sein, an die sich der Graph der zu untersuchenden Funktion beliebig nah ann"ahert, ohne sie jemals zu ber"uhren. Asymptoten findet man vor allem bei gebrochen rationalen Funktionen. Dort, wo der Nenner den Wert 0 erreichen w"urde (an dieser Stelle ist die Funktion nicht definiert $=>$ Grenzwertbildung), befindet sich eine senkrechte Asymptote. Diese Stelle nennt man Polstelle. Es kann aber auch sein, dass es sich dort um ein Loch handelt, dies ist dann der Fall, wenn die Polstelle gleichsam eine Nullstelle der Funktion ist. Beispiel: $\frac{2x}{4x-1}$ Der Nenner wird 0 bei x=0.25, es handelt sich dabei um keine Nullstelle, somit befindet sich an der Stelle x=0,25 eine senkrechte Asymptote. Um den Graphen auf waagrechte oder andere Asymptoten zu untersuchen, schaut man sich die Exponenten der Variablen an. Die folgenden Ausf"uhrungen beziehen sich rein auf die h"ochsten Exponenten der Variablen im Z"ahler und Nenner.
+
+ \subsection{Symmetrie}
+ Hier untersuchen wir die Symmetrie die Graphen zum Koordinatensystem. Wir unterscheiden dabei \textbf{Punktsymmetrie} zum Koordinatenursprung und \textbf{Achsensymmetrie zur $y$-Achse}:
+ \begin{itemize}
+ \item Achsensymmetrie ($y$-Achse), wenn $f(x)=f(-x)$
+ \item Punktsymmetrie (Ursprung), wenn $f(-x)=-f(x)$
+ \end{itemize}
+ siehe Abschnitt \ref{sec:symmetrie}
+
+\subsection{Extrem- und Terrassenpunkte}
+Angenommen Sie sind mit dem Auto unterwegs und sei $v(t)$ die Geschwindigkeit zum Zeitpunkt $t$. Sie beschleunigen und reduzieren die Beschleunigung auf $0$ zur Zeit $t_0$. Nun gibt es 2 M"oglichkeiten:
+\begin{enumerate}
+\item Sie bremsen: lokaler- oder globaler Extrempunkt von $v(t)$
+\item Sie beschleunigen wieder: Terrassenpunkt bin $v(t)$
+\end{enumerate}
+Wenn sie bremsen (negative Beschleunigung), ist klar, dass sie zum Zeitpunkt $t_0$ eine lokale oder globale Geschwindigkeit erreicht haben. Beschleunigen sie wieder, war die Beschleunigung gleich Null $v(t)$, steigt dann aber wieder an. Um nun herauszufinden wann sie die maximale Geschwindigkeit erreicht haben, m"ussen wir den Zeitpunkt finden, an dem Sie beginnen zu bremsen. D.h. an dem die Beschleunigung gleich Null und somit die Ableitung von $v(t)$ gleich Null ist. Das gibt uns \textbf{m"ogliche} Punkte, es k"onnte aber sein, dass Sie wieder beschleunigt haben. Falls dies der Fall ist h"atte sich die Beschleunigung in der Umgebung um $t_0$ nicht ge"andert und damit w"are die Ableitung der Beschleunigung also die 2. Ableitung von $v$ an $t_0$ gleich Null. Andernfalls handelt es sich um den ersten Fall, also um einen Extrempunkt. Im Allgemeinen wissen wir:
+\begin{equation*}
+f'(x_0) = 0 \Rightarrow x_0 \text{ ist ein Extrem- oder Terrassenpunkte}
+\end{equation*}
+Mit der 2. Ableitung ergibt sich folgendes:
+\begin{itemize}
+\item $f''(x_0) = 0 \Rightarrow x_0 \text{ ist Terrassenpunkte}$ 
+\item $f''(x_0) < 0 \Rightarrow x_0 \text{ ist lokales Maximum }$
+\item $f''(x_0) > 0 \Rightarrow x_0 \text{ ist lokales Minimum}$
+\end{itemize}
+Kurz: ein lokales Maximum oder Minimum besteht immer dann, wenn die erste Ableitung an ihrer Nullstelle einen Vorzeichenwechsel hat. Andernfalls handelt es sich um einen Terrassenpunkt, dies k"onnen wir auch "uberpr"ufen ohne die 2. Ableitung zu berechnen.
+
+ \subsection{Monotonie}
+Nachdem wir die Funktion hinreichend auf Extrem- und Terrassenpunkte untersucht haben, kann man ihre Monotonie analysieren. Diese gibt man "ublicherweise in Intervallen an, deren Grenzen die Ränder und die Extremstellen bilden. Um beim obigen Beispiel zu bleiben gibt uns die Monotonie die separierten Bereiche an denen wir Beschleunigt bzw. Abgebremst haben.
+
+\subsection{Kr"ummung}
+Um das Kr"ummungsverhalten einer Funktion zu untersuchen, ben"otigt man die zweite Ableitung des Funktionsterms. Es gilt: 
+ \begin{itemize}
+ \item $f''(x_0)<0 \Rightarrow f \text{ ist an } x_0 \ \textcolor{red}{rechtsgekr"ummt} $
+ \item $f''(x_0)>0 \Rightarrow f \text{ ist an } x_0 \ \textcolor{red}{linksgekr"ummt}$
+ \end{itemize}
+Die Stelle $x_0$, an welcher der Graph seine Kr"ummung "andert, bezeichnet man als Wendepunkt, hier "andert sich die Richtung der Kr"ummung von rechts nach links, bzw. von links nach rechts. Der Wendepunkt ist gleich der Nullstelle der 2. Ableitung des Funktionsterms, d.h. die zweite Ableitung gleich $0$ setzten und den zugeh"origen $x$-Wert berechnen. Das sind die wesentlichen Schritte einer Kurvendiskussion.
+
+ \subsection{"Ubungen}
+ \begin{enumerate}
+ \item Diskutiere die Kurven folgender Funktionen
+ \begin{itemize}
+ \item $f(x)=x^4$
+ \item $f(x)=\sin(x)$
+ \item $f(x)=3x^2 + 12x - 4$
+ \item $f(x)=\frac{4x^3 + x^2 - x}{x+1}$
+ \item $f(x)=\frac{\tan^2(x)}{\sin^2(x)}$
+ \end{itemize}
+ \item Untersuche folgende Funktionen auf ihre Nullstellen, Extrempunkte und Kr"ummung.
+ \begin{itemize}
+ \item $f(x)=(x-4)^2-3$
+ \item $f(x)=(x-2)(x+5)(x-4)$
+ \item $f(x)=\frac{1}{x}$
+ \end{itemize}
+ \end{enumerate}
+ 
+ 

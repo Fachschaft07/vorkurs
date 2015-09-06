@@ -6,18 +6,18 @@ A_1 \Rightarrow A_2, A_2 \Rightarrow A_3, \ldots A_{n-1} \Rightarrow A_n
 und $A_1$ gilt, dann folgt $A_n$. Wir haben also Pr"amissen, folgern gewisse Schl"usse und gelangen dann zur zu zeigenden Aussage.
 
 \subsection{Indirekter Beweis}
-Im indirekten Beweis oder auch Widerspruchsbeweis schaut man sich den Fall an, welchen man beweisen will und zeigt, dass es nicht anders sein kann. Man geht also zun"achst von der Negation aus und versucht auf einen Widerspruch zu sto"sen. Angenommen wir wollen $A$ beweisen. Wir wissen
+Im indirekten Beweis oder auch Widerspruchsbeweis der Aussage $A$ geht man davon aus, dass $A$ nicht zutrifft und zeigt, dass dies aufgrund eines Widerspruchs nicht sein kann. Man geht also zun"achst von der Negation aus und versucht auf einen Widerspruch zu sto"sen. Angenommen wir wollen $A$ beweisen. Wir wissen
 \begin{equation*}
 A \lor \neg A
 \end{equation*}
-ist eine Tautologie. Wir zeigen nun dass $\neg A \equiv \text{falsch}$, damit muss aber dann $A \equiv \text{wahr}$ gelten. Indirekte Beweise sind weniger sch"on in dem Sinne, dass sie weniger konstruktiv sind. Wir haben einen Widerspruchsannahme, folgern etwas und gelangen zu einem Widerspruch.
+ist eine Tautologie. Wir zeigen nun dass $\neg A \equiv \text{falsch}$, damit muss aber dann $A \equiv \text{wahr}$ gelten. Indirekte Beweise sind weniger sch"on in dem Sinne, dass sie weniger konstruktiv sind. Wir haben einen Widerspruchsannahme, folgern etwas und gelangen zu einem Widerspruch. Dabei kann es sein, dass wir nichts daraus 'lernen' und wir, bis auf das $A$ gilt, nichts aus dem Beweis 'mitnehmen'. Solche Beweise wirken oft 'wie vom Himmel gefallen' und geben oft kaum Auskunft dar"uber, welche Idee der Beweisende hatte oder wie und warum er darauf gekommen ist.
 
 \subsubsection{Beispiel}
 Das bekannteste Beispiel hierf"ur ist der Beweis der Aussage:
 \begin{equation*}
 A:=  \sqrt{2} \text{ ist keine rationale Zahl}
 \end{equation*}
-Man geht nun zun"achst davon aus, dass es eine rationale Zahl ist. Angenommen $\neg A \equiv \text{wahr}$ also angenommen $\sqrt{2}$ ist eine rationale Zahl.
+Man geht nun davon aus, dass $\sqrt{2}$ eine rationale Zahl ist. Angenommen $\neg A \equiv \text{wahr}$ also angenommen $\sqrt{2}$ ist eine rationale Zahl.
 \begin{equation*}
 \Rightarrow \exists q, p \in \mathbb{N}:\sqrt{2}=\frac{q}{p},
 \end{equation*}
@@ -41,13 +41,17 @@ Setzt man nun diesen Wert f"ur $q$ oben ein, so erh"alt man
 \begin{equation*}
 2 \cdot p^2 = 4 \cdot r^2 \iff p^2 = 2 \cdot r^2
 \end{equation*}
-Nun sieht man das es sich auch bei $p$ um eine ganze, gerade Zahl handelt. Da jede ganze, gerade Zahl den Teiler $2$ hat, besitzen auch $p$ und $q$ den \textbf{gemeinsamen Teiler} 2. Einer unserer Voraussetzungen war allerdings, dass diese beiden Zahlen \textbf{teilerfremd} sind. Wenn wir auf solch einen Widerspruch treffen, so muss zumindest eine unserer Annahmen falsch sein. Die einzige Annahme, welche wir getroffen haben ist jedoch, dass es sich bei Wurzel $2$ um eine rationale Zahl handelt. Diese ist also falsch ($(\neg A) \Rightarrow \text{falsch}$ ist wahr). Damit muss $\neg A \equiv \text{falsch}$ sein und damit $A \equiv \text{wahr}$. Und somit haben wir bewiesen, dass $\sqrt{2}$ keine rationale Zahl ist.
+Nun sieht man, dass es sich auch bei $p$ um eine ganze, gerade Zahl handelt. Da jede ganze, gerade Zahl den Teiler $2$ hat, besitzen auch $p$ und $q$ den \textbf{gemeinsamen Teiler} 2. Einer unserer Voraussetzungen war allerdings, dass diese beiden Zahlen \textbf{teilerfremd} sind. Wenn wir auf solch einen Widerspruch treffen, so muss zumindest eine unserer Annahmen falsch sein. Die einzige Annahme, welche wir getroffen haben ist jedoch, dass es sich bei Wurzel $2$ um eine rationale Zahl handelt. Diese ist also falsch ($(\neg A) \Rightarrow \text{falsch}$ ist wahr). Damit muss $\neg A \equiv \text{falsch}$ sein und damit $A \equiv \text{wahr}$. Und somit haben wir bewiesen, dass $\sqrt{2}$ keine rationale Zahl ist.
 
 \subsection{Vollst"andige Induktion}
-Das Induktionsprinzip ist sehr nat"urlich. Es geht im Endeffekt um nichts anderes als ums Z"ahlen. Das beherrschen bereits Kleinkinder und Tiere. Stellen Sie sich eine Dominokette vor. Wenn sie der folgenden Aussage zustimmen k"onnen, haben sie die Induktion im Grunde verstanden:
+Das Induktionsprinzip ist sehr nat"urlich. Es geht im Endeffekt um nichts anderes als ums Z"ahlen. Z"ahlen, so scheint es, liegt in der Natur jedes intelligenten Lebewesens. Stellen Sie sich eine Dominokette vor. Wenn sie der folgenden Aussage zustimmen k"onnen, haben sie die Induktion im Grunde verstanden:
 \begin{center}
-Wenn ich den ersten Dominostein umwerfe und zudem gilt: wenn ein Dominostein umf"allt, folgt, dass sein Nachfolger umf"allt, so fallen alle Dominosteine um.
+Wenn ich den ersten Dominostein umwerfe und zudem gilt, dass wenn ein Dominostein umf"allt, folgt, dass sein Nachfolger umf"allt, so fallen alle Dominosteine um.
 \end{center}
+In Form der Pr"adikatenlogik kann man dies wie folgt schreiben
+\begin{equation*}
+(P(1) \ \land P(x) \Rightarrow P(x+1)) \Rightarrow P(y)
+\end{equation*}
 Sie m"ussen nicht zeigen, dass jeder Stein umf"allt sondern sie zeigen dass:
 \begin{enumerate}
 \item \textbf{Induktionsanfang}: der 1. Stein umf"allt und
