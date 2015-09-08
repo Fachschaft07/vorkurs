@@ -1,10 +1,10 @@
-Die Logik "offnete den Weg f"ur die Informatik. Sie war immer eine Disziplin der Philosophie und hat eine sehr interessante Geschichte (von Aristoteles, Kant, Hegel, Boole, Russell, Gentzen, Skolem, G"odel, bis zu Turing und weiter) hinter sich gelassen. Die Aussagenlogik, als kleiner aber grundlegender Teil, ist intuitiv und auf sehr nat"urliche Weise begreifbar. Sie ist fundamental um mathematische Ausdr"ucke zu verstehen und wird in allen Bereichen der Mathematik verwendet. In der Informatik hat die Logik und damit auch die Aussagenlogik eine wichtige Bedeutung. In der technischen Informatik werden Kodierer und Dekodierer, Addierer und Multiplizierer mit sogenannten logischen Gattern realisiert. Ein Gatter ist nichts anders als eine logische Verkn"upfung. Zum Beispiel ist das Und-Gatter ein Gatter mit zwei Eing"angen $x_{in}^1, x_{in}^2$ und einem Ausgang $x_{out}$ mit 
+Die Logik "offnete den Weg f"ur die Informatik. Sie war immer eine Disziplin der Philosophie und hat eine sehr interessante Geschichte (von Aristoteles, Kant, Hegel, Boole, Russell, Gentzen, Skolem, G"odel, bis zu Turing und weiter) hinter sich gelassen. Die Aussagenlogik als kleiner aber grundlegender Teil ist intuitiv und auf sehr nat"urliche Weise begreifbar. Sie ist fundamental um mathematische Ausdr"ucke zu verstehen und wird in allen Bereichen der Mathematik verwendet. In der Informatik hat die Logik und damit auch die Aussagenlogik eine wichtige Bedeutung. In der technischen Informatik werden Kodierer und Dekodierer, Addierer und Multiplizierer mit sogenannten logischen Gattern realisiert. Ein Gatter ist nichts anders als eine logische Verkn"upfung. Zum Beispiel ist das Und-Gatter ein Gatter mit zwei Eing"angen $x_{in}^1, x_{in}^2$ und einem Ausgang $x_{out}$ mit 
 \begin{equation*}
-	x_{out} = x_{in}^1 \land x_{in}^2,
+	x_{out} = x_{in}^1 \land x_{in}^2.
 \end{equation*}
-legt man nun eine gewisse Spannung an $x_{in}^1$, und gleichzeitig an $x_{in}^2$ an, so gibt das Gatter diese Spannung weiter, ansonsten nicht. Die Gatter bilden den Kern der Computerhardware wie z.B. Mikroprozessoren. Zudem ist die Aussagenlogik in jeder Programmiersprache eingebettet. Sie werden viele logische Ausdr"ucke in Java schreiben.
+Legt man nun eine gewisse Spannung an $x_{in}^1$ und \textit{gleichzeitig} $x_{in}^2$ an, so gibt das Gatter diese Spannung weiter, ansonsten nicht. Die Gatter bilden den Kern der Computerhardware wie z.B. Mikroprozessoren. Zudem ist die Aussagenlogik in jeder Programmiersprache eingebettet. Sie werden viele logische Ausdr"ucke in Java schreiben.
 
-Sp"ater im Studium werden Sie (Wirtschaftsinformatiker ausgeschlossen), das Konzept einer formalen Sprache kennenlernen. Formale Sprachen und bestimmte Teile der Logik sind sehr eng miteinander verbunden. Die aktuelle Forschung besch"aftigt sich mit der automatisierten Beweis"uberpr"ufung und sogar mit dem automatisierten Beweisen bisher unbewiesener Aussagen. Die Logik ist zudem im Bereich k"unstliche Intelligenz und Robotik essentiell. Und: ein bisschen Logik kann auch f"ur den Alltag nicht schaden.
+Sp"ater im Studium werden die meisten von Ihnen das Konzept einer formalen Sprache kennenlernen. Formale Sprachen und bestimmte Teile der Logik sind sehr eng miteinander verbunden. Die aktuelle Forschung besch"aftigt sich mit der automatisierten Beweis"uberpr"ufung und sogar mit dem automatisierten Beweisen bisher unbewiesener Aussagen. Die Logik ist zudem im Bereich k"unstliche Intelligenz und Robotik essentiell. Und: ein bisschen Logik kann auch f"ur den Alltag nicht schaden.
 
 Wir werden die Aussagenlogik besprechen und einen ganz kurzen ersten Blick auf die Pr"adikatenlogik werfen. Beherrschen sie diese beiden Bereiche der Logik, so sind sie f"ur das gesamte Bachelorstudium gewappnet.
 
@@ -15,22 +15,21 @@ Wir werden die Aussagenlogik besprechen und einen ganz kurzen ersten Blick auf d
 \begin{definition}[Aussage]
 Eine Aussage ist ein als Satz formulierter Gedanke, dem man auf sinnvolle Weise einen Wahrheitswert zuordnen kann.
 \end{definition}
-
-\begin{axiom}[Gesetzt vom ausgeschlossenen Dritten]
-Eine Aussage ist entweder \textbf{wahr (w)} oder \textbf{falsch (f)}.
-\end{axiom}
+%\begin{axiom}[Gesetz vom ausgeschlossenen Dritten]
+Eine Aussage ist entweder \textbf{wahr (w)} oder \textbf{falsch (f)} (Gesetz vom ausgeschlossenen Dritten).
+%\end{axiom}
 
 \subsubsection*{Beispiele}
 \begin{itemize}
 \item $A_1 := $ Die Sonne strahlt w"arme ab.
 \item $A_2 := $ Bayern M"unchen wird diese Saison wieder deutscher Meister.
 \item $A_3 := 1+1 = 2$
-\item $A_4 := $ Wann ist in diesem Jahr Ostern?
+\item $A_4 := $ Wird in diesem Jahr Ostern gefeiert?
 \end{itemize}
-$A_1$ und $A_3$ sind offensichtlich wahre Aussagen. $A_2$ k"onnen wir derzeit nicht "uberpr"ufen, sie ist aber trotzdem wahr oder falsch und darum zul"assig. $A_4$ ist keine Aussage.
+$A_1$ und $A_3$ sind offensichtlich wahre Aussagen. $A_2$ k"onnen wir derzeit nicht "uberpr"ufen, sie ist aber trotzdem wahr oder falsch und darum zul"assig. $A_4$ ist keine Aussage, sondern eine Frage - die Antwort darauf kann wieder eine Aussage sein (z.B. \textit{In diesem Jahr wird Ostern gefeiert.}).
 
 \subsubsection*{Schreibweisen}
-Wir schreiben gew"ohnlich $A$ ist \textbf{wahr} oder \textbf{falsch} bzw. \textbf{w} oder \textbf{f} bzw. (f"ur uns Informatiker) \textbf{1} oder \textbf{0}.
+Wir schreiben gew"ohnlich $A$ ist \textbf{wahr} oder \textbf{falsch}, \textbf{w} oder \textbf{f} bzw. (f"ur uns Informatiker) \textbf{1} oder \textbf{0}.
 
 \subsubsection{Logische Verkn"upfungen}
 \begin{definition}[Negation]
@@ -162,7 +161,7 @@ Das exklusive Oder ist f"ur die Informatiker so Hilfreich, dass es, anders als d
 \subsubsection{Vollst"andigkeit}
 Wie ihr sicher gesehen habt lassen sich XOR, $\iff, \Rightarrow$ mithilfe von $\neg, \land, \lor$ darstellen und tats"achlich reichen die Verkn"upfungen $\neg, \land, \lor$ aus um jede denkbare Formel aufzustellen. Trotzdem sollte man die Bedeutung der anderen Symbole beherrschen, da diese in jedem Mathe- oder Informatikbuch auftauchen und sehr n"utzliche Abk"urzungen sind. Man bedenke auch, dass auch eine andere Menge an Verkn"upfungen vollst"andig sein kann $A \land B$ kann zum Beispiel durch $\neg (A \Rightarrow \neg B)$ ausgedr"uckt werden, man "uberlege warum?
 
-\subsubsection{Grundlegende Rechenregeln}
+\subsubsection{Grundlegende Rechenregeln (Bonus)}
 Wir verwenden das Symbol $\equiv$ anstatt $\iff$ um anzudeuten, dass wir zwei Ausdr"ucke vergleichen m"ochten und diese sollen durch das $\equiv$-Symbol besser abgetrennt werden. Die Symbole k"onnen als identisch angesehen werden. Wir m"ochten mit dem $\equiv$-Symbol verdeutlichen, dass die eine durch die andere Formel ersetzt/vereinfacht werden kann, da sie "aquivalent sind.
 \begin{itemize}
 \item Neutrales Element 1: $A \ \lor $ wahr $\equiv$ wahr
@@ -188,13 +187,13 @@ Wir verwenden das Symbol $\equiv$ anstatt $\iff$ um anzudeuten, dass wir zwei Au
 Man bezeichnet wahr auch als das \textbf{neutrale} Element der \textbf{Konjunktion} ("ahnlich der 1 in der Multiplikation) und falsch als das \textbf{neutrale} Element der \textbf{Disjunktion} ("ahnlich der 0 in der Addition). Dies Erkl"art auch die Informatikschreibweise denn verwenden wir anstatt wahr die 1 und anstatt falsch die 0, so k"onnen wir mit einer Aussageformel rechen: $A \land B \equiv A \cdot B$, $A \lor B \equiv A + B \equiv \min(A + B, 1)$, das aber nur am Rande.
 
 \subsubsection{Tautologie}
-Als Tautologie bezeichnet man eine Aussage die immer wahr ist. So zum Beispiel das Gesetzt vom ausgeschlossenen Dritten
+Als Tautologie bezeichnet man eine Aussage die immer wahr ist. So zum Beispiel das Gesetz vom ausgeschlossenen Dritten
 
 \paragraph*{Beispiel:}
 \begin{equation*}
 A \lor (\neg A)
 \end{equation*}
-andere Tautologien sind nicht auf den ersten Blick zu Erkennen.
+Andere Tautologien sind nicht auf den ersten Blick zu erkennen.
 
 \subsubsection{Widerspruch}
 Als Widerspruch bezeichnet man eine Aussage die immer falsch ist. 
@@ -207,7 +206,7 @@ Nehmen wir das Beispiel von oben:
 \begin{equation*}
 (\neg A) \land A
 \end{equation*}
-ist immer falsch, denn immer wenn eine Seite der Konjunktion wahr ist, ist die andere falsch. Damit aber eine Konjunktion wahr wird m"ussen beide Seiten wahr sein. Verneinen wir diese Aussage so erhalten wir:
+Das ist immer falsch, denn immer wenn eine Seite der Konjunktion wahr ist, ist die andere falsch. Damit aber eine Konjunktion wahr wird m"ussen beide Seiten wahr sein. Verneinen wir diese Aussage so erhalten wir:
 \begin{equation*}
 \neg ((\neg A) \land A) \stackrel{\text{nach De-Morgen-2}}{\equiv} ((\neg (\neg A)) \lor (\neg A)) \stackrel{\text{nach Negation 1}}{\equiv} (A \lor (\neg A))
 \end{equation*} 
