@@ -2,18 +2,18 @@ Beim Ableiten m"ochten wir etwas "uber die Ver"anderung einer Funktion erfahren.
 \begin{equation*}
 \bar{v} = \frac{\text{Strecke}}{\text{Zeit}} \approx \frac{s(11) - s(9)}{11 - 9} = \frac{\Delta s}{\Delta t} = \frac{s(11) - s(9)}{2}
 \end{equation*}
-Aber ist $\bar{v} \stackrel{?}{=} v(10)$? Nein $\bar{v}$ ist nur die durchschnittliche Geschwindigkeit zwischen $s(9)$ und $s(11)$. Wenn wir die Geschwindigkeit genauer bestimmen m"ochten, m"ussen wir den Abstand von $10$ kleiner w"ahlen, $0$ darf er jedoch nicht werden, denn wir d"urfen nicht durch Null teilen. Hilfe gibt uns der Grenzwert:
+Aber ist $\bar{v} \stackrel{?}{=} v(10)$? Nein $\bar{v}$ ist nur die durchschnittliche Geschwindigkeit zwischen $s(9)$ und $s(11)$. Wenn wir die Geschwindigkeit genauer bestimmen m"ochten, m"ussen wir den Abstand/die \textit{Umgebung} von/um $10$ kleiner w"ahlen, $0$ darf er jedoch nicht werden, denn wir d"urfen nicht durch Null teilen. Hilfe gibt uns der Grenzwert:
 \begin{equation*}
 v(10) = \lim\limits_{h \to 0} \frac{s(10+h) - s(10)}{h}
 \end{equation*}
 Der Grenzwert muss nat"urlich existieren! Nehmen wir einmal an das Auto beschleunigt und $s(t) = 2 t^2$.
 \begin{align*}
 v(10) &= \lim\limits_{h \to 0} \frac{s(10+h) - s(10)}{h} = \lim\limits_{h \to 0} \frac{2 (10+h)^2 - 2 (10)^2}{h}\\
-&= \lim\limits_{h \to 0} \frac{40h + 2h^2}{h} = \lim\limits_{h \to 0} 20 + h \to 40
+&= \lim\limits_{h \to 0} \frac{40h + 2h^2}{h} = \lim\limits_{h \to 0}(40 + 2h) \to 40
 \end{align*}
 
 \subsection{Ableiten von Funktionen}
-Die Ableitung der Funktion $f$ an der Stelle $x_0$, geschrieben $f'(x_0)$ beschreibt das Verhalten der Funktion in der Umgebung an der Stelle $x_0$. Sie ist auch die Steigung der Funktion an dem Punkt $x_0$. Die Tangente an $x_0$ hat die Steigung $f'(x_0)$. Eine Tangente ist eine Gerade, die den Graphen in nur einem einzigen Punkt ber"uhrt. Um die Tangentensteigung zu erhalten, betrachtet man zun"achst die Steigung einer Sekante und n"ahert den zweiten Punkt dem ersten immer weiter an. Ja, das klingt stark nach einer Grenzwertbildung. 
+Die Ableitung der Funktion $f$ an der Stelle $x_0$, geschrieben $f'(x_0)$ beschreibt das Verhalten der Funktion in der \textit{Umgebung} an der Stelle $x_0$. Sie ist auch die Steigung der Funktion an dem Punkt $x_0$. Die Tangente an $x_0$ hat die Steigung $f'(x_0)$. Eine Tangente ist eine Gerade, die den Graphen in nur einem einzigen Punkt ber"uhrt. Um die Tangentensteigung zu erhalten, betrachtet man zun"achst die Steigung einer Sekante und n"ahert den zweiten Punkt dem ersten immer weiter an.
 \begin{definition}[Differenzierbarkeit in $x_0$]
 Eine Funktion hei"st differenzierbar an der Stelle $x_0$ wenn der Grenzwert
 \begin{equation*}
@@ -33,17 +33,14 @@ Eine Funktion hei"st differenzierbar, wenn sie an jeder Stelle $x_0 \in \mathbb{
 \paragraph{Anmerkung:} Eine differenzierbare Funktion ist stetig und eine in $x_0$ differenzierbare Funktion ist stetig in $x_0$. Die Umkehrung gilt nicht!
 
 \subsubsection{Die erste Ableitung}
-F"ur die gew"ohnlichen differenzierbaren Funktionen gibt es die uns bekannten Ableitungsregeln. Um eine Funktion abzuleiten multipliziert man bei Polynomen jeweils die Exponenten mit den dazugeh"origen Koeffizienten ihrer Basis und subtrahiert den Exponenten dabei um 1.
+F"ur die gew"ohnlichen differenzierbaren Funktionen gibt es die uns bekannten Ableitungsregeln. Um eine Funktion abzuleiten multipliziert man bei Polynomen jeweils die Exponenten mit den dazugeh"origen Koeffizienten ihrer Basis und subtrahiert den Exponenten dabei um 1. Konstanten fallen dabei weg.
+\begin{equation*}
+f(x) = a_1 \cdot (x-a_2)^{a_3} + a_4 \Rightarrow f'(x) = a_1 \cdot (x - a_2)^{a_3-1} \cdot a_3 \text{ mit } a_1,a_2,a_3 \text{ konstant.}
+\end{equation*}
 
 \paragraph{Beispiel:}
 \begin{equation*}
 f(x)=2x^2 \Rightarrow f'(x)= 2 \cdot 2x^{2-1}=4x
-\end{equation*}
-Konstanten fallen dabei weg.
-
-\paragraph{Beispiel:}
-\begin{equation*}
-f(x)=2x^2+4 \Rightarrow f'(x)= 2 \cdot 2x^(2-1)=4x
 \end{equation*}
 
 \subsection{Besondere Ableitungen}

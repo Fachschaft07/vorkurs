@@ -19,7 +19,7 @@ Sie ist eine nach oben ge"offnete, achsensymmetrische Kurve dar, deren niedrigst
 %Ihr Scheitel besitzt die Koordinaten $S(x_s,y_s)$.
 
 \subsubsection{Stauchen und Strecken}
-Durch Multiplizieren der Normalparabel mit einer konstanten $a$ l"asst sich die Kurve stauchen oder strecken. $f(x)=a \cdot x^2$ Ist der Betrag von $a$ kleiner $1$, so wird die Parabel gestaucht. Ist er gr"o"ser $1$, so wird sie gestreckt. Dar"uber hinaus wird die Funktion durch einen negativen Wert von a an der $x$-Achse gespiegelt und die Parabel ist somit nach unten ge"offnet.
+Durch Multiplizieren der Normalparabel mit einer konstanten $a$ l"asst sich die Kurve stauchen oder strecken $f(x)=a \cdot x^2$. Ist der Betrag von $a$ kleiner $1$, so wird die Parabel gestaucht (siehe Abb. \ref{fig:parabel}). Ist er gr"o"ser $1$, so wird sie gestreckt. Dar"uber hinaus wird die Funktion durch einen negativen Wert von a an der $x$-Achse gespiegelt und die Parabel ist somit nach unten ge"offnet.
 \begin{figure}[h!]
 \begin{center}
 \begin{tikzpicture}[scale = 1.0]
@@ -31,21 +31,25 @@ Durch Multiplizieren der Normalparabel mit einer konstanten $a$ l"asst sich die 
         axis y line=center,
         axis x line=middle,
     ]
-    	   \addplot+[mark=none, color=blue] { x*x};
-        \addplot+[mark=none, color=red] {2 * x*x};
-         \addplot+[mark=none, color=green] {0.5 * x*x};
+    	  \addlegendentry{$a=1$}
+    	   \addplot+[mark=none, color=blue] {x*x};
+    	   \addlegendentry{$a=2$}
+       \addplot+[mark=none, color=red] {2 * x*x};
+       \addlegendentry{$a=0.5$}
+       \addplot+[mark=none, color=green] {0.5 * x*x};
     \end{axis}
 \end{tikzpicture}
 \end{center}
 \caption{Normalparabel (blau), gestreckte (rot) und gestauchte Normalparabel (gr"un).}
+\label{fig:parabel}
 \end{figure}
 
 \subsubsection{Die Scheitelform}
 Durch Kombination von Stauchung/Streckung und Verschiebung erh"alt man die so genannte Scheitelform: 
 \begin{equation*}
-f(x)=a(x-x_s)^2+y_s
+f(x)=a(x-x_s)^2+y_s.
 \end{equation*}
-Mithilfe dieser Funktion lassen sich alle Arten quadratischer Funktionen darstellen. Au"serdem lassen sich die Koordinaten des Scheitels, der Stauchungs- bzw. Streckungsfaktor der Funktion, sowie die Frage, ob sie nach oben oder unten ge"offnet ist, auf einfachste Weise bestimmen.
+Mithilfe dieser Form lassen sich alle Arten quadratischer Funktionen darstellen. Au"serdem lassen sich die Koordinaten des Scheitels, der Stauchungs- bzw. Streckungsfaktor der Funktion, sowie die Frage, ob sie nach oben oder unten ge"offnet ist, auf einfachste Weise bestimmen.
 
 \subsubsection{Die Normalform einer quadratischen Gleichung}
 Multipliziert man die Scheitelform aus, so erh"alt man 
@@ -58,7 +62,7 @@ f(x)=a \cdot x^2+b \cdot x+c
 \end{equation*}
 
 \subsubsection{Die binomischen Formeln}
-Die binomischen Formeln sind das Ergebnis des Ausmultiplizierens, hat man sie jedoch im Kopf so spart man viel Zeit.
+Die binomischen Formeln sind das Ergebnis des Ausmultiplizierens, hat man sie jedoch im Kopf so spart man viel Zeit:
 \begin{enumerate}
 \item $(a+b)^2=a^2+2ab+b^2$
 \item $(a-b)^2=a^2-2ab+b^2$
@@ -77,7 +81,7 @@ Im ersten Schritt klammern wir die Konstante "'$a$"' (hier gleich $3$) aus:
 \begin{equation*}
 f(x) = 3x^2 - 6x - 24= 3 \cdot (x^2-2x-8).
 \end{equation*}
-Schaut man sich nun den Term innerhalb der runden Klammern genauer an, so kann man eine gewisse "Ahnlichkeit mit der ersten, bzw. zweiten binomischen Formel feststellen. Deshalb folgt nun auch der wichtigste Schritt, die eigentliche quadratische Erg"anzung. Wir erg"anzen die Formel nun so, dass wir eine der beiden binomischen Formeln anwenden k"onnen. Daf"ur m"ussen wir erste einmal feststellen, was der a- und was der $b$-Wert der binomischen Formeln ist. Die zweite binomische Formel lautet 
+Schaut man sich nun den Term innerhalb der runden Klammern genauer an, so kann man eine gewisse "Ahnlichkeit mit der ersten, bzw. zweiten binomischen Formel feststellen. Deshalb folgt nun auch der wichtigste Schritt, die eigentliche quadratische Erg"anzung. Wir erg"anzen die Formel nun so, dass wir eine der beiden binomischen Formeln anwenden k"onnen. Daf"ur m"ussen wir erst einmal feststellen, was der $a$- und was der $b$-Wert der binomischen Formeln ist. Die zweite binomische Formel lautet 
 \begin{equation*}
 (a-b)^2=a^2-2ab+b^2.
 \end{equation*}
@@ -119,14 +123,14 @@ f(x) = 6x^2 - 24
 \end{equation*}
 Wir fragen uns f"ur welche $x$ ist $f(x) = 0$.
 \begin{equation*}
-f(x) = 0 \iff 6x^2 - 24 = 0 \iff x^2 - 4 = 0 \iff^{\text{3. bin. Formel}} (x-2)(x+2) = 0 
+f(x) = 0 \iff 6x^2 - 24 = 0 \iff x^2 - 4 = 0 \stackrel{\text{3. bin. Formel}}{\iff} (x-2)(x+2) = 0 
 \end{equation*}
 Die Faktoren der Funktion sind somit $(x-2)$ und $(x+2)$. $(x-2) = 0$ f"ur $x = 2$ und $(x+2) = 0$ f"ur  $x = -2$. Damit sind die Nullstellen:
 \begin{equation*}
 N_1 = (2, f(2)) = (2, 0) \text{ und } N_2 = (-2, f(-2)) = (-2, 0)
 \end{equation*}
 
-\paragraph{Berechnung der Umkehrfunktionen (nicht f"ur quadratischen Funktionen):}
+\paragraph{Berechnung der Umkehrfunktionen (f"ur alle Funktionen):}
 Im Grundlagenteil haben wir den Begriff der Umkehrfunktion kennen gelernt. Angenommen $x_0$ sei eine Nullstelle der Funktion $f(x)$ und angenommen $f(x)$ besitzt eine Umkehrfunktion ($f(x)$ ist bijektiv), dann folgt daraus:
 \begin{equation*}
 f(x_0) = 0 \iff f^{-1}(0) = x_0
@@ -135,8 +139,9 @@ Das hei"st wir k"onnten $f^{-1}(x)$ berechnen und dann einfach $0$ einsetzten un
 
 \paragraph{Beispiele}
 \begin{itemize}
-\item Sei $f(x) = 3x^2 + 3x + 4$: Die Normalparabel ist nicht bijektiv und da jede quadratische Funktion eine gestauchte und verschobene 'Variante' der Normalparabel ist, sind quadratische Funktionen nicht bijektiv.
-\item Sei $f(x) = x - 7 \Rightarrow f^{-1}(y) = y + 7 \Rightarrow N = (f^{-1}(0), 0) = (7, 0)$
+\item Sei $f(x) = 3x^2 + 3x + 4$, $f$ ist nicht bijektiv, hier nehmen wir lieber die Mitternachtsformel.
+\item Sei $f(x) = x - 7 \Rightarrow f^{-1}(y) = y + 7 \Rightarrow N = (f^{-1}(0), 0) = (7, 0)$.
+\item Sei $f(x) = \ln(x)$, die Umkehrfunktion ist $e^x$ und somit ist $e^0 = 1$ eine Nullstelle von $f(x)$.
 \end{itemize}
 
 % Was hier folgt ist unsinnig!
@@ -182,16 +187,15 @@ Wie entsteht diese Formel?
 \end{equation*}
 Wird auf die Scheitelform gebracht
 \begin{equation*}
- ax^2 + bx + c  = (x + \frac{b}{2a})^2 - \frac{b^2-4ac}{4a^2}
+ ax^2 + bx + c  = \left(x + \frac{b}{2a} \right)^2 - \frac{b^2-4ac}{4a^2}
 \end{equation*}
 und gleich Null gesetzt
 \begin{equation*}
-(x + \frac{b}{2a})^2 - \frac{b^2-4ac}{4a^2} = 0 \iff x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\left(x + \frac{b}{2a}\right)^2 - \frac{b^2-4ac}{4a^2} = 0 \iff x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 \end{equation*}
-Den Beinamen "'Mitternachtsformel"' verdankt sie ihrer Wichtigkeit. Sie wird n"amlich tats"achlich so oft gebraucht, dass man sie auch noch auswendig aufsagen k"onnen sollte, wenn man um Mitternacht geweckt wird! (Auch wenn von euch vermutlich niemand bereits um Mitternacht schl"aft $\ldots$)
-Die Mitternachtsformel hat noch einen weiteren Vorteil. Mithilfe der Diskriminante (dem Term, der bei der Mitternachtsformel unter der Wurzel steht) l"asst sich auch auf leichteste Weise feststellen, ob die Funktion Nullstellen besitzt und wenn ja, wie viele.
+Den Beinamen "'Mitternachtsformel"' verdankt sie ihrer Wichtigkeit. Sie wird n"amlich tats"achlich so oft gebraucht, dass man sie auch noch auswendig aufsagen k"onnen sollte, wenn man um Mitternacht geweckt wird! (Auch wenn von euch vermutlich niemand bereits um Mitternacht schl"aft $\ldots$).
 
-\paragraph{Raten der Nullstellen (nicht nur f"ur quadratischen Funktionen):}
+\paragraph{Raten der Nullstellen (f"ur alle Funktionen):}
 Ist man erfahren genug und die Funktion einfach genug, so kann man h"aufig die Nullstelle auch einfach erraten. Dann muss man noch einen Beweis erbringen, dass es sich wirklich um einen Nullstelle handelt. Hierf"ur setzten wir einfach das geratene $x_0$ in $f(x)$ ein und "uberpr"ufen ob 
 \begin{equation*}
 f(x_0) \stackrel{?}{=} 0

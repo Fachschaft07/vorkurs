@@ -1,16 +1,16 @@
 \subsection{Direkter Beweis}
-Den direkten Beweis haben wir im Kapitel "uber die quadratischen Funktionen schon kennengelernt. Es handelt sich hierbei um nichts anderes als das direkte Herleiten von Formeln. Wen wir zeigen k"onnen dass 
+Beim direkten Beweis handelt es sich um das \textbf{direkte} Herleiten von Aussagen unter der Annahme von bereits bewiesenen, wahren Aussagen. Wenn wir zeigen k"onnen dass 
 \begin{equation*}
 A_1 \Rightarrow A_2, A_2 \Rightarrow A_3, \ldots A_{n-1} \Rightarrow A_n
 \end{equation*}
-und $A_1$ gilt, dann folgt $A_n$. Wir haben also Pr"amissen, folgern gewisse Schl"usse und gelangen dann zur zu zeigenden Aussage.
+gilt und $A_1$ eine bereits bewiesene wahre Aussage ist, dann folgt $A_n$. Wir haben also Pr"amissen, folgern gewisse Schl"usse und gelangen dann zur zu zeigenden Aussage $A_n$.
 
 \subsection{Indirekter Beweis}
-Im indirekten Beweis oder auch Widerspruchsbeweis der Aussage $A$ geht man davon aus, dass $A$ nicht zutrifft und zeigt, dass dies aufgrund eines Widerspruchs nicht sein kann. Man geht also zun"achst von der Negation aus und versucht auf einen Widerspruch zu sto"sen. Angenommen wir wollen $A$ beweisen. Wir wissen
+Im \textbf{indirekten Beweis} oder auch \textbf{Widerspruchsbeweis} der Aussage $A$ geht man davon aus, dass $A$ nicht zutrifft und zeigt, dass dies aufgrund eines Widerspruchs nicht sein kann. Man geht also zun"achst von der Negation aus und versucht auf einen Widerspruch zu sto"sen. Angenommen wir wollen $A$ beweisen. Wir wissen
 \begin{equation*}
 A \lor \neg A
 \end{equation*}
-ist eine Tautologie. Wir zeigen nun dass $\neg A \equiv \text{falsch}$, damit muss aber dann $A \equiv \text{wahr}$ gelten. Indirekte Beweise sind weniger sch"on in dem Sinne, dass sie weniger konstruktiv sind. Wir haben einen Widerspruchsannahme, folgern etwas und gelangen zu einem Widerspruch. Dabei kann es sein, dass wir nichts daraus 'lernen' und wir, bis auf das $A$ gilt, nichts aus dem Beweis 'mitnehmen'. Solche Beweise wirken oft 'wie vom Himmel gefallen' und geben oft kaum Auskunft dar"uber, welche Idee der Beweisende hatte oder wie und warum er darauf gekommen ist.
+ist eine Tautologie. Wir zeigen nun, dass $\neg A \equiv \text{falsch}$, damit muss $A \equiv \text{wahr}$ gelten. Indirekte Beweise sind weniger sch"on in dem Sinne, dass sie weniger konstruktiv sind. Wir haben einen Widerspruchsannahme, folgern etwas und gelangen zu einem Widerspruch. Dabei kann es sein, dass wir nichts daraus \glqq lernen\grqq \ und wir, bis auf das $A$ gilt, nichts aus dem Beweis \glqq mitnehmen\grqq . Solche Beweise wirken oft \glqq wie vom Himmel gefallen\grqq \ und geben oft kaum Auskunft dar"uber, welche Idee der Beweisende hatte oder wie und warum er darauf gekommen ist.
 
 \subsubsection{Beispiel}
 Das bekannteste Beispiel hierf"ur ist der Beweis der Aussage:
@@ -44,20 +44,20 @@ Setzt man nun diesen Wert f"ur $q$ oben ein, so erh"alt man
 Nun sieht man, dass es sich auch bei $p$ um eine ganze, gerade Zahl handelt. Da jede ganze, gerade Zahl den Teiler $2$ hat, besitzen auch $p$ und $q$ den \textbf{gemeinsamen Teiler} 2. Einer unserer Voraussetzungen war allerdings, dass diese beiden Zahlen \textbf{teilerfremd} sind. Wenn wir auf solch einen Widerspruch treffen, so muss zumindest eine unserer Annahmen falsch sein. Die einzige Annahme, welche wir getroffen haben ist jedoch, dass es sich bei Wurzel $2$ um eine rationale Zahl handelt. Diese ist also falsch ($(\neg A) \Rightarrow \text{falsch}$ ist wahr). Damit muss $\neg A \equiv \text{falsch}$ sein und damit $A \equiv \text{wahr}$. Und somit haben wir bewiesen, dass $\sqrt{2}$ keine rationale Zahl ist.
 
 \subsection{Vollst"andige Induktion}
-Das Induktionsprinzip ist sehr nat"urlich. Es geht im Endeffekt um nichts anderes als ums Z"ahlen. Z"ahlen, so scheint es, liegt in der Natur jedes intelligenten Lebewesens. Stellen Sie sich eine Dominokette vor. Wenn sie der folgenden Aussage zustimmen k"onnen, haben sie die Induktion im Grunde verstanden:
+Das Induktionsprinzip ist sehr nat"urlich. Es geht im Endeffekt um nichts anderes als ums Z"ahlen. Z"ahlen, so scheint es, liegt in der Natur jedes intelligenten Lebewesens. Stellen Sie sich eine Dominokette vor. Wenn Sie der folgenden Aussage zustimmen k"onnen, haben Sie die Induktion im Grunde verstanden:
 \begin{center}
 Wenn ich den ersten Dominostein umwerfe und zudem gilt, dass wenn ein Dominostein umf"allt, folgt, dass sein Nachfolger umf"allt, so fallen alle Dominosteine um.
 \end{center}
-In Form der Pr"adikatenlogik kann man dies wie folgt schreiben
+In Form der Pr"adikatenlogik und unter Annahme, dass wir es mit nat"urlichen Zahlen zu tun haben, kann man dies wie folgt schreiben
 \begin{equation*}
 (P(1) \ \land P(x) \Rightarrow P(x+1)) \Rightarrow P(y)
 \end{equation*}
-Sie m"ussen nicht zeigen, dass jeder Stein umf"allt sondern sie zeigen dass:
+Sie m"ussen nicht zeigen, dass jeder Stein umf"allt sondern Sie zeigen dass:
 \begin{enumerate}
 \item \textbf{Induktionsanfang}: der 1. Stein umf"allt und
 \item \textbf{Induktionsschluss:} dass wenn Stein $n$ umf"allt, f"allt Stein $n+1$ um (wenn $n$ nicht der letzte Stein ist)
 \end{enumerate}
-Allgemeiner nutzen wir dies um Eigenschaften von Objekten zu zeigen, die nat"urlich geordnet sind.
+Allgemeiner nutzen wir dies um Eigenschaften von Objekten zu zeigen, die wir mit einer nat"urlichen Zahl identifizieren k"onnen (Reihen, Folgen, aber auch die $n$-te Ableitung von $f$).
 
 \subsubsection{Beispiel}
 Wir wollen nun beweisen:
@@ -66,12 +66,12 @@ a_{n} = 2 \cdot a_{n-1}; a_1 = 2 \text{ entspricht } b_n = 2^n.
 \end{equation}
 \begin{enumerate}
 \item \textbf{Induktionsanfang:} $n = 1$ (1. Stein): $ a_1 = 2 = 2^1 = b_n$ (passt)
-\item \textbf{Induktionsschluss:} $n' = n + 1$ (Achtung nicht $n' = 2$!), wir d"urfen zudem Annehmen das der $n$-te Stein gefallen ist, dass also $a_n = b_n$ (mehr nicht!).
+\item \textbf{Induktionsschluss:} $n' = n + 1$ (Achtung nicht $n' = 2$), wir d"urfen zudem Annehmen das der $n$-te Stein gefallen ist, dass also $a_n = b_n$ (mehr nicht!).
 \begin{align*}
-a_{n+1} &=^{\text{nach Def.}} 2 \cdot a_{n+1-1} \\
+a_{n+1} &\stackrel{\text{nach Def.}}{=} 2 \cdot a_{n+1-1} \\
 &=  2 \cdot a_{n} \\
-&=^\text{nach Induktionsanfang} 2 \cdot b_n \\
-&=^\text{nach Def.} 2 \cdot 2^n = 2^{n+1} \\
+&\stackrel{\text{nach Induktionsanfang}}{=} 2 \cdot b_n \\
+&\stackrel{\text{nach Def.}}{=} 2 \cdot 2^n = 2^{n+1} \\
 &= b_{n+1}.
 \end{align*}
 (passt)

@@ -1,0 +1,72 @@
+In diesem Kapitel m"ochten wir einen weiteren Blick auf die Mathematik als Sprache richten. Mit der Logik aus dem vorherigen Kapitel, soll dies dazu f"uhren, dass Sie die Angst vor kompliziert anmutenden Formeln wie
+\begin{equation*}
+\forall \epsilon > 0 \ \exists \delta > 0 : \forall x \in \mathbb{D} \text{ mit } \left|x - x_0 \right| < \delta \text{ gilt: } \left| f(x) - f(x_0) \right| < \epsilon 
+\end{equation*}
+verlieren.
+
+\subsection{Die Mengenlehre}
+Mengen sind eine \textbf{ungeordnete} Gruppe von \textbf{verschiedenen} Objekten. Ein Objekt einer Mengen $M$ nennen wir \textit{Element} von $M$. Falls das Element $x$ \textbf{ein} Element von $M$ ist so schreiben wir 
+\begin{equation*}
+x \in M.
+\end{equation*}
+Falls $x$ \textbf{kein} Element von $M$ ist, schreiben wir
+\begin{equation*}
+x \notin M.
+\end{equation*}
+
+\paragraph{Bemerke:} $x \in M \lor x \notin M$ ist eine Tautologie.
+
+\subsubsection{Schreibweisen}
+F"ur die Menge selbst gibt es unterschiedliche Schreibweisen:
+\begin{itemize}
+\item $M := \left\{a, b, c\right\}$ ist die Menge mit den Elementen $a,b,c$, also z.B. $b \in  \left\{a, b, c\right\}$ bzw. $b \in M$
+\item $M := \left\{1, 2, 3, \ldots \right\}$ ist die unendliche Menge die alle ganzen positiven Zahlen $> 0$ enth"alt, wir gehen also davon aus, dass dem Lesern klar ist, wie die \textit{Folge} weitergeht.
+\item $X:= \left\{x \ | \ x < 8 \ \land \ x \text{ ist eine ganze positive Zahl} \right\}$,\\$M := \left\{x \in X \ | \ x \text{ ist eine Primzahl} \right\} = \left\{2, 3, 5, 7\right\}$. Wir sehen hier, dass in der Definition einer Menge wieder eine Menge verwendet wird.
+\item $\mathbb{N}, \mathbb{Z}, \mathbb{R}, \ldots$ sind Symbole f"ur Mengen die wir h"aufig verwenden.
+\end{itemize}
+Eine Menge kann selbst wieder \textbf{Mengen enthalten}. 
+
+\subsubsection{Mengenoperationen}
+Mengen sind eng mit der Aussagenlogik verbunden. "Ahnlich wie zwei Aussagen k"onnen wir auch zwei Mengen verkn"upfen. Seien $A$ und $B$ zwei Mengen.
+\begin{equation*}
+A \cap B = \left\{ x \ | \ x \in A \ \land \ x \in B \right\}
+\end{equation*}
+Wir sehen hier, dass das $\cap$ in der Mengenlehre dem logischen $\land$ in der Aussagenlogik entspricht. Die Aussagen  befinden sich in der Mengendefinition von $A \cap B$.
+\begin{itemize}
+\item Schnitt: $A \cap B =  \left\{x \ | \ x \in A \ \land \ x \in B \right\}$
+\item Vereinigung: $A \cup B =  \left\{x \ | \ x \in A \ \lor \ x \in B \right\}$
+\item Differenz: $A \setminus B =  \left\{x \ | \ x \in A \ \land \ x \notin B \right\}$
+\item Komplement: Das Komplement macht nur Sinn, wenn wir ein sog. Universum $U$ haben und $A$ nur Elemente von $U$ enth"alt ($A \subseteq U$): $A^C = \bar{A} = \left\{x \in U \ | \ x \notin A \right\}$
+\end{itemize}
+Durch die Analogie zur Aussagenlogik gelten die gleichen \textbf{Rechenoperationen}, darum verzichten wir auf eine Auflistung. Ein Beispiel w"aren die \textbf{De Morgen-Regeln}:
+\begin{gather*}
+(A \cap B)^C = A^C \cup B^C \\
+(A \cup B)^C = A^C \cap B^C 
+\end{gather*} 
+
+\subsubsection{Mengenrelationen}
+Eine Relation stellt zwei mathematische Objekte in eine Beziehung/Relation. So etwa die Ihnen bekannte $<$-Relation.
+\begin{equation*}
+4 < 5
+\end{equation*}
+besagt, dass $4$ in der $<$-Relation zu $5$ steht, also dass $4$ eben kleiner als $5$ ist. Wir ben"otigen aber auch Relationen f"ur Mengen um diese z.B. zu vergleichen. Wir wollen Aussagen, dass alle Elemente von $A$ auch in $B$ enthalten sind oder andersherum.
+\begin{itemize}
+\item Teilmenge: $(A \subseteq B) \iff (x \in A \Rightarrow x \in B)$ quasi ($\leq$)
+\item Supermenge: $A \supseteq B  \iff (x \in A \Leftarrow x \in B)$ quasi ($\geq$)
+\item Echte Teilmenge: $(A \subset B) \iff (x \in A \Rightarrow x \in B \land A \neq B)$ quasi ($<$)
+\item Echte Supermenge: $(\supset B) \iff (x \in A \Leftarrow x \in B \land A \neq B)$ quasi ($>$)
+\end{itemize}
+
+\subsubsection{Besondere Mengen}
+Als leere Menge $M = \emptyset = \{\}$ bezeichnet man die Menge die kein Element enth"alt. Diese Menge ist Teilmenge jeder Menge. Die Potenzmenge $\mathcal{P}(M)$ oder $2^M$ der Menge $M$ enth"alt alle Teilmengen der Menge $M$, also
+\begin{equation*}
+\mathcal{P}(M) := \left\{X \ | \ X \subseteq M \right\}
+\end{equation*}
+Man beachte $\emptyset \neq \{ \emptyset \} = \mathcal{P}(\emptyset)$. Die Notation $2^M$ soll andeuten, dass die Menge $2^M$, $2^{|M|}$ Elemente enth"alt, falls $M$ endlich ist. Dabei bezeichnet $|M|$ die \textbf{M"achtigkeit} der Menge und ist gleich der Anzahl der Elemente, falls $M$ endlich ist.
+\begin{itemize}
+\item $|\emptyset| = 0$
+\item $\{1, 2, 3\} = 3$
+\item $|\mathcal{P}(\emptyset)| = 1$
+\item (Bonus) $|\mathbb{N}| = |\mathbb{Z}| \neq |\mathbb{R}|$, dies werden Sie sp"ater im Studium erkl"art bekommen
+\end{itemize}
+ Die M"achtigkeit ist ein Konzept um gr"o"se von Mengen, insbesondere von unendlichen Mengen, zu vergleichen.

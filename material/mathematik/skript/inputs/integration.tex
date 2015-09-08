@@ -1,18 +1,18 @@
 Die Integration ist aus der Fl"achenberechnung entstanden. Das Integral ist ein Oberbegriff f"ur das \textbf{bestimmte} und \textbf{unbestimmte} Integral. Die Integration bezeichnet die \textbf{Berechnung} von Integralen. Wir verzichten hier auf den axiomatischen Zugang. 
 
 \subsection{Bestimmtes Integral}
-Ein geschlossenes Integral der Funktion $f$ im kompakten (abgeschlossen und beschr"ankt) $\left[ a; b \right]$ ist der Fl"acheninhalt der zwischen der Funktion $f$, der $x$-Achse und der Geraden $x = a$ und $x = b$ eingeschlossen ist. Diese Fl"acheninhalt wird als 
+Ein geschlossenes Integral der Funktion $f$ im kompakten (\textit{abgeschlossen} und \textit{beschr"ankt}) Intervall $\left[ a; b \right]$ ist der Fl"acheninhalt der zwischen der Funktion $f$, der $x$-Achse und der Geraden $x = a$ und $x = b$ eingeschlossen ist. Diese Fl"acheninhalt wird als 
 \begin{equation*}
 \int\limits_a^b f(x) dx,
 \end{equation*}
-gelesen: Integral von $a$ bis $b$ von $f \ dx$.
+gelesen: Integral von $a$ bis $b$ von $f \ dx$. Anmerkung: Sei m"usse noch nicht wissen was \textit{kompakt} bzw. \textit{beschr"ankt} bedeutet.
 
 \subsection{Unbestimmtes Integral / Stammfunktion}
-In gewissen Sinne ist die Integration die Umkehrung der Differentiation. So ist $F$ die \textbf{Stammfunktion} der Funktion $f$, wenn
+In gewissem Sinne ist die Integration die Umkehrung der Differentiation. So ist $F$ die \textbf{Stammfunktion} der Funktion $f$, wenn
 \begin{equation*}
-F' = f.
+F' = f
 \end{equation*}
-$F$ ist. $F$ nennen wir auch unbestimmtes Integral. Hin und wieder wird mit dem unbestimmten Integral auch die Menge der Stammfunktionen von $f$ bezeichnet.
+ist. $F$ nennen wir auch unbestimmtes Integral. Hin und wieder wird mit dem \textbf{unbestimmten Integral} auch die Menge der Stammfunktionen von $f$ bezeichnet.
 \paragraph{Beispiel:} Sei $f(x) = x^2$, so ist $F(x) = \frac{1}{3} x^3$ ein (nicht das) unbestimmtes Integral von $f$. Beweis: $F'(x) = 3 \cdot \frac{1}{3} \cdot x^{3-1} = f(x)$. Allerdings sind alle Funktionen aus der Menge 
 \begin{equation*}
 \mathcal{F} := \left\{ F \ | \ F(x) = \frac{1}{3} x^3 + c : c \in \mathbb{R} \right\}
@@ -20,7 +20,7 @@ $F$ ist. $F$ nennen wir auch unbestimmtes Integral. Hin und wieder wird mit dem 
 eine Stammfunktion von $f$.
 
 \subsection{Hauptsatz der Differential- und Integralrechnung}
-Dieser Satz stellt eine Beziehung zwischen Stammfunktion und Integral her: Sei $f$ eine auf $\left[a; b\right]$ stetige Funktion und $F$ eine Stammfunktion von $f$, so gilt:
+Dieser Satz stellt eine Beziehung zwischen Stammfunktion und Integral her. Sei $f$ eine auf $\left[a; b\right]$ stetige Funktion und $F$ eine Stammfunktion von $f$, so gilt:
 \begin{equation*}
 \int\limits_a^b f(x) dx = F(b) - F(a)
 \end{equation*}
@@ -38,8 +38,7 @@ Dieser Satz stellt eine Beziehung zwischen Stammfunktion und Integral her: Sei $
 %Symbol der Stammfunktion: F(x)     d.h. $F'(x)=f(x)$
 
 \subsection{Berechnung von Stammfunktionen}
-Die Stammfunktion erh"alt man, indem man die Ableitung r"uckw"arts rechnet. D.h. ich addiere den Exponenten um 1, bilde daraus einen Bruch der Form $\frac{1}{Exponent+1}$ und multipliziere diesen mit dem Faktor vor der Basis.
-Mit dieser Methode lassen sich zu fast allen Polynomen Stammfunktionen berechnen. Da wir hierbei eine Menge $\mathcal{F}$ an Funktionen berechnen m"ussen wir noch festlegen welche Funktion, wir genau meinen. Wir legen daf"ur das $c$ (siehe obiges Beispiel) fest.
+Die Stammfunktion erh"alt man, indem man die Ableitung r"uckw"arts rechnet. D.h. f"ur Polynome addiert man zum Exponenten 1 hinzu, bilde daraus einen Bruch der Form $\frac{1}{Exponent+1}$ und multipliziere diesen mit dem Faktor vor der Basis. Mit dieser Methode lassen sich zu fast allen Polynomen Stammfunktionen berechnen. Da wir hierbei eine Menge $\mathcal{F}$ an Funktionen berechnen m"ussen wir noch festlegen welche Funktion, wir genau meinen. Wir legen daf"ur das $c$ (siehe obiges Beispiel) fest.
 
 %\subsubsection{Hauptsatz der Differential- und Integralrechnung (HDI)}
 %\textcolor{red}{HDI}:\textcolor{red}{!!!Jede Integralfunktion ist eine Stammfunktion der zu integrierenden Funktion!!!}
@@ -52,18 +51,18 @@ Wir benutzen den Hauptsatz der Differential- und Integralrechnung um ein Integra
 \end{enumerate}
 
 \subsection{Berechnung von Fl"ache zwischen zwei Graphen}
-Um die Fl"ache zwischen zwei Graphen $f(x)$ und $g(x)$ zu ermitteln, berechnet man sich zun"achst die Schnittpunkte der beiden Graphen, welche die Intervallgrenzen bilden. Wenn man nun eine neue Funktion $h(x)$ aus der Subtraktion der beiden Funktionen $f(x)$ und $g(x)$ bildet und das Integral dieser Funktion "uber die beiden Schnittpunkte berechnet, erh"alt man die Fl"ache zwischen den beiden Graphen.
+Um die Fl"ache zwischen zwei Graphen $f(x)$ und $g(x)$ zu ermitteln, berechnet man zun"achst die Schnittpunkte der beiden Graphen, welche die Intervallgrenzen bilden. Wenn man nun eine neue Funktion $h(x)$ aus der Subtraktion der beiden Funktionen $f(x)$ und $g(x)$ bildet und das Integral dieser Funktion "uber den beiden Schnittpunkten berechnet, erh"alt man die Fl"ache zwischen den beiden Graphen.
 
 \subsection{Das Riemann-Integral (Bonus)}
-Um den Hauptsatz der Differential- und Integralrechnung anwenden zu k"onnen muss $f$ in $\left[a;b\right]$ stetig sein. Gilt dies nicht, so k"onnen wir das Integral nicht ohne weiteres Berechnen. Beim Riemann Integral reduziert man die Berechnung des Integrals auf die Berechnung von vielen, einfach zu berechnenden Rechtecken. Dabei wird das Intervall $\left[a;b \right]$ in $n$ Intervalle $I_i = \left[x_{i-1}, x_i \right]$ aufgeteilt. Zudem gibt es f"ur jedes Intervall eine Zwischenstelle $t_i \in I_i$. Dabei gilt $a = x_0, b = x_n$. Die Bedingung ist nun, dass die Zerlegung hinreichend fein gew"ahlt werden kann. Es folgt dann
+Um den Hauptsatz der Differential- und Integralrechnung anwenden zu k"onnen muss $f$ in $\left[a;b\right]$ stetig sein. Gilt dies nicht, so k"onnen wir das Integral nicht ohne weiteres berechnen. Beim Riemann-Integral reduziert man die Berechnung des Integrals auf die Berechnung von vielen, einfach zu berechnenden Rechtecken. Dabei wird das Intervall $\left[a;b \right]$ in $n$ Intervalle $I_i = \left[x_{i-1}, x_i \right]$ aufgeteilt. Zudem gibt es f"ur jedes Intervall eine Zwischenstelle $t_i \in I_i$. Dabei gilt $a = x_0, b = x_n$. Die Bedingung ist nun, dass die Zerlegung hinreichend fein gew"ahlt werden kann. Es folgt dann
 \begin{equation*}
 \int\limits_a^b f(x) dx \approx \sum\limits_{i=1}^n f(t_i) \cdot (x_{i} - x_{i-1})
 \end{equation*}
 und f"ur $n \to \infty$
 \begin{equation*}
-\int\limits_a^b f(x) dx = \sum\limits_{i=1}^\infty f(t_i) \cdot (x_{i} - x_{i-1})
+\int\limits_a^b f(x) dx = \sum\limits_{i=1}^\infty f(t_i) \cdot (x_{i} - x_{i-1}).
 \end{equation*}
-Es existieren Funktionen die nicht riemannintegrierbar sind. Ein weiteres Integral, welches allerdings nicht in der Vorlesung besprochen wird, ist das sog. Lebesgue-Integral.
+Es existieren Funktionen die nicht riemannintegrierbar sind. Ein weiteres Integral, welches allerdings nicht in der Vorlesung besprochen wird, ist das sog. Lebesgue-Integral. Es gibt Funktionen die lebesgueintegrierbar aber nicht riemannintegrierbar sind.
 
 \subsection{"Ubung}
 \begin{enumerate}

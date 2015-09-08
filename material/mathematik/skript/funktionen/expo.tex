@@ -11,7 +11,7 @@ Dabei ist
 \item[$x_0$] Wert der Verschiebung in $x$-Richtung (siehe Abschnitt \ref{sec:verschieben})
 \item[$y_0$] Wert der Verschiebung in $y$-Richtung (siehe Abschnitt \ref{sec:verschieben})
 \end{description}
-Sie ist auf ganz $\mathbb{R}$ definiert und ist f"ur die Zielmenge $\mathbb{R}^{+} \setminus \{0\}$ surjektiv. Sie ist au"serdem injektiv uns somit f"ur $\mathbb{R}^{+} \setminus \{0\}$ als Zielmenge bijektiv.
+Sie ist auf ganz $\mathbb{R}$ definiert und ist f"ur die Zielmenge $\mathbb{R}^{+} \setminus \{0\}$ surjektiv. Sie ist au"serdem injektiv und somit f"ur $\mathbb{R}^{+} \setminus \{0\}$ als Zielmenge bijektiv.
 
 \subsubsection{Umkehrfunktion - die Logarithmusfunktion}
 Die Umkehrfunktion der Exponentialfunktion ist die Logarithmusfunktion. Sei $f(x)$ gleich
@@ -20,10 +20,10 @@ f(x) = a \cdot b^{x-x_0}+y_0
 \end{equation*}
 So berechnet sich die Umkehrfunktion wie folgt:
 \begin{align*}
-y = a \cdot b^{x-x_0}+y_0 &\iff  \\
-y - y_0 = a \cdot b^{x-x_0} &\iff \\
-\frac{y - y_0}{a} =  b^{x-x_0} &\iff \\
-\log_b\left(\frac{y - y_0}{a}\right) = x - x_0 &\iff \\
+y = a \cdot b^{x-x_0}+y_0 & \stackrel{-y_0}{\iff}  \\
+y - y_0 = a \cdot b^{x-x_0} &\stackrel{/ a}{\iff} \\
+\frac{y - y_0}{a} =  b^{x-x_0} &\stackrel{\log_b}{\iff} \\
+\log_b\left(\frac{y - y_0}{a}\right) = x - x_0 &\stackrel{+x_0}{\iff} \\
 \log_b\left(\frac{y - y_0}{a}\right) + x_0 = x &
 \end{align*}
-Da die Exponentialfunktion mit einer Zielmenge gleich $\mathbb{R}^{+} \setminus \{0\}$ bijektiv ist, ist die Umkehrfunktion, der die Logarithmusfunktion, nur auf $\mathbb{R}^{+} \setminus \{0\}$ definiert!
+Da die Exponentialfunktion nur mit einer Zielmenge $\mathbb{R}^{+} \setminus \{0\}$ bijektiv ist, ist ihre Umkehrfunktion, die Logarithmusfunktion, nur auf $\mathbb{R}^{+} \setminus \{0\}$ definiert!

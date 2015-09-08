@@ -1,0 +1,104 @@
+\subsection{Zahlenmengen}
+Dieses Kapitel gibt einen kurzen "uberblick "uber die in der Mathematik "ublichen Zahlenmengen.
+
+\subsubsection{Nat"urliche Zahlen}
+$\mathbb{N} := \left\{1, 2, 3, \ldots \right\}$ in manchen Lehrb"uchern ist die $0$ auch eine nat"urliche Zahl, um Klarheit zu schaffen schreiben wir $\mathbb{N}_0$ f"ur die Menge $\left\{0, 1, 2, 3, \ldots \right\} = \mathbb{N} \cup \{0\}$. Die nat"urlichen Zahlen wurden zuallererst entdeckt oder erfunden. Sie entsprangen dem Z"ahlvorgang was scheinbar in jedem intelligenten Lebewesen innewohnt. Die Frage ob die nat"urlichen Zahlen gottgegeben sind oder nicht ist eine philosophische:
+\begin{quote}
+\glqq Gott hat die nat"urlichen Zahlen geschaffen, alles andere ist Menschenwerk.\grqq \ (Leopold Kronecker)
+\end{quote}
+
+\subsubsection{Ganze Zahlen}
+$\mathbb{Z} := \left\{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots \right\}$, diese Zahlen erweitern die nat"urlichen Zahlen um negative ganze Zahlen. Mit ihnen ist es m"oglich, uneingeschr"ankt zu subtrahieren.
+\paragraph{Beispiele: } $3 - 4 = -1$
+
+\subsubsection{Rationale Zahlen}
+$\mathbb{Q} := \left\{ q \  : \ q = \frac{x}{y}, \ x,y \in \mathbb{Z} \  \land \ y \neq 0 \right\} \supset \mathbb{N}$, mit der Erweiterung auf die rationalen Zahlen sind alle vier Grundrechenarten inklusive der Division. Schon die antiken Griechen kannten die rationale Zahlen. Sie haben diese als Verh"altnisse von Streckenl"angen verstanden.
+\paragraph{Beispiele: } $\frac{1}{3}$,$-\frac{7}{13}$, $1 = \frac{1}{1}$, $-8 =\frac{-8}{1}$	
+
+\subsubsection{Reelle Zahlen}
+$\mathbb{R} = \mathbb{Q} \cup \mathbb{I}$, wobei wir mit $\mathbb{I}$ die irrationalen Zahlen bezeichnen. Die irrationalen Zahlen bilden \textbf{unendliche}, \textbf{nicht periodische} und demzufolge nicht als Bruch darstellbare Zahlen. 
+\begin{center}
+Kein Computer mit endlichem Speicher kann mit einer irrationalen Zahl umgehen!
+\end{center}
+Den ersten Existenzbeweis lieferten die, in der griechischen Antike im 5. Jahrhundert v. Chr. lebenden, Pythagoreer. Eine Definition in Form der heutigen Mathematik, sind bei Weierstrau"s und Dedekind zu finden. Wir wollen diese hier nicht besprechen, da dies zu weit gehen w"urde.
+\paragraph{Beispiele: } $\sqrt{2}$, $\sqrt[3]{17}$, $\pi$, $e$
+
+%\subsection{Komplexe Zahlen}
+%Symbol: $\mathbb{C}$
+%\begin{flushleft}
+%Die komplexen Zahlen sind der algebraische Abschluss der reellen Zahlen. Dies
+%bedeutet, dass jedes Polynom eine Nullstelle hat. Es gibt folglich eine
+%(nicht-reelle) Zahl $i \in \mathbb{C}$ mit $i^2 + 1 = 0$ bzw. $i^2=-1$, die
+%imagin"are Einheit. Komplexe Zahlen bestehen aus einem reellen und einem imagin"aren Teil. Um komplexe Zahlen zu multiplizieren, benutzt man oft die Gaußsche Zahlenebene und die Polarform.
+%\end{flushleft}
+%\paragraph{Beispiele:} $5+3i \approx 5.83*e^{i*30.96}$, $4-5i$, $i^2=-1$
+
+%\paragraph{Anmerkung:} Da die komplexe Zahlen in vielerlei Hinsicht verwendet werden k"onnen, werden diese hier nicht genauer formuliert. Auf spezielle Eigenschaften wird in den einzelnen Vorlesungen genauer eingegangen.
+
+\subsubsection{Ordnung der Zahlenmengen} 
+Mit Ausnahme der irrationalen Zahlen k"onnen die Zahlenmengen als Erweiterungen der jeweils vorhergehenden Zahlenmenge verstanden werden. $\mathbb{N}$ bildet dabei die Basis.
+\begin{equation*}
+ \mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R}
+\end{equation*}
+
+\subsubsection{Intervalle}
+Ein Intervall ist eine, m"oglicherweise echte, Teilmenge einer Zahlenmenge. Ein Intervall $I$ besitzt eine untere Grenze $a$ und eine obere Grenze $b$. Diese Grenzen k"onnen auch plus/minus unendlich also $+ \infty$ oder $- \infty$ annehmen. $\mathbb{R} = \left(-\infty, +\infty\right)$. Meist wird aus dem Kontext klar welche Zahlenmenge die Supermenge ist.
+
+\paragraph{Abgeschlossene}
+\begin{flushleft}
+Um auszudr"ucken, dass die Variable $x$ einen Wert in einem gewissen Intervall $A$ mit der linken Grenze $a$ und der rechten Grenze $b$ hat, schreibt man es als \textbf{abgeschlossenes Intervall}; es schließt die beiden Werte \textbf{a} und \textbf{b} mit ein. 
+\begin{equation*}
+x \in \left[a;b \right]
+\end{equation*}
+Oft werden $a$ und $b$ auch durch ein Komma ($x \in \left[a,b \right]$) getrennt, was sich aber bei Zahlen in deutscher Notation als ungeschickt herausstellen kann.
+\end{flushleft}
+
+\paragraph{Offene Intervalle}
+\begin{flushleft}
+Um beide Werte auszuschlie"sen, schreibt man ein \textbf{offenes Intervall}
+\begin{equation*}
+x \in (a;b) \textsf{ bzw. } x \in \left]a;b \right[
+\end{equation*}
+\end{flushleft}
+
+\paragraph{Beachte:} Es gibt mehrere Notationen, Werte eines Intervalls auszugrenzen. Die am meisten gebrauchte Schreibweise ist die Notation mit runden Klammern.
+
+\paragraph{Halboffene Intervalle}
+\begin{flushleft}
+Zudem gibt es noch \textbf{halboffene Intervalle}, wie das \textbf{rechtsoffene Intervall}
+\begin{equation*}
+x \in \left[a;b \right) \textsf{ bzw. } x \in \left[a;b \right[
+\end{equation*}
+und das \textbf{linksoffene Intervall}
+\begin{equation*}
+x \in \left(a;b \right] \textsf{ bzw. } x \in \left] a;b \right]
+\end{equation*}
+\end{flushleft}
+
+\paragraph{Bemerkung:} Beachten Sie, das ein Intervall eine Menge ist und wir somit alle Mengenoperationen durchf"uhren k"onnen:
+\begin{equation*}
+\left[0.5;10\right] \cup \mathbb{N} \setminus \{20\}
+\end{equation*}
+beinhaltet zum Beispiel alle reellen Zahlen von $0.5$ bis $10$ und alle nat"urlichen Zahlen ohne die $20$.
+
+\subsection{Aufgaben}
+\begin{enumerate}
+	\item Seien $A = \{1,3,4,5\}, B = \{4, 5, 6, 7\}$ gegeben, berechnen Sie $A \cap B, A \cup B, A \setminus B$
+	\item Gilt das Distributiv Gesetz also $(A \cap B) \cap C) = A \cap (B \cap C)$ und $(A \cup B) \cup C) = A \cup (B \cup C)$? Begr"unden Sie ihre Antwort.
+	\item Sei $A$ endlich, wie viele Elemente besitzt $\mathcal{P}(\mathcal{P}(A))$?
+	\item Gilt $A^C \setminus B^C = (A \setminus B)^C$? Begr"unden Sie ihre Antwort.
+	\item Gilt $(A \subseteq B \ \land \ B \subseteq A) \iff (A = B)$?
+	\item Seien $A, B$ zwei Mengen. Verwenden Sie die Mengenoperationen um die Menge zu konstruieren, die alle Elemente aus $A$ oder $B$ enth"altt, die nicht zugleich in $A$ und in $B$ liegen. Tipp: Denken Sie an die logische XOR-Verkn"upfung.
+	\item Addieren Sie eine Zahl aus $\mathbb N$ und eine aus $\mathbb R \setminus \mathbb N$. In welcher Menge liegt die neue Zahl? (ohne Rundung!)
+	%\item Formulieren Sie eine Funktion (Wurzel), f"ur deren L"osung sie i br"auchten.
+	\item Z"ahlen Sie die f"unf gr"oßten Elemente von $\mathbb Z \setminus \mathbb N_0$ auf!
+	\item Definieren Sie mit Hilfe der nat"urlichen Zahlen die Menge $\mathbb{Z}$ der ganzen Zahlen! Sie d"urfen dabei das Symbol $\mathbb N$ verwenden, nicht aber $\mathbb Z$!
+	\item Schreiben Sie folgende Mengen in Intervallschreibweise, vereinfachen Sie so gut es geht:
+\begin{itemize}
+	\item $\left[5;100\right] \cup \left(- \infty; 5\right)$
+	\item $\left(3;5\right] \cup \left(0; 3\right)$
+	\item $\mathbb{N} \setminus \left(9;15\right]$
+	\item $\left(-1;8\right] \cap \left(9;15\right]$
+\end{itemize}	
+
+\end{enumerate}
