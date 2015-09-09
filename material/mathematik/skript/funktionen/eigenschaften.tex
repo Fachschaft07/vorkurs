@@ -1,9 +1,10 @@
 \subsection{Definition}
-Eine \textbf{Funktion} $f$ oder \textbf{Abbildung} $f$ ist eine Relation zwischen zwei Mengen, die \textcolor{red}{jedem} Element der einen Menge (Funktionsargument $x$) \textcolor{red}{genau ein} Element der anderen Menge (Funktionswert $y$) zuordnet. Ist $x_1 \neq x_2$ ist $f(x_1) = f(x_2)$ nat"urlich zul"assig.
+Eine \textbf{Funktion} (oder \textbf{Abbildung}) $f$ ist eine Relation zwischen zwei Mengen, die \textcolor{red}{jedem} Element der einen Menge (Funktionsargument $x$) \textcolor{red}{genau ein} Element der anderen Menge (Funktionswert $y$) zuordnet, so dass $$y=f(x).$$
+Ist $x_1 \neq x_2$, dann ist $f(x_1) = f(x_2)$ nat"urlich zul"assig.
 \begin{enumerate}
-\item Die \textbf{Definitionsmenge} $\mathbb{D}$ von $f$, ist die Menge aus der das Funktionsargument $x$ stammt.
-\item Die \textbf{Zielmenge} $Z$ von $f$, ist die Menge der Funktionswerte $y$.
-\item Die \textbf{Wertemenge} oder besser der \textbf{Bildbereich} von $f$ (manchmal auch nur das \textbf{Bild} von $f$) $\mathbb{W} \subset Z$, ist die Menge der Funktionswerte, die die Funktion annehmen kann. Oder kurz
+\item Die \textbf{Definitionsmenge} $\mathbb{D}$ von $f$ ist die Menge, aus der das Funktionsargument $x$ stammt.
+\item Die \textbf{Zielmenge} $Z$ von $f$ ist die Menge der Funktionswerte $y$.
+\item Die \textbf{Wertemenge} oder besser der \textbf{Bildbereich} von $f$ (manchmal auch nur das \textbf{Bild} von $f$) $\mathbb{W} \subset Z$ ist die Menge der Funktionswerte, die die Funktion annehmen kann. Oder kurz
 \begin{equation*}
 \mathbb{W} := \left\{ f(x) \ | x \in \mathbb{D} \right\}
 \end{equation*}
@@ -17,10 +18,10 @@ um anzugeben was $\mathbb{D}$ und $Z$ ist und wie die Funktion aussieht, also zu
 \begin{equation*}
 f :\mathbb{R} \to \mathbb{R}, x \mapsto 2x + 5 \text{ bzw. } f(x) := 2x + 5
 \end{equation*}
-Man beachte: jedes $x \in \mathbb{D}$ hat sein $y \in Z$, aber nicht jedes $y \in Z$ sein $x \in \mathbb{D}$ (salopp ausgedr"uckt). Jedoch hat jedes $x \in \mathbb{W}$ sein $x \in \mathbb{D}$. Die Definitions\-menge gibt hierbei an in welchem Bereich die Funktion definiert ist, sprich welche Werte \glqq in die Funktion eingesetzt werden d"urfen\grqq . Die Abbildungs\-vorschrift sorgt nun daf"ur, dass jedem Wert $x$ des Definitions\-bereichs genau ein Wert $y$ des Bild\-bereiches zugeordnet werden kann. Die Wertemenge enth"alt genau jene Zahlen, welche man durch Abbildung des Definitions\-bereiches mithilfe der Abbildungs\-vorschrift erhalten kann.
+Man beachte: jedes $x \in \mathbb{D}$ hat sein $y \in Z$, aber nicht jedes $y \in Z$ sein $x \in \mathbb{D}$ (sprich jedem Wert der Definitionsmenge wird ein Zielwert zugeordnet, aber nicht jeder Zielwert muss einen Wert in der Definitionsmenge haben). Jedoch hat jedes $y \in \mathbb{W}$ sein $x \in \mathbb{D}$ (jeder Wert im Bildbereich der Funktion hat einen zugeh"origen Wert im Definitionsbereich). Die Definitions\-menge gibt hierbei an, in welchem Bereich die Funktion definiert ist, sprich welche Werte \glqq in die Funktion eingesetzt werden d"urfen\grqq . Die Abbildungs\-vorschrift sorgt nun daf"ur, dass jedem Wert $x$ des Definitions\-bereichs genau ein Wert $y$ des Bild\-bereiches zugeordnet werden kann. Die Wertemenge enth"alt genau jene Zahlen, welche man durch Abbildung des Definitions\-bereiches mithilfe der Abbildungs\-vorschrift erhalten kann.
 
 \paragraph{Zur Vorstellungserleichterung:}
-Vorstellen kann man sich das wie die Funktionsweise eines Fotoapparates. Der Definitionsbereich w"are hierbei das, was in der realen Welt existiert und von der Kamera aufgenommen werden soll. Das ausgestrahlte Licht, der Bestandteile des Definitionsbereiches, wird nun mithilfe einer Linse eingefangen, gespiegelt und bei neueren Kameras mithilfe von Sensoren in digitale Bilder umgewandelt. Dieses digitale \textcolor{red}{Bild} ist nun das Ergebnis und jeder erreichte Wert (RGB, CMYK, ...) ist Bestandteil der Bildmenge.
+Vorstellen kann man sich das wie die Funktionsweise eines Fotoapparates. Der Definitionsbereich w"are hierbei das, was in der realen Welt existiert. Die Kamera ist die Funktion, welche die Welt (Definitionsbereich) aufnimmt. Das ausgestrahlte Licht der Bestandteile des Definitionsbereiches wird nun mithilfe einer Linse eingefangen, gespiegelt und in ein Bild umgewandelt. Dieses Bild ist nun das Ergebnis, jeder Teil des Bildes ist Bestandteil der Bildmenge.
 \begin{figure}[h!]
  \centering
  \begin{tikzpicture}[ele/.style={fill=black,circle,minimum width=.8pt,inner sep=1pt},every fit/.style={ellipse,draw,inner sep=-2pt}, scale = 0.8]
@@ -43,7 +44,7 @@ Vorstellen kann man sich das wie die Funktionsweise eines Fotoapparates. Der Def
   \draw[->,thick,shorten <=2pt,shorten >=2] (a3) -- (b1);
   \draw[->,thick,shorten <=2pt,shorten >=2] (a4) -- (b4);
  \end{tikzpicture}
- \caption{Eine Funktion mit einer endlichen $\mathbb{D} = \{a, b, c, d\}$ Definitionsmenge (rechts) und einer endlichen Zielmenge $Z = \{1, 2, 3, 4, 5\}$ und einer Bildmenge $\mathbb{W} = \{1,2,4\}$. Alle Elemente aus $\mathbb{D}$ besitzen genau eine \glqq Verbindung\grqq .}
+ \caption{Eine Funktion mit einer endlichen Definitionsmenge $\mathbb{D} = \{a, b, c, d\}$  (links), einer endlichen Zielmenge $Z = \{1, 2, 3, 4, 5\}$ (rechts) und einer Bildmenge $\mathbb{W} = \{1,2,4\}$. Alle Elemente aus $\mathbb{D}$ besitzen genau eine \glqq Verbindung\grqq .}
 \end{figure}
 
 \paragraph{Beispiele:}
@@ -55,7 +56,7 @@ Vorstellen kann man sich das wie die Funktionsweise eines Fotoapparates. Der Def
 
 \subsection{Eigenschaften von Funktionen}
 \subsubsection{Surjektion}
-Eine Funktion $f$ ist surjektiv (siehe Abb. \ref{fig:surjektiv}) genau dann wenn jeder Wert der Zielmenge (mindestens einmal) angenommen wird:
+Eine Funktion $f$ ist surjektiv (siehe Abb. \ref{fig:surjektiv}) genau dann wenn jeder Wert der Zielmenge mindestens einmal angenommen wird:
 \begin{equation*}
 \forall y \in Z \ \exists x \in \mathbb{D} : f(x) = y
 \end{equation*}
@@ -90,7 +91,7 @@ Eine Funktion $f$ ist surjektiv (siehe Abb. \ref{fig:surjektiv}) genau dann wenn
 \end{figure}
 
 \subsubsection{Injektion}
-Eine Funktion $f$ ist injektiv (siehe Abb. \ref{fig:injektiv}) genau dann wenn jeder Wert der Bildmenge \textbf{nicht} mehrmals angenommen wird:
+Eine Funktion $f$ ist injektiv (siehe Abb. \ref{fig:injektiv}) genau dann wenn jeder Wert der Bildmenge \textbf{nicht mehrmals} angenommen wird:
 \begin{equation*}
 \forall x_1, x_2 \in \mathbb{D} : f(x_1) = f(x_2) \Rightarrow x_1 = x_2
 \end{equation*}
@@ -148,7 +149,7 @@ Eine Funktion ist bijektiv (siehe Abb. \ref{fig:bijectiv}), wenn sie zugleich in
 \end{figure}
 
 \subsubsection{Umkehrfunktion}
-Durch Einsetzen eines bestimmten $x$-Wertes in eine Funktion $f(x)$ erh"alt man den entsprechenden $y$-Wert. Will man jedoch den $x$-Wert zu einem bestimmten $y$-Wert bestimmen, so muss man zun"achst dessen Umkehrfunktion $f(y)^{-1}$ berechnen. Daf"ur l"ost man die Funktion nach $x$ auf. Durch das Bilden der Umkehrfunktion werden Definitions- und Wertemenge vertauscht. Die Umkehrfunktion muss nat"urlich die Anforderungen erf"ullen welche an eine Funktion gestellt werden. Wenn nicht jedes $y$ auf genau ein $x$ abgebildet wird, existiert die Umkehrfunktion nicht. Damit muss die Funktion bijektiv sein. Ist die Funktion injektiv aber nicht surjektiv so m"ussen wir den Definitionsbereich einschr"anken, um eine Funktion zu erhalten. 
+Durch Einsetzen eines bestimmten $x$-Wertes in eine Funktion $f$ erh"alt man den entsprechenden $y$-Wert: $y=f(x)$. Will man jedoch den $x$-Wert zu einem bestimmten $y$-Wert bestimmen, so muss man zun"achst dessen Umkehrfunktion $f^{-1}$ an der Stelle $y$ berechnen: $x=f^{-1}(y)$. Daf"ur l"ost man die Gleichung $y=f(x)$ nach $x$ auf. Durch das Bilden der Umkehrfunktion werden Definitions- und Wertemenge vertauscht. Die Umkehrfunktion muss nat"urlich die Anforderungen erf"ullen welche an eine Funktion gestellt werden. Wenn nicht jedes $y$ auf genau ein $x$ abgebildet wird, existiert die Umkehrfunktion nicht. Damit muss die Funktion bijektiv sein. Ist die Funktion injektiv aber nicht surjektiv, so m"ussen wir den Definitionsbereich einschr"anken, um eine Funktion zu erhalten. 
 
 \paragraph{Beispiel}
 \begin{itemize}
@@ -160,7 +161,7 @@ Durch Einsetzen eines bestimmten $x$-Wertes in eine Funktion $f(x)$ erh"alt man 
 
 
 \subsubsection{Monotonie}
-Die Monotonie einer Funktion gibt an, ob deren Funktionswerte mit den Funktionsargumenten durchg"angig ansteigen oder abfallen.
+Die Monotonie einer Funktion gibt an, ob deren Funktionswerte mit den Funktionsargumenten ansteigen oder abfallen.
 \begin{itemize}
 \item Eine Funktion ist \textcolor{red}{monoton fallend} \textcolor{DarkGrey}{(bzw. wachsend)}, wenn gilt:
 \begin{equation*}
@@ -193,11 +194,11 @@ f(x+p) = f(x), \forall x\in\mathbb{D}
 Diese Definition sagt eigentlich nichts anderes aus, als dass sich die Funktion st"andig im gleichen Abstand wiederholt.
 
 \subsubsection{Nullstellen} \label{sec:nullstellen}
-Eine Nullstelle ist ein Punkt, an dem der Graf die $x$-Achse schneidet. Anders ausgedr"uckt: Ein Punkt an dem die Funktion $f(x)$ den Wert $0$ erreicht. Um Nullstellen zu berechnen, l"ost man
+Eine Nullstelle ist ein Punkt, an dem der Graph die $x$-Achse schneidet. Anders ausgedr"uckt: Ein Punkt an dem die Funktion $f(x)$ den Wert $0$ erreicht. Um Nullstellen zu berechnen, l"ost man die Gleichung
 \begin{equation*}
 f(x) = 0,
 \end{equation*}
-indem die Gleichung nach $x$ aufgel"ost wird. So kann man nun den $x$-Wert berechnen.
+nach $x$. Beispiel: $f(x)=x^2-1$, Nullstellen: $x^2-1=0\implies x^2=1$, L"osungen sind $+1$ und $-1$. Die Gleichung kann also auch mehrere L"osungen haben.
 
 \subsubsection{Stetigkeit}
 Eine Funktion ist stetig, wenn man ihren Graphen (innerhalb der Definitionsmenge) ohne Absetzen des Stiftes in einem Zug zeichnen kann (salopp). Achtung folgende Definition ist eine der knackigsten Ausdr"ucke die euch begegnen wird. Eine Funktion $f : \mathbb{D} \to Z$ ist stetig in $x_0 \in \mathbb{D}$, wenn

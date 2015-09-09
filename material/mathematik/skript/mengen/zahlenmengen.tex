@@ -2,25 +2,26 @@
 Dieses Kapitel gibt einen kurzen "uberblick "uber die in der Mathematik "ublichen Zahlenmengen.
 
 \subsubsection{Nat"urliche Zahlen}
-$\mathbb{N} := \left\{1, 2, 3, \ldots \right\}$ in manchen Lehrb"uchern ist die $0$ auch eine nat"urliche Zahl, um Klarheit zu schaffen schreiben wir $\mathbb{N}_0$ f"ur die Menge $\left\{0, 1, 2, 3, \ldots \right\} = \mathbb{N} \cup \{0\}$. Die nat"urlichen Zahlen wurden zuallererst entdeckt oder erfunden. Sie entsprangen dem Z"ahlvorgang was scheinbar in jedem intelligenten Lebewesen innewohnt. Die Frage ob die nat"urlichen Zahlen gottgegeben sind oder nicht ist eine philosophische:
+$\mathbb{N} := \left\{1, 2, 3, \ldots \right\}$ in manchen Lehrb"uchern ist die $0$ auch eine nat"urliche Zahl, um Klarheit zu schaffen schreiben wir $\mathbb{N}_0$ f"ur die Menge $\left\{0, 1, 2, 3, \ldots \right\} = \mathbb{N} \cup \{0\}$. Die nat"urlichen Zahlen entsprechen dem Z"ahlvorgang am ehesten. Die Frage ob die nat"urlichen Zahlen gottgegeben sind oder nicht ist eine philosophische:
 \begin{quote}
 \glqq Gott hat die nat"urlichen Zahlen geschaffen, alles andere ist Menschenwerk.\grqq \ (Leopold Kronecker)
 \end{quote}
 
 \subsubsection{Ganze Zahlen}
-$\mathbb{Z} := \left\{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots \right\}$, diese Zahlen erweitern die nat"urlichen Zahlen um negative ganze Zahlen. Mit ihnen ist es m"oglich, uneingeschr"ankt zu subtrahieren.
-\paragraph{Beispiele: } $3 - 4 = -1$
+$\mathbb{Z} := \left\{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots \right\}$, diese Zahlen erweitern die nat"urlichen Zahlen um negative ganze Zahlen. Mit ihnen ist es m"oglich, uneingeschr"ankt zu subtrahieren, was mit nat"urlichen Zahlen nicht m"oglich ist.
+\paragraph{Beispiel: } $3 - 4 = -1$
 
 \subsubsection{Rationale Zahlen}
 $\mathbb{Q} := \left\{ q \  : \ q = \frac{x}{y}, \ x,y \in \mathbb{Z} \  \land \ y \neq 0 \right\} \supset \mathbb{N}$, mit der Erweiterung auf die rationalen Zahlen sind alle vier Grundrechenarten inklusive der Division. Schon die antiken Griechen kannten die rationale Zahlen. Sie haben diese als Verh"altnisse von Streckenl"angen verstanden.
-\paragraph{Beispiele: } $\frac{1}{3}$,$-\frac{7}{13}$, $1 = \frac{1}{1}$, $-8 =\frac{-8}{1}$	
+
+\paragraph{Beispiele: } $\frac{1}{3}$,$-\frac{7}{13}$, $1 = \frac{1}{1}$, $-8 =\frac{-8}{1}$
 
 \subsubsection{Reelle Zahlen}
 $\mathbb{R} = \mathbb{Q} \cup \mathbb{I}$, wobei wir mit $\mathbb{I}$ die irrationalen Zahlen bezeichnen. Die irrationalen Zahlen bilden \textbf{unendliche}, \textbf{nicht periodische} und demzufolge nicht als Bruch darstellbare Zahlen. 
 \begin{center}
-Kein Computer mit endlichem Speicher kann mit einer irrationalen Zahl umgehen!
+Kein Computer mit endlichem Speicher kann irrationale Zahlen komplett speichern!
 \end{center}
-Den ersten Existenzbeweis lieferten die, in der griechischen Antike im 5. Jahrhundert v. Chr. lebenden, Pythagoreer. Eine Definition in Form der heutigen Mathematik, sind bei Weierstrau"s und Dedekind zu finden. Wir wollen diese hier nicht besprechen, da dies zu weit gehen w"urde.
+Den ersten Existenzbeweis einer irrationalen Zahl lieferten die in der griechischen Antike im 5. Jahrhundert v. Chr. lebenden Pythagoreer. Eine Definition in Form der heutigen Mathematik sind bei Weierstra"s und Dedekind zu finden, wir werden diese Definition hier nicht besprechen.  (Bonus) Interessant (weil nicht intuitiv) ist, dass die M"achtigkeit der rationalen Zahlen gleich der den nat"urlichen und ganzen Zahlen ist - es gibt also quasi \textit{"ahnlich viele} Br"uche wie nat"urliche Zahlen. Die reellen Zahlen dagegen sind m"achtiger als die rationalen Zahlen, es gibt also sozusagen \textit{mehr} reelle als rationale Zahlen - obwohl beide Mengen unendlich gro"s sind.
 \paragraph{Beispiele: } $\sqrt{2}$, $\sqrt[3]{17}$, $\pi$, $e$
 
 %\subsection{Komplexe Zahlen}
@@ -42,15 +43,17 @@ Mit Ausnahme der irrationalen Zahlen k"onnen die Zahlenmengen als Erweiterungen 
 \end{equation*}
 
 \subsubsection{Intervalle}
-Ein Intervall ist eine, m"oglicherweise echte, Teilmenge einer Zahlenmenge. Ein Intervall $I$ besitzt eine untere Grenze $a$ und eine obere Grenze $b$. Diese Grenzen k"onnen auch plus/minus unendlich also $+ \infty$ oder $- \infty$ annehmen. $\mathbb{R} = \left(-\infty, +\infty\right)$. Meist wird aus dem Kontext klar welche Zahlenmenge die Supermenge ist.
+Ein Intervall ist eine, m"oglicherweise echte, Teilmenge einer Zahlenmenge. Ein Intervall $I$ besitzt eine untere Grenze $a$ und eine obere Grenze $b$.
+% Diese Grenzen k"onnen auch plus/minus unendlich also $+ \infty$ oder $- \infty$  annehmen. Lieber rausnehmen - wenn das Intervall unendlich _enth"alt_, dann ist die Supermenge R vereinigt mit Unendlich... Gemeint ist wohl eher, dass die obere/untere Schranke (-)unendlich sein kann, nicht, dass das Intervall unendlich enth"alt.
+$\mathbb{R} = \left(-\infty, +\infty\right)$. Meist wird aus dem Kontext klar welche Zahlenmenge die Supermenge ist.
 
-\paragraph{Abgeschlossene}
+\paragraph{Abgeschlossene Intervalle}
 \begin{flushleft}
-Um auszudr"ucken, dass die Variable $x$ einen Wert in einem gewissen Intervall $A$ mit der linken Grenze $a$ und der rechten Grenze $b$ hat, schreibt man es als \textbf{abgeschlossenes Intervall}; es schließt die beiden Werte \textbf{a} und \textbf{b} mit ein. 
+Um auszudr"ucken, dass die Variable $x$ einen Wert in einem gewissen Intervall $A$ mit der linken Grenze $a$ und der rechten Grenze $b$ hat, schreibt man es als \textbf{abgeschlossenes Intervall}; es schlie"st die beiden Werte \textbf{a} und \textbf{b} mit ein. 
 \begin{equation*}
 x \in \left[a;b \right]
 \end{equation*}
-Oft werden $a$ und $b$ auch durch ein Komma ($x \in \left[a,b \right]$) getrennt, was sich aber bei Zahlen in deutscher Notation als ungeschickt herausstellen kann.
+Oft werden $a$ und $b$ auch durch ein Komma ($x \in \left[a,b \right]$) getrennt, was sich aber bei Zahlen in deutscher Notation als ungeschickt herausstellen kann, da hier das Komma als Dezimaltrennzeichen verwendet wird.
 \end{flushleft}
 
 \paragraph{Offene Intervalle}

@@ -54,7 +54,7 @@ F"ur Logarithmus- und $e$-Funktionen sowie die Winkelfunktionen gelten besondere
 \end{itemize}
 
 \subsection{Ableitungsregeln}
-Wie "uberall in der Mathematik gibt es auch f"ur das Ableiten, insbesondere bei komplizierteren Funktionstermen, bestimmte Regeln im Hinblick auf ihre richtige Ableitung.
+Bei komplizierteren Funktionstermen gibt es bestimmte Regeln im Hinblick auf ihre Ableitung.
 
 \subsubsection{Produktregel}
 \begin{equation*}
@@ -65,12 +65,17 @@ f(x) = h(x) \cdot g(x) \Rightarrow f'(x)=h'(x) \cdot g(x)+h(x) \cdot g'(x)
 \begin{equation*}
 f(x)=2x^3 \cdot \sin(x)\Rightarrow f'(x)=6x^2 \cdot \sin(x)+2x^3 \cdot \cos(x)
 \end{equation*}
+Die Produktregel gilt auch f"ur einfache Funktionen, z.B.
+\begin{equation*}
+f(x)=x^2=x\cdot x\Rightarrow f'(x)=1 \cdot x+x \cdot 1 = 2x
+\end{equation*}
+Hier bietet sich aber die Ableitungsregel f"ur Polynome an (siehe oben).
 
 \subsubsection{Quotientenregel}
 \begin{equation*}
 f(x)=\frac{h(x)}{g(x)} \Rightarrow f'(x)=\frac{h'(x) \cdot g(x)-h(x) \cdot g'(x)}{(g(x))^2}
 \end{equation*}
-Diese Regel kann auf die Produktregel zur"uckgef"uhrt werden man bemerke $\frac{h(x)}{g(x)} = h(x) \cdot g(x)^{-1}$
+Diese Regel kann auf die Produktregel zur"uckgef"uhrt werden, man bemerke $\frac{h(x)}{g(x)} = h(x) \cdot g(x)^{-1}$
 
 \paragraph{Beispiel:}
 \begin{equation*}
@@ -85,7 +90,7 @@ f(x)=f(g(x))\Rightarrow f'(g(x))=f'(g(x))\textcolor{red}{g'(x)}
 
 \paragraph{Beispiel:}
 \begin{equation*}
-f(g(x))=x^{(x^2+4)}\Rightarrow f'(g(x))=(x^2+4)*x^{(x^2+4-1)}\textcolor{red}{ \cdot 2x}
+f(g(x))=x^{(x^2+4)}\Rightarrow f'(g(x))=(x^2+4)\cdot x^{(x^2+4-1)}\textcolor{red}{ \cdot 2x}
 \end{equation*}
 
 \subsection{"Ubungen}
