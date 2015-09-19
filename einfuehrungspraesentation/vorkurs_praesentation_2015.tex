@@ -1,0 +1,290 @@
+\documentclass{beamer}
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+
+\mode<presentation>{
+	\definecolor{LogoRed}{RGB}{219,00,31}
+	\definecolor{LogoGray}{RGB}{86,86,80}
+	
+	\useoutertheme[width=2.1cm]{sidebar}
+	\useinnertheme{rounded}
+	\setbeamercolor{normal text}{fg=black,bg=white}
+	\setbeamercolor{palette sidebar primary}{use=normal text,fg=normal text.fg}
+	\setbeamercolor{title}{fg=LogoRed}
+	\setbeamercolor{frametitle}{fg=LogoRed}
+	\setbeamercolor{structure}{fg=LogoRed}
+	\setbeamercolor{section in sidebar}{fg=LogoRed}
+	\setbeamercolor{subsection in sidebar}{fg=LogoRed}
+	
+	\usefoottemplate{\vbox{\tinycolouredline{LogoGray!25}{\hspace{4pt}\hspace{15pt}\insertdate\hfill\insertshortinstitute\hfill \insertframenumber{}/\inserttotalframenumber}}}
+	
+	\setbeamertemplate{section in toc}{\inserttocsectionnumber.~\inserttocsection\par}
+	\setbeamertemplate{subsection in toc}{\hspace*{2em}\inserttocsectionnumber.\inserttocsubsectionnumber~\inserttocsubsection}
+	\AtBeginSubsection[] {
+		\begin{frame}<beamer>
+			\frametitle{Outline}
+			\tableofcontents[currentsection,sectionstyle=show/show,subsectionstyle=show/shaded/hide]
+		\end{frame}
+	}
+}
+
+\title{Vorkurs WS 2015/16}
+\author[Diana Irmscher]{Diana Irmscher\\\texttt{irmscher@fs.cs.hm.edu}}
+\institute[Fachschaft 07]{Fachschaft 07\\Fakultät für Informatik und Mathematik\\Hochschule für angewandte Wissenschaften München}
+\logo{\includegraphics[height=1.5cm]{logo_fs07.pdf}}
+\date{\today}
+
+\setbeamertemplate{navigation symbols}{}
+
+\begin{document}
+	\maketitle
+	
+	\section{Begrüßung}
+	
+	\begin{frame}
+		Organisation
+		\begin{columns}[t]
+			\column{.47\textwidth}
+			\includegraphics[width=0.5\textwidth]{diana.jpg}
+			\\Diana Irmscher
+			\column{.47\textwidth}
+			\includegraphics[width=0.5\textwidth]{ersin.jpg}
+			\\Ersin Öztürk
+		\end{columns}
+		\bigskip
+		\bigskip
+		Helfer
+		\begin{itemize}
+			\item Nicole Behrens
+			\item Sebastian Klohn
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}
+		\begin{columns}[t]
+			\column{.47\textwidth}
+			Dozenten Mathematik
+			\begin{itemize}
+				\item Chris Becker
+				\item Benedict Zönnchen
+				\item Sebastian Klohn
+				\item Lesya Mankovska
+				\item Felix Dieterich
+				\item Marc Zibelink
+				\item Linda Rudolph
+				\item Stephan Ploederl
+			\end{itemize}
+			\column{.47\textwidth}
+			Dozenten Softwareentwicklung
+			\begin{itemize}
+				\item Fabio Hellmann
+				\item Benjamin Klas
+				\item Tim Lauster
+				\item Luca Spataro
+				\item Christian Worf
+				\item Benjamin Reischböck
+			\end{itemize}
+		\end{columns}
+	\end{frame}
+	
+	\begin{frame}
+		\tableofcontents
+	\end{frame}
+	
+	\section{Termine}
+	\begin{frame}
+		Erstsemesterveranstaltung
+		\begin{itemize}
+			\item Donnerstag, 01.10.2015 um 09:00 Uhr im roten Würfel
+		\end{itemize}
+		\pause
+		Erstsemestertag
+		\begin{itemize}
+			\item Freitag, 02.10.2015 ab 08:15 Uhr in der Lothstraße 64
+		\end{itemize}
+		\pause
+		Wahl der AW-Fächer
+		\begin{itemize}
+			\item 17.09. - 02.10.2015 Belegung 1. Los-Durchgang
+			\item 05.10.2015 Bekanntgabe des 1. Los-Durchgangs
+			\item 05.10. - 06.10.2015 Belegung 2. Los-Durchgang
+			\item 07.10.2015 Bekanntgabe des 2. Los-Durchgangs
+		\end{itemize}
+	\end{frame}
+	
+	\section{Die Fachschaft}
+	
+	\begin{frame}
+		Fachschaftsleitung
+		\center
+		\includegraphics[width=0.7\textwidth]{matti_diana.jpg}
+		\\Mathias Duve und Diana Irmscher
+	\end{frame}
+	
+	\begin{frame}
+		Was macht die Fachschaft?
+		\begin{itemize}
+			\item Ansprechpartner für Fragen zum Studium
+			\item Rechts- und Studienberatung
+			\item Fakultätsrat
+			\item Paritätische Kommission
+			\item Studentisches Parlament
+			\item Social Media
+		\end{itemize}
+		\bigskip
+		\begin{itemize}
+			\item Vorkurs
+			\item Erstsemesterveranstaltung
+			\item Studentische Vollversammlung
+			\item RetroGaming Abend
+			\item Speeddating (Firmenkontakte)
+			\item Absolventenfeier
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}
+		Wir haben wichtige Informationen für Erstsemester in einem Guide für euch zusammengestellt.\\
+		\bigskip
+		Download unter \url{fs.cs.hm.edu}\\
+		\center
+		\includegraphics[width=0.3\textwidth]{erstiguide.jpg}
+	\end{frame}
+	
+	\section{Das Studium}
+	
+	\begin{frame}
+		Accounts (1)
+		\begin{itemize}
+			\item Hochschul-Account
+			\begin{itemize}
+				\item Mail-Postfach unter \url{xmail.mwn.de}
+			\end{itemize}
+			\pause
+			\item Moodle (E-Learning-Plattform)
+			\begin{itemize}
+				\item Mail-Postfach unter \url{moodle.hm.edu}
+			\end{itemize}
+			\pause
+			\item Eduroam (WLAN)
+			\begin{itemize}
+				\item \url{www.lrz.de/services/netz/mobil/wireless/}
+			\end{itemize}
+			\pause
+			\item LRZ (VPN/WLAN)
+			\begin{itemize}
+				\item \url{www.lrz.de/services/netz/mobil/vpn/}
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}
+		Accounts (2)
+		\begin{itemize}
+			\item FK07 Kennung
+			\begin{itemize}
+				\item ifw-Account, z.B. ifw12345
+				\item Laborrechner
+			\end{itemize}
+			\pause
+			\item ZPA-System
+			\begin{itemize}
+				\item \url{w3-o.cs.hm.edu/zpa/}
+				\item Anmeldung mit FK07-Account
+				\item Anmeldung  für FWP Fächer (mit und ohne Praktika),
+				praxisbegleitenden Unterricht,
+				Blockunterricht,
+				Praktika zu bestimmten Vorlesungen und
+				Seminaren
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}
+		Veranstaltungen
+		Anwesenheitspflicht in Vorlesungen?
+		\begin{itemize}
+			\item in den meisten Veranstaltungen nicht, in Seminaren (z.B. Angewandte Mathematik) jedoch schon
+			\item dennoch ratsam, gerade am Beginn des Studium jede Veranstaltung zu besuchen
+		\end{itemize}
+		\bigskip
+		\pause
+		Zwischen den Vorlesungen
+		\begin{itemize}
+			\item Lernen, Essen, Entspannen
+			\item Aufenthaltsräume
+		\end{itemize}
+		\bigskip
+		\pause
+		Nach den Vorlesungen
+		\begin{itemize}
+			\item Lernen
+			\item Abgaben
+		\end{itemize}
+		
+	\end{frame}
+	
+	\begin{frame}
+		Tipps für's Studium (1)
+		\begin{itemize}
+			\item Lerngruppen
+			\pause
+			\item Wahl des Praktikumspartners
+			\pause
+			\item Organisation des Studiums: Prüfungen schieben ist immer schlecht
+			\pause
+			\item eigenes Notebook ist empfehlenswert
+			\pause
+			\item Bücher bekommt man alle in der Bibliothek \url{bib.hm.edu}
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}
+		Tipps für's Studium (2)
+		\begin{itemize}
+			\item Unterlagen, Skripte 
+			\begin{itemize}
+				\item Moddle
+				\item Skriptensammlung der Fachschaft
+				\item Skriptenbestellung der Fachschaft
+			\end{itemize}
+			\pause
+			\item Website der Fachschaft\\ \url{fs.cs.hm.edu}
+			\pause
+			\item Android-App der Fachschaft\\ \url{play.google.com/store/apps/details?id=com.fk07}
+			\pause
+			\item iOS-App der Fachschaft\\
+			in Arbeit	
+		\end{itemize}
+	\end{frame}
+	
+	\section{Vorkurs}
+	
+	\begin{frame}
+		Softwareentwicklung
+		\begin{itemize}
+			\item Grundkenntnisse in Programmierung mit Java
+			\item Tutorium
+		\end{itemize}
+		\bigskip
+		Mathematik
+		\begin{itemize}
+			\item Themen aus der Analysis
+			\item Vorlesung und Übung
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}
+		Stundenplan
+	\end{frame}
+	
+	\begin{frame}
+		Gruppeneinteilung
+	\end{frame}
+	
+	\begin{frame}
+		\center Danke für eure Aufmerksamkeit\\ und\\ viel Spaß beim Vorkurs!
+	\end{frame}
+
+\end{document}
