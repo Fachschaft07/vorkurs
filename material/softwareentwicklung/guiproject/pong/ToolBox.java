@@ -22,6 +22,7 @@ public class ToolBox
 
 	private final ImagePanel	panel;
 	private final JFrame		frame;
+	private KeyListener keyListener;
 
 	/**
 	 * Creates a new Toolbox with window and everything.
@@ -53,20 +54,29 @@ public class ToolBox
 			@Override
 			public void keyTyped(final KeyEvent e)
 			{
-				if (e.getKeyChar() == 27)
-				{
-					System.exit(0);
+				if (keyListener != null) {
+					keyListener.keyTyped(e);
 				}
 			}
 
 			@Override
 			public void keyReleased(final KeyEvent e)
 			{
+				if (keyListener != null) {
+					keyListener.keyReleased(e);
+				}
 			}
 
 			@Override
-			public void keyPressed(final KeyEvent arg0)
+			public void keyPressed(final KeyEvent e)
 			{
+				if (keyListener != null) {
+					keyListener.keyPressed(e);
+				}
+				if (e.getKeyCode() == KeyEvent.VK_ESCAPE)
+				{
+					System.exit(0);
+				}
 			}
 		});
 		// put the panel into the frame
@@ -77,6 +87,16 @@ public class ToolBox
 		graphics = panel.createImage();
 		width = panel.getWidth();
 		height = panel.getHeight();
+	}
+	
+	/**
+	 * Add a listener which will be informed when a key of 
+	 * the keyboard was pressed.
+	 *
+	 * @param listener to inform.
+	 */
+	public void addKeyListener(KeyListener listener) {
+		keyListener = listener;
 	}
 
 	/**
