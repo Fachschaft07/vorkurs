@@ -1,3 +1,4 @@
+import java.awt.Color;
 
 /**
  * @author Fabio
@@ -9,12 +10,14 @@ public class Ball {
     private float directionY;
     private float speed;
     private int size;
+	private Color color;
 
-    public Ball(float x, float y, int size, float speed) {
+    public Ball(float x, float y, int size, float speed, Color color) {
         this.x = x;
         this.y = y;
         this.size = size;
         this.speed = speed;
+		this.color = color;
     }
 
     public void move() {
@@ -58,4 +61,8 @@ public class Ball {
     public float getDirectionY() {
         return directionY;
     }
+	
+	public Color getColor() {
+		return color;
+	}
 }
