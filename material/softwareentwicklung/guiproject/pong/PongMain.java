@@ -17,14 +17,15 @@ public class PongMain implements KeyListener {
         game.setFont("Bauhaus 93", game.getFrameHeight() / 15);
 
         float marginBorder = game.getFrameWidth() / 25; // Abstand zum Fensterrand
-        int barHeight = game.getFrameHeight() / 7; // Höhe eines Balkens
+        int barHeight = game.getFrameHeight() / 7; // Hï¿½he eines Balkens
         int barWidth = game.getFrameWidth() / 150; // Breite eines Balkens
 
         Bar barPlayerLeft = new Bar(
                 marginBorder, // Abstand zum Fensterrand (links)
                 game.getFrameHeight() / 2 - barHeight / 2, // Startposition des Balkens y-Achse
                 barWidth, // Balken Breite
-                barHeight // Balken Höhe
+                barHeight, // Balken Hï¿½he
+				Color.MAGENTA
         );
         playerLeft = new Player(barPlayerLeft);
 
@@ -32,7 +33,8 @@ public class PongMain implements KeyListener {
                 game.getFrameWidth() - marginBorder - barWidth, // Abstand zum Fensterrand (rechts)
                 game.getFrameHeight() / 2 - barHeight / 2, // Startposition des Balkens y-Achse
                 barWidth, // Balken Breite
-                barHeight // Balken Höhe
+                barHeight, // Balken Hï¿½he
+				Color.GREEN
         );
         playerRight = new Player(barPlayerRight);
 
@@ -42,7 +44,8 @@ public class PongMain implements KeyListener {
                 game.getFrameWidth() / 2 - ballRadius / 2, // Startposition des Balls x-Achse
                 game.getFrameHeight() / 2 - ballRadius / 2, // Startposition des Balls y-Achse
                 ballRadius, // Radius des Balls
-                20.0f // Startgeschwindigkeit
+                20.0f, // Startgeschwindigkeit
+				Color.WHITE
         );
 
         if (game.nextRandomInt(10) > 5) {
@@ -69,17 +72,17 @@ public class PongMain implements KeyListener {
             game.fillRectangle(0, 0, game.getFrameWidth(), game.getFrameHeight());
 
             // Spieler auf der linken Seite
-            game.setColor(Color.MAGENTA);
             Bar barLeft = playerLeft.getBar();
+            game.setColor(barLeft.getColor());
             game.fillRectangle(barLeft.getX(), barLeft.getY(), barLeft.getWidth(), barLeft.getHeight());
 
             // Spieler auf der rechten Seite
-            game.setColor(Color.GREEN);
             Bar barRight = playerRight.getBar();
+            game.setColor(barRight.getColor());
             game.fillRectangle(barRight.getX(), barRight.getY(), barRight.getWidth(), barRight.getHeight());
 
             // Ball
-            game.setColor(Color.WHITE);
+            game.setColor(ball.getColor());
             game.fillOval(ball.getX(), ball.getY(), ball.getSize(), ball.getSize());
 
             // Spielstand
@@ -99,25 +102,25 @@ public class PongMain implements KeyListener {
 
             ball.move(); // Als simulierte Bewegung
 
-            // Randberührungen überprüfen
+            // Randberï¿½hrungen ï¿½berprï¿½fen
 
             if (ball.getX() < 0 || ball.getX() + ball.getSize() > game.getFrameWidth()) {
-                // linker oder rechter Rand berührt
+                // linker oder rechter Rand berï¿½hrt
                 ball.setDirection(-directionX, directionY);
                 if (ball.getX() < 0) {
-                    // linker Rand berührt
+                    // linker Rand berï¿½hrt
                     playerRight.incrementScore(1);
                 } else {
-                    // rechter Rand berührt
+                    // rechter Rand berï¿½hrt
                     playerLeft.incrementScore(1);
                 }
                 ball.increseSpeed(speed);
             } else if (ball.getY() < 0 || ball.getY() + ball.getSize() > game.getFrameHeight()) {
-                // oberer oder unterer Rand berürt
+                // oberer oder unterer Rand berï¿½rt
                 ball.setDirection(directionX, -directionY);
             }
 
-            // Balkenberührungen überprüfen
+            // Balkenberï¿½hrungen ï¿½berprï¿½fen
 
             if (ball.getX() < barLeft.getX() + barLeft.getWidth() // Spieler auf der linken Seite
                     && ball.getX() < barLeft.getX()
@@ -131,8 +134,8 @@ public class PongMain implements KeyListener {
                 ball.setDirection(-directionX, directionY);
             }
 
-            ball.setX(x); // Ball auf ursprüngliche x-Position zurücksetzen
-            ball.setY(y); // Ball auf ursprüngliche y-Position zurücksetzen
+            ball.setX(x); // Ball auf ursprï¿½ngliche x-Position zurï¿½cksetzen
+            ball.setY(y); // Ball auf ursprï¿½ngliche y-Position zurï¿½cksetzen
 
             ball.move(); // Ball wirklich bewegen
 
