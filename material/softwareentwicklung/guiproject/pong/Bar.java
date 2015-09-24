@@ -1,3 +1,4 @@
+import java.awt.Color;
 
 /**
  * @author Fabio
@@ -9,13 +10,15 @@ public class Bar {
     private int height;
     private float speedY;
     private float speed;
+	private Color color;
 
-    public Bar(float x, float y, int width, int height) {
+    public Bar(float x, float y, int width, int height, Color color) {
         this.x = x;
         this.y = y;
         this.width = width;
         this.height = height;
         this.speed = 7.5f;
+		this.color = color;
     }
 
     public int getX() {
@@ -33,6 +36,10 @@ public class Bar {
     public int getHeight() {
         return height;
     }
+	
+	public Color getColor() {
+		return color;
+	}
 
     public void moveUp() {
         speedY = -speed;
