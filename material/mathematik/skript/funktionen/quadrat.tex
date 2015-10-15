@@ -1,5 +1,44 @@
 \subsection{Quadratische Funktionen}
-Nach den linearen sind die sogenannten quadratischen Funktionen noch relativ einfach. Sie werden auch als Parabelgleichungen bezeichnet. Ihren Namen verdanken diese Funktionen der Tatsache, dass ihre Variable zumindest einmal quadratisch und niemals mit einem h"oheren Exponenten als $2$ in die Funktion mit eingeht.
+Nach den linearen sind die sogenannten quadratischen Funktionen noch relativ einfach. Sie werden auch als Parabelgleichungen bezeichnet. Ihren Namen verdanken diese Funktionen der Tatsache, dass ihre Variable zumindest einmal quadratisch und niemals mit einem h"oheren Exponenten als $2$ in die Funktion mit eingeht.\\
+Um diese Definition jedoch richtig zu verstehen, m"ussen wir zun"achst einmal anschauen, was ein Exponent ist:
+
+\subsection{Exponent und Basis}
+Die Worte Exponent und Basis, spielen immer dann eine Rolle in der Mathematik, wenn es sich um ein Konstrukt wie $a^b$ handelt (Gesprochen: "'a hoch b"').\\
+In diesem Konstrukt wird "'a"' als Basis und "'b"' als Exponent bezeichnet. Hierbei gilt:
+\begin{itemize}
+	\item $a^0 = 1$
+	\item $a^1 = a$
+	\item $a^2 = a \cdot a$
+	\item $a^3 = a \cdot a \cdot a$
+	\item $a^4 = a \cdot a \cdot a \cdot a$
+	\item $\ldots$
+\end{itemize}
+
+\paragraph{Rechengesetze f"ur Exponenten}
+\begin{enumerate}
+	\item $((b)^n)^m = b^{n \cdot m}$
+	\item $b^n \cdot b^m = b^{n+m}$
+	\item $\frac{b^n}{b^m} = b^{n-m}$
+\end{enumerate}
+
+\noindent Will man nun, solch eine Funktion umkehren, so muss man die n-te Wurzel ziehen:
+\paragraph{Beispiel f"ur Wurzeln}
+\begin{enumerate}
+	\item $f(x)=x^2 => f^{-1}(y)=\sqrt[2]{y}$ oder k"urzer $f^{-1}(y)=\sqrt{y}$
+	\item $f(x)=x^3 => f^{-1}(y)=\sqrt[3]{y}$
+	\item $f(x)=x^4 => f^{-1}(y)=\sqrt[4]{y}$
+\end{enumerate}
+
+\paragraph{Rechengesetze f"ur Wurzeln}
+\begin{enumerate}
+	\item $\sqrt[m]{a} = a^{\frac{1}{m}}$
+	\item $\sqrt[m]{a} \cdot \sqrt[m]{b} = \sqrt[m]{a \cdot b}$
+	\item $\frac{\sqrt[m]{a}}{\sqrt[m]{b}} = \sqrt[m]{\frac{a}{b}}$
+	\item $\sqrt[m]{b^n} = b^{\frac{n}{m}}$
+\end{enumerate}\vline
+
+\noindent Im Fall $a^2$ wird auch oft einfach nur "'a zum Quadrat"' gesagt.\\
+Dies kommt daher, dass ein Quadrat aus vier gleich langen Seiten besteht und es sich bei allen Innenwinkel (die Winkel innerhalb des Rechtecks), um so genannte "'rechte Winkel"' (genau 90 Grad) handelt. Die Fläche eines Quadrats, mit der Seitenl"ange a, l"asst sich deshalb mit der Formel $a \cdot a$ oder auch $a^2$ berechnen.
 
 \subsubsection{Die Normalparabel}
 Die Normalparabel besitzt die Formel 
@@ -164,7 +203,7 @@ Das hei"st wir k"onnten $f^{-1}(x)$ berechnen und dann einfach $0$ einsetzten un
 %In unserem Fall bemerkt man schnell, dass unter der Wurzel ein negativer Wert heraus kommt. Dies darf jedoch nicht sein, da in den reellen Zahlen die Wurzel von negativen Zahlen nicht definiert ist.\\
 %Somit hat unsere Funktion keinerlei Nullstellen.
 
-\paragraph{Die Mitternachtsformel:}
+\paragraph{Die L"osungsformel f"ur quadratische Gleichungen (Mitternachtsformel):}
 Eine weitere M"oglichkeit, die Nullstellen einer quadratischen Funktion zu berechnen, w"are durch Verwendung der so genannten "'Mitternachtsformel"':
 \begin{equation*}
 0 = ax^2 + bx + c \Rightarrow x_{1,2} := \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
