@@ -9,6 +9,32 @@ m= \frac{\triangle y}{\triangle x}=\frac{f(x_2)-f(x_1)}{x_2-x_1}
 \end{equation*}
 Die Konstante $t$ ist auch als $y$-Achsenabschnitt bekannt. Er wird so bezeichnet, da die Funktion f"ur den $x$-Wert $0$ den Funktionswert $y = t$ annimmt. Viele komplizierte Funktionen werden am Ende doch wieder mit Hilfe einfacher lineare Funktionen angen"ahert. Lineare Funktionen lassen sich auf dem Computer leicht berechnen. Sie sind so prominent und verbreitet, dass es f"ur sie eine eigene Vorlesung gibt: \textbf{Lineare Algebra}.
 
+
+\begin{figure}[h!]
+	\begin{center}
+		\begin{tikzpicture}[scale = 1.0]
+		\begin{axis}[
+		domain=-2:10,
+		xmin=-2, xmax=10,
+		ymin=-0, ymax=10,
+		samples=400,
+		axis y line=center,
+		axis x line=middle,
+		xlabel={x},
+		ylabel={f(x)},
+		]
+		\addlegendentry{$f(x)=0,5x+1$}
+		\addplot+[mark=none, color=blue] {0.5*x+1};
+		\addlegendentry{$f(x)=2x+1$}
+		\addplot+[mark=none, color=red] {2 * x+1};
+		\addlegendentry{$f(x)=x$}
+		\addplot+[mark=none, color=green] {x};
+		\end{axis}
+		\end{tikzpicture}
+	\end{center}
+	\caption{Beispiele linearer Funktionen in $\mathbb{R}\times\mathbb{R}$.}
+	\label{fig:gerade}
+\end{figure}
 %Lineare Funktionen existieren in drei Auspr"agungen. Geraden, Halbgeraden und Strecken. Eine Gerade ist unendlich lang, eine Strecke existiert nur zwischen zwei reellen Punkten und eine Halbgerade startet oder endet in genau einem Punkt. Der andere Teil geht ins Unendliche.
 
 \subsubsection{Die Punktsteigungsform}
@@ -44,6 +70,6 @@ Der Schnittpunkt hat somit die Koordinaten $S = \left(\frac{23}{8}, \frac{23}{2}
 \begin{itemize}
 \item Besitzen zwei Geraden dieselbe Steigung, so sind diese parallel zueinander. Im Normalfall besitzen diese keinerlei Schnittpunkte. Eine besondere Art der Parallelit"at ist jedoch die Identit"at zweier Geraden. Identische Geraden besitzen unendlich viele Schnittpunkte.
 \item Sind zwei Geraden senkrecht (im rechten Winkel) zueinander, so ist das Produkt ihrer Steigungen -1: $m_1 \cdot m_2 = -1$.
-\item Eine  \textcolor{red}{Tangente} ist eine Gerade, die mindestens einen Punkt, sowie an diesem Punkt die Steigung mit einer Kurve gemeinsam hat.
+\item Eine  \textcolor{red}{Tangente} ist eine Gerade, die mindestens einen Punkt, sowie an diesem Punkt die Steigung mit einer Kurve gemeinsam hat. Man sagt auch, sie ber"uhrt den Punkt der Kurve an dieser stelle.
 \item Eine  \textcolor{red}{Sekante} schneidet eine Kurve in zwei Punkten.
 \end{itemize}

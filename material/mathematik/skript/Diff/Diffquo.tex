@@ -1,4 +1,23 @@
-Beim Ableiten m"ochten wir etwas "uber die Ver"anderung einer Funktion erfahren. Angenommen ein Auto startet an einem Punkt und die Funktion $s(t)$ gibt an wie viele Meter das Auto zum Zeitpunkt $t$ zur"uckgelegt hat. Wir fragen uns nun wie schnell das Auto nach 10 Sekunden f"ahrt. Wie k"onnen wir dies herausfinden? Wir k"onnen das absch"atzen indem wir 
+Um die Differentiation zu verstehen, ben"otigen wir zun"achst einmal etwas Wissen "uber Grenzwerte.
+
+\subsection{Limes}
+Das Wort Limes kommt aus dem Latein und bedeutet so viel wie \textit{Grenzweg} und bezeichnet die Grenzw"alle, welche das R"omische Reich zwischen dem 1. und 6. Jahrhundert in Europa, Vorderasien und Nordafrika angelegt hatten.\\
+Auch im Bereich der Mathematik bezeichnet der Limes einen Grenzwall. Dieser kann nie ganz erreicht werden, jedoch kann man sich beliebig nah an ihn annähern.\\
+Wenn also $x_0$ der Wert ist, an dem sich dieser Grenzwert befindet, so kann man den Abstand zwischen dem aktuell betrachtetem x-Wert und $x_0$ immer kleiner werden lassen. Man schreibt auch $\lim\limits_{x \to x_0}$. Geht x beliebig nahe an $x_0$ heran, so kann man schlie"slich den s.g. Grenzwert berechnen $\lim\limits_{x \to x_0} f(x)$. Hierf"ur betrachtet man, wie sich die Funktion verh"alt, wenn der Abstand immer kleiner wird.\\
+Ausgesprochen wird dies \textit{Limes von x gegen $x_0$ von f von x}
+Beim Ableiten m"ochten wir etwas "uber die Ver"anderung einer Funktion erfahren.
+
+\begin{warning}
+	Hin und wieder will man lediglich den Grenzwert aus einer bestimmten Richtung betrachten.\\
+	Will man den linksseitigen Grenzwert bestimmen, so schreibt man:\\
+	$\lim\limits_{x \to x_0-} f(x_0)$ da x immer etwas kleiner ist, als $x_0$.
+	Der rechtsseitige Grenzwert, wird wie folgt angegeben:\\
+	$\lim\limits_{x \to x_0+} f(x_0)$\\
+	Es existieren auch noch weitere Schreibweisen, welche mit de $> und <$ Zeichen gebildet werden, jedoch belassen wir es im Moment bei dieser Schreibweise.
+\end{warning}
+
+\subsection{Heranf"uhrung an die Differentiation}
+Angenommen ein Auto startet an einem Punkt und die Funktion $s(t)$ gibt an wie viele Meter das Auto zum Zeitpunkt $t$ zur"uckgelegt hat. Wir fragen uns nun wie schnell das Auto nach 10 Sekunden f"ahrt. Wie k"onnen wir dies herausfinden? Wir k"onnen das absch"atzen indem wir 
 \begin{equation*}
 \bar{v} = \frac{\text{Strecke}}{\text{Zeit}} \approx \frac{s(11) - s(9)}{11 - 9} = \frac{\Delta s}{\Delta t} = \frac{s(11) - s(9)}{2}
 \end{equation*}

@@ -18,10 +18,19 @@ um anzugeben was $\mathbb{D}$ und $Z$ ist und wie die Funktion aussieht, also zu
 \begin{equation*}
 f :\mathbb{R} \to \mathbb{R}, x \mapsto 2x + 5 \text{ bzw. } f(x) := 2x + 5
 \end{equation*}
-Man beachte: jedes $x \in \mathbb{D}$ hat sein $y \in Z$, aber nicht jedes $y \in Z$ sein $x \in \mathbb{D}$ (sprich jedem Wert der Definitionsmenge wird ein Zielwert zugeordnet, aber nicht jeder Zielwert muss einen Wert in der Definitionsmenge haben). Jedoch hat jedes $y \in \mathbb{W}$ sein $x \in \mathbb{D}$ (jeder Wert im Bildbereich der Funktion hat einen zugeh"origen Wert im Definitionsbereich). Die Definitions\-menge gibt hierbei an, in welchem Bereich die Funktion definiert ist, sprich welche Werte \glqq in die Funktion eingesetzt werden d"urfen\grqq . Die Abbildungs\-vorschrift sorgt nun daf"ur, dass jedem Wert $x$ des Definitions\-bereichs genau ein Wert $y$ des Bild\-bereiches zugeordnet werden kann. Die Wertemenge enth"alt genau jene Zahlen, welche man durch Abbildung des Definitions\-bereiches mithilfe der Abbildungs\-vorschrift erhalten kann.
+\begin{warning}Jedes $x \in \mathbb{D}$ hat sein $y \in Z$, aber nicht jedes $y \in Z$ sein $x \in \mathbb{D}$ (sprich jedem Wert der Definitionsmenge wird ein Zielwert zugeordnet, aber nicht jeder Zielwert muss einen Wert in der Definitionsmenge haben). Jedoch hat jedes $y \in \mathbb{W}$ sein $x \in \mathbb{D}$ (jeder Wert im Bildbereich der Funktion hat einen zugeh"origen Wert im Definitionsbereich).
+\end{warning}
+Die Definitions\-menge gibt hierbei an, in welchem Bereich die Funktion definiert ist, sprich welche Werte \glqq in die Funktion eingesetzt werden d"urfen\grqq . Die Abbildungs\-vorschrift sorgt nun daf"ur, dass jedem Wert $x$ des Definitions\-bereichs genau ein Wert $y$ des Bild\-bereiches zugeordnet werden kann. Die Wertemenge enth"alt genau jene Zahlen, welche man durch Abbildung des Definitions\-bereiches mithilfe der Abbildungs\-vorschrift erhalten kann.
 
 \paragraph{Zur Vorstellungserleichterung:}
-Vorstellen kann man sich das wie die Funktionsweise eines Fotoapparates. Der Definitionsbereich w"are hierbei das, was in der realen Welt existiert. Die Kamera ist die Funktion, welche die Welt (Definitionsbereich) aufnimmt. Das ausgestrahlte Licht der Bestandteile des Definitionsbereiches wird nun mithilfe einer Linse eingefangen, gespiegelt und in ein Bild umgewandelt. Dieses Bild ist nun das Ergebnis, jeder Teil des Bildes ist Bestandteil der Bildmenge.
+Vorstellen kann man sich das ganze wie die Erschaffung eines Gem"aldes. Die Definitionsmenge ist hierbei die abzubildende Szene (zum Beispiel eine Landschaft).\\
+Die Zielmenge sind alle Farben, welche der K"unstler besitzt (und mischen kann), um das Bild anzufertigen.\\
+Die Wertemenge, ist die Menge der Farben, welche der K"unstler wirklich verwendet, um das Gem"alde zu erzeugen.
+
+\begin{warning}
+	Die Worte Bild und Urbild, stammen tats"achlich aus dem Bereich der Kunst. Das Urbild ist die Originalszene und das Bild die Abbildung dieser Szene, welche der K"unstler erstellt. In der Mathematik werden die x-Werte ab und an auch als Urbild und die y-Werte als Bild bezeichnet.
+\end{warning}
+
 \begin{figure}[h!]
  \centering
  \begin{tikzpicture}[ele/.style={fill=black,circle,minimum width=.8pt,inner sep=1pt},every fit/.style={ellipse,draw,inner sep=-2pt}, scale = 0.8]
@@ -54,7 +63,7 @@ Vorstellen kann man sich das wie die Funktionsweise eines Fotoapparates. Der Def
 \end{itemize}
 \end{flushleft}
 
-\subsection{Eigenschaften von Funktionen}
+\subsection{Grundlegende Eigenschaften von Funktionen (Bonus)}
 \subsubsection{Surjektivit"at (Bonus)}
 Eine Funktion $f$ ist surjektiv (siehe Abb. \ref{fig:surjektiv}) genau dann wenn jeder Wert der Zielmenge mindestens einmal angenommen wird:
 \begin{equation*}
@@ -147,69 +156,3 @@ Eine Funktion ist bijektiv (siehe Abb. \ref{fig:bijectiv}), wenn sie zugleich in
  \caption{Eine bijektive Funktion.}
  \label{fig:bijectiv}
 \end{figure}
-
-\subsubsection{Umkehrfunktion}
-Durch Einsetzen eines bestimmten $x$-Wertes in eine Funktion $f$ erh"alt man den entsprechenden $y$-Wert: $y=f(x)$. Will man jedoch den $x$-Wert zu einem bestimmten $y$-Wert bestimmen, so muss man zun"achst dessen Umkehrfunktion $f^{-1}$ an der Stelle $y$ berechnen: $x=f^{-1}(y)$. Daf"ur l"ost man die Gleichung $y=f(x)$ nach $x$ auf. Durch das Bilden der Umkehrfunktion werden Definitions- und Wertemenge vertauscht. Die Umkehrfunktion muss nat"urlich die Anforderungen erf"ullen welche an eine Funktion gestellt werden. Wenn nicht jedes $y$ auf genau ein $x$ abgebildet wird, existiert die Umkehrfunktion nicht. Damit muss die Funktion bijektiv sein. Ist die Funktion injektiv aber nicht surjektiv, so m"ussen wir den Definitionsbereich einschr"anken, um eine Funktion zu erhalten. 
-
-\paragraph{Beispiel}
-\begin{itemize}
-\item $f(x) = x^2$ besitzt keine Umkehrfunktion denn sie ist nicht injektiv: $f(2) = f(-2) = 4$. Somit m"usste $f^{-1}(4) = \{2, -2\}$ (hier wird ein Wert $4$ der Bildmenge mehrfach angenommen) sein, was aber die Definition einer Funktion widerspricht!
-\item In Abbildung \ref{fig:injektiv} m"ussten wir $5$ aus dem Definitionsbereich von $f^{-1}$ herausnehmen. Wir w"urden dann eine Umkehrfunktion erhalten, allerdings w"are $f^{-1}(5)$ nicht definiert.
-\item $f(x) = e^x$ ist bijektiv falls $Z = \mathbb{R}^+  \setminus \{0\}$. F"ur $Z = \mathbb{R}$ ist sie nicht surjektiv denn $e^x$ ist stets gr"o"ser Null. Ihre Umkehrfunktion ist bekanntlich $f^{-1}(y) = \ln(y)$, diese ist aber nur auf $\mathbb{D}_{f^{-1}} =  \mathbb{R}^+ \setminus \{0\}$ definiert.
-\item $f(x) = x$ ist bijektiv auf ganz $\mathbb{R}$.
-\end{itemize}
-
-
-\subsubsection{Monotonie}
-Die Monotonie einer Funktion gibt an, ob deren Funktionswerte mit den Funktionsargumenten ansteigen oder abfallen.
-\begin{itemize}
-\item Eine Funktion ist \textcolor{red}{monoton fallend} \textcolor{DarkGrey}{(bzw. wachsend)}, wenn gilt:
-\begin{equation*}
-\forall x_1, x_2 \in\mathbb{D}, x_1 < x_2: f(x_1)\geq f(x_2) \hspace{0.2 cm}\textcolor{DarkGrey}{(bzw. f(x_1)\leq f(x_2))}
-\end{equation*}
-\item Eine Funktion ist \textcolor{red}{streng monoton fallend} \textcolor{DarkGrey}{(bzw. wachsend)}, wenn gilt:
-\begin{equation*}
-\forall x_1, x_2 \in\mathbb{D}, x_1 < x_2: f(x_1)>f(x_2) \hspace{0.2 cm}\textcolor{DarkGrey}{(bzw. f(x_1)<f(x_2))}
-\end{equation*}
-\end{itemize}
-
-\subsubsection{Symmetrie} \label{sec:symmetrie}
-Eine Funktion ist genau dann \textcolor{red}{symmetrisch zur y-Achse}, wenn gilt:
-\begin{equation*}
-f(x)=f(-x).
-\end{equation*}
-Solche Funktionen werden auch als \textcolor{red}{gerade} Funktion bezeichnet. Eine Funktion ist genau dann \textcolor{red}{symmetrisch zum Ursprung}, oder auch \textcolor{red}{ungerade}, wenn gilt:
-\begin{equation*}
-f(-x)=-f(x).
-\end{equation*}
-\begin{center}
-\textbf{\textcolor{red}{Achtung:}} Gerade hat in dem Sinne nichts mit der Geraden zu tun!!!
-\end{center}
-
-\subsubsection{Periodizit"at}
-Eine Funktion ist dann \textcolor{red}{periodisch}, wenn es eine Konstante p gibt, f"ur die gilt:
-\begin{equation*}
-f(x+p) = f(x), \forall x\in\mathbb{D}
-\end{equation*}
-Diese Definition sagt eigentlich nichts anderes aus, als dass sich die Funktion st"andig im gleichen Abstand wiederholt.
-
-\subsubsection{Nullstellen} \label{sec:nullstellen}
-Eine Nullstelle ist ein Punkt, an dem der Graph die $x$-Achse schneidet. Anders ausgedr"uckt: Ein Punkt an dem die Funktion $f(x)$ den Wert $0$ erreicht. Um Nullstellen zu berechnen, l"ost man die Gleichung
-\begin{equation*}
-f(x) = 0,
-\end{equation*}
-nach $x$. Beispiel: $f(x)=x^2-1$, Nullstellen: $x^2-1=0\implies x^2=1$, L"osungen sind $+1$ und $-1$. Die Gleichung kann also auch mehrere L"osungen haben.
-
-\subsubsection{Stetigkeit}
-Eine Funktion ist stetig, wenn man ihren Graphen (innerhalb der Definitionsmenge) ohne Absetzen des Stiftes in einem Zug zeichnen kann (salopp). Achtung folgende Definition ist eine der knackigsten Ausdr"ucke die euch begegnen wird. Eine Funktion $f : \mathbb{D} \to Z$ ist stetig in $x_0 \in \mathbb{D}$, wenn
-\begin{equation*}
-\forall \epsilon > 0 \ \exists \delta > 0 : \forall x \in \mathbb{D} \text{ mit } \left|x - x_0 \right| < \delta \text{ gilt: } \left| f(x) - f(x_0) \right| < \epsilon 
-\end{equation*}
-Intuitiv bedeutet dies: egal wie klein ich meine Funktionswert-\textbf{Umgebung} ($\epsilon$) um $f(x_0)$ w"ahle, ich kann trotzdem alle Funktionswerte, welche durch die Argument-\textit{Umgebung} ($\delta$) um $x_0$ entstehen, einschlie"sen.
-
-\subsubsection{Verschieben einer Funktion} \label{sec:verschieben}
-Angenommen wir haben eine Funktion $f$ mit $\mathbb{D} = \mathbb{R}$ und wollen eine neue Funktion $f^*$ bauen, wobei wir diese um $d > 0$ nach rechts verschieben wollen. Damit muss gelten:
-\begin{equation*}
-\forall x \in \mathbb{R} :  f^*(x) = f(x-d) \iff \forall x \in \mathbb{R} : f^*(x+d) = f(x).
-\end{equation*}
-Wir nehmen also einfach die gegebene Funktion $f(x)$ und ersetzen jedes $x$ durch $x-d$. Setzen wir hingegen $f^*(x) = f(x) + d$ so verschieben wir die Funktion nach oben. F"ur $d < 0$ folgt, dass wir die Funktion nach links bzw. nach unten verschieben.

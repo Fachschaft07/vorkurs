@@ -5,11 +5,8 @@ Wir m"ochten meist den maximalen Definitionsbereich bestimmen, den Bereich also 
 \begin{equation*}
 \mathbb{D} := \mathbb{R}/\{0\} = \left\{x \in \mathbb{R} \ | \ x \neq 0 \right\}
 \end{equation*}
-Ein ebenfalls g"ultiger Definitionsbereich w"are $\left[10;15\right]$. Solche Einschr"ankungen machen Sinn, wenn uns nur dieser Bereich der Funktion interessiert. Oftmals k"onnen wir eine Funktion vereinfachen, sobald der Definitionsbereich definiert ist. So k"onnen wir die Funktion
-\begin{equation*}
-f_1(x) = \frac{x-1}{x-1}
-\end{equation*}
-durch $f_2(x) = 1$ mit $\mathbb{D}_{f_2} = \mathbb{R} \setminus \{1\}$ ersetzten. Man bedenke $f_1(x) = f_2(x) \ \forall x \in \mathbb{D}_{f_2}$ jedoch gilt $f_2(1) = 1$ und $f_1(1)$ ist nicht definiert. Um den Wertebereich einer Funktion $F$ zu bestimmen, bestimmen wir
+Ein ebenfalls g"ultiger Definitionsbereich w"are $\left[10;15\right]$. Solche Einschr"ankungen machen Sinn, wenn uns nur dieser Bereich der Funktion interessiert.\\
+Um den Wertebereich einer Funktion $F$ zu bestimmen, bestimmen wir
 \begin{equation*}
 \mathbb{W}_f = f(\mathbb{D}_f) = \left\{f(x) \ | \ x \in \mathbb{D}_f \right\},
 \end{equation*}
@@ -19,11 +16,17 @@ hierzu kann es vonn"oten sein zuerst die Grenzwerte (Abschnitt \ref{sec:grenzwer
 Interessant k"onnen auch die Schnittpunkte des Graphen mit den Koordinatenachsen sein, v.a. wenn man den Graphen skizzieren m"ochte.
 \begin{itemize}
 \item Schnittpunkt mit der y-Achse: $f(0)$, einfach einsetzten und ausrechnen.
-\item Nullstellen: $f(x) = 0$ (siehe Abschnitt \ref{sec:nullstellen} und \ref{sec:quadnullstellen}).\\
+\item Nullstellen: $f(x) = 0$ (siehe Abschnitt \ref{sec:nullstellen}).\\
 Merke: Ein Polynom hat h"ochstens so viele Nullstellen wie der h"ochste Exponent der Funktion, dabei erh"alt man zum Teil auch mehrfache Nullstellen, wie beispielsweise bei $x^3$. Diese Funktion hat ein dreifache Nullstelle an der Stelle $x=0$.
 \end{itemize}
 
 \subsection{Grenzwerte} \label{sec:grenzwerte}
+
+\begin{warning}
+	Achtung: Es hei"st nicht x geht unendlich nahe an $x_0$, sondern beliebig nahe.\\
+	Die Bezeichnung \textit{unendlich Nahe} existiert nicht und manche Professoren achten sehr darauf.
+\end{warning}
+
 \subsubsection{Polstellen und L"ocher}
 Eine Polstelle oder ein Pol, ist eine einpunktige Definitionsl"ucke einer Funktion, wenn die Funktionswerte in jeder Umgebung des Punktes (betragsm"a"sig) beliebig gro"s werden. Der Punkt $x_0 = 1$ der Funktion $f_1$ erf"ullt dies nicht (hier handelt es sich um ein \textbf{Loch}), denn $f_1(x) = 1$ in der Umgebung von $x_0$. Betrachten wir 
 \begin{equation*}
@@ -41,6 +44,10 @@ Nun betrachtet man das Verhalten des Graphen im Unendlichen, also
 \lim\limits_{x \to +\infty} f(x) \text{ und } \lim\limits_{x \to -\infty} f(x) .
 \end{equation*}
  Dabei ist interessant, ob sich der Graph einem bestimmten Wert ann"ahert oder ob er ins Unendliche steigt oder f"allt.
+
+\begin{warning}
+	Achtet darauf das \textit{Unendlich} kein Wert ist, der einfach eingesetzt werden darf. \textit{Unendlich} kann niemals erreicht werden, dadurch kann x diesen Wert auch nicht annehmen. Man kann lediglich x gegen Unendlich gehen lassen.
+\end{warning}
 
 \subsection{Asymptoten}
 Sei $f$ eine Funktion, so ist eine Asymptote von $f$ eine Gerade die $f$ im Unendlichen, in $x$ oder in $y$ Richtung, ann"ahert. Asymptoten gehen somit direkt mit den Grenzwerten der Funktion $f$ einher. Die Gerade muss keine Funktionsgerade sein! Betrachten wir erneut 

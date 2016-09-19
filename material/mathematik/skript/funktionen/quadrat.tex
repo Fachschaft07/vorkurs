@@ -69,6 +69,8 @@ Durch Multiplizieren der Normalparabel mit einer konstanten $a$ l"asst sich die 
         samples=400,
         axis y line=center,
         axis x line=middle,
+        xlabel={x},
+        ylabel={f(x)},
     ]
     	  \addlegendentry{$a=1$}
     	   \addplot+[mark=none, color=blue] {x*x};
@@ -99,6 +101,13 @@ Ersetzt man nun die konstanten Werte $-2ax_s$ durch $b$ und $x_s^2+y_s$ durch $c
 \begin{equation*}
 f(x)=a \cdot x^2+b \cdot x+c
 \end{equation*}
+
+\subsubsection{Verschieben einer Funktion (f"ur alle Funktionen)} \label{sec:verschieben}
+Angenommen wir haben eine Funktion $f$ mit $\mathbb{D} = \mathbb{R}$ und wollen eine neue Funktion $f^*$ bauen, wobei wir diese um $d > 0$ nach rechts verschieben wollen. Damit muss gelten:
+\begin{equation*}
+\forall x \in \mathbb{R} :  f^*(x) = f(x-d) \iff \forall x \in \mathbb{R} : f^*(x+d) = f(x).
+\end{equation*}
+Wir nehmen also einfach die gegebene Funktion $f(x)$ und ersetzen jedes $x$ durch $x-d$. Setzen wir hingegen $f^*(x) = f(x) + d$ so verschieben wir die Funktion nach oben. F"ur $d < 0$ folgt, dass wir die Funktion nach links bzw. nach unten verschieben.
 
 \subsubsection{Die binomischen Formeln}
 Die binomischen Formeln sind das Ergebnis des Ausmultiplizierens, hat man sie jedoch im Kopf so spart man viel Zeit:
@@ -147,9 +156,14 @@ f(x) = 3 \cdot ((x-1)^2-1^2-8) = 3((x-1)^2-9) = 3(x-1)^2-27
 Und voil\`a, schon ist man fertig.
 
 \subsubsection{Berechnung der Nullstellen} \label{sec:quadnullstellen}
+Eine Nullstelle ist ein Punkt, an dem der Graph die $x$-Achse schneidet. Anders ausgedr"uckt: Ein Punkt an dem die Funktion $f(x)$ den Wert $0$ erreicht. Um Nullstellen zu berechnen, l"ost man die Gleichung
+\begin{equation*}
+f(x) = 0,
+\end{equation*}
+nach $x$. Beispiel: $f(x)=x^2-1$, Nullstellen: $x^2-1=0\implies x^2=1$, L"osungen sind $+1$ und $-1$. Die Gleichung kann also auch mehrere L"osungen haben.\\
 Um die Nullstellen von quadratischen Gleichungen zu berechnen, gibt es mehrere M"oglichkeiten.
 
-\paragraph{Zerlegung in Linearfaktoren (auch f"ur Polynome):}
+\paragraph{Zerlegung in Linearfaktoren (auch f"ur Polynome h"oherer Ordnung):}
 %\begin{center}
 %"'Null multipliziert mit irgendwas ist immer Null"'
 %\end{center} % Bitte entfernen. Unendlich mal Null ist undefiniert, und gerade bei Grenzwerten schwierig...
@@ -169,20 +183,6 @@ Die Faktoren der Funktion sind somit $(x-2)$ und $(x+2)$. $(x-2) = 0$ f"ur $x = 
 \begin{equation*}
 N_1 = (2, f(2)) = (2, 0) \text{ und } N_2 = (-2, f(-2)) = (-2, 0)
 \end{equation*}
-
-\paragraph{Berechnung der Umkehrfunktionen (f"ur alle Funktionen):}
-Im Grundlagenteil haben wir den Begriff der Umkehrfunktion kennen gelernt. Angenommen $x_0$ sei eine Nullstelle der Funktion $f(x)$ und angenommen $f(x)$ besitzt eine Umkehrfunktion ($f(x)$ ist bijektiv), dann folgt daraus:
-\begin{equation*}
-f(x_0) = 0 \iff f^{-1}(0) = x_0
-\end{equation*}
-Das hei"st wir k"onnten $f^{-1}(x)$ berechnen und dann einfach $0$ einsetzten und erhalten damit die Nullstelle von $f(x)$ nämlich $N = (f^{-1}(0), 0)$.
-
-\paragraph{Beispiele}
-\begin{itemize}
-\item Sei $f(x) = 3x^2 + 3x + 4$, $f$ ist nicht bijektiv, hier nehmen wir lieber die Mitternachtsformel.
-\item Sei $f(x) = x - 7 \Rightarrow f^{-1}(y) = y + 7 \Rightarrow N = (f^{-1}(0), 0) = (7, 0)$.
-\item Sei $f(x) = \ln(x)$, die Umkehrfunktion ist $e^x$ und somit ist $e^0 = 1$ eine Nullstelle von $f(x)$.
-\end{itemize}
 
 % Was hier folgt ist unsinnig!
 %Wenn wir also rein theoretisch die Funktion umkehren und 0 einsetzen, so m"ussten wir die x-Werte der Nullstellen herausbekommen. Wollen wir jedoch eine quadratische Gleichung umkehren, so sto"sen wir allerdings auf ein kleines Problem... \vspace{0.5 cm}\\
@@ -241,6 +241,21 @@ Ist man erfahren genug und die Funktion einfach genug, so kann man h"aufig die N
 f(x_0) \stackrel{?}{=} 0
 \end{equation*}
 
+
+\subsubsection{Symmetrie} \label{sec:symmetrie}
+Eine Funktion ist genau dann \textcolor{red}{symmetrisch zur y-Achse}, wenn gilt:
+\begin{equation*}
+f(x)=f(-x).
+\end{equation*}
+Solche Funktionen werden auch als \textcolor{red}{gerade} Funktion bezeichnet. Eine Funktion ist genau dann \textcolor{red}{symmetrisch zum Ursprung}, oder auch \textcolor{red}{ungerade}, wenn gilt:
+\begin{equation*}
+f(-x)=-f(x).
+\end{equation*}
+Quadratische Funktionen sind immer Achsensymmetrisch, jedoch nicht immer zur y-Achse.
+\begin{warning}
+	\textbf{\textcolor{red}{Achtung:}} Gerade hat in dem Sinne nichts mit der Geraden zu tun!!!\\
+	Die Bezeichnungen gerade und ungerade Funktion stammen daher, dass alle Polynome \ref{polynom}, welche lediglich gerade Exponenten aufweisen, auf jeden Fall symmetrisch sind. Polynome mit ausschließlich ungeraden Exponenten sind Punktsymmetrisch.
+\end{warning}
 %\begin{description}
 %\item[Zwei Nullstellen] Die Funktion besitzt zwei Nullstellen, wenn der Wert der Diskriminante gr"o"ser 0 ist.
 %\item[Eine Nullstelle] Die Funktion besitzt nur eine (doppelte) Nullstelle, wenn die Diskriminante 0 ergibt.

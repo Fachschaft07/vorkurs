@@ -1,15 +1,8 @@
-Die Logik "offnete den Weg f"ur die Informatik. Sie war immer eine Disziplin der Philosophie und hat eine sehr interessante Geschichte (von Aristoteles, Kant, Hegel, Boole, Russell, Gentzen, Skolem, G"odel, bis zu Turing und weiter) hinter sich gelassen. Die Aussagenlogik als kleiner aber grundlegender Teil ist intuitiv und auf sehr nat"urliche Weise begreifbar. Sie ist fundamental um mathematische Ausdr"ucke zu verstehen und wird in allen Bereichen der Mathematik verwendet. In der Informatik hat die Logik und damit auch die Aussagenlogik eine wichtige Bedeutung. In der technischen Informatik werden Kodierer und Dekodierer, Addierer und Multiplizierer mit sogenannten logischen Gattern realisiert. Ein Gatter ist nichts anders als eine logische Verkn"upfung. Zum Beispiel ist das Und-Gatter ein Gatter mit zwei Eing"angen $x_{in}^1, x_{in}^2$ und einem Ausgang $x_{out}$ mit 
-\begin{equation*}
-	x_{out} = x_{in}^1 \land x_{in}^2.
-\end{equation*}
-Legt man nun eine gewisse Spannung an $x_{in}^1$ und \textit{gleichzeitig} $x_{in}^2$ an, so gibt das Gatter diese Spannung weiter, ansonsten nicht. Die Gatter bilden den Kern der Computerhardware wie z.B. Mikroprozessoren. Zudem ist die Aussagenlogik in jeder Programmiersprache eingebettet. Sie werden viele logische Ausdr"ucke in Java schreiben.
-
-Sp"ater im Studium werden die meisten von Ihnen das Konzept einer formalen Sprache kennenlernen. Formale Sprachen und bestimmte Teile der Logik sind sehr eng miteinander verbunden. Die aktuelle Forschung besch"aftigt sich mit der automatisierten Beweis"uberpr"ufung und sogar mit dem automatisierten Beweisen bisher unbewiesener Aussagen. Die Logik ist zudem im Bereich k"unstliche Intelligenz und Robotik essentiell. Und: ein bisschen Logik kann auch f"ur den Alltag nicht schaden.
-
-Wir werden die Aussagenlogik besprechen und einen ganz kurzen ersten Blick auf die Pr"adikatenlogik werfen. Beherrschen sie diese beiden Bereiche der Logik, so sind sie f"ur das gesamte Bachelorstudium gewappnet.
-
-%\subsection{Alles auf Anfang}
-%Ein mathematisches System baut auf gewissen Grundregeln auf, die nicht bewiesen werden k"onnen und intuitiv gew"ahlt werden (meist durch Beobachtungen aus der Natur). Ohne Grundregeln k"onnte man keine Folgerungen aufstellen. Das hei{\ss}t aber auch, dass wir uns immer im Hinterkopf halten m"ussen, dass wenn diese Regeln in sich zusammenbrechen, auch das gesamte System zusammenbricht. Eine absolute Wahrheit ist also nicht bekannt. Dies mag zun"achst sehr unbefriedigend klingen aber die Resultate aus der Mathematik haben sich bisher als wahr herausgestellt, eine absolute Gewissheit existiert allerdings nicht!
+Die Logik "offnete den Weg f"ur die Informatik. Sie war immer eine Disziplin der Philosophie und hat eine sehr interessante Geschichte (von Aristoteles, Kant, Hegel, Boole, Russell, Gentzen, Skolem, G"odel, bis zu Turing und weiter) hinter sich gelassen. Die Aussagenlogik, als kleiner aber grundlegender Teil, ist fundamental um mathematische Ausdr"ucke zu verstehen und wird in allen Bereichen der Mathematik verwendet.
+\begin{warning}
+In der Informatik hat die Logik eine wichtige Bedeutung. In der technischen Informatik werden Recheneinheiten mit sogenannten logischen Gattern realisiert. Ein Gatter ist nichts anders als eine logische Verkn"upfung. Zum Beispiel ist das Und-Gatter ein Gatter mit zwei Eing"angen $x_{in}^1, x_{in}^2$ und einem Ausgang $x_{out}$.\\
+Legt man nun Spannung an $x_{in}^1$ und \textit{gleichzeitig} $x_{in}^2$ an, so gibt das Gatter diese Spannung weiter, ansonsten nicht. Die Gatter bilden den Kern der Computerhardware wie z.B. Mikroprozessoren. Zudem ist die Aussagenlogik in jeder Programmiersprache eingebettet.
+\end{warning}
 
 \subsection{Aussagenlogik}
 \begin{definition}[Aussage]
@@ -35,7 +28,7 @@ Wir schreiben gew"ohnlich $A$ ist \textbf{wahr} oder \textbf{falsch}, \textbf{w}
 \begin{definition}[Negation]
 Unter der Negation einer Aussage $A$ versteht man die Aussage $\neg A$ (Mathe) bzw. $\overline{A}$ (Informatik) (in Worten:\glqq nicht $A$\grqq ), die genau dann wahr ist, wenn $A$ selbst falsch ist.
 \end{definition}
-Es folgt eine sogenannte \textbf{Wahrheitstabelle} der Verkn"upfung. In der ersten Spalte stehen die Werte, die $A$ annimmt, und in der rechten Spalte, Werte, die $\neg A$ dann besitzt. Solche Wahrheitstabellen werden Sie in der technischen Informatik viele erstellen. Besitzt eine logische Verkn"upfung bzw. eine aussagenlogische Formel $k$ verschiedene Variablen, so gibt es $2^k$ verschiedene Belegungen. Dabei bedeutet, Belegung, dass jede Variable bzw. Aussage entweder wahr oder falsch ist. Jede Aussage kann 2 Werte annehmen bei $k$ Aussagen sind das $\underbrace{2 \cdot 2 \cdot \cdots \cdots 2}_{k-\text{mal}} = 2^k$ M"oglichkeiten.
+Es folgt eine sogenannte \textbf{Wahrheitstabelle} der Verkn"upfung. In der ersten Spalte stehen die Werte, die $A$ annimmt, und in der rechten Spalte, Werte, die $\neg A$ dann besitzt.
 \begin{center}
 \begin{tabular}{c||c}
  $A$ & $\neg A$  \\ 
@@ -71,7 +64,7 @@ In den ersten Spalten dieser \textbf{Wahrheitstabelle} stehen die Werte der Vari
 \paragraph*{Beispiel:}
 \begin{itemize}
 	\item \glqq 18 ist eine gerade Zahl und durch 3 teilbar\grqq , ist eine wahre Aussage im Rahmen des Axiomensystems f"ur die Arithmetik, welche hier umgangssprachlich vorausgesetzt wurde. Eigentlich handelt es sich um die Aussage \glqq 18 ist eine gerade Zahl, und 18 ist durch 3 teilbar\grqq .
-	\item \glqq 15 ist eine gerade Zahl und durch 3 teilbar\grqq, ist eine falsche Aussage, denn der erste Teil ist falsch.
+	\item \glqq 15 ist eine gerade Zahl und durch 3 teilbar\grqq, ist eine falsch, denn der erste Teil der Aussage ist falsch.
 \end{itemize}
 
 \begin{definition}[Disjunktion]
@@ -88,7 +81,9 @@ $A$& $B$  &  $A \lor B$  \\
 \hline
 \end{tabular}
 \end{center}
-Hier beginnen die Schwierigkeiten mit der Umgangssprache. Umgangssprachlich meinen wir mit \glqq oder\grqq \ meist \glqq entweder $\ldots$ oder\grqq . Was aber nicht der logischen Disjunktion entspricht.
+\begin{warning}
+	Umgangssprachlich meinen wir mit \glqq oder\grqq \ meist \glqq entweder $\ldots$ oder\grqq . Was aber nicht der logischen Disjunktion entspricht.
+\end{warning}
 
 \paragraph*{Beispiel:}
 \begin{itemize}
@@ -111,22 +106,18 @@ $A$& $B$ &$\neg A$&  $\neg A \lor B$  \\
 \end{tabular}
 \end{center}
 
-\paragraph*{Beispiel:}
-$A$ wird auch als Pr"amisse bezeichnet. Eigentlich sieht alles recht einfach aus. Nehmen wir die Aussagen: ($A$) \glqq Wenn es regnet folgt daraus, dass ($B$) die Stra{\ss}e nass wird\grqq . Wenn es nun regnet und die Stra{\ss}e nass wird ist die Aussage wahr. Doch was passiert wenn es nicht regnet? Hier liegt der Knackpunkt! Wenn es nicht regnet ist die Aussage immer wahr egal ob die Stra{\ss}e nun nass oder trocken ist.
-\begin{center}
-Aus einer falschen Aussage kann man alles folgern!
-\end{center}
+$A$ wird auch als Pr"amisse bezeichnet. Eigentlich sieht alles recht einfach aus. Nehmen wir die Aussagen: ($A$) \glqq Wenn es regnet folgt daraus, dass ($B$) die Stra{\ss}e nass wird\grqq . Wenn es nun regnet und die Stra{\ss}e nass wird ist die Aussage wahr. Doch was passiert wenn es nicht regnet?\\
+Wenn es nicht regnet ist die Aussage immer wahr egal ob die Stra{\ss}e nun nass oder trocken ist.
 Wir k"onnen die Aussage auch wie folgt formulieren:
 \begin{center}
-\glqq Ist die Stra{\ss}e nicht nass, so folgt daraus, dass es nicht regnet.\grqq
+\glqq Ist die Stra{\ss}e nicht nass, so folgt daraus, dass es nicht regnet.\grqq\\ (Kontropositionsgesetz)
 \end{center}
-Wir sehen hier die Anwendung des Kontropositionsgesetzes:
 \begin{equation*}
 ((\neg B) \Rightarrow (\neg A)) \iff (A \Rightarrow B)
 \end{equation*}
 
 \begin{definition}["Aquivalenz]
-Unter der "aquivalenz zweier Aussagen $A$ und $B$ versteht man die Aussage $A \iff B$ (in Worten:\glqq $A$ gilt genau dann wenn $B$ gilt\grqq ). Diese ist genau dann wahr wenn $A \Rightarrow B \land B \Rightarrow A$ wahr ist. 
+Unter der "Aquivalenz zweier Aussagen $A$ und $B$ versteht man die Aussage $A \iff B$ (in Worten:\glqq $A$ gilt genau dann wenn $B$ gilt\grqq ). Diese ist genau dann wahr wenn $A \Rightarrow B \land B \Rightarrow A$ wahr ist. 
 \end{definition}
 In den ersten Spalten dieser \textbf{Wahrheitstabelle} stehen die Werte der Variablen der "Aquivalenz, in der letzten Spalte der resultierende Wert.
 \begin{center}
@@ -156,10 +147,9 @@ $A$ & $B$ & $A \textsf{ XOR } B$  \\
 \hline
 \end{tabular}
 \end{center}
-Das exklusive Oder ist f"ur die Informatiker so Hilfreich, dass es, anders als die Implikation, in die meisten Programmiersprachen, als Standardfunktion, eingebaut ist.
-
-\subsubsection{Vollst"andigkeit}
-Wie ihr sicher gesehen habt lassen sich XOR, $\iff, \Rightarrow$ mithilfe von $\neg, \land, \lor$ darstellen und tats"achlich reichen die Verkn"upfungen $\neg, \land, \lor$ aus um jede denkbare Formel aufzustellen. Trotzdem sollte man die Bedeutung der anderen Symbole beherrschen, da diese in jedem Mathe- oder Informatikbuch auftauchen und sehr n"utzliche Abk"urzungen sind. Man bedenke auch, dass auch eine andere Menge an Verkn"upfungen vollst"andig sein kann $A \land B$ kann zum Beispiel durch $\neg (A \Rightarrow \neg B)$ ausgedr"uckt werden, man "uberlege warum?
+\begin{warning}
+	Das exklusive Oder ist in die meisten Programmiersprachen, als Standardfunktion, eingebaut ist.
+\end{warning}
 
 \subsubsection{Grundlegende Rechenregeln (Bonus)}
 Wir verwenden das Symbol $\equiv$ anstatt $\iff$ um anzudeuten, dass wir zwei Ausdr"ucke vergleichen m"ochten und diese sollen durch das $\equiv$-Symbol besser abgetrennt werden. Die Symbole k"onnen als identisch angesehen werden. Wir m"ochten mit dem $\equiv$-Symbol verdeutlichen, dass die eine durch die andere Formel ersetzt/vereinfacht werden kann, da sie "aquivalent sind.
@@ -193,26 +183,17 @@ Als Tautologie bezeichnet man eine Aussage die immer wahr ist. So zum Beispiel d
 \begin{equation*}
 A \lor (\neg A)
 \end{equation*}
-Andere Tautologien sind nicht auf den ersten Blick zu erkennen.
 
 \subsubsection{Widerspruch}
 Als Widerspruch bezeichnet man eine Aussage die immer falsch ist. 
-\begin{axiom}[Widerspruch]
-$F$ ist genau dann ein Widerspruch, wenn $\neg F$ eine Tautologie ist.
-\end{axiom}
 
 \paragraph*{Beispiel}
-Nehmen wir das Beispiel von oben:
 \begin{equation*}
 (\neg A) \land A
 \end{equation*}
-Das ist immer falsch, denn immer wenn eine Seite der Konjunktion wahr ist, ist die andere falsch. Damit aber eine Konjunktion wahr wird m"ussen beide Seiten wahr sein. Verneinen wir diese Aussage so erhalten wir:
-\begin{equation*}
-\neg ((\neg A) \land A) \stackrel{\text{nach De-Morgen-2}}{\equiv} ((\neg (\neg A)) \lor (\neg A)) \stackrel{\text{nach Negation 1}}{\equiv} (A \lor (\neg A))
-\end{equation*} 
 
 \subsubsection{Aufgaben}
-Werten Sie folgende Ausdr"ucke aus:
+Werten folgende Ausdr"ucke aus:
 \begin{enumerate}
 	\item wahr $\land$ falsch $\lor$ wahr
 	\item wahr $XOR$ (wahr $\lor$ falsch)
@@ -222,29 +203,24 @@ Werten Sie folgende Ausdr"ucke aus:
 	\item falsch $\iff$ wahr
 	\item (wahr $\Rightarrow$ wahr) $\iff$ (falsch $\Rightarrow$ falsch)
 \end{enumerate}
-Vereinfachen Sie folgende Ausdr"ucke:
+Vereinfache folgende Ausdr"ucke:
 \begin{enumerate}
 	\item $A \lor (B \land A) \lor (C \land A) \lor (D \land B)$
 	\item $A \lor \neg A \land (C \land \neg C)$
 	\item $(A \Rightarrow B) \land (\neg B \Rightarrow \neg A)$
 	\item $A \land (A \lor B)$
 \end{enumerate}
-F"uhren Sie folgende Negationen aus:
+F"uhre folgende Negationen aus:
 \begin{enumerate}
 	\item $\neg (\neg C \lor \neg D)$
 	\item $\neg ((A \lor B) \land (C \lor D))$
 \end{enumerate}
-Zeigen Sie, dass die folgenden Aussageverkn"upfungen Tautologien sind:
+Zeige, dass die folgenden Aussageverkn"upfungen Tautologien sind:
 \begin{enumerate}
 	\item $(A \land (A \Rightarrow B)) \Rightarrow B$ (Abtrennungsregel)
 	\item $((A \Rightarrow B) \land (B \Rightarrow C)) \Rightarrow (A \Rightarrow C)$ (Syllogismus-Regel)
 	\item $(A \Rightarrow B) \iff (\neg B \Rightarrow \neg A)$ (Kontrapositionsgesetz)
 \end{enumerate}
-
-
-%vllt später mal:
-%\subsection{Formalisierung der Logik (Bonus)}
-%Dieser Teil ist nur f"ur alle Interessierten gedacht und wird nicht in der Vorlesung betrachtet. In diesem Kapitel geht es um die Formalisierung der Logik. Die \textbf{Intuition} von Logik, die jedem Menschen innewohnt, die Aussagenlogik und die Pr"adikatenlogik reicht f"ur das Studium an der HM v"ollig aus. 
 
 %\subsubsection*{Syntax der Aussagenlogik}
 Eine atomare Formel hat die Form $A_i$, wobei $i = 1,2,3,\ldots$. Formeln werden durch folgenden induktiven Prozesse definiert:

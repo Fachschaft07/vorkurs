@@ -24,9 +24,10 @@
 \usetikzlibrary{calc}
 \usepackage{pgfplots}
 \usepackage{tikz}
-\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,calc}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,calc,plotmarks}
 \newcounter{angle}
 \setcounter{angle}{220}
+\usepackage{pifont, mdframed}
 
 %Polynomdivision
  \usepackage{polynom}
@@ -35,6 +36,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[C]{Vorkurs (Mathematik)}
+\fancyhead[L]{\leftmark}
 \renewcommand{\headrulewidth}{0.5 pt}
 \fancyfoot[L]{\today}
 \fancyfoot[C]{\thepage}
@@ -53,6 +55,13 @@
 \definecolor{agreen}{rgb}{0.5,1.0,0.5}
 \definecolor{ared}{rgb}{1.0,0.5,0.5}
 \definecolor{blue}{rgb}{0.5,0.5,1.0}
+
+\usepackage{blindtext}
+\newenvironment{warning}
+{\par\begin{mdframed}[linewidth=2pt,linecolor=red]%
+		\begin{list}{}{\leftmargin=1cm
+				\labelwidth=\leftmargin}\item[\Large\ding{43}]}
+		{\end{list}\end{mdframed}\par}
 
 \begin{document}
 \pagenumbering{roman}
