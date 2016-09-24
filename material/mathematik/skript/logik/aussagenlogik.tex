@@ -1,6 +1,6 @@
-Die Logik "offnete den Weg f"ur die Informatik. Sie war immer eine Disziplin der Philosophie und hat eine sehr interessante Geschichte (von Aristoteles, Kant, Hegel, Boole, Russell, Gentzen, Skolem, G"odel, bis zu Turing und weiter) hinter sich gelassen. Die Aussagenlogik, als kleiner aber grundlegender Teil, ist fundamental um mathematische Ausdr"ucke zu verstehen und wird in allen Bereichen der Mathematik verwendet.
+Die Logik öffnete den Weg für die Informatik. Sie war immer eine Disziplin der Philosophie und hat eine sehr interessante Geschichte (von Aristoteles, Kant, Hegel, Boole, Russell, Gentzen, Skolem, Gödel, bis zu Turing und weiter) hinter sich gelassen. Die Aussagenlogik, als kleiner aber grundlegender Teil, ist fundamental um mathematische Ausdrücke zu verstehen und wird in allen Bereichen der Mathematik verwendet.
 \begin{warning}
-In der Informatik hat die Logik eine wichtige Bedeutung. In der technischen Informatik werden Recheneinheiten mit sogenannten logischen Gattern realisiert. Ein Gatter ist nichts anders als eine logische Verkn"upfung. Zum Beispiel ist das Und-Gatter ein Gatter mit zwei Eing"angen $x_{in}^1, x_{in}^2$ und einem Ausgang $x_{out}$.\\
+In der Informatik hat die Logik eine wichtige Bedeutung. In der technischen Informatik werden Recheneinheiten mit sogenannten logischen Gattern realisiert. Ein Gatter ist nichts anders als eine logische Verknüpfung. Zum Beispiel ist das Und-Gatter ein Gatter mit zwei Eingängen $x_{in}^1, x_{in}^2$ und einem Ausgang $x_{out}$.\\
 Legt man nun Spannung an $x_{in}^1$ und \textit{gleichzeitig} $x_{in}^2$ an, so gibt das Gatter diese Spannung weiter, ansonsten nicht. Die Gatter bilden den Kern der Computerhardware wie z.B. Mikroprozessoren. Zudem ist die Aussagenlogik in jeder Programmiersprache eingebettet.
 \end{warning}
 
@@ -14,21 +14,21 @@ Eine Aussage ist entweder \textbf{wahr (w)} oder \textbf{falsch (f)} (Gesetz vom
 
 \subsubsection*{Beispiele}
 \begin{itemize}
-\item $A_1 := $ Die Sonne strahlt w"arme ab.
-\item $A_2 := $ Bayern M"unchen wird diese Saison wieder deutscher Meister.
+\item $A_1 := $ Die Sonne strahlt wärme ab.
+\item $A_2 := $ Bayern München wird diese Saison wieder deutscher Meister.
 \item $A_3 := 1+1 = 2$
 \item $A_4 := $ Wird in diesem Jahr Ostern gefeiert?
 \end{itemize}
-$A_1$ und $A_3$ sind offensichtlich wahre Aussagen. $A_2$ k"onnen wir derzeit nicht "uberpr"ufen, sie ist aber trotzdem wahr oder falsch und darum zul"assig. $A_4$ ist keine Aussage, sondern eine Frage - die Antwort darauf kann wieder eine Aussage sein (z.B. \textit{In diesem Jahr wird Ostern gefeiert.}).
+$A_1$ und $A_3$ sind offensichtlich wahre Aussagen. $A_2$ können wir derzeit nicht überprüfen, sie ist aber trotzdem wahr oder falsch und darum zulässig. $A_4$ ist keine Aussage, sondern eine Frage - die Antwort darauf kann wieder eine Aussage sein (z.B. \textit{In diesem Jahr wird Ostern gefeiert.}).
 
 \subsubsection*{Schreibweisen}
-Wir schreiben gew"ohnlich $A$ ist \textbf{wahr} oder \textbf{falsch}, \textbf{w} oder \textbf{f} bzw. (f"ur uns Informatiker) \textbf{1} oder \textbf{0}.
+Wir schreiben gewöhnlich $A$ ist \textbf{wahr} oder \textbf{falsch}, \textbf{w} oder \textbf{f} bzw. (für uns Informatiker) \textbf{1} oder \textbf{0}.
 
-\subsubsection{Logische Verkn"upfungen}
+\subsubsection{Logische Verknüpfungen}
 \begin{definition}[Negation]
 Unter der Negation einer Aussage $A$ versteht man die Aussage $\neg A$ (Mathe) bzw. $\overline{A}$ (Informatik) (in Worten:\glqq nicht $A$\grqq ), die genau dann wahr ist, wenn $A$ selbst falsch ist.
 \end{definition}
-Es folgt eine sogenannte \textbf{Wahrheitstabelle} der Verkn"upfung. In der ersten Spalte stehen die Werte, die $A$ annimmt, und in der rechten Spalte, Werte, die $\neg A$ dann besitzt.
+Es folgt eine sogenannte \textbf{Wahrheitstabelle} der Verknüpfung. In der ersten Spalte stehen die Werte, die $A$ annimmt, und in der rechten Spalte, Werte, die $\neg A$ dann besitzt.
 \begin{center}
 \begin{tabular}{c||c}
  $A$ & $\neg A$  \\ 
@@ -41,8 +41,8 @@ Es folgt eine sogenannte \textbf{Wahrheitstabelle} der Verkn"upfung. In der erst
 
 \paragraph*{Beispiel:}
 \begin{itemize}
-	\item Die Negation der Aussage \glqq 4 ist ungerade\grqq \ ist die Aussage \glqq 4 ist gerade\grqq , denn es gibt nur diese beiden M"oglichkeiten.
-	\item Aber die Negation der Aussage \glqq 4.5 ist ungerade\grqq \ ist nicht die Aussage \glqq 4.5 ist gerade\grqq, denn beide Aussagen sind falsch, ja sogar unsinnig. Die Negation der Aussage \glqq Diese Kuh ist schwarz\grqq \ ist nicht etwa die Aussage \glqq Diese Kuh ist wei{\ss}\grqq , denn es gibt ja noch andere Farben. Vielmehr m"usste man sagen:\glqq Diese Kuh ist nicht schwarz\grqq. Das umgangssprachliche Gegengenteil ist meist etwas anderes als die logische Verneinung.
+	\item Die Negation der Aussage \glqq 4 ist ungerade\grqq \ ist die Aussage \glqq 4 ist gerade\grqq , denn es gibt nur diese beiden Möglichkeiten.
+	\item Aber die Negation der Aussage \glqq 4.5 ist ungerade\grqq \ ist nicht die Aussage \glqq 4.5 ist gerade\grqq, denn beide Aussagen sind falsch, ja sogar unsinnig. Die Negation der Aussage \glqq Diese Kuh ist schwarz\grqq \ ist nicht etwa die Aussage \glqq Diese Kuh ist weiß\grqq , denn es gibt ja noch andere Farben. Vielmehr müsste man sagen:\glqq Diese Kuh ist nicht schwarz\grqq. Das umgangssprachliche Gegengenteil ist meist etwas anderes als die logische Verneinung.
 \end{itemize}
 
 \begin{definition}[Konjunktion]
@@ -63,7 +63,7 @@ In den ersten Spalten dieser \textbf{Wahrheitstabelle} stehen die Werte der Vari
 
 \paragraph*{Beispiel:}
 \begin{itemize}
-	\item \glqq 18 ist eine gerade Zahl und durch 3 teilbar\grqq , ist eine wahre Aussage im Rahmen des Axiomensystems f"ur die Arithmetik, welche hier umgangssprachlich vorausgesetzt wurde. Eigentlich handelt es sich um die Aussage \glqq 18 ist eine gerade Zahl, und 18 ist durch 3 teilbar\grqq .
+	\item \glqq 18 ist eine gerade Zahl und durch 3 teilbar\grqq , ist eine wahre Aussage im Rahmen des Axiomensystems für die Arithmetik, welche hier umgangssprachlich vorausgesetzt wurde. Eigentlich handelt es sich um die Aussage \glqq 18 ist eine gerade Zahl, und 18 ist durch 3 teilbar\grqq .
 	\item \glqq 15 ist eine gerade Zahl und durch 3 teilbar\grqq, ist eine falsch, denn der erste Teil der Aussage ist falsch.
 \end{itemize}
 
@@ -87,8 +87,8 @@ $A$& $B$  &  $A \lor B$  \\
 
 \paragraph*{Beispiel:}
 \begin{itemize}
-	\item \glqq Ich werde Mathematik oder Informatik studieren\grqq , diese Aussage ist auch dann wahr, wenn ich mich daf"ur entscheide, beide F"acher zu studieren. Falsch wird sie aber z.B., wenn ich nur Biologie studiere.
-	\item \glqq Ich kann nur H"u oder Hott sagen\grqq . Das ist nat"urlich falsch, denn ich kann ja beide W"orter vermeiden.
+	\item \glqq Ich werde Mathematik oder Informatik studieren\grqq , diese Aussage ist auch dann wahr, wenn ich mich dafür entscheide, beide Fächer zu studieren. Falsch wird sie aber z.B., wenn ich nur Biologie studiere.
+	\item \glqq Ich kann nur Hü oder Hott sagen\grqq . Das ist natürlich falsch, denn ich kann ja beide Wörter vermeiden.
 \end{itemize}
 
 \begin{definition}[Implikation]
@@ -106,11 +106,11 @@ $A$& $B$ &$\neg A$&  $\neg A \lor B$  \\
 \end{tabular}
 \end{center}
 
-$A$ wird auch als Pr"amisse bezeichnet. Eigentlich sieht alles recht einfach aus. Nehmen wir die Aussagen: ($A$) \glqq Wenn es regnet folgt daraus, dass ($B$) die Stra{\ss}e nass wird\grqq . Wenn es nun regnet und die Stra{\ss}e nass wird ist die Aussage wahr. Doch was passiert wenn es nicht regnet?\\
-Wenn es nicht regnet ist die Aussage immer wahr egal ob die Stra{\ss}e nun nass oder trocken ist.
-Wir k"onnen die Aussage auch wie folgt formulieren:
+$A$ wird auch als Prämisse bezeichnet. Eigentlich sieht alles recht einfach aus. Nehmen wir die Aussagen: ($A$) \glqq Wenn es regnet folgt daraus, dass ($B$) die Stra{ß}e nass wird\grqq . Wenn es nun regnet und die Stra{ß}e nass wird ist die Aussage wahr. Doch was passiert wenn es nicht regnet?\\
+Wenn es nicht regnet ist die Aussage immer wahr egal ob die Stra{ß}e nun nass oder trocken ist.
+Wir können die Aussage auch wie folgt formulieren:
 \begin{center}
-\glqq Ist die Stra{\ss}e nicht nass, so folgt daraus, dass es nicht regnet.\grqq\\ (Kontropositionsgesetz)
+\glqq Ist die Stra{ß}e nicht nass, so folgt daraus, dass es nicht regnet.\grqq\\ (Kontropositionsgesetz)
 \end{center}
 \begin{equation*}
 ((\neg B) \Rightarrow (\neg A)) \iff (A \Rightarrow B)
@@ -130,7 +130,7 @@ In den ersten Spalten dieser \textbf{Wahrheitstabelle} stehen die Werte der Vari
 \hline
 \end{tabular}
 \end{center}
-Ein Beispiel w"are $x + 5 = 7 \iff x + 8 = 10$.
+Ein Beispiel wäre $x + 5 = 7 \iff x + 8 = 10$.
 
 
 \begin{definition}[Exklusives Oder]
@@ -152,7 +152,7 @@ $A$ & $B$ & $A \textsf{ XOR } B$  \\
 \end{warning}
 
 \subsubsection{Grundlegende Rechenregeln (Bonus)}
-Wir verwenden das Symbol $\equiv$ anstatt $\iff$ um anzudeuten, dass wir zwei Ausdr"ucke vergleichen m"ochten und diese sollen durch das $\equiv$-Symbol besser abgetrennt werden. Die Symbole k"onnen als identisch angesehen werden. Wir m"ochten mit dem $\equiv$-Symbol verdeutlichen, dass die eine durch die andere Formel ersetzt/vereinfacht werden kann, da sie "aquivalent sind.
+Wir verwenden das Symbol $\equiv$ anstatt $\iff$ um anzudeuten, dass wir zwei Ausdrücke vergleichen möchten und diese sollen durch das $\equiv$-Symbol besser abgetrennt werden. Die Symbole können als identisch angesehen werden. Wir möchten mit dem $\equiv$-Symbol verdeutlichen, dass die eine durch die andere Formel ersetzt/vereinfacht werden kann, da sie äquivalent sind.
 \begin{itemize}
 \item Neutrales Element (bezgl. oder): $A \ \lor $ falsch $\equiv A$
 \item Neutrales Element (bezgl. und): $A \ \land $ wahr $\equiv A$
@@ -171,10 +171,10 @@ Wir verwenden das Symbol $\equiv$ anstatt $\iff$ um anzudeuten, dass wir zwei Au
 \item Widerspruch: $\neg A \land A \equiv$ falsch
 \item Absorbtionsgesetz 1: $A \lor (A \land B) \equiv A$
 \item Absorbtionsgesetz 2: $A \land (A \lor B) \equiv A$
-\item De-Morgan-Gesetzt 1: $\neg (A \lor B) \equiv \neg A \land \neg B$ (sehr n"utzlich)
-\item De-Morgan-Gesetzt 2: $\neg (A \land B) \equiv \neg A \lor \neg B$ (sehr n"utzlich)
+\item De-Morgan-Gesetzt 1: $\neg (A \lor B) \equiv \neg A \land \neg B$ (sehr nützlich)
+\item De-Morgan-Gesetzt 2: $\neg (A \land B) \equiv \neg A \lor \neg B$ (sehr nützlich)
 \end{itemize}
-Man bezeichnet wahr auch als das \textbf{neutrale} Element der \textbf{Konjunktion} ("ahnlich der 1 in der Multiplikation) und falsch als das \textbf{neutrale} Element der \textbf{Disjunktion} ("ahnlich der 0 in der Addition). Dies Erkl"art auch die Informatikschreibweise denn verwenden wir anstatt wahr die 1 und anstatt falsch die 0, so k"onnen wir mit einer Aussageformel rechen: $A \land B \equiv A \cdot B$, $A \lor B \equiv A + B \equiv \min(A + B, 1)$, das aber nur am Rande.
+Man bezeichnet wahr auch als das \textbf{neutrale} Element der \textbf{Konjunktion} (ähnlich der 1 in der Multiplikation) und falsch als das \textbf{neutrale} Element der \textbf{Disjunktion} (ähnlich der 0 in der Addition). Dies Erklärt auch die Informatikschreibweise denn verwenden wir anstatt wahr die 1 und anstatt falsch die 0, so können wir mit einer Aussageformel rechen: $A \land B \equiv A \cdot B$, $A \lor B \equiv A + B \equiv \min(A + B, 1)$, das aber nur am Rande.
 
 \subsubsection{Tautologie}
 Als Tautologie bezeichnet man eine Aussage die immer wahr ist. So zum Beispiel das Gesetz vom ausgeschlossenen Dritten
@@ -193,7 +193,7 @@ Als Widerspruch bezeichnet man eine Aussage die immer falsch ist.
 \end{equation*}
 
 \subsubsection{Aufgaben}
-Werten folgende Ausdr"ucke aus:
+Werten folgende Ausdrücke aus:
 \begin{enumerate}
 	\item wahr $\land$ falsch $\lor$ wahr
 	\item wahr $XOR$ (wahr $\lor$ falsch)
@@ -203,19 +203,19 @@ Werten folgende Ausdr"ucke aus:
 	\item falsch $\iff$ wahr
 	\item (wahr $\Rightarrow$ wahr) $\iff$ (falsch $\Rightarrow$ falsch)
 \end{enumerate}
-Vereinfache folgende Ausdr"ucke:
+Vereinfache folgende Ausdrücke:
 \begin{enumerate}
 	\item $A \lor (B \land A) \lor (C \land A) \lor (D \land B)$
 	\item $A \lor \neg A \land (C \land \neg C)$
 	\item $(A \Rightarrow B) \land (\neg B \Rightarrow \neg A)$
 	\item $A \land (A \lor B)$
 \end{enumerate}
-F"uhre folgende Negationen aus:
+Führe folgende Negationen aus:
 \begin{enumerate}
 	\item $\neg (\neg C \lor \neg D)$
 	\item $\neg ((A \lor B) \land (C \lor D))$
 \end{enumerate}
-Zeige, dass die folgenden Aussageverkn"upfungen Tautologien sind:
+Zeige, dass die folgenden Aussageverknüpfungen Tautologien sind:
 \begin{enumerate}
 	\item $(A \land (A \Rightarrow B)) \Rightarrow B$ (Abtrennungsregel)
 	\item $((A \Rightarrow B) \land (B \Rightarrow C)) \Rightarrow (A \Rightarrow C)$ (Syllogismus-Regel)
@@ -226,27 +226,27 @@ Zeige, dass die folgenden Aussageverkn"upfungen Tautologien sind:
 Eine atomare Formel hat die Form $A_i$, wobei $i = 1,2,3,\ldots$. Formeln werden durch folgenden induktiven Prozesse definiert:
 \begin{enumerate}
 \item Alle atomaren Formeln sind Formeln.
-\item F"ur alle Formeln $F$ und $G$ sind $(F \land G)$ und $(F \lor G)$ Formeln.
-\item F"ur jede Formel $F$ ist $\neg F$ eine Formel.
+\item Für alle Formeln $F$ und $G$ sind $(F \land G)$ und $(F \lor G)$ Formeln.
+\item Für jede Formel $F$ ist $\neg F$ eine Formel.
 \end{enumerate}
 
 %\subsubsection{Semantik der Aussagenlogik}
-%Die Elemente der Menge $\{\text{wahr}, \text{falsch}\}$ hei"sen Wahrheitswerte. Eine Belegung ist eine Funktion $\mathcal{A} : D \to \{\text{wahr}, \text{falsch}\}$, wobei $D$ eine Teilmenge der Formeln ist.
+%Die Elemente der Menge $\{\text{wahr}, \text{falsch}\}$ heißen Wahrheitswerte. Eine Belegung ist eine Funktion $\mathcal{A} : D \to \{\text{wahr}, \text{falsch}\}$, wobei $D$ eine Teilmenge der Formeln ist.
 
 %\subsubsection*{Theorien}
-%Wenn wir beweisen wollen, dass eine Aussage $B$ wahr ist, und wenn wir schon wissen, dass Aussage $A$ wahr ist und dass $B$ von $A$ impliziert wird, wie gehen wir dann vor? Es sei $\mathcal{A}$ das System der Axiome unserer Theorie. Das sind einfach Aussagen, deren Wahrheit wir einfach festsetzen. Zu ihrer Formulierung benutzen wir primitive Terme und logische Verkn"upfungen. Mit Hilfe dieser primitiven Terme und logischen Verkn"upfungen lassen sich weitere Aussagen formulieren, die entweder wahr oder falsch sind. Mit $\mathcal{W}$ sei die Gesamtheit derjenigen Aussagen bezeichnet, die unter Voraussetzung von $\mathcal{A}$ wahr sind. Theoretisch lassen sich diese wahren Aussagen mit Hilfe von Wahrheitstafeln bestimmen. Praktisch wird das meist nicht so einfach gehen, man m"usste mit unendlich gro{\ss}en Tafeln arbeiten. Deshalb f"uhren wir ein Regelsystem zur Bildung von Ketten wahrer Aussagen $A_1, A_2, \ldots$ (sogenannter Beweise) ein, und wir sehen die Wahrheit einer Aussage $A$ als bewiesen an, wenn sie am Ende einer solchen Kette steht. Wir sagen dann, $A$ ist aus $\mathcal{A}$ ableitbar und schreiben:
+%Wenn wir beweisen wollen, dass eine Aussage $B$ wahr ist, und wenn wir schon wissen, dass Aussage $A$ wahr ist und dass $B$ von $A$ impliziert wird, wie gehen wir dann vor? Es sei $\mathcal{A}$ das System der Axiome unserer Theorie. Das sind einfach Aussagen, deren Wahrheit wir einfach festsetzen. Zu ihrer Formulierung benutzen wir primitive Terme und logische Verknüpfungen. Mit Hilfe dieser primitiven Terme und logischen Verknüpfungen lassen sich weitere Aussagen formulieren, die entweder wahr oder falsch sind. Mit $\mathcal{W}$ sei die Gesamtheit derjenigen Aussagen bezeichnet, die unter Voraussetzung von $\mathcal{A}$ wahr sind. Theoretisch lassen sich diese wahren Aussagen mit Hilfe von Wahrheitstafeln bestimmen. Praktisch wird das meist nicht so einfach gehen, man müsste mit unendlich gro{ß}en Tafeln arbeiten. Deshalb führen wir ein Regelsystem zur Bildung von Ketten wahrer Aussagen $A_1, A_2, \ldots$ (sogenannter Beweise) ein, und wir sehen die Wahrheit einer Aussage $A$ als bewiesen an, wenn sie am Ende einer solchen Kette steht. Wir sagen dann, $A$ ist aus $\mathcal{A}$ ableitbar und schreiben:
 %\begin{equation*}
 % \mathcal{A} \vdash A
 %\end{equation*}
-%Eine Beweiskette $A_1, A_2, \ldots, A_n$ wollen wir zul"assig nennen, wenn jede Aussage $A$, die in der Kette vorkommt, eine der folgenden Bedingungen erf"ullt:
+%Eine Beweiskette $A_1, A_2, \ldots, A_n$ wollen wir zulässig nennen, wenn jede Aussage $A$, die in der Kette vorkommt, eine der folgenden Bedingungen erfüllt:
 %\begin{enumerate}
 %\item $A$ ist eines der Axiome
 %\item $A$ ist eine Tautologie ($\vdash A$)
-%\item Es gibt eine Kette vor $A$ eine Aussage $B$ und die Aussage $B \Rightarrow A$. Diese Beweis-Schema tr"agt auch die Bezeichnung modus ponens und kann so beschrieben werden:
+%\item Es gibt eine Kette vor $A$ eine Aussage $B$ und die Aussage $B \Rightarrow A$. Diese Beweis-Schema trägt auch die Bezeichnung modus ponens und kann so beschrieben werden:
 %Wenn $\mathcal{A} \vdash B$ und $\mathcal{A} \vdash (B \Rightarrow A$ dann $\mathcal{A} \vdash A$ (direkter Beweis)
-%\item $A$ entsteht aus einer vorher abgeleiteten zusammengesetzten Aussage $B$, indem man eine in $B$ auftauchende Teilaussage durch eine "aquivalente ersetzt. Dieses Ersetzungs-Prinzip verleiht den Tautologien eine besondere Bedeutung.
-%\item $A$ ist eine Definition, f"uhrt also nur eine andere Bezeichnung f"ur etwas bekanntes ein, wir verwenden hierf"ur $:=$ oder $:\iff$.
+%\item $A$ entsteht aus einer vorher abgeleiteten zusammengesetzten Aussage $B$, indem man eine in $B$ auftauchende Teilaussage durch eine äquivalente ersetzt. Dieses Ersetzungs-Prinzip verleiht den Tautologien eine besondere Bedeutung.
+%\item $A$ ist eine Definition, führt also nur eine andere Bezeichnung für etwas bekanntes ein, wir verwenden hierfür $:=$ oder $:\iff$.
 %\end{enumerate}
 
 %\subsubsection*{Konstruktivismus}
-%Es gibt logische System, neben der klassischen Logik, in denen das Gesetzt vom ausgeschlossenen Dritten \textbf{nicht} gilt, solche Systeme vermeiden damit den Beweis durch Widerspruch. Was erst einmal irrsinnig klingt macht Sinn wenn man bedenkt, dass z.B. durch das Gesetzt die Existenz von Objekten beweisen k"onnen ohne diese 'anzufassen' indem wir von der Nicht-Existenz ausgehen und damit zu einem Widerspruch gelangen (Stichwort: Konstruktivismus). Der Konstruktivismus ist f"ur Informatiker von gro{\ss}er Bedeutung. Die Beweise in der Informatik (sehen sie sp"ater in der theoretischen Informatik) sind fast immer konstruktiv. Solche Beweise liefern als Nebenprodukt oft einen konkreten L"osungsweg bzw. einen Algorithmus mit dem man etwas anfangen kann. Andere Beweise m"ogen einem eine Aussage beantworten, sonst haben sie aber keinerlei Mehrwert.
+%Es gibt logische System, neben der klassischen Logik, in denen das Gesetzt vom ausgeschlossenen Dritten \textbf{nicht} gilt, solche Systeme vermeiden damit den Beweis durch Widerspruch. Was erst einmal irrsinnig klingt macht Sinn wenn man bedenkt, dass z.B. durch das Gesetzt die Existenz von Objekten beweisen können ohne diese 'anzufassen' indem wir von der Nicht-Existenz ausgehen und damit zu einem Widerspruch gelangen (Stichwort: Konstruktivismus). Der Konstruktivismus ist für Informatiker von großer Bedeutung. Die Beweise in der Informatik (sehen sie später in der theoretischen Informatik) sind fast immer konstruktiv. Solche Beweise liefern als Nebenprodukt oft einen konkreten Lösungsweg bzw. einen Algorithmus mit dem man etwas anfangen kann. Andere Beweise mögen einem eine Aussage beantworten, sonst haben sie aber keinerlei Mehrwert.

@@ -1,16 +1,16 @@
-\subsection{Pr"adikatenlogik}
-Dies ist eine sehr kurz gehaltene Einf"uhrung in die Pr"adikatenlogik. Kurz gesagt ist die \textbf{Pr"adikatenlogik} \textbf{$\approx$} \textbf{Aussagenlogik mit Quantoren}. Wir m"ochten einem Objekt x eine Eigenschaft/\textbf{Pr"adikat} P(x) zuweisen z.B. \glqq$7$ ist eine Primzahl\grqq . In diesem Fall ist das Pr"adikat \textit{Primzahl} und $7$ das \textit{Objekt}.\\
-Pr"adikate k"onnen eine unterschiedliche Stelligkeit besitzen ($P(x_1, x_2, \ldots, x_n)$, $n$-stelliges Pr"adikat). Um Elementen/Objekten eine Eigenschaft zuzuweisen ben"otigen wir noch eine Menge $M$ an Objekten. Wir schreiben dann:
+\subsection{Prädikatenlogik}
+Dies ist eine sehr kurz gehaltene Einführung in die Prädikatenlogik. Kurz gesagt ist die \textbf{Prädikatenlogik} \textbf{$\approx$} \textbf{Aussagenlogik mit Quantoren}. Wir möchten einem Objekt x eine Eigenschaft/\textbf{Prädikat} P(x) zuweisen z.B. \glqq$7$ ist eine Primzahl\grqq . In diesem Fall ist das Prädikat \textit{Primzahl} und $7$ das \textit{Objekt}.\\
+Prädikate können eine unterschiedliche Stelligkeit besitzen ($P(x_1, x_2, \ldots, x_n)$, $n$-stelliges Prädikat). Um Elementen/Objekten eine Eigenschaft zuzuweisen benötigen wir noch eine Menge $M$ an Objekten. Wir schreiben dann:
 \begin{equation*}
 \underbrace{\exists}_{\text{es existiert ein}} \underbrace{x}_{\text{x}} \underbrace{\in}_{\text{in}} \underbrace{M}_{\text{M}} \underbrace{|}_{\text{sodass}} \underbrace{P(x)}_{\text{x die Eigenschaft P besitzt.}}
 \end{equation*}
 oder
 \begin{equation*}
-\underbrace{\forall}_{\text{f"ur alle}} \underbrace{x}_{\text{x}} \underbrace{\in}_{\text{in}} \underbrace{M}_{\text{M}} \underbrace{:}_{\text{gilt dass}} \underbrace{P(x)}_{\text{x die Eigenschaft P besitzt.}}
+\underbrace{\forall}_{\text{für alle}} \underbrace{x}_{\text{x}} \underbrace{\in}_{\text{in}} \underbrace{M}_{\text{M}} \underbrace{:}_{\text{gilt dass}} \underbrace{P(x)}_{\text{x die Eigenschaft P besitzt.}}
 \end{equation*}
 
 \subsubsection*{Beispiel}
-Sei $T$ die Menge aller Tomaten und das Pr"adikat $R(x):= \text{\glqq}x \text{ ist rot\grqq}$ gegeben, so kommen wir von der klassischen Aussage $A := \text{\glqq Tomaten sind rot\grqq}$, nun zu:
+Sei $T$ die Menge aller Tomaten und das Prädikat $R(x):= \text{\glqq}x \text{ ist rot\grqq}$ gegeben, so kommen wir von der klassischen Aussage $A := \text{\glqq Tomaten sind rot\grqq}$, nun zu:
 \begin{itemize}
 \item \glqq\textbf{alle} Tomaten sind rot\grqq : $\forall x \in T : R(x)$
 \item \glqq\textbf{keine} Tomate ist rot\grqq : $\forall x \in T : \neg R(x)$ (bzw. $\neg (\exists x \in T : R(x))$)
@@ -25,11 +25,11 @@ Man bedenke:
 Die Verneinung der Aussage \textbf{\glqq alle Tomaten sind rot\grqq} ($\neg (\forall x \in T : R(x))$) ist eben nicht \glqq keine Tomate ist rot\grqq \ $\forall x \in T : \neg R(x)$ sondern \textbf{\glqq es gibt mindestens eine Tomate dir nicht rot ist\grqq} $ \exists x \in T : \neg R(x)$!
 
 \subsubsection{Aufgaben}
-F"uhren Sie folgende Negationen aus:
+Führen Sie folgende Negationen aus:
 \begin{itemize}
-	\item $\neg A, \text{ mit } A:= $ Kein Mensch kann Fu{\ss}ballspielen.
+	\item $\neg A, \text{ mit } A:= $ Kein Mensch kann Fußballspielen.
 	\item $\neg A, \text{ mit } A := $ Alle Rosen sind rot.
 	\item $\neg A, \text{ mit } A := $ Alle Tomaten schmecken klasse und sind rot.
 	\item $\neg A, \text{ mit } A := $ Wenn jemand im Lotto gewinne folgt daraus, dass diese Person viel Geld hat-
 \end{itemize}
-Sei nun $M$ die Menge aller Menschen, $R$ die Menge aller Rosen, $T$ die Menge aller Tomaten. Definieren Sie geeignete Pr"adikate und formulieren Sie m"oglichst kurze Aussagen der Pr"adikatenlogik, welche den obigen Aussagen entsprechen. F"uhren Sie anschlie"send die gleiche Negation durch.
+Sei nun $M$ die Menge aller Menschen, $R$ die Menge aller Rosen, $T$ die Menge aller Tomaten. Definieren Sie geeignete Prädikate und formulieren Sie möglichst kurze Aussagen der Prädikatenlogik, welche den obigen Aussagen entsprechen. Führen Sie anschließend die gleiche Negation durch.

@@ -1,5 +1,5 @@
 \subsection{Reihen}
-Eine Reihe ist eine Folge von Partialsummen und somit auch eine Abbildung von $\mathbb{N}$ nach $X$ (meist ist $X \subseteq \mathbb{R}$). Anders ausgedr"uckt, ist das $k$-te Reihenglied die Summe der ersten $k$ Folgenglieder einer Folge. Da Mathematiker schreibfaul sind und es sehr aufwendig ist ein Reihenglied hinzuschreiben da man $k$ Folgeglieder mit einen $+$ verknüpft aufschreiben m"usste, wurde ein neues, mathematisches Symbol eingef"uhrt, das so genannte "'Summen-Zeichen"' $\sum$.
+Eine Reihe ist eine Folge von Partialsummen und somit auch eine Abbildung von $\mathbb{N}$ nach $X$ (meist ist $X \subseteq \mathbb{R}$). Anders ausgedrückt, ist das $k$-te Reihenglied die Summe der ersten $k$ Folgenglieder einer Folge. Da Mathematiker schreibfaul sind und es sehr aufwendig ist ein Reihenglied hinzuschreiben da man $k$ Folgeglieder mit einen $+$ verknüpft aufschreiben müsste, wurde ein neues, mathematisches Symbol eingeführt, das so genannte "'Summen-Zeichen"' $\sum$.
 %\vspace{1 cm}\\
 %Folgende Grafik zeigt nun noch einmal aus welchen Teilen sich das Summen-Zeichen zusammen setzt:
 %\vspace{0.5 cm}\\
@@ -12,22 +12,22 @@ Eine Reihe ist eine Folge von Partialsummen und somit auch eine Abbildung von $\
 \begin{minipage}{7 cm}
 \begin{description}
 \item[Startwert] Dieser Wert ist der erste Wert der Laufvariable und bestimmt somit das erste aufsummierte Folgeglied.
-\item[Laufvariable] Diese Variable ist auch Teil des Bildungsgesetzes und wird pro aufsummierten Folgeglieds um 1 erh"oht, bis sie den Endwert erreicht hat.
-\item[Funktion bzw. der Laufvariable] Hiermit ist das Bildungsgesetz der urspr"unglichen Folge gemeint.
+\item[Laufvariable] Diese Variable ist auch Teil des Bildungsgesetzes und wird pro aufsummierten Folgeglieds um 1 erhöht, bis sie den Endwert erreicht hat.
+\item[Funktion bzw. der Laufvariable] Hiermit ist das Bildungsgesetz der ursprünglichen Folge gemeint.
 \end{description}
 \end{minipage}
 
 \subsubsection{Endliche Reihen}
-Als endliche Reihen werden Reihen bezeichnet, deren Endwert nicht gegen plus Unendlich ($+\infty$) geht. (Ich sage hier mit Absicht "'\textbf{gegen} plus Unendlich geht"', da der Wert Unendlich logischer Weise niemals erreicht werden kann, auch wenn Chuck Norris bis Unendlich z"ahlen kann...)
+Als endliche Reihen werden Reihen bezeichnet, deren Endwert nicht gegen plus Unendlich ($+\infty$) geht. (Ich sage hier mit Absicht "'\textbf{gegen} plus Unendlich geht"', da der Wert Unendlich logischer Weise niemals erreicht werden kann, auch wenn Chuck Norris bis Unendlich zählen kann...)
 
 \subsubsection{Unendliche Reihen}
-Was f"ur eine "Uberraschung, dass es bei Unendlichen Reihen nun so ist, dass der Endwert gegen Unendlich geht.
+Was für eine Überraschung, dass es bei Unendlichen Reihen nun so ist, dass der Endwert gegen Unendlich geht.
 \begin{equation*}
 s = \sum\limits_{k=0}^{\infty}g(k)
 \end{equation*}
 
-\subsubsection{Monotonie, Beschr"anktheit und Konvergenz}
-Genau wie Folgen k"onnen auch Reihen monoton, beschr"ankt und konvergent gegen einen bestimmten Wert sein. Die Definition dieser Begriffe bleibt jedoch genau die selbe, wie auch bei Folgen, weshalb ich sie mir hier spare.
+\subsubsection{Monotonie, Beschränktheit und Konvergenz}
+Genau wie Folgen können auch Reihen monoton, beschränkt und konvergent gegen einen bestimmten Wert sein. Die Definition dieser Begriffe bleibt jedoch genau die selbe, wie auch bei Folgen, weshalb ich sie mir hier spare.
 
 \subsection{Besondere Reihen}
 \subsubsection{Konvergierende Reihen und Nullfolgen}
@@ -35,11 +35,11 @@ Das Bildungsgesetz jeder konvergierenden Reihe beschreibt eine Nullfolge.
 \begin{center}
 \textcolor{red}{Anders herum stimmt das allerdings nicht!}
 \end{center}
-Bekanntestes Gegenbeispiel hierf"ur ist die so genannte \textbf{Harmonische Reihe}:
+Bekanntestes Gegenbeispiel hierfür ist die so genannte \textbf{Harmonische Reihe}:
 \begin{equation*}
 s_n = \sum\limits_{k=1}^{n}\frac{1}{k}
 \end{equation*}
-Diese Reihe divergiert gegen Unendlich! Sie wird auch als \textcolor{red}{harmonische Reihe} bezeichnet. Beweis mithilfe einer Absch"atzung:
+Diese Reihe divergiert gegen Unendlich! Sie wird auch als \textcolor{red}{harmonische Reihe} bezeichnet. Beweis mithilfe einer Abschätzung:
 \begin{align*}
 s^{2^{k+}} &= 1 + \frac{1}{2} + \underbrace{\left( \frac{1}{3} + \frac{1}{4} \right)}_{\geq 2 \cdot \frac{1}{4}} + \underbrace{\left( \frac{1}{5} + \ldots + \frac{1}{8} \right)}_{\geq 4 \cdot \frac{1}{8}} + \ldots + \underbrace{\left( \frac{1}{2^k + 1} + \ldots + \frac{1}{2^{k+1}} \right)}_{\geq 2^k \cdot \frac{1}{2^{k + 1}}}\\
 &\geq 1 + \frac{1}{2} + 2^{\color{red}1} \cdot \frac{1}{4} + 2^{\color{red}2} \cdot \frac{1}{8} + \ldots + 2^{\color{red}k} \cdot \frac{1}{2^{k+1}} \\

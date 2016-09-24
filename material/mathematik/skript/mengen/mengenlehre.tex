@@ -1,13 +1,13 @@
-In diesem Kapitel m"ochten wir einen weiteren Blick auf die Mathematik als Sprache richten. Mit der Logik aus dem vorherigen Kapitel, soll dies dazu f"uhren, dass ihr die Angst vor kompliziert anmutenden Formeln wie
+In diesem Kapitel möchten wir einen weiteren Blick auf die Mathematik als Sprache richten. Mit der Logik aus dem vorherigen Kapitel, soll dies dazu führen, dass ihr die Angst vor kompliziert anmutenden Formeln wie
 \begin{equation*}
 \forall \epsilon > 0 \ \exists \delta > 0 : \forall x \in \mathbb{D} \text{ mit } \left|x - x_0 \right| < \delta \text{ gilt: } \left| f(x) - f(x_0) \right| < \epsilon 
 \end{equation*}
 verliert.\\
 Was auf den ersten Blick schwierig aussieht wird einfach(er), wenn man es wie einen normalen Satz lesen kann:
 \textit{
-F"ur alle positiven Zahlen Epsilon gibt es (mindestens) eine positive Zahl Delta, so dass f"ur alle Zahlen x in D mit einem kleineren Abstand zu $x_0$ als Delta gilt, dass die Funktionswerte von f an der Stelle x weniger als Epsilon von den Funktionswerten von f an der Stelle $x_0$ entfernt sind.
+Für alle positiven Zahlen Epsilon gibt es (mindestens) eine positive Zahl Delta, so dass für alle Zahlen x in D mit einem kleineren Abstand zu $x_0$ als Delta gilt, dass die Funktionswerte von f an der Stelle x weniger als Epsilon von den Funktionswerten von f an der Stelle $x_0$ entfernt sind.
 }
-Dieses Kapitel hilft, Formeln wie die obige in lesbare S"atze zu "ubersetzen, die dann (im n"achsten Schritt) diskutiert und verstanden werden k"onnen.
+Dieses Kapitel hilft, Formeln wie die obige in lesbare Sätze zu übersetzen, die dann (im nächsten Schritt) diskutiert und verstanden werden können.
 
 \subsection{Die Mengenlehre}
 Eine Menge ist eine \textbf{ungeordnete} Gruppe von \textbf{verschiedenen} Objekten. Ein Objekt einer Menge $M$ nennen wir \textit{Element} von $M$. Falls das Element $x$ \textbf{ein Element von $M$} ist so schreiben wir 
@@ -27,13 +27,13 @@ x \notin M.
 Mengen können in den unterschiedlichsten Schreibweisen auftreten:
 \begin{itemize}
 \item $M := \left\{a, b, c\right\}$ ist die Menge mit den Elementen $a,b,c$, also z.B. $b \in  \left\{a, b, c\right\}$ bzw. $b \in M$
-\item $M := \left\{1, 2, 3, \ldots \right\}$ ist die unendliche Menge die alle ganzen positiven Zahlen $> 0$ enth"alt.
+\item $M := \left\{1, 2, 3, \ldots \right\}$ ist die unendliche Menge die alle ganzen positiven Zahlen $> 0$ enthält.
 \item $X:= \left\{x \ | \ x < 8 \ \land \ x \text{ ist eine ganze positive Zahl} \right\}$,\\$M := \left\{x \in X \ | \ x \text{ ist eine Primzahl} \right\} = \left\{2, 3, 5, 7\right\}$.
-\item $\mathbb{N}, \mathbb{Z}, \mathbb{R}, \ldots$ sind Symbole f"ur Mengen die wir h"aufig verwenden.
+\item $\mathbb{N}, \mathbb{Z}, \mathbb{R}, \ldots$ sind Symbole für Mengen die wir häufig verwenden.
 \end{itemize}
 
 \subsubsection{Mengenoperationen}
-Mengen sind eng mit der Aussagenlogik verbunden. "Ahnlich wie zwei Aussagen k"onnen wir auch zwei Mengen verkn"upfen. Seien $A$ und $B$ zwei Mengen.
+Mengen sind eng mit der Aussagenlogik verbunden. Ähnlich wie zwei Aussagen können wir auch zwei Mengen verknüpfen. Seien $A$ und $B$ zwei Mengen.
 \begin{equation*}
 A \cap B = \left\{ x \ | \ x \in A \ \land \ x \in B \right\}
 \end{equation*}
@@ -44,11 +44,11 @@ Wir sehen hier, dass das $\cap$ in der Mengenlehre dem logischen $\land$ in der 
 \item Differenz, sprich \textbf{A ohne B}: $A \setminus B =  \left\{x \ | \ x \in A \ \land \ x \notin B \right\}$
 \item Komplement, sprich \textbf{nicht A}: ($A \subseteq U$): $A^C = \bar{A} = \left\{x \in U \ | \ x \notin A \right\}$.
 \begin{warning}
-	Das Komplement macht nur Sinn, wenn wir ein sog. Universum $U$ haben, das A \textit{einschlie"st}.\\
+	Das Komplement macht nur Sinn, wenn wir ein sog. Universum $U$ haben, das A \textit{einschließt}.\\
 	Für U gilt dann: $U := \bar{A} \cup A$
 \end{warning}
 \end{itemize}
-Durch die Analogie zur Aussagenlogik gelten die gleichen \textbf{Rechenoperationen}, darum verzichten wir auf eine Auflistung. Ein Beispiel w"aren die \textbf{De Morgen-Regeln}:
+Durch die Analogie zur Aussagenlogik gelten die gleichen \textbf{Rechenoperationen}, darum verzichten wir auf eine Auflistung. Ein Beispiel wären die \textbf{De Morgen-Regeln}:
 \begin{gather*}
 (A \cap B)^C = A^C \cup B^C \\
 (A \cup B)^C = A^C \cap B^C 
@@ -56,7 +56,7 @@ Durch die Analogie zur Aussagenlogik gelten die gleichen \textbf{Rechenoperation
 
 \subsubsection{Mengenrelationen}
 Eine Relation stellt zwei mathematische Objekte in eine Beziehung/Relation. So etwa die $<$-Relation (sprich: kleiner-Relation).\\
-$4 < 5$ besagt, dass $4$ in der $<$-Relation zu $5$ steht, also dass $4$ eben kleiner als $5$ ist. Wir ben"otigen aber auch Relationen f"ur Mengen um diese z.B. zu vergleichen. Wir wollen Aussagen, dass alle Elemente von $A$ auch in $B$ enthalten sind oder andersherum.
+$4 < 5$ besagt, dass $4$ in der $<$-Relation zu $5$ steht, also dass $4$ eben kleiner als $5$ ist. Wir benötigen aber auch Relationen für Mengen um diese z.B. zu vergleichen. Wir wollen Aussagen, dass alle Elemente von $A$ auch in $B$ enthalten sind oder andersherum.
 \begin{itemize}
 \item Teilmenge: $(A \subseteq B) \iff (x \in A \Rightarrow x \in B)$ quasi ($\leq$)
 \item Supermenge: $A \supseteq B  \iff (x \in A \Leftarrow x \in B)$ quasi ($\geq$)

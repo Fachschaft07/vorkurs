@@ -1,52 +1,52 @@
-\subsection{Monotonie, Beschr"anktheit und Konvergenz}
+\subsection{Monotonie, Beschränktheit und Konvergenz}
 \subsubsection{Monotonie}
-Eine Folge ist \textcolor{red}{monoton fallend}, wenn kein Folgeglied gr"o"ser ist als dessen Vorg"anger:
+Eine Folge ist \textcolor{red}{monoton fallend}, wenn kein Folgeglied größer ist als dessen Vorgänger:
 \begin{equation*}
 \forall n \in \mathbb{N} : a_n \leq a_{n-1}
 \end{equation*}
-Ist eine Folge \textcolor{red}{monoton steigend}, so ist jedes Folgeglied entweder gr"o"ser oder gleich dessen Vorg"anger:
+Ist eine Folge \textcolor{red}{monoton steigend}, so ist jedes Folgeglied entweder größer oder gleich dessen Vorgänger:
 \begin{equation*}
 \forall n\in{\mathbb{N}}: a_n \geq a_{n-1}
 \end{equation*}
 
 \paragraph{Strenge Monotonie} 
-Der Unterschied zwischen Monotonie und strenger Monotonie ist einfach. Bei Monotonie d"urfen die Folgeglieder gleich deren Vorg"anger sein, bei strenger Monotonie ist dies jedoch nicht der Fall:
+Der Unterschied zwischen Monotonie und strenger Monotonie ist einfach. Bei Monotonie d"urfen die Folgeglieder gleich deren Vorgänger sein, bei strenger Monotonie ist dies jedoch nicht der Fall:
 \begin{itemize}
 \item \textcolor{red}{streng monoton steigend} $\Leftrightarrow \forall n\in\mathbb{N}: a_n > a_{n-1}$
 \item \textcolor{red}{streng monoton fallend} $\Leftrightarrow \forall n\in\mathbb{N}: a_n < a_{n-1}$
 \end{itemize}
 
-\subsubsection{Beschr"anktheit}
-Ist eine Folge nach unten beschr"ankt, so gilt:
+\subsubsection{Beschränktheit}
+Ist eine Folge nach unten beschränkt, so gilt:
 \begin{equation*}
 \exists s \in \mathbb{R} \text{ so dass } \forall n \in \mathbb{N}: s \leq a_n.
 \end{equation*}
-Hierbei wird jeder Wert, welcher kleiner gleich des kleinsten Folgegliedes der Folge ist, als \textcolor{red}{untere Schranke} bezeichnet. Die gr"o"ste untere Schranke wird als \textcolor{red}{Infimum} bezeichnet. Eine Folge ist dann nach oben beschr"ankt, wenn es mindestens einen Wert s aus $\mathbb{N}$ gibt, welcher gr"o"ser oder gleich des gr"o"sten Folgegliedes ist. Diese Werte bezeichnet man als \textcolor{red}{obere Schranke}:
+Hierbei wird jeder Wert, welcher kleiner gleich des kleinsten Folgegliedes der Folge ist, als \textcolor{red}{untere Schranke} bezeichnet. Die größte untere Schranke wird als \textcolor{red}{Infimum} bezeichnet. Eine Folge ist dann nach oben beschränkt, wenn es mindestens einen Wert s aus $\mathbb{N}$ gibt, welcher größer oder gleich des größten Folgegliedes ist. Diese Werte bezeichnet man als \textcolor{red}{obere Schranke}:
 \begin{equation*}
 \exists s \in \mathbb{R} \text{ so dass } \forall n \in \mathbb{N} : s\geq a_n 
 \end{equation*}
-Die kleinste obere Schranke hei"st \textcolor{red}{Supremum}.
+Die kleinste obere Schranke heißt \textcolor{red}{Supremum}.
 
 \subsubsection{Konvergenz}
-N"ahert sich eine Folge stetig einem bestimmten "'\textcolor{red}{Grenzwert}"' (oder "'\textcolor{red}{Limes}"') $a$ beliebig nahe an, so sagt man, sie konvergiert gegen $a$:
+Nähert sich eine Folge stetig einem bestimmten "'\textcolor{red}{Grenzwert}"' (oder "'\textcolor{red}{Limes}"') $a$ beliebig nahe an, so sagt man, sie konvergiert gegen $a$:
 \begin{equation*}
 \forall \epsilon > 0 \ \exists n_0  \in \mathbb{N} \text{ so dass } \forall n \in \mathbb{N} \text{ mit } n \geq n_0 : |a_n - a|< \epsilon
 \end{equation*}
-Epsilon $\epsilon$ ist hierbei eine beliebig kleine Zahl, welche den Abstand/die \textit{Umgebung} zwischen dem Wert von $a_n$ und dem Grenzwert $a$ beschreibt. Jetzt mal langsam. Was besagt der mathematische Ausdruck? Sei $a$ unser Grenzwert dann gibt es f"ur jedes positive Epsilon, egal wie klein es auch ist (nur null darf es nicht sein), eine nat"urliche Zahl $n_0$, sodass der Abstand zwischen $a$ alle Folgeglieder, die nach oder gleich dem $n_0$-ten Glied kommen, kleiner ist als Epsilon. Das hei"st, wenn eine Folge gegen $a$ konvergiert kann ich euch ein $\epsilon > 0$ geben, zum Beispiel $0.00000000001$, und ihr k"onnt mir ein $n_0$ sagen, sodass $|a_n - a| < \epsilon$ und zwar f"ur alle $n \geq n_0$. Jede nicht konvergente Folge wird als \textcolor{red}{divergent} bezeichnet.
+Epsilon $\epsilon$ ist hierbei eine beliebig kleine Zahl, welche den Abstand/die \textit{Umgebung} zwischen dem Wert von $a_n$ und dem Grenzwert $a$ beschreibt. Jetzt mal langsam. Was besagt der mathematische Ausdruck? Sei $a$ unser Grenzwert dann gibt es f"ur jedes positive Epsilon, egal wie klein es auch ist (nur null darf es nicht sein), eine nat"urliche Zahl $n_0$, sodass der Abstand zwischen $a$ alle Folgeglieder, die nach oder gleich dem $n_0$-ten Glied kommen, kleiner ist als Epsilon. Das heißt, wenn eine Folge gegen $a$ konvergiert kann ich euch ein $\epsilon > 0$ geben, zum Beispiel $0.00000000001$, und ihr könnt mir ein $n_0$ sagen, sodass $|a_n - a| < \epsilon$ und zwar f"ur alle $n \geq n_0$. Jede nicht konvergente Folge wird als \textcolor{red}{divergent} bezeichnet.
 
 \paragraph{Beispiel}
 Sei unsere Folge $a_n = \frac{1}{n}$. Wir nehmen an, dass die Folge gegen $0$ konvergiert. Ich gebe euch nun ein $\epsilon$, nun soll gelten 
 \begin{equation*}
 |a_n - 0| < \epsilon \iff \left|\frac{1}{n}\right| < \epsilon \stackrel{\text{da } n > 0}{\iff} \frac{1}{n} < \epsilon
 \end{equation*}
-l"osen wir doch einfach nach $n$ auf:
+lösen wir doch einfach nach $n$ auf:
 \begin{equation*}
 \frac{1}{n} < \epsilon \iff n > \frac{1}{\epsilon}
 \end{equation*}
-Nun k"onnt ihr mir immer ein $n$ nennen. Das $n_0$ ist hierbei mit irgendeinem $n$, was die Bedingung erf"ullt identisch und alle $n \geq n_0$ erf"ullen die Bedingung ebenso.
+Nun könnt ihr mir immer ein $n$ nennen. Das $n_0$ ist hierbei mit irgendeinem $n$, was die Bedingung erf"ullt identisch und alle $n \geq n_0$ erf"ullen die Bedingung ebenso.
 
-\subsubsection{Zusammenh"ange}
+\subsubsection{Zusammenhänge}
 \begin{itemize}
-\item Jede konvergente Folge ist auch beschr"ankt, allerdings ist \textbf{nicht} jede beschr"ankte Folge auch konvergent. \textcolor{red}{Konvergenz $\Rightarrow$ Beschr"anktheit}
-\item Jede beschr"ankte, monotone Folge ist konvergent. \textcolor{red}{Beschr"anktheit und Monotonie $\Rightarrow$ Konvergenz}
+\item Jede konvergente Folge ist auch beschränkt, allerdings ist \textbf{nicht} jede beschränkte Folge auch konvergent. \textcolor{red}{Konvergenz $\Rightarrow$ Beschränktheit}
+\item Jede beschränkte, monotone Folge ist konvergent. \textcolor{red}{Beschränktheit und Monotonie $\Rightarrow$ Konvergenz}
 \end{itemize}

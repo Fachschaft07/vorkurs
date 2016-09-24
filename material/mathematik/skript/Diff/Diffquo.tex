@@ -1,11 +1,11 @@
-Um die Differentiation zu verstehen, ben"otigen wir zun"achst einmal etwas Wissen "uber Grenzwerte.
+Um die Differentiation zu verstehen, benötigen wir zunächst einmal etwas Wissen über Grenzwerte.
 
 \subsection{Limes}
-Das Wort Limes kommt aus dem Latein und bedeutet so viel wie \textit{Grenzweg} und bezeichnet die Grenzw"alle, welche das R"omische Reich zwischen dem 1. und 6. Jahrhundert in Europa, Vorderasien und Nordafrika angelegt hatten.\\
+Das Wort Limes kommt aus dem Latein und bedeutet so viel wie \textit{Grenzweg} und bezeichnet die Grenzwälle, welche das Römische Reich zwischen dem 1. und 6. Jahrhundert in Europa, Vorderasien und Nordafrika angelegt hatten.\\
 Auch im Bereich der Mathematik bezeichnet der Limes einen Grenzwall. Dieser kann nie ganz erreicht werden, jedoch kann man sich beliebig nah an ihn annähern.\\
-Wenn also $x_0$ der Wert ist, an dem sich dieser Grenzwert befindet, so kann man den Abstand zwischen dem aktuell betrachtetem x-Wert und $x_0$ immer kleiner werden lassen. Man schreibt auch $\lim\limits_{x \to x_0}$. Geht x beliebig nahe an $x_0$ heran, so kann man schlie"slich den s.g. Grenzwert berechnen $\lim\limits_{x \to x_0} f(x)$. Hierf"ur betrachtet man, wie sich die Funktion verh"alt, wenn der Abstand immer kleiner wird.\\
+Wenn also $x_0$ der Wert ist, an dem sich dieser Grenzwert befindet, so kann man den Abstand zwischen dem aktuell betrachtetem x-Wert und $x_0$ immer kleiner werden lassen. Man schreibt auch $\lim\limits_{x \to x_0}$. Geht x beliebig nahe an $x_0$ heran, so kann man schließlich den s.g. Grenzwert berechnen $\lim\limits_{x \to x_0} f(x)$. Hierfür betrachtet man, wie sich die Funktion verhält, wenn der Abstand immer kleiner wird.\\
 Ausgesprochen wird dies \textit{Limes von x gegen $x_0$ von f von x}
-Beim Ableiten m"ochten wir etwas "uber die Ver"anderung einer Funktion erfahren.
+Beim Ableiten möchten wir etwas über die Veränderung einer Funktion erfahren.
 
 \begin{warning}
 	Hin und wieder will man lediglich den Grenzwert aus einer bestimmten Richtung betrachten.\\
@@ -16,25 +16,25 @@ Beim Ableiten m"ochten wir etwas "uber die Ver"anderung einer Funktion erfahren.
 	Es existieren auch noch weitere Schreibweisen, welche mit de $> und <$ Zeichen gebildet werden, jedoch belassen wir es im Moment bei dieser Schreibweise.
 \end{warning}
 
-\subsection{Heranf"uhrung an die Differentiation}
-Angenommen ein Auto startet an einem Punkt und die Funktion $s(t)$ gibt an wie viele Meter das Auto zum Zeitpunkt $t$ zur"uckgelegt hat. Wir fragen uns nun wie schnell das Auto nach 10 Sekunden f"ahrt. Wie k"onnen wir dies herausfinden? Wir k"onnen das absch"atzen indem wir 
+\subsection{Heranführung an die Differentiation}
+Angenommen ein Auto startet an einem Punkt und die Funktion $s(t)$ gibt an wie viele Meter das Auto zum Zeitpunkt $t$ zurückgelegt hat. Wir fragen uns nun wie schnell das Auto nach 10 Sekunden fährt. Wie können wir dies herausfinden? Wir können das abschätzen indem wir 
 \begin{equation*}
 \bar{v} = \frac{\text{Strecke}}{\text{Zeit}} \approx \frac{s(11) - s(9)}{11 - 9} = \frac{\Delta s}{\Delta t} = \frac{s(11) - s(9)}{2}
 \end{equation*}
-Aber ist $\bar{v} \stackrel{?}{=} v(10)$? Nein $\bar{v}$ ist nur die durchschnittliche Geschwindigkeit zwischen $s(9)$ und $s(11)$. Wenn wir die Geschwindigkeit genauer bestimmen m"ochten, m"ussen wir den Abstand/die \textit{Umgebung} von/um $10$ kleiner w"ahlen, $0$ darf er jedoch nicht werden, denn wir d"urfen nicht durch Null teilen. Hilfe gibt uns der Grenzwert:
+Aber ist $\bar{v} \stackrel{?}{=} v(10)$? Nein $\bar{v}$ ist nur die durchschnittliche Geschwindigkeit zwischen $s(9)$ und $s(11)$. Wenn wir die Geschwindigkeit genauer bestimmen möchten, müssen wir den Abstand/die \textit{Umgebung} von/um $10$ kleiner wählen, $0$ darf er jedoch nicht werden, denn wir dürfen nicht durch Null teilen. Hilfe gibt uns der Grenzwert:
 \begin{equation*}
 v(10) = \lim\limits_{h \to 0} \frac{s(10+h) - s(10)}{h}
 \end{equation*}
-Der Grenzwert muss nat"urlich existieren! Nehmen wir einmal an das Auto beschleunigt und $s(t) = 2 t^2$.
+Der Grenzwert muss natürlich existieren! Nehmen wir einmal an das Auto beschleunigt und $s(t) = 2 t^2$.
 \begin{align*}
 v(10) &= \lim\limits_{h \to 0} \frac{s(10+h) - s(10)}{h} = \lim\limits_{h \to 0} \frac{2 (10+h)^2 - 2 (10)^2}{h}\\
 &= \lim\limits_{h \to 0} \frac{40h + 2h^2}{h} = \lim\limits_{h \to 0}(40 + 2h) \to 40
 \end{align*}
 
 \subsection{Ableiten von Funktionen}
-Die Ableitung der Funktion $f$ an der Stelle $x_0$, geschrieben $f'(x_0)$ beschreibt das Verhalten der Funktion in der \textit{Umgebung} an der Stelle $x_0$. Sie ist auch die Steigung der Funktion an dem Punkt $x_0$. Die Tangente an $x_0$ hat die Steigung $f'(x_0)$. Eine Tangente ist eine Gerade, die den Graphen in nur einem einzigen Punkt ber"uhrt. Um die Tangentensteigung zu erhalten, betrachtet man zun"achst die Steigung einer Sekante und n"ahert den zweiten Punkt dem ersten immer weiter an.
+Die Ableitung der Funktion $f$ an der Stelle $x_0$, geschrieben $f'(x_0)$ beschreibt das Verhalten der Funktion in der \textit{Umgebung} an der Stelle $x_0$. Sie ist auch die Steigung der Funktion an dem Punkt $x_0$. Die Tangente an $x_0$ hat die Steigung $f'(x_0)$. Eine Tangente ist eine Gerade, die den Graphen in nur einem einzigen Punkt berührt. Um die Tangentensteigung zu erhalten, betrachtet man zunächst die Steigung einer Sekante und nähert den zweiten Punkt dem ersten immer weiter an.
 \begin{definition}[Differenzierbarkeit in $x_0$]
-Eine Funktion hei"st differenzierbar an der Stelle $x_0$ wenn der Grenzwert
+Eine Funktion heißt differenzierbar an der Stelle $x_0$ wenn der Grenzwert
 \begin{equation*}
  \lim\limits_{x \to x_0} \frac{f(x)-f(x_0)}{x-x_0} = \lim\limits_{h \to 0}  \frac{f(x_0 + h)-f(x_0)}{h} , \text{ mit } h = x - x_0
 \end{equation*}
@@ -46,13 +46,13 @@ Ein Grenzwert $a$ an der Stelle $x_0$ der Funktion $f$ existiert wenn der linke 
 \end{equation*}
 
 \begin{definition}[Differenzierbarkeit]
-Eine Funktion hei"st differenzierbar, wenn sie an jeder Stelle $x_0 \in \mathbb{D}$ differenzierbar ist.
+Eine Funktion heißt differenzierbar, wenn sie an jeder Stelle $x_0 \in \mathbb{D}$ differenzierbar ist.
 \end{definition}
 
 \paragraph{Anmerkung:} Eine differenzierbare Funktion ist stetig und eine in $x_0$ differenzierbare Funktion ist stetig in $x_0$. Die Umkehrung gilt nicht!
 
 \subsubsection{Die erste Ableitung}
-F"ur die gew"ohnlichen differenzierbaren Funktionen gibt es die uns bekannten Ableitungsregeln. Um eine Funktion abzuleiten multipliziert man bei Polynomen jeweils die Exponenten mit den dazugeh"origen Koeffizienten ihrer Basis und subtrahiert den Exponenten dabei um 1. Konstanten fallen dabei weg.
+Für die gewöhnlichen differenzierbaren Funktionen gibt es die uns bekannten Ableitungsregeln. Um eine Funktion abzuleiten multipliziert man bei Polynomen jeweils die Exponenten mit den dazugehörigen Koeffizienten ihrer Basis und subtrahiert den Exponenten dabei um 1. Konstanten fallen dabei weg.
 \begin{equation*}
 f(x) = a_1 \cdot (x-a_2)^{a_3} + a_4 \Rightarrow f'(x) = a_1 \cdot (x - a_2)^{a_3-1} \cdot a_3 \text{ mit } a_1,a_2,a_3 \text{ konstant.}
 \end{equation*}
@@ -63,7 +63,7 @@ f(x)=2x^2 \Rightarrow f'(x)= 2 \cdot 2x^{2-1}=4x
 \end{equation*}
 
 \subsection{Besondere Ableitungen}
-F"ur Logarithmus- und $e$-Funktionen sowie die Winkelfunktionen gelten besondere Ableitungsgesetze:
+Für Logarithmus- und $e$-Funktionen sowie die Winkelfunktionen gelten besondere Ableitungsgesetze:
 \begin{itemize}
 \item $\sin'(x) = \cos(x)$
 \item $\cos'(x) = - \sin(x)$
@@ -84,17 +84,17 @@ f(x) = h(x) \cdot g(x) \Rightarrow f'(x)=h'(x) \cdot g(x)+h(x) \cdot g'(x)
 \begin{equation*}
 f(x)=2x^3 \cdot \sin(x)\Rightarrow f'(x)=6x^2 \cdot \sin(x)+2x^3 \cdot \cos(x)
 \end{equation*}
-Die Produktregel gilt auch f"ur einfache Funktionen, z.B.
+Die Produktregel gilt auch für einfache Funktionen, z.B.
 \begin{equation*}
 f(x)=x^2=x\cdot x\Rightarrow f'(x)=1 \cdot x+x \cdot 1 = 2x
 \end{equation*}
-Hier bietet sich aber die Ableitungsregel f"ur Polynome an (siehe oben).
+Hier bietet sich aber die Ableitungsregel für Polynome an (siehe oben).
 
 \subsubsection{Quotientenregel}
 \begin{equation*}
 f(x)=\frac{h(x)}{g(x)} \Rightarrow f'(x)=\frac{h'(x) \cdot g(x)-h(x) \cdot g'(x)}{(g(x))^2}
 \end{equation*}
-Diese Regel kann auf die Produktregel zur"uckgef"uhrt werden, man bemerke $\frac{h(x)}{g(x)} = h(x) \cdot g(x)^{-1}$
+Diese Regel kann auf die Produktregel zurückgeführt werden, man bemerke $\frac{h(x)}{g(x)} = h(x) \cdot g(x)^{-1}$
 
 \paragraph{Beispiel:}
 \begin{equation*}
@@ -102,7 +102,7 @@ f(x)=\frac{2x^3}{2x^2+4} \Rightarrow f'(x)=\frac{6x^2 \cdot (2x^2+4)-2x^3 \cdot 
 \end{equation*}
 
 \subsubsection{Kettenregel}
-F"ur ineinander geschachtelte (verkettete) Funktionen gilt die sogenannte Kettenregel. Diese ist besonders n"utzlich und wird oft mehrmals hintereinander angewendet! Dabei wird die Funktion ganz normal abgeleitet und die innere Funktion \textcolor{red}{nachdifferenziert}.
+Für ineinander geschachtelte (verkettete) Funktionen gilt die sogenannte Kettenregel. Diese ist besonders nützlich und wird oft mehrmals hintereinander angewendet! Dabei wird die Funktion ganz normal abgeleitet und die innere Funktion \textcolor{red}{nachdifferenziert}.
 \begin{equation*}
 f(x)=f(g(x))\Rightarrow f'(g(x))=f'(g(x))\textcolor{red}{g'(x)}
 \end{equation*}
@@ -112,7 +112,7 @@ f(x)=f(g(x))\Rightarrow f'(g(x))=f'(g(x))\textcolor{red}{g'(x)}
 f(g(x))=x^{(x^2+4)}\Rightarrow f'(g(x))=(x^2+4)\cdot x^{(x^2+4-1)}\textcolor{red}{ \cdot 2x}
 \end{equation*}
 
-\subsection{"Ubungen}
+\subsection{Übungen}
 \begin{enumerate}
 \item Bilde die Ableitungen folgender Terme
 \begin{itemize}

@@ -1,39 +1,5 @@
-\documentclass[12pt,a4paper,titlepage]{scrartcl}
-\usepackage[left=3cm,right=4cm,top=3cm,bottom=3cm,includeheadfoot]{geometry}
-\usepackage{german}
-\usepackage{graphicx}
+\documentclass[12pt,a4paper,titlepage]{vorkurs}
 
-\usepackage{color}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{polynom}
-\usepackage{array}
-\usepackage[table]{xcolor}
-\usepackage[colorlinks,pdfpagelabels,pdfstartview = FitH,bookmarksopen = true,bookmarksnumbered = true,linkcolor = black,plainpages = false,hypertexnames = false,citecolor = black]{hyperref}
-\usepackage{fancyhdr}
-
-%Serifenschrift in Überschrift
-%\usepackage{sectsty}
-%\allsectionsfont{\rmfamily}
-%\usepackage{tocloft}
-%\renewcommand{\cftsecfont}{\rmfamily}
-%\renewcommand{\cftsecfont}{\bfseries}
-
-%Plots
-\usepackage{tkz-euclide}
-\usetikzlibrary{calc}
-\usepackage{pgfplots}
-\usepackage{tikz}
-\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,calc,plotmarks}
-\newcounter{angle}
-\setcounter{angle}{220}
-\usepackage{pifont, mdframed}
-
-%Polynomdivision
- \usepackage{polynom}
- \polyset{style=C, div=:,vars=x}
-
-\pagestyle{fancy}
 \fancyhf{}
 \fancyhead[C]{Vorkurs (Mathematik)}
 \fancyhead[L]{\leftmark}
@@ -41,31 +7,9 @@
 \fancyfoot[L]{\today}
 \fancyfoot[C]{\thepage}
 \fancyfoot[R]{FS07}
-\renewcommand{\footrulewidth}{0.5 pt}
-\newcommand{\psection}[1]{\pagebreak\section{#1}}
-\definecolor{DarkGrey}{RGB}{128,128,128}
-
-\newtheorem{remark}{Bemerkung}[section]
-\newtheorem{axiom}{Satz}[section]
-\newtheorem{definition}{Definition}[section]
-\newtheorem{example}{Beispiel}[section]
-\newtheorem{important}{Merke}[section]
-\newtheorem{theorem}{Theorem}[section]
-
-\definecolor{agreen}{rgb}{0.5,1.0,0.5}
-\definecolor{ared}{rgb}{1.0,0.5,0.5}
-\definecolor{blue}{rgb}{0.5,0.5,1.0}
-
-\usepackage{blindtext}
-\newenvironment{warning}
-{\par\begin{mdframed}[linewidth=2pt,linecolor=red]%
-		\begin{list}{}{\leftmargin=1cm
-				\labelwidth=\leftmargin}\item[\Large\ding{43}]}
-		{\end{list}\end{mdframed}\par}
-
+\usepackage[utf8]{inputenc}
 \begin{document}
 \pagenumbering{roman}
-%\setkomafont{disposition}{\normalfont\rmfamily}
 \input{inputs/title}
 \clearpage
 
