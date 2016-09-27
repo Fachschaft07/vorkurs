@@ -34,24 +34,7 @@ public class Aufg4b
 															   double interpretiert
 	}
 }
-
-	class hello                              // 1. public fehlt
-	                                         // 2. hello statt Hello
-	{
-	   public void main{String *args[]};     // 3. static fehlt
-	                                         // 4. { statt (
-	                                         // 5. * unnötig
-	                                         // 6. } statt )
-	                                         // 7. Semikolon überflüssig
-	   (                                     // 8. ( statt {
-	      System.out.PrintLn('Hello, world') // 9. PrintLn statt println
-	                                         //10. ' statt "
-	                                         //11. ' statt "
-	                                         //12. Semikolon fehlt
-	   )                                     //13. ) statt }
-	}
-
-	Es folgt eine korrigierte Version:
+	Beispiel für eine korrigierte Version:
 */
 public class Aufg4b
 {

@@ -18,7 +18,7 @@ public class Aufg5b
 		 * infinity über int zu erreichen. Das liegt daran, dass int nicht wie
 		 * double aufgebaut ist. int geht immer im Kreis und sobald der Maximalwert
 		 * erreicht wurd geht es wieder vom Minimalenwert los. Heißt Maximalwert+1 = Minimalwert
-		 * Es kommt zu keinem Fehler! Dies kann natürlich zu unangehmen Fehlern führen!
+		 * Es kommt zu keinem Fehler! Dies kann natürlich zu unangehmen Effekten in Programmen führen!
 		 * long, short sind wie int aufgebaut.
 		 */
 		int intNumber = 90000000;
@@ -28,8 +28,8 @@ public class Aufg5b
 		intResult = intNumber * intNumber ;
 		System.out.println(intResult); // Wir springen wieder ins positive
 		/*
-		 * Mathematisch ist das Ergebnis natürlich sobald wir einmal über die Maximalgrenze
-		 * springen falsch!
+		 * Mathematisch ist das Ergebnis natürlich, sobald wir einmal über die Maximalgrenze
+		 * springen, falsch!
 		 */
 	}
 }

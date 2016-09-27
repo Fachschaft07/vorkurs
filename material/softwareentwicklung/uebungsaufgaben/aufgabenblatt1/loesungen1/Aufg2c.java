@@ -1,26 +1,25 @@
 /*
  Das Programm enthält eine erstaunliche Anzahl an Fehlern:
 
-	class hello                              // 1. public fehlt
-	                                         // 2. hello statt Hello
+	class hello                              // 1. hello statt Hello
 	{
-	   public void main{String *args[]};     // 3. static fehlt
-	                                         // 4. { statt (
-	                                         // 5. * falsch
-	                                         // 6. } statt )
-	                                         // 7. Semikolon falsch
-	   (                                     // 8. ( statt {
-	      System.out.PrintLn('Hello, world') // 9. PrintLn statt println
+	   public void main{String *args[]};     // 2. static fehlt
+	                                         // 3. { statt (
+	                                         // 4. * falsch
+	                                         // 5. } statt )
+	                                         // 6. Semikolon falsch
+	   (                                     // 7. ( statt {
+	      System.out.PrintLn('Hello, world') // 8. PrintLn statt println
+	                                         // 9. ' statt "
 	                                         //10. ' statt "
-	                                         //11. ' statt "
-	                                         //12. Semikolon fehlt
-	   )                                     //13. ) statt }
+	                                         //11. Semikolon fehlt
+	   )                                     //12. ) statt }
 	}
 
 	Es folgt eine korrigierte Version (die Klasse heißt hier
 	allerdings "Aufg2c" statt "hello")
  */
-public class Aufg2c
+class Aufg2c
 {
 	public static void main(String args[])
 	{

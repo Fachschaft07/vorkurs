@@ -1,4 +1,4 @@
-public class Aufg5d
+public class Aufg5dMitModulo
 {
 	public static void main(String[] args)
 	{
@@ -6,20 +6,20 @@ public class Aufg5d
  		int secsPerMin = 60; //Anzahl der Sekunden pro Minute
 		int minsPerHour = secsPerMin; //Anzahl der Minuten pro Stunde
 		int hoursPerDay = 24; // Anzahl der Stunden pro Tag
+ 		
  		/*
- 		 * Berechne Tage (days) und ziehe dann die Tage vom Anfangswert ab.
- 		 * Verfahre mit Stunden und Minuten genauso.
+ 		 * Verkürzung der Berechnung aus Aufg5d mithilfe des Modulo-Operators.
  		 */
  		int divider = secsPerMin * minsPerHour * hoursPerDay;		// Variable zur Vermeidung von doppelten Operationen
  		int days = initial / divider;		
- 		initial = initial - (days * divider);
+ 		initial = initial % divider;
  		
- 		divider = divider / hoursPerDay;	
+ 		divider = divider / hoursPerDay;
  		int h = initial / divider;
- 		initial = initial - (h*divider);
+ 		initial = initial % divider;
  		
- 		int min = initial / minsPerHour;
- 		int sec = initial - (secsPerMin*min); 
+ 		int min = initial / secsPerMin;
+ 		int sec = initial % secsPerMin; 
  		
  		System.out.println(days + " Tage, "+h+" Stunden, " +min+" Minuten und " + sec + " Sekunden");
 	}
