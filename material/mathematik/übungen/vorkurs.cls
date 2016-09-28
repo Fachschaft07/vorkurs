@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{guide}[2016/09/20 Latex Class for the Precourse-Scripts]
+\ProvidesClass{vorkurs}[2016/09/20 Latex Class for the Precourse-Scripts]
 \ProcessOptions \relax
 \LoadClass{scrartcl}
 \RequirePackage[left=3cm,right=4cm,top=3cm,bottom=3cm,includeheadfoot]{geometry}

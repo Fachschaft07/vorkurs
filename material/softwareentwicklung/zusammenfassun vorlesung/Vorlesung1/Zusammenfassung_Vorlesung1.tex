@@ -1,0 +1,181 @@
+\documentclass[12pt,a4paper]{../summary}
+\usepackage{float}
+\usepackage[german]{babel}
+\usepackage[german]{cleveref}
+\fancyhf{}
+\fancyhead[C]{SE Vorlesung 1}
+\renewcommand{\headrulewidth}{0.5 pt}
+\fancyfoot[L]{\today}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{FS07}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{color}
+
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+\usepackage{listings}
+\lstset{language=Java,
+	showspaces=false,
+	showtabs=false,
+	breaklines=true,
+	showstringspaces=false,
+	breakatwhitespace=true,
+	commentstyle=\color{pgreen},
+	keywordstyle=\color{pblue},
+	stringstyle=\color{pred},
+	basicstyle=\ttfamily,
+	moredelim=[il][\textcolor{pgrey}]{$$},
+	moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+}
+\crefname{lstlisting}{listing}{listings}
+\Crefname{lstlisting}{Listing}{Listings}
+
+
+\begin{document}
+\section{Klassifizierung}
+\begin{table}[H]
+\begin{tabular}{ | c | c | c | c | c | }
+\hline
+\textbf{Sprache} & \textbf{funktional} & \textbf{objektorientiert} & \textbf{platformunabhängig} & \textbf{Skript-Sprache}\\ \hline
+C & & & &\\ \hline
+C++ & & X & &\\ \hline
+\color{red}\textbf{Java} & &\color{red} X &\color{red} X &\\ \hline
+Python & & X & X& X \\ \hline
+Ruby & & X & X & X \\ \hline
+Haskell & X & & &  \\ \hline
+\end{tabular}
+\caption{Einordnung von Java im Gegenzug zu anderen Programmiersprachen}\label{einordnung}
+
+\end{table}
+In \cref{einordnung} seht ihr eine Einordnung von Java im Verhältnis zu einigen, weiteren Programmiersprachen.
+\begin{warning}
+	Bitte Beachtet: Die Einordnung wurde Anhand ausgewählter Kriterien gemacht.\\
+	Es gibt darüber hinaus noch viele andere Eigenschaften, welche hierfür verwendet werden könnten.
+\end{warning}
+\begin{itemize}
+	\item \textbf{funktionale Sprachen:} Aufbau wie in der Mathematik (Keine Variablen/Nur Konstanten, keine Schleifen)
+	\item \textbf{objektorientierte Sprachen:} Einführung neuer Datentypen mit bestimmten Eigenschaften (Bsp.: Objekt Buch hat Autor und Titel)
+	\item \textbf{platformunabhängige Sprachen:} Kann auf verschiedenen Betriebssystemen (Platformen) ausgeführt werden
+	\item \textbf{Skript-Sprachen:} Werden erst zur Laufzeit des Programmes in Maschinencode umgewandelt (Werden nicht kompiliert)
+\end{itemize}
+\pagebreak
+\section{Platformunabhängigkeit}
+Java realisiert die Platformunabhängigkeit dadurch, dass der Quellcode (der geschriebene Programmcode) nicht direkt in Maschinencode (vom PC verstandene Anweisungen) übersetzt wird, sondern in eine Art "Zwischencode".\\
+Die Übersetzung wird hierbei durch einen so genannten Compiler (im Fall von Java "javac") durchgeführt.\\
+Dieser Zwischencode wird dann mit Hilfe einer virtuellen Maschine (JVM - Java Virtual Machine) während der Programmlaufzeit in Maschinencode übersetzt.\\
+Diese JVM muss aus diesem Grund auf jedem System, welches das Programm ausführen soll, installiert sein!\\
+\cref{unabhaengigkeit} zeigt diesen Ablauf nochmals grafisch.
+
+\begin{figure}[H]
+\begin{tikzpicture}[basic/.style  = {draw, text width=2cm, drop shadow, font=\sffamily, rectangle},
+ root/.style   = {basic, rounded corners=2pt, thin, align=center,
+	fill=green!30},
+level 1/.style={sibling distance=40mm},
+level 2/.style = {basic, rounded corners=6pt, thin,align=center,
+	text width=8em},
+edge from parent/.style={->,draw},
+>=latex]
+\node[root]{Quellcode (Main.java)}
+	child{node[level 2] (compiler) {Compiler (javac)}
+		child{node[root](class){Zwischencode (Main.class)}
+			child{node[level 2] {ausführen ("java Main" auf Linux)}child{node[root] (lJVM) {JVM für Linux} child{node[level 2] (l) {Maschinencode für Linux}}}}
+			child{node[level 2] {ausführen ("java Main" auf OSX)}child{node[root] (lJVM) {JVM für OSX} child{node[level 2] (l) {Maschinencode für OSX}}}}
+			child{node[level 2] {ausführen ("java Main" auf Windows)}child{node[root] (lJVM) {JVM für Windows} child{node[level 2] (l) {Maschinencode für Windows}}}}
+			}
+		}
+;
+\end{tikzpicture}
+\caption{Platformunabhängigkeit eines Java-Programms}\label{unabhaengigkeit}
+\end{figure}
+\pagebreak
+\section{Aufbau eines Java-Programmes}
+\Cref{main_one} zeigt den Aufbau eines minimalen Java-Programms. Die Grün markierten Textbereiche sind hierbei Kommentare, welche der Compiler ingoriert und den Programmfluss nicht beeinflussen.
+\begin{lstlisting}[captionpos=b,caption={Beispiel eines Java-Programms},label={main_one}]
+/**
+* Datei: Main.java
+* Ein Java-Programm besteht immer aus mindestens einer
+* Klasse
+* Diese wird durch das Schluesselwort "class" deklariert
+* und sie wird stetig gross geschrieben.
+* Darueber hinaus ist es wichtig, dass die Datei den
+* gleichen Namen wie die beinhaltende Klasse besitzt,
+* sowie die Endung ".java"
+* Der Inhalt einer Klasse ist umringt von geschweiften
+* Klammern
+*/ 
+class Main{
+  /**
+  * Jedes Java-Programm muss die folgende main-Methode
+  * aufweisen. Diese wird bei Programmstart ausgefuehrt.
+  */
+  public static void main(String[] args){
+  	System.out.println("test");
+  	//hier stehen die auszufuehrenden Anweisungen
+  }
+}
+\end{lstlisting}
+\section{Exkurs: Was sind Bits?}
+Ein Bit ist die kleinste Einheit mit welcher ein Computer rechnen kann.
+Ein Rechner ist eine Maschine und diese kennt an sich nur zwei Zustände (Strom oder kein Strom). In der Informatik wird dies oft durch die beiden Werte 1 (Strom) und 0 (kein Strom) ausgedrückt. Aus diesem Grund müssen innerhalb des Computers auch alle Werte als Bits "codiert" werden.
+Ist ein Wert 8-Bit lang, so kann dieser $2^8$, also 256, verschiedene Werte annehmen.
+Die $2^8$ kommt daher, dass es sich um 8-Bits handelt, welche jeweils zwei verschiedene Zustände annehmen können.
+\begin{figure}[H]
+\begin{center}
+\begin{tikzpicture}[
+node distance=0pt,
+start chain = A going right,
+X/.style = {rectangle, draw,% styles of nodes in string (chain)
+	minimum width=2ex, minimum height=3ex,
+	outer sep=0pt, on chain}
+]
+\foreach \i in {0,1,1,0,0,0,1,0,0}% <-- content of nodes
+\node[X] {\i};
+\end{tikzpicture}
+\end{center}
+\caption{Beispiel eines 8-Bit langen Wertes}
+\end{figure}
+
+\section{Die ersten Datentypen}
+\begin{lstlisting}[captionpos=b,caption={Die standart Datentypen von Java},label={datentypen}]
+/**
+* Datei: Variable.java
+* Dieses Java-Programm zeigt die grundlegende Verwendung
+* von Variablen.
+*/
+class Datentypen{
+  public static void main(String[] args){
+    int i;// definition der variable i vom Typ int.
+    /*
+    * Integer (int) sind Ganzzahlen. Ein int  
+    * belegt in Java 32-Bit und
+    * kann deshalb $2^32$ verschiedene Werte 
+    * annehmen.
+    */
+    
+    i = 4; //Zuweisung/Initialisierung der Variable i
+    /*
+    * Initialisierung heisst es nur im bei der ersten
+    * Zuweisung
+    */
+    
+    short s;// definition der variable s, vom Typ short.
+    /*
+    * shorts sind 16-Bit Ganzzahlen.
+    */
+    
+    int j = 42;// Definition und Initialisierung 
+    
+    String s = "Hallo";//Strings sind Zeichenketten
+	/*
+	* Strings stehen in Java immer in doppelten 
+	* Anfuehrungsstrichen
+	*/
+  }  
+}
+\end{lstlisting}
+\end{document}

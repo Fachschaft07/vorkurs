@@ -28,58 +28,67 @@
 \firstpagefootrule
 %\allsectionsfont{\sffamily\raggedright}
 
-\lstset{
-	language=Java,
-	showstringspaces=false, 
-	basicstyle=\small,
-	breakatwhitespace=true,breaklines=true,
-	tabsize=2, 
-	keywordstyle=\color{blue}\textbf,
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+\lstset{language=Java,
+  showspaces=false,
+  showtabs=false,
+  breaklines=true,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  commentstyle=\color{pgreen},
+  keywordstyle=\color{pblue},
+  stringstyle=\color{pred},
+  basicstyle=\ttfamily,
+  moredelim=[il][\textcolor{pgrey}]{$$},
+  moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
 }
 %\allsectionsfont{\sffamily\raggedright}
 
 \begin{document}
 
-\begin{questions}	
-	\question if/else und if else
-	\begin{parts}
-	\part Geben Sie im Programm zur Schaltjahrberechnung einen Text Ihrer Wahl statt \textit{true} und \textit{false} aus.
-	\part Was halten Sie von folgendem Code? Was macht das Programm und wie könnte man das Programm verschönern?
-	\begin{lstlisting}	
+\begin{questions}  
+  \question if/else und if else
+  \begin{parts}
+  \part Geben Sie im Programm zur Schaltjahrberechnung einen Text Ihrer Wahl statt \textit{true} und \textit{false} aus.
+  \part Was halten Sie von folgendem Code? Was macht das Programm und wie könnte man das Programm verschönern?
+  \begin{lstlisting}  
 public class Aufg1b
 {
-	public static void main(String[] args)
-	{
-		int x = Integer.parseInt(args[0]);
-		int y = Integer.parseInt(args[1]);
-		
-		if(x > y)
-		{
-			System.out.println(true);
-		}
-		else
-		{
-			System.out.println(false);
-		}
-	}
+  public static void main(String[] args)
+  {
+    int x = Integer.parseInt(args[0]);
+    int y = Integer.parseInt(args[1]);
+    
+    if(x > y)
+    {
+      System.out.println(true);
+    }
+    else
+    {
+      System.out.println(false);
+    }
+  }
 }
-	\end{lstlisting}	
-	\part Schreiben Sie ein Programm, dem eine ganze Zahl übergeben wird. Die Ausgabe hängt davon ab welche Zahl eingegeben wurde. Je nach Zahl wird eine von 7 beliebigen Texten ausgegeben. Verwenden Sie nur if/else zur Unterscheidung.
-	\part Was ist der Fehler des folgenden Programms? Schreiben Sie eine korrekte Version.
+\end{lstlisting}
+  \part Schreiben Sie ein Programm, dem eine ganze Zahl übergeben wird. Die Ausgabe hängt davon ab welche Zahl eingegeben wurde. Je nach Zahl wird eine von 7 beliebigen Texten ausgegeben. Verwenden Sie nur if/else zur Unterscheidung.
+  \part Was ist der Fehler des folgenden Programms? Schreiben Sie eine korrekte Version.
 \begin{lstlisting}
 public class Aufg1d
 {
-	public static void main(String[] args)
-	{
-		int number = 6;
-		
-		if(number % 3 == 0)
-			System.out.println("Zahl ist durch 3 teilbar");
-			if(number % 9 == 0)
-				System.out.println("Zahl ist auch durch 9 teilbar");
-		else
-			System.out.println("Zahl ist nicht durch 3 teilbar");
-	}
+  public static void main(String[] args)
+  {
+    int number = 6;
+    
+    if(number % 3 == 0)
+      System.out.println("Zahl ist durch 3 teilbar");
+      if(number % 9 == 0)
+        System.out.println("Zahl ist auch durch 9 teilbar");
+    else
+      System.out.println("Zahl ist nicht durch 3 teilbar");
+  }
 }
 \end{lstlisting}
 \newpage
@@ -88,7 +97,7 @@ public class Aufg1d
 boolean istHaupstadt;
 int anzahlEinwohner;
 double steuernProEinwohner;
-\end{lstlisting}	
+\end{lstlisting}  
 
 Dabei gilt folgendes:
 \begin{itemize}
@@ -112,11 +121,11 @@ $x_1=2, x_2=1, x_3=2\\\Rightarrow m = 2$
 $x_1=2, x_2=2, x_3=2\\\Rightarrow m = 2$
 
 \textbf{Hilfe}: Suchen Sie im Internet nach \textit{Entscheidungsbaum} und zeichnen Sie einen solchen zur Orientierung auf.
-	\end{parts}
-	
-	\question Vergleichen von Fließkommazahlen
-	\begin{parts}
-	\part Schreiben Sie Programm mit zwei lokalen Variablen vom Typ double. Die eine Variable soll den initialen Wert 0,0 und die andere den Wert 0,1 haben. Addieren Sie (ohne Schleife) 10 mal den Wert der zweiten Variable auf die erste. Vergleichen Sie anschließend den Wert mit dem Identitätsoperator \textit{==} auf 1,0 und geben Sie das Ergebnis dieses Booleschen Ausdrucks und der zwei Variablen auf dem Bildschirm aus. Wie erklären Sie sich das Resultat?
-	\end{parts}
+  \end{parts}
+  
+  \question Vergleichen von Fließkommazahlen
+  \begin{parts}
+  \part Schreiben Sie Programm mit zwei lokalen Variablen vom Typ double. Die eine Variable soll den initialen Wert 0,0 und die andere den Wert 0,1 haben. Addieren Sie (ohne Schleife) 10 mal den Wert der zweiten Variable auf die erste. Vergleichen Sie anschließend den Wert mit dem Identitätsoperator \textit{==} auf 1,0 und geben Sie das Ergebnis dieses Booleschen Ausdrucks und der zwei Variablen auf dem Bildschirm aus. Wie erklären Sie sich das Resultat?
+  \end{parts}
 \end{questions}
 \end{document}
