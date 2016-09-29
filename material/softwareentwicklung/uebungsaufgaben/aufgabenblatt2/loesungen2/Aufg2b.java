@@ -1,7 +1,5 @@
-public class Aufg2b
-{
-	public static void main(String[] args)
-	{
+class Aufg2b{
+	public static void main(String[] args){
 		// optional
 		// System.out.println(Integer.parseInt(args[0])%2==0);
 		

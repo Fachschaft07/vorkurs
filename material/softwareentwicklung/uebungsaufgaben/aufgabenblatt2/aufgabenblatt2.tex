@@ -6,12 +6,18 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{listings}
-\usepackage{color}
+\usepackage{xcolor}
 \usepackage{sectsty}
 \usepackage{stmaryrd}
+\usepackage{attachfile2}
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{%
+	\parbox{3\textwidth}{\colorbox{lightgray}{\parbox{0.91844\textwidth}{#1#2#3}}\vskip4.5pt}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
 
 
-\title{Aufgabenblatt 2}
+\title{Aufgabenblatt 3}
 \linespread{1.2}
 
 % Kopf-Fu"szeile
@@ -33,86 +39,49 @@
 	showstringspaces=false, 
 	basicstyle=\small,
 	breakatwhitespace=true,breaklines=true,
-	tabsize=2, 
+	tabsize=4, 
 	keywordstyle=\color{blue}\textbf,
+	columns=fullflexible,
+	frame=single,xleftmargin=\fboxsep,xrightmargin=-\fboxsep,
+	rulecolor=\color{lightgray}
 }
 %\allsectionsfont{\sffamily\raggedright}
 
+
+\newcommand{\attachcode}[1]{\lstinputlisting[title={\textattachfile[color={0 0 1}]{#1}{#1}}]{#1}	
+}
+\newcommand{\attachsolutions}[1]{\par\textattachfile[color={1 0 0}]{loesungen2/#1}{Lösung: #1}}
+\newcommand{\attachcodeandsolutions}[1]{
+	\attachcode{#1}
+	\attachsolutions{#1}
+}
 \begin{document}
 
 \begin{questions}
 	\question Variablen und Datentypen
 	\begin{parts}
 	\part Analysieren sie folgenden Programmcode. Warum kann man das (byte) rechts nicht einfach weglassen und welche Auswirkungen hat es? Warum braucht man hingegen in der letzten Zeile keine Typumwandlung (type cast)?
-			\begin{lstlisting}
-public class Aufg1a
-{
-	public static void main(String args[])
-	{
-		int a = 1234;
-		byte c = 20;
-		byte b = (byte)a;
-		a = c;
-	}
-}
-			\end{lstlisting}
+	\attachcodeandsolutions{Aufg1a.java}
 
 	\part Wieso braucht man für unterschiedliche Werte einer Variable unterschiedlich viel Speicherplatz um diese zu speichern?
+	\attachsolutions{Aufg1b.java}
 	\part Weisen Sie einer byte-Variable den Wert einer int-Variable zu. Warum führt die Zuweisung zu Informationsverlust?
+	\attachsolutions{Aufg1c.java}
 	\part Nennen Sie einen Grund warum die Genauigkeit einer Fließkommazahl begrenzt ist. Schreiben Sie ein Programm das dieses Problem zeigt und offensichtlich falsche Ergebnisse liefert.
+	\attachsolutions{Aufg1d.java}
+	\newpage
 	\part Geben Sie an was dieser Code auf der Konsole ausgibt und von welchem Datentyp die jeweiligen Ausgaben sind.
-				\begin{lstlisting}
-public class Aufg1e
-{
-	public static void main(String[] args)
-	{
-		System.out.println(4+2+" Wert");				
-		System.out.println("" + 4 + 2 + " Wert");		
-		System.out.println("" + (4 + 2) + " Wert");		
-		
-		System.out.println((byte)(127 + 1));			
-		System.out.println((127 + 1));					
-		System.out.println(((byte)127 + (byte)1));		
-		System.out.println('a' + 1);                    
-		System.out.println('a' + (char)1);             
-		System.out.println((char)('a' + 1));			
-		
-		System.out.println(3/2);						
-		System.out.println((double)3/2);				
-		System.out.println((double)(3/2));      	    
-		System.out.println((char)'a' + 1);				
-	}
-}
-			\end{lstlisting}	
+	\attachcodeandsolutions{Aufg1e.java}
 	\end{parts}
 	\newpage
 	\question Boolean und logische Ausdrücke
 	\begin{parts}
 	\part Geben Sie die Ausgabe des folgenden Programms an.
-	\begin{lstlisting}
-public class Aufg2a
-{
-	public static void main(String[] args)
-	{
-		System.out.println(true && false);				
-		System.out.println(true && true);				
-		System.out.println(false && false);				
-		System.out.println(true || false);				
-		System.out.println(true || true);				
-		System.out.println(false || false);				
-		
-		System.out.println(true && false || true);		
-		System.out.println(true || true && false);		
-		System.out.println((true || true) && false);	
-		System.out.println(true ^ false);				
-		System.out.println(true ^ true);				
-		System.out.println(false ^ false);			
-	}
-}
-	\end{lstlisting}
+	\attachcodeandsolutions{Aufg2a.java}
 	\part Schreiben Sie ein Programm das \textit{true} ausgibt, wenn eine ganze Zahl im Programm gerade ist und \textit{false} wenn sie ungerade ist. Sie können auch einmal versuchen die Zahl als Parameter bei Programmstart mitzugeben und Sie dann zu testen (optional).
+	\attachsolutions{Aufg2b.java}
 	\part Schreiben Sie ein Programm das \textit{true} ausgibt, wenn eine ganze Zahl im Programm ein Schaltjahr ist und \textit{false} wenn sie kein Schaltjahr ist. Sie können auch einmal versuchen die Zahl als Parameter bei Programmstart mitzugeben und Sie dann zu testen (optional).
-
+	\attachsolutions{Aufg2c.java}
 	\end{parts}
 	
 	\question Aufgaben lösen mit dem Rechner
@@ -132,6 +101,7 @@ Die beiden Temperaturen sollen jeweils in lokale Variablen \textit{celsius} und 
 \begin{lstlisting}
 10.0 Grad Celsius sind 50.0 Grad Fahrenheit
 \end{lstlisting} 
+\attachsolutions{Aufg3a.java}
 	\end{parts}
 \end{questions}
 \end{document}

@@ -1,7 +1,5 @@
-public class Aufg1f
-{
-	public static void main(String[] args)
-	{
+class Aufg1f{
+	public static void main(String[] args){
 		/*
 		 * Überprüfung der minimalen Paramateranzahl
 		 */
@@ -21,39 +19,29 @@ public class Aufg1f
 		/*
 		 * Abfrage der noch 3 übrigen Möglichkeiten
 		 */
-		if (x1 > x2)
-		{
-			if (x1 < x3)
-			{
+		if (x1 > x2){
+			if (x1 < x3){
 				median = x1;
 			}
-			else
-			{
-				if (x2 > x3)
-				{
+			else{
+				if (x2 > x3){
 					median = x2;
 				}
-				else
-				{
+				else{
 					median = x3;
 				}
 			}
 		}
-		else
-		{
-			if (x1 < x3)
-			{
-				if (x3 < x2)
-				{
+		else{
+			if (x1 < x3){
+				if (x3 < x2){
 					median = x3;
 				}
-				else
-				{
+				else{
 					median = x2;
 				}
 			}
-			else
-			{
+			else{
 				median = x1;
 			}
 		}

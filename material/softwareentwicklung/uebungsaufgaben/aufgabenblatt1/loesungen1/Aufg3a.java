@@ -1,7 +1,5 @@
-public class Aufg3a
-{
-	public static void main(String args[])
-	{
+class Aufg3a{
+	public static void main(String args[]){
 	    System.out.println(42);                //int
 
 	    System.out.println(-17);               //int

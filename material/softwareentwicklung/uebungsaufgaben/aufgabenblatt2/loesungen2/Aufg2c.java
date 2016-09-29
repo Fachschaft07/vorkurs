@@ -1,12 +1,10 @@
-public class Aufg2c
-{
+class Aufg2c{
 	/*
 	 * Erklärung:
 	 * Ein Schaltjahr muss durch 4 teilbar sein, darf nicht durch 100 teilbar sein.
 	 * Wenn es aber durch 400 teilbar ist, ist es wieder ein Schaltjahr.
 	 */
-	public static void main(String[] args)
-	{
+	public static void main(String[] args){
 		// optional
 		/*
 		 *  int year = Integer.parseInt(args[0]);

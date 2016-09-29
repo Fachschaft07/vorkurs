@@ -1,7 +1,5 @@
-public class Aufg1b
-{
-	public static void main(String agrs[])
-	{
+class Aufg1b{
+	public static void main(String agrs[]){
 		/* 
 		 * Daten werden im Rechner immer im Binärsystem gespeichert.
 		 * Uns stehen also nur die 0 und die 1 zur Speicherung von Daten zur Verfügung.

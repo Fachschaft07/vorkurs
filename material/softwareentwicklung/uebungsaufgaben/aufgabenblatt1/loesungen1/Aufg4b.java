@@ -1,9 +1,7 @@
 /*
 Das Programm enthält eine erstaunliche Anzahl an Fehlern:
-public class Aufg4b
-{
-	public static void main(String args[])
-	{
+class Aufg4b{
+	public static void main(String args[]){
 		int a,b = 4;
 		System.out.println(a);				
 		 													1. a wurde nicht initalisiert
@@ -36,10 +34,8 @@ public class Aufg4b
 }
 	Beispiel für eine korrigierte Version:
 */
-public class Aufg4b
-{
-	public static void main(String args[])
-	{
+class Aufg4b{
+	public static void main(String args[]){
 		int a = 4;
 		int b = 4;
 		System.out.println(a);				

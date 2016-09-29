@@ -6,9 +6,15 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{listings}
-\usepackage{color}
+\usepackage{xcolor}
 \usepackage{sectsty}
 \usepackage{stmaryrd}
+\usepackage{attachfile2}
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{%
+	\parbox{3\textwidth}{\colorbox{lightgray}{\parbox{0.91844\textwidth}{#1#2#3}}\vskip4.5pt}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
 
 
 \title{Aufgabenblatt 3}
@@ -28,24 +34,27 @@
 \firstpagefootrule
 %\allsectionsfont{\sffamily\raggedright}
 
-\definecolor{pblue}{rgb}{0.13,0.13,1}
-\definecolor{pgreen}{rgb}{0,0.5,0}
-\definecolor{pred}{rgb}{0.9,0,0}
-\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
-\lstset{language=Java,
-  showspaces=false,
-  showtabs=false,
-  breaklines=true,
-  showstringspaces=false,
-  breakatwhitespace=true,
-  commentstyle=\color{pgreen},
-  keywordstyle=\color{pblue},
-  stringstyle=\color{pred},
-  basicstyle=\ttfamily,
-  moredelim=[il][\textcolor{pgrey}]{$$},
-  moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+\lstset{
+	language=Java,
+	showstringspaces=false, 
+	basicstyle=\small,
+	breakatwhitespace=true,breaklines=true,
+	tabsize=4, 
+	keywordstyle=\color{blue}\textbf,
+	columns=fullflexible,
+	frame=single,xleftmargin=\fboxsep,xrightmargin=-\fboxsep,
+	rulecolor=\color{lightgray}
 }
 %\allsectionsfont{\sffamily\raggedright}
+
+
+\newcommand{\attachcode}[1]{\lstinputlisting[title={\textattachfile[color={0 0 1}]{#1}{#1}}]{#1}	
+}
+\newcommand{\attachsolutions}[1]{\par\textattachfile[color={1 0 0}]{loesungen3/#1}{Lösung: #1}}
+\newcommand{\attachcodeandsolutions}[1]{
+	\attachcode{#1}
+	\attachsolutions{#1}
+}
 
 \begin{document}
 
@@ -53,45 +62,14 @@
   \question if/else und if else
   \begin{parts}
   \part Geben Sie im Programm zur Schaltjahrberechnung einen Text Ihrer Wahl statt \textit{true} und \textit{false} aus.
+  \attachsolutions{Aufg1a.java}
   \part Was halten Sie von folgendem Code? Was macht das Programm und wie könnte man das Programm verschönern?
-  \begin{lstlisting}  
-public class Aufg1b
-{
-  public static void main(String[] args)
-  {
-    int x = Integer.parseInt(args[0]);
-    int y = Integer.parseInt(args[1]);
-    
-    if(x > y)
-    {
-      System.out.println(true);
-    }
-    else
-    {
-      System.out.println(false);
-    }
-  }
-}
-\end{lstlisting}
+  \attachcodeandsolutions{Aufg1b.java}
   \part Schreiben Sie ein Programm, dem eine ganze Zahl übergeben wird. Die Ausgabe hängt davon ab welche Zahl eingegeben wurde. Je nach Zahl wird eine von 7 beliebigen Texten ausgegeben. Verwenden Sie nur if/else zur Unterscheidung.
+  \attachsolutions{Aufg1c.java}
+  \newpage
   \part Was ist der Fehler des folgenden Programms? Schreiben Sie eine korrekte Version.
-\begin{lstlisting}
-public class Aufg1d
-{
-  public static void main(String[] args)
-  {
-    int number = 6;
-    
-    if(number % 3 == 0)
-      System.out.println("Zahl ist durch 3 teilbar");
-      if(number % 9 == 0)
-        System.out.println("Zahl ist auch durch 9 teilbar");
-    else
-      System.out.println("Zahl ist nicht durch 3 teilbar");
-  }
-}
-\end{lstlisting}
-\newpage
+\attachcodeandsolutions{Aufg1d.java}
 \part Gegeben seien drei Variablen, die Auskunft über Eigenschaften einer bestimmten Stadt geben:
 \begin{lstlisting}
 boolean istHaupstadt;
@@ -107,7 +85,8 @@ Dabei gilt folgendes:
 \end{itemize}
 Wir definieren eine Metropole als eine Stadt, die Hauptstadt ist mit mehr als 100 000 Einwohner oder die mehr als 200 000 Einwohner hat und im Durchschnitt mindestens 720 000 000 Steuereinnahmen hat. \\
 Geben Sie einen Booleschen-Ausdruck mit den drei Variablen in Java an, der genau dann true ist, wenn die Stadt eine Metropole ist. 
-
+\attachsolutions{Aufg1e.java}
+\newpage
 \part Bauen Sie ein Programm das folgendes Entscheidungsproblem löst:
 Es werden 3 ganze Zahlen, - wir nennen sie x1, x2 und x3 - definiert. Diese Zahlen dürfen, müssen aber nicht paarweise verschieden sein, d.h. im Extremfall sind sie sogar gleich. Gesucht wird der mittlere Wert m.
 
@@ -121,11 +100,13 @@ $x_1=2, x_2=1, x_3=2\\\Rightarrow m = 2$
 $x_1=2, x_2=2, x_3=2\\\Rightarrow m = 2$
 
 \textbf{Hilfe}: Suchen Sie im Internet nach \textit{Entscheidungsbaum} und zeichnen Sie einen solchen zur Orientierung auf.
+\attachsolutions{Aufg1f.java}
   \end{parts}
   
   \question Vergleichen von Fließkommazahlen
   \begin{parts}
   \part Schreiben Sie Programm mit zwei lokalen Variablen vom Typ double. Die eine Variable soll den initialen Wert 0,0 und die andere den Wert 0,1 haben. Addieren Sie (ohne Schleife) 10 mal den Wert der zweiten Variable auf die erste. Vergleichen Sie anschließend den Wert mit dem Identitätsoperator \textit{==} auf 1,0 und geben Sie das Ergebnis dieses Booleschen Ausdrucks und der zwei Variablen auf dem Bildschirm aus. Wie erklären Sie sich das Resultat?
+  \attachsolutions{Aufg2a.java}
   \end{parts}
 \end{questions}
 \end{document}

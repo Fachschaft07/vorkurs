@@ -1,7 +1,5 @@
-public class Aufg5c
-{
-	public static void main(String[] args)
-	{
+class Aufg5c{
+	public static void main(String[] args){
 		System.out.println(3/2);		
 		/*
 		 * Erwartete Ausgabe: 1.5 

@@ -1,7 +1,5 @@
-public class Aufg4a
-{
-	public static void main(String args[])
-	{
+class Aufg4a{
+	public static void main(String args[]){
 		boolean b;
 		b = true;
 		byte by;

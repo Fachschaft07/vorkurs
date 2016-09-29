@@ -1,7 +1,5 @@
-public class Aufg5a
-{
-	public static void main(String[] args)
-	{
+class Aufg5a{
+	public static void main(String[] args){
 		double d = 0.1e-23;
 		
 		double result = d * d * d * d * d * d * d * d * d * d * d * d * d;

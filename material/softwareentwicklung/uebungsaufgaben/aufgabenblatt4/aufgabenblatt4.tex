@@ -6,9 +6,15 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{listings}
-\usepackage{color}
+\usepackage{xcolor}
 \usepackage{sectsty}
 \usepackage{stmaryrd}
+\usepackage{attachfile2}
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{%
+	\parbox{3\textwidth}{\colorbox{lightgray}{\parbox{0.91844\textwidth}{#1#2#3}}\vskip4.5pt}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
 
 
 \title{Aufgabenblatt 4}
@@ -18,8 +24,8 @@
 \addtolength{\headheight}{2\baselineskip} \addtolength{\headheight}{0.61pt}
 \pagestyle{headandfoot}
 
-\firstpageheader{Aufgabenblatt 3}{}{\thepage}
-\runningheader{Aufgabenblatt 3}{}{\thepage}
+\firstpageheader{Aufgabenblatt 4}{}{\thepage}
+\runningheader{Aufgabenblatt 4}{}{\thepage}
 \firstpagefooter{\small{Vorkurs Softwareentwicklung}}{}{\small{WS 2014/15}}
 \runningfooter{\small{Vorkurs Softwareentwicklung}}{}{\small{WS 2014/15}}
 \runningfootrule
@@ -33,10 +39,22 @@
 	showstringspaces=false, 
 	basicstyle=\small,
 	breakatwhitespace=true,breaklines=true,
-	tabsize=2, 
+	tabsize=4, 
 	keywordstyle=\color{blue}\textbf,
+	columns=fullflexible,
+	frame=single,xleftmargin=\fboxsep,xrightmargin=-\fboxsep,
+	rulecolor=\color{lightgray}
 }
 %\allsectionsfont{\sffamily\raggedright}
+
+
+\newcommand{\attachcode}[1]{\lstinputlisting[title={\textattachfile[color={0 0 1}]{#1}{#1}}]{#1}	
+	}
+\newcommand{\attachsolutions}[1]{\par\textattachfile[color={1 0 0}]{loesungen4/#1}{Lösung: #1}}
+\newcommand{\attachcodeandsolutions}[1]{
+	\attachcode{#1}
+	\attachsolutions{#1}
+}
 
 \begin{document}
 
@@ -44,95 +62,27 @@
 	\question Das Array
 	\begin{parts}
 	\part Schreiben Sie ein Programm in dem Sie ein Array (bis zum Index 10) mit seinem Index füllen. Wie viele Plätze hat das Array?
+	\attachsolutions{Aufg1a.java}
 	\part Was halten Sie von folgendem Programmcode? Markieren und erklären Sie kurz alle Fehler?
-	\begin{lstlisting}	
-public class Aufg1b
-{
-	public static void main(String[] args)
-	{
-		int array;
-		array = new int[5];
-		
-		int secArray[];
-		secArray = new  int   [5];
-		
-		int[]a1 = new int[10];
-		[]int a2 = new int[10];
-		int a3 [] = new int[10];
-		
-		a3[-1] = 4;
-		a3[10] = 5;
-		a3[0] = 2;
-		a1 = new int[];
-		a1 = new int [] {1,2,3,4};
-		a2 = {1,2,3,4};
-		a2 = new {1,2,3,4};
-		
-		int [] twoDimArray1 = new int []{{1,2},{3,4},{5,6}};
-		int [][] twoDimArray2 = new int [][]{{1,2},{3,4},{5,6}};
-		int [][] twoDimArray3 = new int[4][];
-		int [][] twoDimArray4 = new int[][];
-		int [][] twoDimArray5 = new int[][5];
-		
-		int a [] = new int[2];
-		int b [] = new int[8];
-		int c [];
-		c = a;
-		a = b;
-		b = c;
-	
-		int i [] = new int[55];
-		double [] d = new double[33];
-		short s [] = new short[44];
-		i = d;
-		d = i;
-		i = s;
-	}
-}
-	\end{lstlisting}	
+	\attachcodeandsolutions{Aufg1b.java}
 	\part Was bedeutet nun eigentlich dieses verdammte \textit{String args[]}? Was genau ist \textit{args}?
+	\attachsolutions{Aufg1c.java}
 	\part Schreiben Sie das Programm aus Aufgabe 1c des Aufgabenblatts 3 so um, dass Sie ohne switches und if/else auskommen. Verwenden Sie stattdessen ein \textit{String[] array}!
+	\attachsolutions{Aufg1d.java}
 	\end{parts}
 	
 	\question Die for-Schleife
 	\begin{parts}
 	\part Schreiben Sie das Programm aus Aufgabe 1a dieses Aufgabenblatts so um, dass Sie das Array nicht manuell sondern mit einer for-Schleife befüllen. Füllen Sie dabei das Array einmal von vorne (Start bei 0) und einmal von hinten (Start beim letzten Index). Was glauben Sie, welche Version schneller in der Ausführung ist, die des manuellen oder automatischen Befüllens mit einer Schleife?
+	\attachsolutions{Aufg2a.java}
 	\part Analysieren Sie folgenden Code. Welche Schleife läuft aus dem Arraybereich heraus und verursacht somit einen Fehler? Welche Ausgabe wird generiert (sofern das Programm nicht abstürzt).
-\begin{lstlisting}	
-		int[] array = new int[10];
-		
-		System.out.println("Ausgabe 1:");
-		for(int i = 0; i <= 10; i++)
-		{
-			array[i] = i;
-			System.out.print(array[i]+ " ");
-		}
-		
-		System.out.println("\nAusgabe 2:");
-		for(int i = 0; i < 10; i = i + 1)
-		{
-			array[i] = i;
-			System.out.print(array[i]+ " ");
-		}
-		
-		System.out.println("\nAusgabe 3:");
-		for(int i = 0; i > array.length; i++)
-		{
-			array[i] = i + 3;
-			System.out.println(array[i]+ " ");
-		}
-		
-		System.out.println("\nAusgabe 4:");
-		for(int i = 0; i <= 10; i++)
-		{
-			i = i + 3;
-			array[i] = i;
-			System.out.println(array[i] + " ");
-		}
-\end{lstlisting}
+	\attachcodeandsolutions{Aufg2b.java}
 \part Schreiben Sie ein Programm, das ein zweidimensionales Array (\textit{int[][] array = new int [10][10]}), füllt. Der Inhalt sollte sich aus den Indizes ergeben.
+\attachsolutions{Aufg2c.java}
 \part Schreiben Sie ein Programm zur Berechnung der Summe der Zahlen von 1 bis n. Dabei wird n als Parameter übergeben und das Ergebnis soll ausgegeben werden. Verwenden Sie dabei eine for-Schleife.
+\attachsolutions{Aufg2d.java}
 \part Schreiben Sie ein Programm zur Berechnung der Fakultät der Zahl n. Dabei wird n als Parameter übergeben. Verwenden Sie dafür eine for-Schleife. Testen Sie bis zu welcher Zahl das Ergebnis stimmt.
+\attachsolutions{Aufg2e.java}
 \newpage
 \part Schreiben Sie ein Programm dem eine Zahl n als Parameter übergeben wird und das daraus resultierende Quadrat zeichnet (Hinweis: Sie benötigen zwei in sich geschachtelte Schleifen, sowie mehrere if-Konstrukte):
 \begin{lstlisting}	
@@ -159,7 +109,7 @@ n = 4:
 
 usw.
 \end{lstlisting}	
-
+\attachsolutions{Aufg2f.java}
 \part Schreiben Sie ein Programm, das mit Hilfe geschachtelter Schleifen folgende Ausgabe erzeugt:
 \begin{lstlisting}	
 1 abcdefg
@@ -169,22 +119,17 @@ usw.
 12345 abc
 123456 ab
 1234567 a
-\end{lstlisting}	
+\end{lstlisting}
+\attachsolutions{Aufg2g.java}	
 	\end{parts}
 	
 	\newpage
 	\question Die while-Schleife	
 	\begin{parts}
 	\part Schreiben Sie die Schleifen zur Berechnung der Summe aus 3d und der Fakultät aus Aufgabe 3e jeweils in eine while-Schleife um.
+	\attachsolutions{Aufg3a.java}
 	\part Wo liegt im folgenden Programmcode das Problem und was wird passieren wenn wir das Programm starten?
-	\begin{lstlisting}
-	int n = 2;
-	while(n%2==0)
-	{
-		n = n + 2;
-		System.out.println(n);
-	}
-	\end{lstlisting}
+	\attachcodeandsolutions{Aufg3b.java}
 	\end{parts}
 \end{questions}
 \end{document}

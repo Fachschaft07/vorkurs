@@ -1,7 +1,5 @@
-public class Aufg1c
-{
-	public static void main(String args[])
-	{
+class Aufg1c{
+	public static void main(String args[]){
 		/*
 		 * Ein byte kann nur 256 Werte annehmen (von -128 bis 127) da es nur 8 "Codierungsplätzte" hat
 		 * Ein int hingegen besistzt ganze 32 Codierungsplätze und kann somit 2^32 Werte annehmen 

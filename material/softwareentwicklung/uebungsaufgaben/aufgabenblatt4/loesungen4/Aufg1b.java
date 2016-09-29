@@ -1,7 +1,5 @@
-public class Aufg1b
-{
-	public static void main(String[] args)
-	{
+class Aufg1b{
+	public static void main(String[] args){
 		int array;
 		
 		//array = new int[5];

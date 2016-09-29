@@ -6,12 +6,18 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{listings}
-\usepackage{color}
+\usepackage{xcolor}
 \usepackage{sectsty}
 \usepackage{stmaryrd}
+\usepackage{attachfile2}
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{%
+	\parbox{3\textwidth}{\colorbox{lightgray}{\parbox{0.91844\textwidth}{#1#2#3}}\vskip4.5pt}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
 
 
-\title{Aufgabenblatt 1}
+\title{Aufgabenblatt 3}
 \linespread{1.2}
 
 % Kopf-Fu"szeile
@@ -33,8 +39,21 @@
 	showstringspaces=false, 
 	basicstyle=\small,
 	breakatwhitespace=true,breaklines=true,
-	tabsize=2, 
+	tabsize=4, 
 	keywordstyle=\color{blue}\textbf,
+	columns=fullflexible,
+	frame=single,xleftmargin=\fboxsep,xrightmargin=-\fboxsep,
+	rulecolor=\color{lightgray}
+}
+%\allsectionsfont{\sffamily\raggedright}
+
+
+\newcommand{\attachcode}[1]{\lstinputlisting[title={\textattachfile[color={0 0 1}]{#1}{#1}}]{#1}	
+}
+\newcommand{\attachsolutions}[1]{\par\textattachfile[color={1 0 0}]{loesungen1/#1}{Lösung: #1}}
+\newcommand{\attachcodeandsolutions}[1]{
+	\attachcode{#1}
+	\attachsolutions{#1}
 }
 
 \begin{document}
@@ -51,33 +70,29 @@
  \question Ausgabe mit println und print
 \begin{parts}
 	\part Erstellen Sie das \textit{Hello World-Programm} aus der Vorlesung und bringen Sie es zum Laufen.
+	\attachsolutions{Aufg2a.java}
 	\part Erstellen Sei ein Programm, das folgende veränderte Ausgabe generiert:
 		\begin{lstlisting}
 		Hallo Leute,
 		
 		heute lerne ich ein bisschen Java!
 		\end{lstlisting}
+	\attachsolutions{Aufg2b.java}
+	\attachsolutions{Aufg2bWeiteresBeispiel.java}
 	\part Markieren Sie im folgenden Programmcode alle Fehler und schreiben Sie dann eine fehlerfreie Version.
-	\begin{lstlisting}
-class hello
-{
-	public void main{String args[]};
-   	(
-     	System.out.PrintLn('Hello, world')
-   	)
-}
-		\end{lstlisting}
+	\attachcodeandsolutions{Aufg2c.java}
 		\part Schreiben Sie ein Programm, das nur mit einem einzigen Ausdruck folgendes ausgibt (benutzen Sie Java um das Ergebnis zu \textbf{berechnen}):
 		\begin{lstlisting}
 		5 + 37 = 42
 		\end{lstlisting}
-		
+		\attachsolutions{Aufg2d.java}
 		\part Wo liegt der Unterschied zwischen \textit{System.out.println()} und \textit{System.out.print()}? Schreiben Sie ein Programm, das folgende Ausgabe generiert und verwenden Sie dabei kein \textit{System.out.println()} sondern nur \textit{System.out.print()}. (Zusatz) Versuchen nur \textbf{ein} \textit{System.out.print()} zu verwenden.
 		\begin{lstlisting}
 		Ich brauche kein println 
 		
 		ich kann das auch mit print 
 		\end{lstlisting}
+		\attachsolutions{Aufg2e.java}
 \end{parts}
 	
 	\newpage
@@ -107,45 +122,30 @@ class hello
 \item    0x1d 
 \item 	.34
 \end{itemize}
+\attachsolutions{Aufg3a.java}
 	\end{parts}
 	
 	\newpage
 	\question Variablen - Definition und Initialisierung
 		\begin{parts}
 	\part Schreiben Sie ein Programm in dem Sie von jedem Ihnen bekannten Datentyp jeweils eine Variable definieren und in der nächsten Zeile initialisieren. Initialisieren Sie die Variablen mit der größtmöglichen Zahl und geben Sie alles auf der Konsole aus.
+	\attachsolutions{Aufg4a.java}
 	\part Markieren Sie im folgenden Programmcode alle Fehler bzw. schreiben sie eine fehlerfreie Version und geben sie an, was das Programm ausgibt.
-		\begin{lstlisting}
-public class Aufg4b
-{
-	public static void main(String args[])
-	{
-		int a, b = 4;
-		System.out.println(a);
-		System.out.println(b);
-		int a = 5;
-		a = 6;
-		int c = d;
-		
-		int i = 5; short s = 4;
-		boolean b = 1;
-		boolean bool1 = true, boolean bool2 = false;
-		double d1 = 1.3;
-		double d2 = d1 = 1.5;
-		System.out.println(d1);
-		System.out.println(d2);
-		long l = 131231341313;
-		float f = 1.3;
-	}
-}
-		\end{lstlisting}
+	\attachcodeandsolutions{Aufg4b.java}
 		\end{parts}
 		
 \question Rechnen mit Variablen
 		\begin{parts}
 	\part Finden Sie durch Ausprobieren heraus wie oft sie die Zahl 0.1e-23 = $0,1 * 10^{-23}$  (double) mal sich selbst nehmen müssen bis sie 0 erhalten. Warum ist das Ergebnis mathematisch nicht richtig?
+	\attachsolutions{Aufg5a.java}
 	\part Finden Sie durch Ausprobieren heraus wie oft sie die Zahl 9e100 = $9*10^{100}$ (double) nehmen müssen bis \textit{infinity} heraus kommt. Versuchen Sie infinity auch mit dem Datentyp int und einer Zahl Ihrer Wahl heraus zu bekommen. Was stellen Sie fest? Ist das Ergebnis mathematisch korrekt?
+	\attachsolutions{Aufg5b.java}
+	\newpage
 	\part Schreiben Sie ein möglichst kurzes Programm, was die einfache Rechnung 3/2 durchführt und ausgibt. Was stellen Sie fest?
+	\attachsolutions{Aufg5c.java}
 	\part Entwickeln Sie ein kleines Programm zur Berechnung der Tage, Stunden, Minuten und Sekunden aus einer vorgegebenen Zahl von Sekunden, hier 3798. Sie dürfen nur durch 24 oder 60 dividieren (nicht z.B. durch 3600). Überlegen Sie, in welcher Reihenfolge Sie die Ausgaben zweckmäßigerweise berechnen können. Sie dürfen Zwischenergebnisse einführen.
+	\attachsolutions{Aufg5d.java}
+	\attachsolutions{Aufg5dMitModulo.java}
 	\end{parts}
 
 \end{questions}

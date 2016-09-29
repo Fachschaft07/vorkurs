@@ -1,7 +1,5 @@
-public class Aufg2a
-{
-	public static void main(String[] args)
-	{
+class Aufg2a{
+	public static void main(String[] args){
 		double einZehntel = 0.1;
 		double eins = 0.0;
 
@@ -26,12 +24,10 @@ public class Aufg2a
 		 *  Wert beruhende Berechnungen falsch werden können.
 		 */
 
-		if (eins == 1.0)
-		{
+		if (eins == 1.0){
 			System.out.println("Eins ist 1");
 		}
-		else
-		{
+		else{
 			System.out.println("Eins ist nicht 1, sondern " + eins);
 		}
 
@@ -44,8 +40,7 @@ public class Aufg2a
 		 * Der Vollständigkeit halber zeigen wir die Lösung, die Sie aber nicht 
 		 * verstehen müssen, das würde jetzt zu weit gehen.
 		 */
-		if (Math.abs(eins - 1.0) < 1E20)
-		{
+		if (Math.abs(eins - 1.0) < 1E20){
 			System.out.println("Eins ist 1");
 		}
 

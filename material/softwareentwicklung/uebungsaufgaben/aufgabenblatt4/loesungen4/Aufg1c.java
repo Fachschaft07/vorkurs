@@ -1,7 +1,5 @@
-public class Aufg1c
-{
-	public static void main(String[] args)
-	{
+class Aufg1c{
+	public static void main(String[] args){
 		/*
 		 *  String[] args ist ein Array das beliebig viele Strings also
 		 *  Zeichenketten enthält. Bei Programmstart können diese hinter

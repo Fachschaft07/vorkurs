@@ -1,7 +1,5 @@
-public class Aufg1d
-{
-	public static void main(String[] args)
-	{
+class Aufg1d{
+	public static void main(String[] args){
 		String[] texte = new String[7];
 		
 		texte[0] = "Das ist Ihre Glückszahl";

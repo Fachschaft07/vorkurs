@@ -1,7 +1,5 @@
-public class Aufg1e
-{
-	public static void main(String[] args)
-	{
+class Aufg1e{
+	public static void main(String[] args){
 		/*
 		 * Die Auswertungsreihenfole ist von links nach rechts
 		 */

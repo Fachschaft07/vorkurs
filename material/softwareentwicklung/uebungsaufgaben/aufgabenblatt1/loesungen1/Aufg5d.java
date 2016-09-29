@@ -1,7 +1,5 @@
-public class Aufg5d
-{
-	public static void main(String[] args)
-	{
+public class Aufg5d{
+	public static void main(String[] args){
 		int initial = 3798;
  		int secsPerMin = 60; //Anzahl der Sekunden pro Minute
 		int minsPerHour = secsPerMin; //Anzahl der Minuten pro Stunde

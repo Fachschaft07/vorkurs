@@ -1,7 +1,5 @@
-public class Aufg2a
-{
-	public static void main(String[] args)
-	{
+class Aufg2a{
+	public static void main(String[] args){
 		/*
 		 * Auswertungsreihenfolge von links nach rechts,
 		 * allerdings bindet ein && (UND) stärker als ein || Oder.

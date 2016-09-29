@@ -6,10 +6,8 @@
 * Natürlich gilt dies nicht nur für sehr kleine Fließkommawerte.
 * Werden die Zahlen zu groß, so können diese auch nicht mehr gespeichert werden.
 */
-public class Aufg1d
-{
-	public static void main(String args[])
-	{
+class Aufg1d{
+	public static void main(String args[]){
 		double d = 1.7976931348623157E308;
 		System.out.println("Rechnung gegen Unendlich:");
 		System.out.println("d = " + d);

@@ -1,7 +1,5 @@
-public class Aufg1a
-{
-	public static void main(String[] args)
-	{
+class Aufg1a{
+	public static void main(String[] args){
 		// 11 Plätze, da der Index 0 ebenfalls als Platz genutzt wird => Typisch für die Informatik
 		int indicies[] = new int[11];
 		indicies[0] = 0;

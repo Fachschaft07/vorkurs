@@ -1,7 +1,5 @@
-public class Aufg5b
-{
-	public static void main(String[] args)
-	{
+class Aufg5b{
+	public static void main(String[] args){
 		double number = 9e100;
 		double result = number * number * number;
 		System.out.println(number);
